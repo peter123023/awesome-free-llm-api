@@ -75,10 +75,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared |
-| [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, sign-up to use, OpenAI-compatible; Cons: 2,000 req/day shared total, ~200 per model |
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA |
+| [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### DeepSeek R1 / V3
 
@@ -87,10 +87,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
-| [魔搭 ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, sign-up to use; Cons: shared 2,000/day, R1 ~200/day |
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |
 | [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates monthly |
+| [魔搭 ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### DeepSeek R2
 
@@ -109,7 +109,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
-| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, sign-up to use, full Qwen family; Cons: shares 2,000 req/day pool |
+| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### Qwen3 Coder 480B
 
@@ -117,8 +117,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, sign-up to use; Cons: ~500/day, shares 2,000/day pool |
 | [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |
+| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### Qwen3 235B
 
@@ -126,8 +126,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, sign-up to use; Cons: ~500/day, shares 2,000/day pool |
 | [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |
+| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### Qwen3.8 Flash
 
@@ -153,7 +153,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
-| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, sign-up to use; Cons: shares 2,000 req/day pool |
+| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### Qwen3-8B / GLM-4-9B
 
@@ -425,14 +425,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ### China platforms
 
-#### ModelScope (Alibaba)
-
-- **Official site**: https://modelscope.cn
-- **Free tier**: permanent (free inference for all registered users, ~2,000 req/day total, 100~500 req/day per model)
-- **What the site says**: Alibaba DAMO's open model community — "free inference for all registered users"; DeepSeek-R1 ~200 req/day
-- **Free models**: DeepSeek V4 Flash / R1, Qwen3 Coder 480B, Qwen3 235B, Qwen2.5 72B, GLM-4.5, MiniMax-M1 and ~3,000 open models
-- **Endpoint**: `https://api-inference.modelscope.cn/v1` (OpenAI-compatible)
-- **Status**: Active — verified 2026-08-31 (Alibaba Cloud account + real-name verification required)
 
 #### SiliconFlow
 
@@ -487,6 +479,16 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: DeepSeek V4 Flash, GLM-5.2 (verified working), SenseNova 6.7 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation)
 - **Endpoint**: `https://token.sensenova.cn/v1` (OpenAI-compatible; Anthropic-compatible endpoint also available)
 - **Status**: Active (limited-time beta) — verified 2026-08-31 (phone signup; no card, no real-name)
+
+#### ModelScope (Alibaba)
+
+- **Official site**: https://modelscope.cn
+- **Free tier**: permanent (free inference for all registered users, ~2,000 req/day total, 100~500 req/day per model)
+- **What the site says**: Alibaba DAMO's open model community — "free inference for all registered users"; DeepSeek-R1 ~200 req/day
+- **Free models**: DeepSeek V4 Flash / R1, Qwen3 Coder 480B, Qwen3 235B, Qwen2.5 72B, GLM-4.5, MiniMax-M1 and ~3,000 open models
+- **Endpoint**: `https://api-inference.modelscope.cn/v1` (OpenAI-compatible)
+- **Status**: Active — verified 2026-09-02 (Alibaba Cloud account + real-name verification required)
+- **⚠️ Low-quality free tier**: only ~100–500 req/day per model, shares the 2,000 req/day total pool (busy days can be crowded out); personal / non-commercial use only; shared GPUs may queue, no SLA
 
 ### Aggregators & gateways
 

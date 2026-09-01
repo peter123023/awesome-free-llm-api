@@ -75,10 +75,10 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 |
-| [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产平台、注册即用、OpenAI 兼容;限制:每日总量 2000 次共享,单模型约 200 次/日 |
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### DeepSeek R1 / V3
 
@@ -87,10 +87,10 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
-| [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、注册即用;限制:每日总量 2000 次共享,R1 约 200 次/日 |
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 自研芯片加速、永久免费层;限制:30 RPM、每日约 20 万 token |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |
 | [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单按月轮换 |
+| [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### DeepSeek R2
 
@@ -109,7 +109,7 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
-| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、注册即用、模型全家桶;限制:与全站共享每日 2000 次 |
+| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### Qwen3 Coder 480B
 
@@ -117,8 +117,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、注册即用;限制:单模型约 500 次/日,共享总量 2000 次 |
 | [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、模型全;限制:免费质量较低——单模型约 500 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### Qwen3 235B
 
@@ -126,8 +126,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、注册即用;限制:单模型约 500 次/日,共享总量 2000 次 |
 | [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、模型全;限制:免费质量较低——单模型约 500 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### Qwen3.8 Flash
 
@@ -153,7 +153,7 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |
-| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、注册即用;限制:共享每日 2000 次 |
+| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### Qwen3-8B / GLM-4-9B
 
@@ -425,14 +425,6 @@
 
 ### 中国平台
 
-#### 魔搭 ModelScope（阿里）
-
-- **官网**：https://modelscope.cn
-- **免费形式**：永久免费（所有注册用户免费推理，每日总 2000 次，单模型 100~500 次/日不等）
-- **网页说明**：阿里达摩院开源模型社区，官网明确「所有注册用户均可免费推理」；DeepSeek-R1 约 200 次/日
-- **免费模型**：DeepSeek V4 Flash / R1、Qwen3 Coder 480B、Qwen3 235B、Qwen2.5 72B、GLM-4.5、MiniMax-M1 等近 3000 个开源模型
-- **接入**：`https://api-inference.modelscope.cn/v1`（OpenAI 兼容）
-- **状态**：Active — 核实于 2026-08-31（需阿里云账号 + 实名）
 
 #### 硅基流动 SiliconFlow
 
@@ -487,6 +479,16 @@
 - **免费模型**：DeepSeek V4 Flash、GLM-5.2（实测可调）、SenseNova 6.7 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）
 - **接入**：`https://token.sensenova.cn/v1`（OpenAI 兼容，亦支持 Anthropic 兼容端点）
 - **状态**：Active（限时公测）— 核实于 2026-08-31（手机号注册，免绑卡、免实名）
+
+#### 魔搭 ModelScope（阿里）
+
+- **官网**：https://modelscope.cn
+- **免费形式**：永久免费（所有注册用户免费推理，每日总 2000 次，单模型 100~500 次/日不等）
+- **网页说明**：阿里达摩院开源模型社区，官网明确「所有注册用户均可免费推理」；DeepSeek-R1 约 200 次/日
+- **免费模型**：DeepSeek V4 Flash / R1、Qwen3 Coder 480B、Qwen3 235B、Qwen2.5 72B、GLM-4.5、MiniMax-M1 等近 3000 个开源模型
+- **接入**：`https://api-inference.modelscope.cn/v1`（OpenAI 兼容）
+- **状态**：Active — 核实于 2026-09-02（需阿里云账号 + 实名）
+- **⚠️ 免费质量较低**：单模型仅 100~500 次/日，与全站共享每日 2000 次总量（高峰可能被挤占）；仅限个人学习与非商业用途；共享算力排队，无 SLA
 
 ### 聚合与网关
 
