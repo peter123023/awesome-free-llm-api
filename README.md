@@ -58,222 +58,305 @@
 
 ## 模型免费渠道索引
 
-> 想用哪个模型？每个模型一个表格：第一列是模型名称和官网地址，第二列是相关描述，第三列是它当前**所有免费渠道及免费形式**。
-> **排序规则：国产模型在前、免费额度高且稳定的在前，同级别中能力强的在前。**
-> 免费名单变动频繁，本索引为 **2026-09-02** 核实的快照；正式使用前请到对应官网二次确认。渠道详情（速率限制、接入地址、坑）见[免费渠道一览](#免费渠道一览)。
-
 ### DeepSeek 系列
 
 #### DeepSeek V4 Pro
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 旗舰 MoE,1M 上下文,编程与智能体场景最强
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [DeepSeek V4 Pro](https://deepseek.com) | 旗舰 MoE，1M 上下文，编程与智能体场景最强 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM 无每日上限 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM 无每日上限 | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享,高峰期需排队 |
 
 #### DeepSeek V4 Flash
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 284B MoE,1M 上下文,代码 / 推理性价比首选
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [DeepSeek V4 Flash](https://deepseek.com) | 284B MoE，1M 上下文，代码 / 推理性价比首选 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM；[魔搭 ModelScope](https://modelscope.cn)：约 200 次/日；[商汤 SenseNova](https://platform.sensenova.cn)：公测免费，每 5 小时 1500 次；[B.AI](https://b.ai)：限时免费（0 Credits）；[Hugging Face](https://huggingface.co)：共享端点限流 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产平台、注册即用、OpenAI 兼容;限制:每日总量 2000 次共享,单模型约 200 次/日 |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |
+| [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |
+| [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA |
 
 #### DeepSeek R1 / V3
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 深度推理模型 / 通用旗舰
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [DeepSeek R1 / V3](https://deepseek.com) | 深度推理模型 / 通用旗舰 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM；[魔搭 ModelScope](https://modelscope.cn)：R1 约 200 次/日；[SambaNova](https://cloud.sambanova.ai)：30 RPM；[Cloudflare](https://developers.cloudflare.com/workers-ai)：R1 蒸馏版，1 万 Neurons/日；[OpenRouter](https://openrouter.ai)：`:free` 名单轮换，可能不含 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
+| [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、注册即用;限制:每日总量 2000 次共享,R1 约 200 次/日 |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 自研芯片加速、永久免费层;限制:30 RPM、每日约 20 万 token |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |
+| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单按月轮换 |
 
 #### DeepSeek R2
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 新一代通用模型
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [DeepSeek R2](https://deepseek.com) | 新一代通用模型 | [火山方舟](https://console.volcengine.com/ark)：协作奖励计划免费额度内（每日 200 万 token，以控制台为准） |
+| [火山方舟](https://console.volcengine.com/ark) | 协作奖励计划免费额度内(每日 200 万 token) | 优势:每日 200 万 token 大额免费;限制:需注册火山引擎并实名,额度以控制台为准 |
 
 ### Qwen 系列
 
 #### Qwen3.5 122B / 397B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 阿里旗舰 MoE,多模态,智能体就绪
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3.5 122B / 397B](https://qwen.ai) | 阿里旗舰 MoE，多模态，智能体就绪 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM；[魔搭 ModelScope](https://modelscope.cn)：共享额度内 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
+| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、注册即用、模型全家桶;限制:与全站共享每日 2000 次 |
 
 #### Qwen3 Coder 480B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 代码专项 SOTA,Agent 编码
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3 Coder 480B](https://qwen.ai) | 代码专项 SOTA，Agent 编码 | [魔搭 ModelScope](https://modelscope.cn)：约 500 次/日；[OpenRouter](https://openrouter.ai)：`:free` 名单轮换 |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、注册即用;限制:单模型约 500 次/日,共享总量 2000 次 |
+| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Qwen3 235B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 通用 MoE 旗舰
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3 235B](https://qwen.ai) | 通用 MoE 旗舰 | [魔搭 ModelScope](https://modelscope.cn)：约 500 次/日；[OpenRouter](https://openrouter.ai)：`:free` 名单轮换 |
+| [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、注册即用;限制:单模型约 500 次/日,共享总量 2000 次 |
+| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Qwen3.8 Flash
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 轻量多模态,中文写作强
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3.8 Flash](https://qwen.ai) | 轻量多模态，中文写作强 | [B.AI](https://b.ai)：限时免费；[Groq](https://console.groq.com)：1000 次/日 |
+| [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |
+| [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理(700+ token/s);限制:30 RPM / 1000 RPD,TPM 8K |
 
 #### Qwen3.6 27B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 轻量通用,多语言
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3.6 27B](https://qwen.ai) | 轻量通用，多语言 | [Groq](https://console.groq.com)：1000 次/日 |
+| [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |
 
 #### Qwen2.5 72B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 通用大杯
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen2.5 72B](https://qwen.ai) | 通用大杯 | [SambaNova](https://cloud.sambanova.ai)：30 RPM；[魔搭 ModelScope](https://modelscope.cn)：共享额度内 |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |
+| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、注册即用;限制:共享每日 2000 次 |
 
 #### Qwen3-8B / GLM-4-9B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 9B 级轻量模型
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Qwen3-8B / GLM-4-9B](https://qwen.ai) | 9B 级轻量模型 | [硅基流动](https://cloud.siliconflow.cn)：9B 及以下永久免费 |
+| [硅基流动](https://cloud.siliconflow.cn) | 9B 及以下永久免费 | 优势:国产、9B 以下全免费;限制:仅小模型免费,大模型需付费 |
 
 ### GLM 系列
 
 #### GLM-5.3 Flash
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 原生多模态,320B,1M 上下文
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [GLM-5.3 Flash](https://z.ai) | 原生多模态，320B，1M 上下文 | [B.AI](https://b.ai)：限时免费（0 Credits） |
+| [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期,随时可能结束 |
 
 #### GLM 5.2 / 5.1
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 智能体工作流旗舰
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [GLM 5.2 / 5.1](https://z.ai) | 智能体工作流旗舰 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM；[商汤 SenseNova](https://platform.sensenova.cn)：公测免费（实测可调） |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 智谱免费引流款,200K 上下文
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [GLM-4.7-Flash / GLM-4-Flash](https://open.bigmodel.cn) | 智谱免费引流款，200K 上下文 | [智谱 BigModel](https://open.bigmodel.cn)：永久免费，仅限速 |
+| [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |
 
 ### 其他国产模型
 
 #### MiniMax M2.7
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 230B,代码 / 推理 / 办公
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [MiniMax M2.7](https://minimax.io) | 230B，代码 / 推理 / 办公 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
 
 #### MiniMax M3
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 多模态 MoE,推理 / 工具调用
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [MiniMax M3](https://minimax.io) | 多模态 MoE，推理 / 工具调用 | [NVIDIA NIM](https://build.nvidia.com)：永久免费（官方标注即将弃用，慎用） |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(官方标注即将弃用) | 优势:官方托管、免绑卡;限制:官网标注即将弃用,慎用 |
 
 #### Kimi K2.6
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 1T MoE,长程编码,多模态
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Kimi K2.6](https://www.moonshot.cn) | 1T MoE，长程编码，多模态 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 |
 
 #### StepFun Step 3.7 Flash
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 国产稀疏 MoE 推理模型
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [StepFun Step 3.7 Flash](https://www.stepfun.com) | 国产稀疏 MoE 推理模型 | [NVIDIA NIM](https://build.nvidia.com)：永久免费 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 |
 
 #### 豆包 Doubao Lite
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 字节轻量旗舰
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [豆包 Doubao Lite](https://www.volcengine.com/product/doubao) | 字节轻量旗舰 | [火山方舟](https://console.volcengine.com/ark)：每日 200 万 token 免费额度 |
+| [火山方舟](https://console.volcengine.com/ark) | 每日 200 万 token 免费额度 | 优势:每日 200 万 token 大额免费、国产;限制:需注册火山引擎并实名,以控制台为准 |
 
 #### 混元 Lite / Hy3
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 腾讯通用 / 旗舰
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [混元 Lite / Hy3](https://cloud.tencent.com/product/hunyuan) | 腾讯通用 / 旗舰 | [腾讯混元](https://cloud.tencent.com/product/hunyuan)：Lite 永久免费；[B.AI](https://b.ai)：Hy3 限时免费 |
+| [腾讯混元](https://cloud.tencent.com/product/hunyuan) | Lite 永久免费 | 优势:官方永久免费;限制:仅 Lite 免费,需腾讯云账号实名 |
+| [B.AI](https://b.ai) | Hy3 限时免费 | 优势:匿名免注册;限制:限时免费无截止日期 |
 
 #### ERNIE-Speed / Lite
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 文心轻量免费款
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [ERNIE-Speed / Lite](https://cloud.baidu.com/product/wenxinworkshop) | 文心轻量免费款 | [百度千帆](https://cloud.baidu.com/product/wenxinworkshop)：永久免费，限速 |
+| [百度千帆](https://cloud.baidu.com/product/wenxinworkshop) | 永久免费,限速 | 优势:官方永久免费;限制:QPS 限 1,需百度智能云账号实名 |
 
 #### MiMo-V2.5
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 小米多模态推理
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [MiMo-V2.5](https://github.com/XiaomiMiMo) | 小米多模态推理 | [B.AI](https://b.ai)：限时免费 |
+| [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |
 
 #### SenseNova 6.7 Flash-Lite
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 商汤原生多模态智能体
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [SenseNova 6.7 Flash-Lite](https://platform.sensenova.cn) | 商汤原生多模态智能体 | [商汤](https://platform.sensenova.cn)：公测免费，每 5 小时 1500 次 |
+| [商汤](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:官方自营、公测期免费额度大;限制:限时公测,付费档即将上线 |
 
 ### 海外模型
 
 #### GPT-OSS 120B / 20B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> OpenAI 开源 MoE,代码 / 推理强
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [GPT-OSS 120B / 20B](https://openai.com) | OpenAI 开源 MoE，代码 / 推理强 | [Groq](https://console.groq.com)：1000 次/日；[NVIDIA NIM](https://build.nvidia.com)：永久免费；[OpenRouter](https://openrouter.ai)：`:free` |
+| [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 |
+| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Gemini 2.5 Flash / Flash-Lite
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> Google 免费层主力,多模态
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Gemini 2.5 Flash / Flash-Lite](https://aistudio.google.com) | Google 免费层主力，多模态 | [Google AI Studio](https://aistudio.google.com)：按天重置（Flash 约 1500 次/日、Flash-Lite 约 1000 次/日） |
+| [Google AI Studio](https://aistudio.google.com) | 按天重置(Flash 约 1500 次/日、Flash-Lite 约 1000 次/日) | 优势:官方大额免费、免绑卡、多模态;限制:需 Google 账号,免费层数据可能用于改进产品 |
 
 #### Nemotron 3 Ultra / Super
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> NVIDIA 智能体旗舰,1M 上下文
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Nemotron 3 Ultra / Super](https://build.nvidia.com) | NVIDIA 智能体旗舰，1M 上下文 | [NVIDIA NIM](https://build.nvidia.com)：永久免费，40 RPM；[OpenRouter](https://openrouter.ai)：`:free` |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 |
+| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Llama 3.1 405B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 最大的开源模型
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Llama 3.1 405B](https://llama.com) | 最大的开源模型 | [SambaNova](https://cloud.sambanova.ai)：30 RPM |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:免费摸 405B 级模型、RDU 加速;限制:30 RPM、每日约 20 万 token |
 
 #### Llama 3.3 70B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 通用开源经典
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Llama 3.3 70B](https://llama.com) | 通用开源经典 | [SambaNova](https://cloud.sambanova.ai)：30 RPM；[Cloudflare](https://developers.cloudflare.com/workers-ai)：蒸馏版，1 万 Neurons/日 |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟;限制:蒸馏版非原版、每日额度小 |
 
 #### Llama 4 Scout
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 轻量高速,超长上下文
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Llama 4 Scout](https://llama.com) | 轻量高速，超长上下文 | [SambaNova](https://cloud.sambanova.ai)：30 RPM；[OpenRouter](https://openrouter.ai)：`:free` |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |
+| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Mistral Large / Small / Codestral
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 欧洲开源旗舰,编码 / 通用
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Mistral Large / Small / Codestral](https://mistral.ai) | 欧洲开源旗舰，编码 / 通用 | [Mistral](https://console.mistral.ai)：Experiment 免费层（约 10 亿 token/月）；[Cloudflare](https://developers.cloudflare.com/workers-ai)：Small，1 万 Neurons/日 |
+| [Mistral](https://console.mistral.ai) | Experiment 免费层(约 10 亿 token/月) | 优势:官方免费层、额度大;限制:免费数据默认用于训练(可关闭),无 SLA |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small,1 万 Neurons/日 | 优势:边缘低延迟;限制:仅 Small 版、每日额度小 |
 
 #### Gemma 4 31B
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> Google 开源,视觉 + 文本
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Gemma 4 31B](https://deepmind.google) | Google 开源，视觉 + 文本 | [NVIDIA NIM](https://build.nvidia.com)：永久免费；[OpenRouter](https://openrouter.ai)：`:free` |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 |
+| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |
 
 #### Whisper
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 语音转写
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Whisper](https://openai.com) | 语音转写 | [Groq](https://console.groq.com)：2000 次/日 |
+| [Groq](https://console.groq.com) | 2000 次/日 | 优势:LPU 极速转写;限制:20 RPM / 2000 RPD,音频时长限流 |
 
 #### Embedding 模型
 
-| 模型（官网） | 相关描述 | 免费渠道（免费形式） |
+> 向量化 / 检索
+
+| 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
-| [Embedding 模型](https://mistral.ai) | 向量化 / 检索 | [Mistral](https://console.mistral.ai)：Experiment 免费层；[Cloudflare](https://developers.cloudflare.com/workers-ai)：1 万 Neurons/日 |
+| [Mistral](https://console.mistral.ai) | Experiment 免费层 | 优势:官方免费层;限制:免费数据默认用于训练(可关闭) |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | 1 万 Neurons/日 | 优势:边缘低延迟;限制:每日额度小 |
+
 
 ## 免费渠道一览
-
-> 渠道是主角。每个渠道一条：**官网 + 免费形式 + 官网上的免费说明 + 免费模型**。
-> **排序规则：稳定的官方免费层在前，小型网关殿后；组内国内平台靠前。**
 
 ### 海外官方免费层
 

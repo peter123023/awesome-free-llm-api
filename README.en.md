@@ -58,222 +58,305 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ## Model Index
 
-> Want a specific model? One table per model: column 1 = model name + official site, column 2 = description, column 3 = every channel serving it **for free right now** and how.
-> **Ordering: China-native models first, generous & stable free tiers first, stronger models first within a tier.**
-> Free lineups rotate often. This index is a **2026-09-02** verified snapshot; re-check the provider's site before relying on it. Full channel details (rate limits, endpoint, gotchas) live in [Free Channels](#free-channels).
-
 ### DeepSeek family
 
 #### DeepSeek V4 Pro
 
-| Model (site) | Description | Free channels (free tier) |
+> Flagship MoE, 1M context, strongest for coding & agents
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [DeepSeek V4 Pro](https://deepseek.com) | Flagship MoE, 1M context, strongest for coding & agents | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM, no daily cap |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM, no daily cap | Pros: official, no credit card, no daily cap; Cons: 40 RPM shared across all models |
 
 #### DeepSeek V4 Flash
 
-| Model (site) | Description | Free channels (free tier) |
+> 284B MoE, 1M context, best value for code / reasoning
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [DeepSeek V4 Flash](https://deepseek.com) | 284B MoE, 1M context, best value for code / reasoning | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM; [ModelScope](https://modelscope.cn): ~200 req/day; [SenseNova](https://platform.sensenova.cn): free public beta, 1,500 req/5h; [B.AI](https://b.ai): limited-time free (0 Credits); [Hugging Face](https://huggingface.co): shared endpoint, rate-limited |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared |
+| [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, sign-up to use, OpenAI-compatible; Cons: 2,000 req/day shared total, ~200 per model |
+| [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |
+| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |
+| [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA |
 
 #### DeepSeek R1 / V3
 
-| Model (site) | Description | Free channels (free tier) |
+> Deep-reasoning model / general flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [DeepSeek R1 / V3](https://deepseek.com) | Deep-reasoning model / general flagship | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM; [ModelScope](https://modelscope.cn): R1 ~200 req/day; [SambaNova](https://cloud.sambanova.ai): 30 RPM; [Cloudflare](https://developers.cloudflare.com/workers-ai): R1 distilled, 10K Neurons/day; [OpenRouter](https://openrouter.ai): `:free` rotates, may be absent |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
+| [魔搭 ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, sign-up to use; Cons: shared 2,000/day, R1 ~200/day |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |
+| [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates monthly |
 
 #### DeepSeek R2
 
-| Model (site) | Description | Free channels (free tier) |
+> Next-gen general model
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [DeepSeek R2](https://deepseek.com) | Next-gen general model | [Volcengine Ark](https://console.volcengine.com/ark): within collaboration-plan free quota (2M tokens/day, check console) |
+| [火山方舟](https://console.volcengine.com/ark) | within collaboration-plan free quota (2M tokens/day) | Pros: large 2M tokens/day free quota; Cons: needs Volcengine account + real-name, check console |
 
 ### Qwen family
 
 #### Qwen3.5 122B / 397B
 
-| Model (site) | Description | Free channels (free tier) |
+> Alibaba flagship MoE, multimodal, agent-ready
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3.5 122B / 397B](https://qwen.ai) | Alibaba flagship MoE, multimodal, agent-ready | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM; [ModelScope](https://modelscope.cn): shared quota |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
+| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, sign-up to use, full Qwen family; Cons: shares 2,000 req/day pool |
 
 #### Qwen3 Coder 480B
 
-| Model (site) | Description | Free channels (free tier) |
+> SOTA coding model, agentic coding
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3 Coder 480B](https://qwen.ai) | SOTA coding model, agentic coding | [ModelScope](https://modelscope.cn): ~500 req/day; [OpenRouter](https://openrouter.ai): `:free` rotates |
+| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, sign-up to use; Cons: ~500/day, shares 2,000/day pool |
+| [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |
 
 #### Qwen3 235B
 
-| Model (site) | Description | Free channels (free tier) |
+> General-purpose MoE flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3 235B](https://qwen.ai) | General-purpose MoE flagship | [ModelScope](https://modelscope.cn): ~500 req/day; [OpenRouter](https://openrouter.ai): `:free` rotates |
+| [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, sign-up to use; Cons: ~500/day, shares 2,000/day pool |
+| [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |
 
 #### Qwen3.8 Flash
 
-| Model (site) | Description | Free channels (free tier) |
+> Lightweight multimodal, strong Chinese writing
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3.8 Flash](https://qwen.ai) | Lightweight multimodal, strong Chinese writing | [B.AI](https://b.ai): limited-time free; [Groq](https://console.groq.com): 1,000 req/day |
+| [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: no end date published |
+| [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast inference (700+ tok/s); Cons: 30 RPM / 1,000 RPD, 8K TPM |
 
 #### Qwen3.6 27B
 
-| Model (site) | Description | Free channels (free tier) |
+> Lightweight general, multilingual
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3.6 27B](https://qwen.ai) | Lightweight general, multilingual | [Groq](https://console.groq.com): 1,000 req/day |
+| [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |
 
 #### Qwen2.5 72B
 
-| Model (site) | Description | Free channels (free tier) |
+> General large model
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen2.5 72B](https://qwen.ai) | General large model | [SambaNova](https://cloud.sambanova.ai): 30 RPM; [ModelScope](https://modelscope.cn): shared quota |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
+| [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, sign-up to use; Cons: shares 2,000 req/day pool |
 
 #### Qwen3-8B / GLM-4-9B
 
-| Model (site) | Description | Free channels (free tier) |
+> 9B-class lightweight models
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Qwen3-8B / GLM-4-9B](https://qwen.ai) | 9B-class lightweight models | [SiliconFlow](https://cloud.siliconflow.cn): 9B-and-under permanently free |
+| [硅基流动](https://cloud.siliconflow.cn) | 9B-and-under permanently free | Pros: China-native, all 9B-and-under free; Cons: only small models free |
 
 ### GLM family
 
 #### GLM-5.3 Flash
 
-| Model (site) | Description | Free channels (free tier) |
+> Native multimodal, 320B, 1M context
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [GLM-5.3 Flash](https://z.ai) | Native multimodal, 320B, 1M context | [B.AI](https://b.ai): limited-time free (0 Credits) |
+| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |
 
 #### GLM 5.2 / 5.1
 
-| Model (site) | Description | Free channels (free tier) |
+> Agentic-workflow flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [GLM 5.2 / 5.1](https://z.ai) | Agentic-workflow flagship | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM; [SenseNova](https://platform.sensenova.cn): free public beta (verified working) |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
+| [商汤 SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
-| Model (site) | Description | Free channels (free tier) |
+> Zhipu's free lead-gen models, 200K context
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [GLM-4.7-Flash / GLM-4-Flash](https://open.bigmodel.cn) | Zhipu's free lead-gen models, 200K context | [Zhipu BigModel](https://open.bigmodel.cn): permanently free, rate-limited only |
+| [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |
 
 ### Other China-native models
 
 #### MiniMax M2.7
 
-| Model (site) | Description | Free channels (free tier) |
+> 230B, coding / reasoning / office
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [MiniMax M2.7](https://minimax.io) | 230B, coding / reasoning / office | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
 
 #### MiniMax M3
 
-| Model (site) | Description | Free channels (free tier) |
+> Multimodal MoE, reasoning / tool use
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [MiniMax M3](https://minimax.io) | Multimodal MoE, reasoning / tool use | [NVIDIA NIM](https://build.nvidia.com): permanent (deprecation notice on site, use with care) |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (deprecation notice on site) | Pros: official, no card; Cons: deprecation notice on site, use with care |
 
 #### Kimi K2.6
 
-| Model (site) | Description | Free channels (free tier) |
+> 1T MoE, long-horizon coding, multimodal
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Kimi K2.6](https://www.moonshot.cn) | 1T MoE, long-horizon coding, multimodal | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
 
 #### StepFun Step 3.7 Flash
 
-| Model (site) | Description | Free channels (free tier) |
+> China-native sparse-MoE reasoning model
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [StepFun Step 3.7 Flash](https://www.stepfun.com) | China-native sparse-MoE reasoning model | [NVIDIA NIM](https://build.nvidia.com): permanent |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared |
 
 #### Doubao Lite
 
-| Model (site) | Description | Free channels (free tier) |
+> ByteDance lightweight flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Doubao Lite](https://www.volcengine.com/product/doubao) | ByteDance lightweight flagship | [Volcengine Ark](https://console.volcengine.com/ark): 2M tokens/day free |
+| [火山方舟](https://console.volcengine.com/ark) | 2M tokens/day free | Pros: large 2M tokens/day quota, China-native; Cons: needs account + real-name, check console |
 
 #### Hunyuan Lite / Hy3
 
-| Model (site) | Description | Free channels (free tier) |
+> Tencent general / flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Hunyuan Lite / Hy3](https://cloud.tencent.com/product/hunyuan) | Tencent general / flagship | [Tencent Hunyuan](https://cloud.tencent.com/product/hunyuan): Lite permanently free; [B.AI](https://b.ai): Hy3 limited-time free |
+| [腾讯混元](https://cloud.tencent.com/product/hunyuan) | Lite permanently free | Pros: official, permanently free; Cons: Lite only, needs Tencent Cloud account |
+| [B.AI](https://b.ai) | Hy3 limited-time free | Pros: anonymous; Cons: limited-time, no end date |
 
 #### ERNIE-Speed / Lite
 
-| Model (site) | Description | Free channels (free tier) |
+> Baidu's free lightweight line
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [ERNIE-Speed / Lite](https://cloud.baidu.com/product/wenxinworkshop) | Baidu's free lightweight line | [Baidu Qianfan](https://cloud.baidu.com/product/wenxinworkshop): permanently free, rate-limited |
+| [百度千帆](https://cloud.baidu.com/product/wenxinworkshop) | permanently free, rate-limited | Pros: official, permanently free; Cons: QPS 1, needs Baidu Cloud account |
 
 #### MiMo-V2.5
 
-| Model (site) | Description | Free channels (free tier) |
+> Xiaomi multimodal reasoning
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [MiMo-V2.5](https://github.com/XiaomiMiMo) | Xiaomi multimodal reasoning | [B.AI](https://b.ai): limited-time free |
+| [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: limited-time, no end date |
 
 #### SenseNova 6.7 Flash-Lite
 
-| Model (site) | Description | Free channels (free tier) |
+> SenseTime native multimodal agent
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [SenseNova 6.7 Flash-Lite](https://platform.sensenova.cn) | SenseTime native multimodal agent | [SenseNova](https://platform.sensenova.cn): free public beta, 1,500 req/5h |
+| [商汤](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official, generous beta quota; Cons: limited-time beta, paid tiers coming |
 
 ### Global models
 
 #### GPT-OSS 120B / 20B
 
-| Model (site) | Description | Free channels (free tier) |
+> OpenAI open-weight MoE, coding / reasoning
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [GPT-OSS 120B / 20B](https://openai.com) | OpenAI open-weight MoE, coding / reasoning | [Groq](https://console.groq.com): 1,000 req/day; [NVIDIA NIM](https://build.nvidia.com): permanent; [OpenRouter](https://openrouter.ai): `:free` |
+| [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared |
+| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |
 
 #### Gemini 2.5 Flash / Flash-Lite
 
-| Model (site) | Description | Free channels (free tier) |
+> Google's free-tier workhorse, multimodal
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Gemini 2.5 Flash / Flash-Lite](https://aistudio.google.com) | Google's free-tier workhorse, multimodal | [Google AI Studio](https://aistudio.google.com): daily reset (Flash ~1,500 req/day, Flash-Lite ~1,000 req/day) |
+| [Google AI Studio](https://aistudio.google.com) | daily reset (Flash ~1,500 req/day, Flash-Lite ~1,000 req/day) | Pros: official, large free quota, no card, multimodal; Cons: needs Google account, free-tier data may be used for product improvement |
 
 #### Nemotron 3 Ultra / Super
 
-| Model (site) | Description | Free channels (free tier) |
+> NVIDIA agentic flagship, 1M context
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Nemotron 3 Ultra / Super](https://build.nvidia.com) | NVIDIA agentic flagship, 1M context | [NVIDIA NIM](https://build.nvidia.com): permanent, 40 RPM; [OpenRouter](https://openrouter.ai): `:free` |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared |
+| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |
 
 #### Llama 3.1 405B
 
-| Model (site) | Description | Free channels (free tier) |
+> The largest open-weight model
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Llama 3.1 405B](https://llama.com) | The largest open-weight model | [SambaNova](https://cloud.sambanova.ai): 30 RPM |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: free access to 405B-class, RDU-accelerated; Cons: 30 RPM, ~200K tokens/day |
 
 #### Llama 3.3 70B
 
-| Model (site) | Description | Free channels (free tier) |
+> Classic general-purpose open model
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Llama 3.3 70B](https://llama.com) | Classic general-purpose open model | [SambaNova](https://cloud.sambanova.ai): 30 RPM; [Cloudflare](https://developers.cloudflare.com/workers-ai): distilled, 10K Neurons/day |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | distilled, 10K Neurons/day | Pros: low-latency edge; Cons: distilled not original, small daily quota |
 
 #### Llama 4 Scout
 
-| Model (site) | Description | Free channels (free tier) |
+> Fast & light, huge context
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Llama 4 Scout](https://llama.com) | Fast & light, huge context | [SambaNova](https://cloud.sambanova.ai): 30 RPM; [OpenRouter](https://openrouter.ai): `:free` |
+| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |
+| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |
 
 #### Mistral Large / Small / Codestral
 
-| Model (site) | Description | Free channels (free tier) |
+> European open flagships, coding / general
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Mistral Large / Small / Codestral](https://mistral.ai) | European open flagships, coding / general | [Mistral](https://console.mistral.ai): Experiment tier (~1B tokens/month); [Cloudflare](https://developers.cloudflare.com/workers-ai): Small, 10K Neurons/day |
+| [Mistral](https://console.mistral.ai) | Experiment tier (~1B tokens/month) | Pros: official free tier, large quota; Cons: free-tier data used for training by default (can opt out), no SLA |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small, 10K Neurons/day | Pros: low-latency edge; Cons: Small only, small daily quota |
 
 #### Gemma 4 31B
 
-| Model (site) | Description | Free channels (free tier) |
+> Google open model, vision + text
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Gemma 4 31B](https://deepmind.google) | Google open model, vision + text | [NVIDIA NIM](https://build.nvidia.com): permanent; [OpenRouter](https://openrouter.ai): `:free` |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared |
+| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |
 
 #### Whisper
 
-| Model (site) | Description | Free channels (free tier) |
+> Speech-to-text
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Whisper](https://openai.com) | Speech-to-text | [Groq](https://console.groq.com): 2,000 req/day |
+| [Groq](https://console.groq.com) | 2,000 req/day | Pros: LPU ultra-fast transcription; Cons: 20 RPM / 2,000 RPD, audio-hours limited |
 
 #### Embedding models
 
-| Model (site) | Description | Free channels (free tier) |
+> Vectorization / retrieval
+
+| Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
-| [Embedding models](https://mistral.ai) | Vectorization / retrieval | [Mistral](https://console.mistral.ai): Experiment tier; [Cloudflare](https://developers.cloudflare.com/workers-ai): 10K Neurons/day |
+| [Mistral](https://console.mistral.ai) | Experiment tier | Pros: official free tier; Cons: free-tier data used for training by default (can opt out) |
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | 10K Neurons/day | Pros: low-latency edge; Cons: small daily quota |
+
 
 ## Free Channels
-
-> Channels are the protagonists. One entry per channel: **official site + free tier + what the site itself says about free access + free models**.
-> **Ordering: stable official free tiers first, small gateways last; China platforms sit before other gateways within their group.**
 
 ### Official free tiers (global)
 
