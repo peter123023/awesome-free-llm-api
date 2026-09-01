@@ -99,6 +99,32 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|
 | [火山方舟](https://console.volcengine.com/ark) | within collaboration-plan free quota (2M tokens/day) | Pros: large 2M tokens/day free quota; Cons: needs Volcengine account + real-name, check console |
 
+### GLM family
+
+#### GLM-5.3 Flash
+
+> Native multimodal, 320B, 1M context
+
+| Free channel (site) | Free tier | Pros / Cons |
+|------|------|------|
+| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |
+
+#### GLM 5.2 / 5.1
+
+> Agentic-workflow flagship
+
+| Free channel (site) | Free tier | Pros / Cons |
+|------|------|------|
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
+| [商汤 SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |
+
+#### GLM-4.7-Flash / GLM-4-Flash
+
+> Zhipu's free lead-gen models, 200K context
+
+| Free channel (site) | Free tier | Pros / Cons |
+|------|------|------|
+| [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |
 ### Qwen family
 
 #### Qwen3.5 122B / 397B
@@ -162,32 +188,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|
 | [硅基流动](https://cloud.siliconflow.cn) | 9B-and-under permanently free | Pros: China-native, all 9B-and-under free; Cons: only small models free |
 
-### GLM family
-
-#### GLM-5.3 Flash
-
-> Native multimodal, 320B, 1M context
-
-| Free channel (site) | Free tier | Pros / Cons |
-|------|------|------|
-| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |
-
-#### GLM 5.2 / 5.1
-
-> Agentic-workflow flagship
-
-| Free channel (site) | Free tier | Pros / Cons |
-|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared |
-| [商汤 SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |
-
-#### GLM-4.7-Flash / GLM-4-Flash
-
-> Zhipu's free lead-gen models, 200K context
-
-| Free channel (site) | Free tier | Pros / Cons |
-|------|------|------|
-| [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |
 
 ### Other China-native models
 
