@@ -15,7 +15,6 @@ This list covers only APIs you can **keep calling** for free — **permanently f
 
 ## Table of Contents
 
-- [Disclaimer](#disclaimer)
 - [Scope](#scope)
 - [Model Index](#model-index)
 - [Free Channels](#free-channels)
@@ -25,23 +24,10 @@ This list covers only APIs you can **keep calling** for free — **permanently f
   - [Limited-time free](#limited-time-free)
   - [Small gateways (use with care)](#small-gateways-use-with-care)
 - [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
 - [License](#license)
 
 ---
-
-## Disclaimer
-
-> **Quotas, rate limits, and terms on this page can change at any time without notice.**
-> This list is a snapshot. Always double-check the official pricing page before shipping anything to production.
-
-Known sources of drift, flagged explicitly in each entry:
-
-- **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
-- **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's limited-time models) publish no end date.
-- **Some "free" tiers require a credit card**, a phone number, or real-name verification.
-- **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
-- **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
-- **"Free signup credits" ≠ free.** DeepSeek's official signup grant is confirmed gone (balance 0 as of 2026-08-31); the official channel is now "cheap", not "free".
 
 ## Scope
 
@@ -557,6 +543,20 @@ Found a new permanent-free or limited-time-free channel? Quota changed? Help kee
 - When a channel loses free access entirely, mark the entry **Archived** (with a date) instead of silently deleting it.
 
 Full template and rules: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Disclaimer
+
+> **Quotas, rate limits, and terms on this page can change at any time without notice.**
+> This list is a snapshot. Always double-check the official pricing page before shipping anything to production.
+
+Known sources of drift, flagged explicitly in each entry:
+
+- **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
+- **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's limited-time models) publish no end date.
+- **Some "free" tiers require a credit card**, a phone number, or real-name verification.
+- **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
+- **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
+- **"Free signup credits" ≠ free.** DeepSeek's official signup grant is confirmed gone (balance 0 as of 2026-08-31); the official channel is now "cheap", not "free".
 
 ## License
 
