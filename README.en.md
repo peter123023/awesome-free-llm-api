@@ -10,7 +10,6 @@
 
 This list covers only APIs you can **keep calling** for free — **permanently free** tiers and models, plus APIs **explicitly labeled limited-time free**. **API access only**: it must be programmable via an API key and an HTTP endpoint. A free web chat UI (e.g. a provider's chat page) does **not** count.
 
-Free LLM API info rots fast. Quotas change, rate limits get cut, and "free forever" becomes "free until next quarter". This list tries to stay honest about it: every channel carries a **status tag**, and all data here was verified on 2026-08-31.
 
 ---
 
