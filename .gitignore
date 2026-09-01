@@ -1,0 +1,14 @@
+# Local agent workspace data — not part of the public repo
+.workbuddy/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (if examples are added later)
+node_modules/
