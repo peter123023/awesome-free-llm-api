@@ -63,6 +63,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | ~$10/day credits | Pros: official AMD GPU hosting, OpenAI-compatible, no card; Cons: resets daily, high TTFT (~22s), rate-limited |
 | [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only |
 
 #### DeepSeek R1 / V3
@@ -94,6 +95,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons |
 |------|------|------|
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited |
 
 #### GLM 5.2 / 5.1
 
@@ -148,6 +150,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|
 | [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: no end date published |
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast inference (700+ tok/s); Cons: 30 RPM / 1,000 RPD, 8K TPM |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (Qwen3.8-Flash-Next) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited |
 
 #### Qwen3.6 27B
 
@@ -407,6 +410,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: thousands of community & official models (incl. DeepSeek V4 Flash)
 - **Endpoint**: `https://router.huggingface.co/hf-inference` (`InferenceClient` / REST)
 - **Status**: Active — verified 2026-08-31
+
+#### AMD Token Factory (Radeon Cloud)
+
+- **Official site**: https://developer.amd.com.cn/radeon/tokenfactory
+- **Free tier**: ~$10 worth of credits daily, resets each day
+- **What the site says**: AMD Radeon Cloud's official inference platform; log in to claim a daily free quota, OpenAI-compatible
+- **Free models**: DeepSeek V4 Flash 0731 (Free), MiniCPM5-1B (Free), GLM-5.3-Flash (limited, ZZ.ai), Qwen3.8-Flash-Next (limited, AMD GPU Cloud)
+- **Endpoint**: `https://developer.amd.com.cn/radeon/api/v1` (OpenAI-compatible)
+- **Status**: Active — verified 2026-09-02 (high TTFT, ~22s first-token latency)
 
 ### China platforms
 

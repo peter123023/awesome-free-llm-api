@@ -64,6 +64,7 @@
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 |
 
 #### DeepSeek R1 / V3
@@ -95,6 +96,7 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 |
 |------|------|------|
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期,随时可能结束 |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 |
 
 #### GLM 5.2 / 5.1
 
@@ -149,6 +151,7 @@
 |------|------|------|
 | [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理(700+ token/s);限制:30 RPM / 1000 RPD,TPM 8K |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(Qwen3.8-Flash-Next) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 |
 
 #### Qwen3.6 27B
 
@@ -408,6 +411,15 @@
 - **免费模型**：数千个社区与官方模型（DeepSeek V4 Flash 等也在列）
 - **接入**：`https://router.huggingface.co/hf-inference`（`InferenceClient` / REST）
 - **状态**：Active — 核实于 2026-08-31
+
+#### AMD Token Factory（Radeon Cloud）
+
+- **官网**：https://developer.amd.com.cn/radeon/tokenfactory
+- **免费形式**：每日约 $10 美元等值额度，每日重置（不过夜）
+- **网页说明**：AMD Radeon Cloud 官方推理平台，注册登录领取每日免费额度，OpenAI 兼容
+- **免费模型**：DeepSeek V4 Flash 0731（Free）、MiniCPM5-1B（Free）、GLM-5.3-Flash（限时，ZZ.ai）、Qwen3.8-Flash-Next（限时，AMD GPU Cloud）
+- **接入**：`https://developer.amd.com.cn/radeon/api/v1`（OpenAI 兼容）
+- **状态**：Active — 核实于 2026-09-02（TTFT 偏高，首字延迟约 22 秒）
 
 ### 中国平台
 
