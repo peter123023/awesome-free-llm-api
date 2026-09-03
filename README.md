@@ -59,7 +59,7 @@
 > 284B MoE,1M 上下文,代码 / 推理性价比首选
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
+|---------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 | TTFT 偏高 |
