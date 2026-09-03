@@ -60,12 +60,12 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
-| [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 | TTFT 偏高 |
+| [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### DeepSeek R1 / V3
 
@@ -73,11 +73,11 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 自研芯片加速、永久免费层;限制:30 RPM、每日约 20 万 token |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |  |
 | [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单按月轮换 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### DeepSeek R2
 
@@ -104,8 +104,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
@@ -114,6 +114,7 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
+
 ### Qwen 系列
 
 #### Qwen3.5 122B / 397B
@@ -122,8 +123,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Qwen3 Coder 480B
 
@@ -263,8 +264,8 @@
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Gemini 2.5 Flash / Flash-Lite
 
@@ -280,8 +281,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Llama 3.1 405B
 
@@ -324,8 +325,8 @@
 
 | 免费渠道（官网） | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Whisper
 

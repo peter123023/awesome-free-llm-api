@@ -59,12 +59,12 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |  |
-| [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | ~$10/day credits | Pros: official AMD GPU hosting, OpenAI-compatible, no card; Cons: resets daily, high TTFT (~22s), rate-limited | High TTFT |
+| [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
 | [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### DeepSeek R1 / V3
 
@@ -72,11 +72,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
 | [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates monthly |  |
 | [魔搭 ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### DeepSeek R2
 
@@ -103,8 +103,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
@@ -113,6 +113,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |  |
+
 ### Qwen family
 
 #### Qwen3.5 122B / 397B
@@ -121,8 +122,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Qwen3 Coder 480B
 
@@ -262,8 +263,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Gemini 2.5 Flash / Flash-Lite
 
@@ -279,8 +280,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Llama 3.1 405B
 
@@ -323,8 +324,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel (site) | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Whisper
 
