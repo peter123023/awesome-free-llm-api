@@ -59,9 +59,8 @@
 > 284B MoE,1M 上下文,代码 / 推理性价比首选
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|---------|------|------|------|
+|------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
-| [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、免绑卡、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 | TTFT 偏高 |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
@@ -514,11 +513,11 @@
 #### B.AI
 
 - **官网**：https://b.ai · API 文档：https://b.ai/docs
-- **免费形式**：限时免费（6 个模型活动期 0 Credits，官方公告页标注，**无公开截止日期，随时可能结束**）
-- **网页说明**：AI Agent 基础设施平台；官网「活动与调整公告」明确 6 个模型按 0 Credits 结算；API 兼容 OpenAI / Anthropic 协议
-- **免费模型**：DeepSeek V4 Flash、DeepSeek V4 Flash Vision Exp（仅 API）、GLM-5.3-Flash、Qwen3.8 Flash、Hy3、MiMo-V2.5
+- **免费形式**：限时免费（4 个模型 0 Credits；**无公开截止日期，随时可能结束**）
+- **网页说明**：AI Agent 基础设施平台；API 兼容 OpenAI / Anthropic 协议。**2026-09-03 起 DeepSeek V4 Flash 与 Vision Exp 已结束免费**，改为阶梯折扣（高峰 5 折、空闲低至官方价 2.5 折），其余 4 个模型仍为 0 Credits
+- **免费模型**：GLM-5.3-Flash（Ox Alpha）、Qwen3.8 Flash、Hy3、MiMo-V2.5
 - **接入**：`https://api.b.ai/v1`（国内访问不畅时用备用域名 `api.bankofai.io`，OpenAI 兼容）
-- **状态**：Active（限时）— 核实于 2026-09-02
+- **状态**：Active（限时）— 核实于 2026-09-04
 
 ### 小型网关（谨慎）
 

@@ -60,7 +60,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
-| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | ~$10/day credits | Pros: official AMD GPU hosting, OpenAI-compatible, no card; Cons: resets daily, high TTFT (~22s), rate-limited | High TTFT |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
 | [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -513,11 +512,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### B.AI
 
 - **Official site**: https://b.ai · API docs: https://b.ai/docs
-- **Free tier**: limited-time (6 models at 0 Credits during the promo, per the official announcement page; **no published end date, can end anytime**)
-- **What the site says**: AI-agent infrastructure platform; the "activities & adjustments" page states these 6 models settle at 0 Credits; API is OpenAI- and Anthropic-compatible
-- **Free models**: DeepSeek V4 Flash, DeepSeek V4 Flash Vision Exp (API only), GLM-5.3-Flash, Qwen3.8 Flash, Hy3, MiMo-V2.5
+- **Free tier**: limited-time (4 models at 0 Credits; **no published end date, can end anytime**)
+- **What the site says**: AI-agent infrastructure platform; API is OpenAI- and Anthropic-compatible. **Since 2026-09-03 DeepSeek V4 Flash and Vision Exp are no longer free** — they moved to tiered discounts (50% off at peak, down to 25% of list price off-peak); the other 4 models remain at 0 Credits
+- **Free models**: GLM-5.3-Flash (Ox Alpha), Qwen3.8 Flash, Hy3, MiMo-V2.5
 - **Endpoint**: `https://api.b.ai/v1` (use `api.bankofai.io` if the main domain is unreachable from China; OpenAI-compatible)
-- **Status**: Active (limited-time) — verified 2026-09-02
+- **Status**: Active (limited-time) — verified 2026-09-04
 
 ### Small gateways (use with care)
 
