@@ -49,7 +49,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Flagship MoE, 1M context, strongest for coding & agents
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM, no daily cap | Pros: official, no credit card, no daily cap; Cons: 40 RPM shared across all models | Frequent timeouts |
 
@@ -57,7 +57,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > 284B MoE, 1M context, best value for code / reasoning
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, no signup/card, $0 output; Cons: no end date published, could end anytime |  |
@@ -70,7 +70,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Deep-reasoning model / general flagship
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
@@ -82,7 +82,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Next-gen general model
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [火山方舟](https://console.volcengine.com/ark) | within collaboration-plan free quota (2M tokens/day) | Pros: large 2M tokens/day free quota; Cons: needs Volcengine account + real-name, check console |  |
 
@@ -92,7 +92,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Native multimodal, 320B, 1M context
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
@@ -101,7 +101,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Agentic-workflow flagship
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
@@ -110,7 +110,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Zhipu's free lead-gen models, 200K context
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |  |
 
@@ -120,7 +120,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Alibaba flagship MoE, multimodal, agent-ready
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
@@ -129,7 +129,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > SOTA coding model, agentic coding
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |  |
 | [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -138,7 +138,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > General-purpose MoE flagship
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |  |
 | [魔搭 ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -147,7 +147,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Lightweight multimodal, strong Chinese writing
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: no end date published |  |
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast inference (700+ tok/s); Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
@@ -157,7 +157,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Lightweight general, multilingual
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
 
@@ -165,7 +165,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > General large model
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -174,7 +174,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > 9B-class lightweight models
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [硅基流动](https://cloud.siliconflow.cn) | 9B-and-under permanently free | Pros: China-native, all 9B-and-under free; Cons: only small models free |  |
 
@@ -185,7 +185,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > 230B, coding / reasoning / office
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -193,7 +193,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Multimodal MoE, reasoning / tool use
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (deprecation notice on site) | Pros: official, no card; Cons: deprecation notice on site, use with care | Frequent timeouts |
 
@@ -201,7 +201,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > 1T MoE, long-horizon coding, multimodal
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -209,7 +209,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > China-native sparse-MoE reasoning model
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -217,7 +217,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > ByteDance lightweight flagship
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [火山方舟](https://console.volcengine.com/ark) | 2M tokens/day free | Pros: large 2M tokens/day quota, China-native; Cons: needs account + real-name, check console |  |
 
@@ -225,7 +225,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Tencent general / flagship
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [腾讯混元](https://cloud.tencent.com/product/hunyuan) | Lite permanently free | Pros: official, permanently free; Cons: Lite only, needs Tencent Cloud account |  |
 | [B.AI](https://b.ai) | Hy3 limited-time free | Pros: anonymous; Cons: limited-time, no end date |  |
@@ -234,7 +234,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Baidu's free lightweight line
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [百度千帆](https://cloud.baidu.com/product/wenxinworkshop) | permanently free, rate-limited | Pros: official, permanently free; Cons: QPS 1, needs Baidu Cloud account |  |
 
@@ -242,7 +242,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Xiaomi multimodal reasoning
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: limited-time, no end date |  |
 
@@ -250,7 +250,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > SenseTime native multimodal agent
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [商汤](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
 
@@ -260,7 +260,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > OpenAI open-weight MoE, coding / reasoning
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
@@ -270,7 +270,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Google's free-tier workhorse, multimodal
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Google AI Studio](https://aistudio.google.com) | daily reset (Flash ~1,500 req/day, Flash-Lite ~1,000 req/day) | Pros: official, large free quota, no card, multimodal; Cons: needs Google account, free-tier data may be used for product improvement |  |
 
@@ -278,7 +278,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > NVIDIA agentic flagship, 1M context
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
@@ -287,7 +287,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > The largest open-weight model
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: free access to 405B-class, RDU-accelerated; Cons: 30 RPM, ~200K tokens/day |  |
 
@@ -295,7 +295,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Classic general-purpose open model
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | distilled, 10K Neurons/day | Pros: low-latency edge; Cons: distilled not original, small daily quota |  |
@@ -304,7 +304,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Fast & light, huge context
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
@@ -313,7 +313,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > European open flagships, coding / general
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Mistral](https://console.mistral.ai) | Experiment tier (~1B tokens/month) | Pros: official free tier, large quota; Cons: free-tier data used for training by default (can opt out), no SLA |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small, 10K Neurons/day | Pros: low-latency edge; Cons: Small only, small daily quota |  |
@@ -322,7 +322,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Google open model, vision + text
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
@@ -331,7 +331,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Speech-to-text
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 2,000 req/day | Pros: LPU ultra-fast transcription; Cons: 20 RPM / 2,000 RPD, audio-hours limited |  |
 
@@ -339,7 +339,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 > Vectorization / retrieval
 
-| Free channel (site) | Free tier | Pros / Cons | API quality |
+| Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Mistral](https://console.mistral.ai) | Experiment tier | Pros: official free tier; Cons: free-tier data used for training by default (can opt out) |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 10K Neurons/day | Pros: low-latency edge; Cons: small daily quota |  |
