@@ -61,6 +61,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 | TTFT 偏高 |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
@@ -72,7 +73,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 自研芯片加速、永久免费层;限制:30 RPM、每日约 20 万 token |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |  |
 | [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单按月轮换 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
@@ -95,6 +95,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 
 #### GLM 5.2 / 5.1
@@ -113,6 +114,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
 ### Qwen 系列
 
@@ -167,7 +169,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
 
 #### Qwen3-8B / GLM-4-9B
@@ -195,6 +196,8 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(官方标注即将弃用) | 优势:官方托管、免绑卡;限制:官网标注即将弃用,慎用 | 经常超时 |
 
 #### Kimi K2.6
@@ -203,6 +206,8 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### StepFun Step 3.7 Flash
@@ -229,6 +234,7 @@
 |------|------|------|------|
 | [腾讯混元](https://cloud.tencent.com/product/hunyuan) | Lite 永久免费 | 优势:官方永久免费;限制:仅 Lite 免费,需腾讯云账号实名 |  |
 | [B.AI](https://b.ai) | Hy3 限时免费 | 优势:匿名免注册;限制:限时免费无截止日期 |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
 #### ERNIE-Speed / Lite
 
@@ -245,6 +251,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
 #### SenseNova 6.7 Flash-Lite
 
@@ -264,6 +271,8 @@
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Gemini 2.5 Flash / Flash-Lite
@@ -281,15 +290,9 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
-
-#### Llama 3.1 405B
-
-> 最大的开源模型
-
-| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:免费摸 405B 级模型、RDU 加速;限制:30 RPM、每日约 20 万 token |  |
 
 #### Llama 3.3 70B
 
@@ -297,7 +300,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟;限制:蒸馏版非原版、每日额度小 |  |
 
 #### Llama 4 Scout
@@ -306,7 +308,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | 优势:RDU 加速、永久免费层;限制:30 RPM、每日约 20 万 token |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
 
 #### Mistral Large / Small / Codestral
@@ -325,6 +326,8 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 
 #### Whisper
@@ -385,15 +388,6 @@
 - **接入**：`https://api.mistral.ai/v1`
 - **状态**：Active — 核实于 2026-08-31
 
-#### SambaNova
-
-- **官网**：https://cloud.sambanova.ai
-- **免费形式**：永久免费层（30 RPM，每日约 20 万 token，不限总量）
-- **网页说明**：RDU 自研芯片推理，官网提供永久免费层，是少数能免费摸到 405B 级模型的地方
-- **免费模型**：Llama 3.1 405B、Llama 3.3 70B、Llama 4 Scout、Qwen 2.5 72B、DeepSeek R1 / V3 等
-- **接入**：`https://api.sambanova.ai/v1`（OpenAI 兼容）
-- **状态**：Active — 核实于 2026-09-02
-
 #### Cloudflare Workers AI
 
 - **官网**：https://developers.cloudflare.com/workers-ai
@@ -420,6 +414,15 @@
 - **免费模型**：DeepSeek V4 Flash 0731（Free）、MiniCPM5-1B（Free）、GLM-5.3-Flash（限时，ZZ.ai）、Qwen3.8-Flash-Next（限时，AMD GPU Cloud）
 - **接入**：`https://developer.amd.com.cn/radeon/api/v1`（OpenAI 兼容）
 - **状态**：Active — 核实于 2026-09-02（TTFT 偏高，首字延迟约 22 秒）
+
+#### Ollama Cloud
+
+- **官网**：https://ollama.com（云模型目录：https://ollama.com/search?c=cloud）
+- **免费形式**：永久免费层（Free 档注册即含 starter 用量额度，按月刷新不过期；具体数额未公开）
+- **网页说明**：官网定价页 Free 档 $0 —— "Starter usage credits included / Access to starter models"；云模型按 token 计价从额度扣除，加 credits 可解锁全部模型
+- **免费模型**：deepseek-v4-flash、gemma4、glm-5.3-flash、gpt-oss:20b/120b、kimi-k2.6、minimax-m3、nemotron-3-super/ultra 等（starter 模型集合以官网为准）
+- **接入**：`https://ollama.com/api/chat`（Ollama API；API Key：https://ollama.com/settings/keys）
+- **状态**：Active — 核实于 2026-09-05（免费额度为月度 starter 用量、数额未公开；仅 1 并发）
 
 ### 中国平台
 
@@ -469,6 +472,15 @@
 - **接入**：`https://qianfan.baidubce.com/v2`（OpenAI 兼容）
 - **状态**：Active — 核实于 2026-08-31（需实名）
 
+#### 讯飞星火
+
+- **官网**：https://xinghuo.xfyun.cn/sparkapi
+- **免费形式**：永久免费模型（Spark Lite 无限 Token，仅限速 QPS 2）
+- **网页说明**：讯飞官方开放平台；Spark Lite 个人实名认证后永久免费、不限 Token
+- **免费模型**：Spark Lite（轻量基础版，无限 Token，QPS 2）
+- **接入**：https://xinghuo.xfyun.cn/sparkapi（讯飞 APIKey/APISecret 鉴权；OpenAI 兼容端点见官方文档）
+- **状态**：Active — 核实于 2026-09-05（需实名）
+
 #### 商汤 SenseNova（日日新）
 
 - **官网**：https://platform.sensenova.cn · Token Plan：https://www.sensenova.cn/token-plan
@@ -499,14 +511,25 @@
 - **接入**：`https://openrouter.ai/api/v1`（模型名务必带 `:free` 后缀）
 - **状态**：Active — 核实于 2026-08-31
 
-#### Chutes
+#### AIHubMix
 
-- **官网**：https://chutes.ai
-- **免费形式**：社区 GPU 免费端点（新模型发布后常短期免费）
-- **网页说明**：社区 GPU 市场，热门新模型上架初期提供免费调用
-- **免费模型**：新发布开源模型（DeepSeek V4 Flash 当前是否在免费名单**未确认**，未列入索引）
-- **接入**：见官方文档
-- **状态**：Active（额度随时可能下架）— 核实于 2026-09-02
+- **官网**：https://aihubmix.com（免费模型专页：https://aihubmix.com/models/free）
+- **免费形式**：免费模型档（注册送 10 次试用、不过期；一次性充值 $1 起即永久转每日配额：100 次/日 · 1M token/日，每日重置）
+- **网页说明**：官网标注「56 free models — no credit card required」——平台补贴推理成本，免费模型输入输出均 $0
+- **免费模型**：glm-4.7-flash-free、hy3-free、minimax-m3-free、k2.6-code-preview-free、gpt-oss-20b-free、nemotron-3-ultra/super-free、gemma-4-31b-it-free、mimo-v2.5(-pro)-free、coding-glm-5.3-free、gpt-5.5-free、gemini-3.8-flash-free 等 56 个
+- **接入**：`https://aihubmix.com/v1`（兼容 Chat Completions / Messages / Responses 三协议）
+- **状态**：Active — 核实于 2026-09-05（充值 $1 才转每日配额；全免费模型共享额度池）
+
+#### ~~Chutes~~（已失效）
+
+~~已失效（2026-09-05 核实）：定价页 14 个模型全部标价（DeepSeek V4 Flash 0731 $0.44/$1.32），未发现免费端点；内容保留备查。~~
+
+- ~~**官网**：https://chutes.ai~~
+- ~~**免费形式**：社区 GPU 免费端点（新模型发布后常短期免费）~~
+- ~~**网页说明**：社区 GPU 市场，热门新模型上架初期提供免费调用~~
+- ~~**免费模型**：新发布开源模型（DeepSeek V4 Flash 当前是否在免费名单**未确认**，未列入索引）~~
+- ~~**接入**：见官方文档~~
+- ~~**状态**：Active（额度随时可能下架）— 核实于 2026-09-02~~
 
 ### 限时免费
 
@@ -531,21 +554,13 @@
 - **免费模型**：DeepSeek V4 Flash、Mimo2.5
 - **状态**：Active（小型网关）— 核实于 2026-08-31
 
-#### OpenModel
-
-- **官网**：https://console.openmodel.ai
-- **免费形式**：DeepSeek V4 Flash 免费
-- **网页说明**：小型网关，提供 Anthropic 兼容端点
-- **免费模型**：DeepSeek V4 Flash
-- **状态**：Active（小型网关）— 核实于 2026-08-31
-
 #### BazaarLink
 
 - **官网**：https://bazaarlink.ai
-- **免费形式**：Qwen3.7 Flash 免费（全站目前仅此一个免费模型）
+- **免费形式**：~~Qwen3.7 Flash 免费（全站目前仅此一个免费模型）~~ ⚠️ **已转付费**（定价页 2026-08-06 更新：$0.03 入 / $0.13 出 per 1M）
 - **网页说明**：小型网关，免绑卡；GPT / Gemini 等模型为折扣价而非免费
-- **免费模型**：Qwen3.7 Flash
-- **状态**：Active（小型网关）— 核实于 2026-08-31
+- **免费模型**：Qwen3.7 Flash（已转付费）
+- **状态**：~~Active（小型网关）— 核实于 2026-08-31~~ **已失效（2026-09-05）** —— 不再符合免费收录标准，条目保留备查
 
 ## 参与贡献
 

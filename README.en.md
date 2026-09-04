@@ -60,6 +60,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | ~$10/day credits | Pros: official AMD GPU hosting, OpenAI-compatible, no card; Cons: resets daily, high TTFT (~22s), rate-limited | High TTFT |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
 | [魔搭 ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -71,7 +72,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
 | [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates monthly |  |
 | [魔搭 ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
@@ -94,6 +94,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |  |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 
 #### GLM 5.2 / 5.1
@@ -112,6 +113,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
 ### Qwen family
 
@@ -166,7 +168,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [魔搭 ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 
 #### Qwen3-8B / GLM-4-9B
@@ -194,6 +195,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (deprecation notice on site) | Pros: official, no card; Cons: deprecation notice on site, use with care | Frequent timeouts |
 
 #### Kimi K2.6
@@ -202,6 +205,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### StepFun Step 3.7 Flash
@@ -228,6 +233,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [腾讯混元](https://cloud.tencent.com/product/hunyuan) | Lite permanently free | Pros: official, permanently free; Cons: Lite only, needs Tencent Cloud account |  |
 | [B.AI](https://b.ai) | Hy3 limited-time free | Pros: anonymous; Cons: limited-time, no end date |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
 #### ERNIE-Speed / Lite
 
@@ -244,6 +250,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: limited-time, no end date |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
 #### SenseNova 6.7 Flash-Lite
 
@@ -263,6 +270,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Gemini 2.5 Flash / Flash-Lite
@@ -280,15 +289,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
-
-#### Llama 3.1 405B
-
-> The largest open-weight model
-
-| Free channel | Free tier | Pros / Cons | API quality |
-|------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: free access to 405B-class, RDU-accelerated; Cons: 30 RPM, ~200K tokens/day |  |
 
 #### Llama 3.3 70B
 
@@ -296,7 +299,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | distilled, 10K Neurons/day | Pros: low-latency edge; Cons: distilled not original, small daily quota |  |
 
 #### Llama 4 Scout
@@ -305,7 +307,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SambaNova](https://cloud.sambanova.ai) | 30 RPM | Pros: RDU-accelerated, permanent free tier; Cons: 30 RPM, ~200K tokens/day |  |
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
 
 #### Mistral Large / Small / Codestral
@@ -324,6 +325,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
 #### Whisper
@@ -384,15 +387,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://api.mistral.ai/v1`
 - **Status**: Active — verified 2026-08-31
 
-#### SambaNova
-
-- **Official site**: https://cloud.sambanova.ai
-- **Free tier**: permanent (30 RPM, ~200K tokens/day, no total cap)
-- **What the site says**: RDU-chip inference with a permanent free tier — one of the few places to touch 405B-class models for free
-- **Free models**: Llama 3.1 405B, Llama 3.3 70B, Llama 4 Scout, Qwen 2.5 72B, DeepSeek R1 / V3 and more
-- **Endpoint**: `https://api.sambanova.ai/v1` (OpenAI-compatible)
-- **Status**: Active — verified 2026-09-02
-
 #### Cloudflare Workers AI
 
 - **Official site**: https://developers.cloudflare.com/workers-ai
@@ -419,6 +413,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: DeepSeek V4 Flash 0731 (Free), MiniCPM5-1B (Free), GLM-5.3-Flash (limited, ZZ.ai), Qwen3.8-Flash-Next (limited, AMD GPU Cloud)
 - **Endpoint**: `https://developer.amd.com.cn/radeon/api/v1` (OpenAI-compatible)
 - **Status**: Active — verified 2026-09-02 (high TTFT, ~22s first-token latency)
+
+#### Ollama Cloud
+
+- **Official site**: https://ollama.com (cloud model catalog: https://ollama.com/search?c=cloud)
+- **Free tier**: permanent (Free plan includes starter usage credits, refresh monthly, never expire; amount not published)
+- **What the site says**: pricing page lists Free at $0 — "Starter usage credits included / Access to starter models"; cloud models bill per token against the credits; add credits to unlock all models
+- **Free models**: deepseek-v4-flash, gemma4, glm-5.3-flash, gpt-oss:20b/120b, kimi-k2.6, minimax-m3, nemotron-3-super/ultra and more (starter lineup per the official site)
+- **Endpoint**: `https://ollama.com/api/chat` (Ollama API; API key: https://ollama.com/settings/keys)
+- **Status**: Active — verified 2026-09-05 (monthly starter credits, amount unpublished; 1 concurrent request)
 
 ### China platforms
 
@@ -468,6 +471,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://qianfan.baidubce.com/v2` (OpenAI-compatible)
 - **Status**: Active — verified 2026-08-31 (real-name verification required)
 
+#### iFlytek Spark (Xinghuo)
+
+- **Official site**: https://xinghuo.xfyun.cn/sparkapi
+- **Free tier**: permanent free model (Spark Lite, unlimited tokens, rate-limited to QPS 2)
+- **What the site says**: iFlytek's official platform; Spark Lite is permanently free for real-name-verified individual accounts, no token cap
+- **Free models**: Spark Lite (lightweight, unlimited tokens, QPS 2)
+- **Endpoint**: https://xinghuo.xfyun.cn/sparkapi (APIKey/APISecret auth; OpenAI-compatible endpoint per official docs)
+- **Status**: Active — verified 2026-09-05 (real-name verification required)
+
 #### SenseNova (SenseTime)
 
 - **Official site**: https://platform.sensenova.cn · Token Plan: https://www.sensenova.cn/token-plan
@@ -498,14 +510,25 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://openrouter.ai/api/v1` (append `:free` to the model name)
 - **Status**: Active — verified 2026-08-31
 
-#### Chutes
+#### AIHubMix
 
-- **Official site**: https://chutes.ai
-- **Free tier**: community GPU free endpoints (often free when a hot new model launches)
-- **What the site says**: community GPU marketplace; new releases get free calls early on
-- **Free models**: newly released open models (whether DeepSeek V4 Flash is currently free here is **unconfirmed** — not listed in the index)
-- **Endpoint**: see official docs
-- **Status**: Active (quota can disappear anytime) — verified 2026-09-02
+- **Official site**: https://aihubmix.com (free model list: https://aihubmix.com/models/free)
+- **Free tier**: free models (10 trial calls on signup, no expiry; a one-time $1+ top-up permanently switches to daily quotas: 100 req/day and 1M tokens/day, reset daily)
+- **What the site says**: "56 free models — no credit card required"; the platform subsidizes inference cost — every free model bills $0 in & out
+- **Free models**: glm-4.7-flash-free, hy3-free, minimax-m3-free, k2.6-code-preview-free, gpt-oss-20b-free, nemotron-3-ultra/super-free, gemma-4-31b-it-free, xiaomi-mimo-v2.5(-pro)-free, coding-glm-5.3-free, gpt-5.5-free, gemini-3.8-flash-free and 50+ more
+- **Endpoint**: `https://aihubmix.com/v1` (Chat Completions / Messages / Responses compatible)
+- **Status**: Active — verified 2026-09-05 ($1 top-up required for daily quotas; shared free pool)
+
+#### ~~Chutes~~ (retired)
+
+~~Retired (verified 2026-09-05): all 14 models on the pricing page carry prices (DeepSeek V4 Flash 0731 at $0.44/$1.32); no free endpoint found. Entry kept for reference.~~
+
+- ~~**Official site**: https://chutes.ai~~
+- ~~**Free tier**: community GPU free endpoints (often free when a hot new model launches)~~
+- ~~**What the site says**: community GPU marketplace; new releases get free calls early on~~
+- ~~**Free models**: newly released open models (whether DeepSeek V4 Flash is currently free here is **unconfirmed** — not listed in the index)~~
+- ~~**Endpoint**: see official docs~~
+- ~~**Status**: Active (quota can disappear anytime) — verified 2026-09-02~~
 
 ### Limited-time free
 
@@ -530,21 +553,13 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: DeepSeek V4 Flash, Mimo2.5
 - **Status**: Active (small gateway) — verified 2026-08-31
 
-#### OpenModel
-
-- **Official site**: https://console.openmodel.ai
-- **Free tier**: DeepSeek V4 Flash free
-- **What the site says**: small gateway with an Anthropic-compatible endpoint
-- **Free models**: DeepSeek V4 Flash
-- **Status**: Active (small gateway) — verified 2026-08-31
-
 #### BazaarLink
 
 - **Official site**: https://bazaarlink.ai
-- **Free tier**: Qwen3.7 Flash free (the only free model on the site right now)
+- **Free tier**: ~~Qwen3.7 Flash free (the only free model on the site right now)~~ ⚠️ **now paid** (pricing page updated 2026-08-06: $0.03 in / $0.13 out per 1M)
 - **What the site says**: small gateway, no credit card required; GPT / Gemini models are discounted, not free
-- **Free models**: Qwen3.7 Flash
-- **Status**: Active (small gateway) — verified 2026-08-31
+- **Free models**: Qwen3.7 Flash (now paid)
+- **Status**: ~~Active (small gateway) — verified 2026-08-31~~ **retired (2026-09-05)** — no longer qualifies as free; entry kept for reference
 
 ## Contributing
 
