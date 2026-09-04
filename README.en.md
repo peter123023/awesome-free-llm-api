@@ -553,6 +553,33 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: DeepSeek V4 Flash, Mimo2.5
 - **Status**: Active (small gateway) — verified 2026-08-31
 
+#### TokenRouter
+
+- **Official site**: https://tokenrouter.com (free model page: https://www.tokenrouter.com/models/qwen/qwen3.8-max-free/)
+- **Free tier**: qwen3.8-max-free at $0 in / $0 out; also deepseek-v4-pro-0813-free, nemotron-3-nano-omni-free, etc. (limited free compute)
+- **What the site says**: OpenAI-compatible model router; the model page lists qwen3.8-max-free at $0 in / $0 out; new launches often get a free tier early on
+- **Free models**: Qwen3.8 Max, DeepSeek V4 Pro (0813-free), Nemotron-3-Nano-Omni (per the site's current $0 listings)
+- **Endpoint**: `https://api.tokenrouter.com/v1` (OpenAI-compatible; sign up to generate an API key)
+- **Status**: Active (small gateway) — verified 2026-09-05 (official note: limited free compute, stability and concurrency not guaranteed; free flagship spots vanish fast)
+
+#### Empero
+
+- **Official site**: https://free.empero.org
+- **Free tier**: completely free, no signup (any API key works; use `free` if one is required)
+- **What the site says**: community free endpoint by EmperoAI, an independent German AI lab; prompts and responses are logged (IPs hashed) to train their open models — do not send private data
+- **Free models**: glm-5.3-flash, qwen3.8-flash (a.k.a. Flash-Next), Qwen3.8-27B-FP8 and more (lineup rotates often; see the site)
+- **Endpoint**: `https://free.empero.org/v1` (OpenAI-compatible, any key)
+- **Status**: Active (small gateway) — verified 2026-09-05 (⚠️ often unreachable in practice — `upstream_down`; 503 when busy; prototypes only)
+
+#### AtomCode (CodingPlan)
+
+- **Official site**: https://ai.atomgit.com/serverless-api
+- **Free tier**: CodingPlan Lite trial — limited-time free, 500 claims/day, valid 7 days, ~200 calls per 5h rolling window
+- **What the site says**: free quota inside AtomCode, the terminal AI coding tool from AtomGit (Zhipu ecosystem); **not a standard API channel** — the quota only works inside the AtomCode client, no third-party endpoint access
+- **Free models**: mimo-v2.5, qwen3.8-27b, deepseek-v4-flash (per the client's model list)
+- **Endpoint**: none public — install the AtomCode client and sign in with an AtomGit account to claim the quota
+- **Status**: Active (limited-time) — verified 2026-09-05 (does not really meet this repo's "API key + endpoint" bar; listed for reference only)
+
 #### BazaarLink
 
 - **Official site**: https://bazaarlink.ai

@@ -554,6 +554,33 @@
 - **免费模型**：DeepSeek V4 Flash、Mimo2.5
 - **状态**：Active（小型网关）— 核实于 2026-08-31
 
+#### TokenRouter
+
+- **官网**：https://tokenrouter.com（免费模型页：https://www.tokenrouter.com/models/qwen/qwen3.8-max-free/）
+- **免费形式**：qwen3.8-max-free 输入 / 输出均 $0；另有 deepseek-v4-pro-0813-free、nemotron-3-nano-omni-free 等（免费算力有限）
+- **网页说明**：OpenAI 兼容的模型路由；官方模型页标注 qwen3.8-max-free 为 $0 in / $0 out；新模型上架初期常设免费档
+- **免费模型**：Qwen3.8 Max、DeepSeek V4 Pro（0813-free）、Nemotron-3-Nano-Omni（以官网当前 $0 标注为准）
+- **接入**：`https://api.tokenrouter.com/v1`（OpenAI 兼容，注册后生成 API Key）
+- **状态**：Active（小型网关）— 核实于 2026-09-05（官方提示免费算力有限、不保证稳定性与并发；"旗舰白嫖"名额随时消失）
+
+#### Empero
+
+- **官网**：https://free.empero.org
+- **免费形式**：完全免费、无需注册（API Key 任意填写，一般填 `free`）
+- **网页说明**：德国独立 AI 实验室 EmperoAI 的社区免费端点；prompt 与响应会被记录（IP 哈希化）用于训练其开源模型，勿传隐私内容
+- **免费模型**：glm-5.3-flash、qwen3.8-flash（即 Flash-Next）、Qwen3.8-27B-FP8 等（模型轮换频繁，以官网为准）
+- **接入**：`https://free.empero.org/v1`（OpenAI 兼容，Key 任意）
+- **状态**：Active（小型网关）— 核实于 2026-09-05（⚠️ 实测经常调不通 `upstream_down`、繁忙时 503，仅适合原型调试）
+
+#### AtomCode（CodingPlan）
+
+- **官网**：https://ai.atomgit.com/serverless-api
+- **免费形式**：CodingPlan Lite 体验版——限时免费、每日限量 500 人领取、7 天有效、约 200 次调用 / 5 小时
+- **网页说明**：AtomGit（智谱生态）终端 AI 编程工具的免费额度；**非标准 API 渠道**——额度仅限 AtomCode 客户端内使用，不支持第三方 endpoint 调用
+- **免费模型**：mimo-v2.5、qwen3.8-27b、deepseek-v4-flash（以客户端内列表为准）
+- **接入**：安装 AtomCode 客户端，AtomGit 账号登录后自动领取（无公开 endpoint）
+- **状态**：Active（限时）— 核实于 2026-09-05（严格说不符合本仓库"API Key + endpoint"收录标准，收录仅供了解）
+
 #### BazaarLink
 
 - **官网**：https://bazaarlink.ai
