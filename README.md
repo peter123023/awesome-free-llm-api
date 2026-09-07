@@ -415,11 +415,11 @@
 
 #### Ollama Cloud
 
-- **官网**：https://ollama.com（云模型目录：https://ollama.com/search?c=cloud）
+- **官网**：[https://ollama.com](https://ollama.com)（[云模型目录](https://ollama.com/search?c=cloud)）
 - **免费形式**：永久免费层（Free 档注册即含 starter 用量额度，按月刷新不过期；具体数额未公开）
 - **网页说明**：官网定价页 Free 档 $0 —— "Starter usage credits included / Access to starter models"；云模型按 token 计价从额度扣除，加 credits 可解锁全部模型
 - **免费模型**：deepseek-v4-flash、gemma4、glm-5.3-flash、gpt-oss:20b/120b、kimi-k2.6、minimax-m3、nemotron-3-super/ultra 等（starter 模型集合以官网为准）
-- **接入**：`https://ollama.com/api/chat`（Ollama API；API Key：https://ollama.com/settings/keys）
+- **接入**：`https://ollama.com/api/chat`（Ollama API；API Key：[https://ollama.com/settings/keys](https://ollama.com/settings/keys)）
 - **状态**：Active — 核实于 2026-09-05（免费额度为月度 starter 用量、数额未公开；仅 1 并发）
 
 ### 中国平台
@@ -427,12 +427,12 @@
 
 #### 美团 LongCat
 
-- **官网**：https://longcat.ai（开放平台文档：https://longcat.chat/platform/docs/zh/）
-- **免费形式**：每日免费 token 额度（普通账号 50 万/日，次日 0 点重置；控制台提交申请审核通过后可提额至 500 万/日；另有注册+实名一次性资源包）
-- **网页说明**：美团官方大模型开放平台（LongCat-Flash 系列，MoE 架构）；公测期每日免费额度，缓存命中不消耗额度
-- **免费模型**：LongCat-Flash-Chat / Flash-Lite（以官网模型列表为准）
-- **接入**：`https://api.longcat.chat/openai`（OpenAI 兼容）或 `https://api.longcat.chat/anthropic`（Anthropic 兼容），注册后在 API Keys 页创建
-- **状态**：Active — 核实于 2026-09-07（每日额度刷新不累积；单次输出上限 8K token，超限 429）
+- **官网**：[https://longcat.ai](https://longcat.ai)（[开放平台文档](https://longcat.chat/platform/docs/zh/)）
+- **免费形式**：注册赠送免费额度（每日额度 + 一次性资源包，具体数额以控制台「资源包 / 用量信息」页为准；第三方资料显示普通账号约 50 万 token/日、可申请提额）
+- **网页说明**：美团官方大模型开放平台（LongCat-2.0，1.6 万亿参数 MoE 架构）；缓存命中不消耗额度
+- **免费模型**：LongCat-2.0（官方文档当前唯一列出的模型：1M 上下文 / 最大输出 128K token，支持 OpenAI / Anthropic 双格式）
+- **接入**：`https://api.longcat.chat/openai`（OpenAI 兼容）或 `https://api.longcat.chat/anthropic`（Anthropic 兼容），注册后在 [API Keys 页](https://longcat.chat/platform/api_keys)创建
+- **状态**：Active — 核实于 2026-09-07（限流时返回 429，官方建议指数退避重试；免费额度数额官方未明示，以控制台为准）
 
 #### 硅基流动 SiliconFlow
 
@@ -485,7 +485,7 @@
 - **免费形式**：永久免费模型（Spark Lite 无限 Token，仅限速 QPS 2）
 - **网页说明**：讯飞官方开放平台；Spark Lite 个人实名认证后永久免费、不限 Token
 - **免费模型**：Spark Lite（轻量基础版，无限 Token，QPS 2）
-- **接入**：https://xinghuo.xfyun.cn/sparkapi（讯飞 APIKey/APISecret 鉴权；OpenAI 兼容端点见官方文档）
+- **接入**：[https://xinghuo.xfyun.cn/sparkapi](https://xinghuo.xfyun.cn/sparkapi)（讯飞 APIKey/APISecret 鉴权；OpenAI 兼容端点见官方文档）
 - **状态**：Active — 核实于 2026-09-05（需实名）
 
 #### 商汤 SenseNova（日日新）
@@ -520,7 +520,7 @@
 
 #### AIHubMix
 
-- **官网**：https://aihubmix.com（免费模型专页：https://aihubmix.com/models/free）
+- **官网**：[https://aihubmix.com](https://aihubmix.com)（[免费模型专页](https://aihubmix.com/models/free)）
 - **免费形式**：免费模型档（注册送 10 次试用、不过期；一次性充值 $1 起即永久转每日配额：100 次/日 · 1M token/日，每日重置）
 - **网页说明**：官网标注「56 free models — no credit card required」——平台补贴推理成本，免费模型输入输出均 $0
 - **免费模型**：glm-4.7-flash-free、hy3-free、minimax-m3-free、k2.6-code-preview-free、gpt-oss-20b-free、nemotron-3-ultra/super-free、gemma-4-31b-it-free、mimo-v2.5(-pro)-free、coding-glm-5.3-free、gpt-5.5-free、gemini-3.8-flash-free 等 56 个
@@ -563,7 +563,7 @@
 
 #### TokenRouter
 
-- **官网**：https://tokenrouter.com（免费模型页：https://www.tokenrouter.com/models/qwen/qwen3.8-max-free/）
+- **官网**：[https://tokenrouter.com](https://tokenrouter.com)（[免费模型页](https://www.tokenrouter.com/models/qwen/qwen3.8-max-free/)）
 - **免费形式**：qwen3.8-max-free 输入 / 输出均 $0；另有 deepseek-v4-pro-0813-free、nemotron-3-nano-omni-free 等（免费算力有限）
 - **网页说明**：OpenAI 兼容的模型路由；官方模型页标注 qwen3.8-max-free 为 $0 in / $0 out；新模型上架初期常设免费档
 - **免费模型**：Qwen3.8 Max、DeepSeek V4 Pro（0813-free）、Nemotron-3-Nano-Omni（以官网当前 $0 标注为准）

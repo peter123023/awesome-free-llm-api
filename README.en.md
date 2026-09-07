@@ -427,11 +427,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### Meituan LongCat
 
 - **Official site**: https://longcat.ai (platform docs: https://longcat.chat/platform/docs/zh/)
-- **Free tier**: daily free token allowance (500K/day for regular accounts, resets at midnight; can apply in console to raise to 5M/day; plus a one-time signup+real-name credit pack)
-- **What the site says**: Meituan's official LLM platform (LongCat-Flash series, MoE); daily free quota during public beta, cache hits don't consume quota
-- **Free models**: LongCat-Flash-Chat / Flash-Lite (per the site's model list)
-- **Endpoint**: `https://api.longcat.chat/openai` (OpenAI-compatible) or `https://api.longcat.chat/anthropic` (Anthropic-compatible); create a key under API Keys after signup
-- **Status**: Active — verified 2026-09-07 (daily allowance resets, non-cumulative; 8K max output per call, 429 beyond)
+- **Free tier**: free credits on signup (daily allowance + one-time packs; exact amounts per the console's resource/usage page — third-party sources report ~500K tokens/day for regular accounts, raiseable on application)
+- **What the site says**: Meituan's official LLM platform (LongCat-2.0, a 1.6T-parameter MoE); cache hits don't consume quota
+- **Free models**: LongCat-2.0 (the only model in the official docs: 1M context / 128K max output, OpenAI & Anthropic formats)
+- **Endpoint**: `https://api.longcat.chat/openai` (OpenAI-compatible) or `https://api.longcat.chat/anthropic` (Anthropic-compatible); create a key on the [API Keys page](https://longcat.chat/platform/api_keys)
+- **Status**: Active — verified 2026-09-07 (429 with retry advice when rate-limited; official quota amount unpublished, check the console)
 
 #### SiliconFlow
 
