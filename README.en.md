@@ -315,7 +315,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Mistral](https://console.mistral.ai) | Experiment tier (~1B tokens/month) | Pros: official free tier, large quota; Cons: free-tier data used for training by default (can opt out), no SLA |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small, 10K Neurons/day | Pros: low-latency edge; Cons: Small only, small daily quota |  |
 
 #### Gemma 4 31B
@@ -343,7 +342,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Mistral](https://console.mistral.ai) | Experiment tier | Pros: official free tier; Cons: free-tier data used for training by default (can opt out) |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 10K Neurons/day | Pros: low-latency edge; Cons: small daily quota |  |
 
 
@@ -378,14 +376,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://api.groq.com/openai/v1`
 - **Status**: Active — verified 2026-09-02
 
-#### Mistral La Plateforme
+#### ~~Mistral La Plateforme~~ (free API tier discontinued)
 
 - **Official site**: https://console.mistral.ai
-- **Free tier**: permanent (~1B tokens/month, Experiment plan)
-- **What the site says**: Mistral's official free tier (Experiment) — generous quota, but data is used for training by default (can be turned off)
-- **Free models**: Mistral Large / Small, Codestral, Embedding
-- **Endpoint**: `https://api.mistral.ai/v1`
-- **Status**: Active — verified 2026-08-31
+- **Free tier**: ~~permanent (~1B tokens/month, Experiment plan)~~ ⚠️ **free API quota discontinued** (effective 2026-09-01): the free plan now only includes Le Chat / Vibe message allowances and $10/month API credits (subscription-gated) — no free API call quota anymore
+- **What the site says**: Mistral's official platform; the old Experiment tier (~1B tokens/month) has been restructured and the free tier no longer works for API calls
+- **Free models**: ~~Mistral Large / Small, Codestral, Embedding~~ (no free API quota left)
+- **Endpoint**: `https://api.mistral.ai/v1` (paid only)
+- **Status**: ~~Active — verified 2026-08-31~~ **retired (2026-09-07)** — free API tier discontinued; entry kept for reference
 
 #### Cloudflare Workers AI
 
@@ -425,6 +423,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ### China platforms
 
+
+#### Meituan LongCat
+
+- **Official site**: https://longcat.ai (platform docs: https://longcat.chat/platform/docs/zh/)
+- **Free tier**: daily free token allowance (500K/day for regular accounts, resets at midnight; can apply in console to raise to 5M/day; plus a one-time signup+real-name credit pack)
+- **What the site says**: Meituan's official LLM platform (LongCat-Flash series, MoE); daily free quota during public beta, cache hits don't consume quota
+- **Free models**: LongCat-Flash-Chat / Flash-Lite (per the site's model list)
+- **Endpoint**: `https://api.longcat.chat/openai` (OpenAI-compatible) or `https://api.longcat.chat/anthropic` (Anthropic-compatible); create a key under API Keys after signup
+- **Status**: Active — verified 2026-09-07 (daily allowance resets, non-cumulative; 8K max output per call, 429 beyond)
 
 #### SiliconFlow
 

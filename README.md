@@ -316,7 +316,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Mistral](https://console.mistral.ai) | Experiment 免费层(约 10 亿 token/月) | 优势:官方免费层、额度大;限制:免费数据默认用于训练(可关闭),无 SLA |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small,1 万 Neurons/日 | 优势:边缘低延迟;限制:仅 Small 版、每日额度小 |  |
 
 #### Gemma 4 31B
@@ -344,7 +343,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Mistral](https://console.mistral.ai) | Experiment 免费层 | 优势:官方免费层;限制:免费数据默认用于训练(可关闭) |  |
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 1 万 Neurons/日 | 优势:边缘低延迟;限制:每日额度小 |  |
 
 
@@ -379,14 +377,14 @@
 - **接入**：`https://api.groq.com/openai/v1`
 - **状态**：Active — 核实于 2026-09-02
 
-#### Mistral La Plateforme
+#### ~~Mistral La Plateforme~~（免费 API 层已取消）
 
 - **官网**：https://console.mistral.ai
-- **免费形式**：永久免费层（约 10 亿 token/月，Experiment 计划）
-- **网页说明**：Mistral 官方平台免费层（Experiment），额度大但数据默认用于训练（可关闭）
-- **免费模型**：Mistral Large / Small、Codestral、Embedding 模型
-- **接入**：`https://api.mistral.ai/v1`
-- **状态**：Active — 核实于 2026-08-31
+- **免费形式**：~~永久免费层（约 10 亿 token/月，Experiment 计划）~~ ⚠️ **免费 API 配额已取消**（2026-09-01 生效）：免费计划现仅含 Le Chat / Vibe 消息额度与 $10/月 API credits（需订阅），不再提供免费 API 调用配额
+- **网页说明**：Mistral 官方平台；旧 Experiment 层（约 10 亿 token/月）已重构，免费层不再适合 API 调用
+- **免费模型**：~~Mistral Large / Small、Codestral、Embedding 模型~~（API 侧已无免费配额）
+- **接入**：`https://api.mistral.ai/v1`（仅付费）
+- **状态**：~~Active — 核实于 2026-08-31~~ **已失效（2026-09-07）** —— 免费 API 层取消，不再符合收录标准，条目保留备查
 
 #### Cloudflare Workers AI
 
@@ -426,6 +424,15 @@
 
 ### 中国平台
 
+
+#### 美团 LongCat
+
+- **官网**：https://longcat.ai（开放平台文档：https://longcat.chat/platform/docs/zh/）
+- **免费形式**：每日免费 token 额度（普通账号 50 万/日，次日 0 点重置；控制台提交申请审核通过后可提额至 500 万/日；另有注册+实名一次性资源包）
+- **网页说明**：美团官方大模型开放平台（LongCat-Flash 系列，MoE 架构）；公测期每日免费额度，缓存命中不消耗额度
+- **免费模型**：LongCat-Flash-Chat / Flash-Lite（以官网模型列表为准）
+- **接入**：`https://api.longcat.chat/openai`（OpenAI 兼容）或 `https://api.longcat.chat/anthropic`（Anthropic 兼容），注册后在 API Keys 页创建
+- **状态**：Active — 核实于 2026-09-07（每日额度刷新不累积；单次输出上限 8K token，超限 429）
 
 #### 硅基流动 SiliconFlow
 
