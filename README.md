@@ -53,6 +53,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM 无每日上限 | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大、1M 上下文;限制:限时公测,付费档即将上线 |  |
 
 #### DeepSeek V4 Flash
 

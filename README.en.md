@@ -52,6 +52,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM, no daily cap | Pros: official, no credit card, no daily cap; Cons: 40 RPM shared across all models | Frequent timeouts |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota, 1M context; Cons: limited-time beta, paid tiers coming |  |
 
 #### DeepSeek V4 Flash
 
