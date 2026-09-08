@@ -211,6 +211,14 @@
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
+#### Kimi K3
+
+> 2.8T 原生多模态 Agent,1M 上下文,长程编程 / 复杂推理
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分(额度/RPM 有限) | 优势:国产官方、公测免费、1M 上下文、原生视觉;限制:限时公测,付费档即将上线,额度/RPM 有限(实测偶发限流) |  |
+
 #### StepFun Step 3.7 Flash
 
 > 国产稀疏 MoE 推理模型

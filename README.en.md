@@ -210,6 +210,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
+#### Kimi K3
+
+> 2.8T native multimodal agent, 1M context, long-horizon coding / complex reasoning
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits (quota/RPM limited) | Pros: official China platform, free beta, 1M context, native vision; Cons: limited-time beta, paid tiers coming, quota/RPM limited (occasional rate-limit in practice) |  |
+
 #### StepFun Step 3.7 Flash
 
 > China-native sparse-MoE reasoning model
