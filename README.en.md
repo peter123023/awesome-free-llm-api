@@ -225,13 +225,13 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Volcano Ark](https://console.volcengine.com/ark) | 2M tokens/day free | Pros: large 2M tokens/day quota, China-native; Cons: needs account + real-name, check console |  |
 
-#### Hunyuan Lite / Hy3
+#### ~~Hunyuan Lite / Hy3~~ (Lite dies with the legacy platform on 9/30)
 
 > Tencent general / flagship
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Tencent Hunyuan](https://cloud.tencent.com/product/hunyuan) | Lite permanently free | Pros: official, permanently free; Cons: Lite only, needs Tencent Cloud account |  |
+| ~~[Tencent Hunyuan](https://cloud.tencent.com/product/hunyuan)~~ | ~~Lite permanently free~~ legacy platform shuts down 2026-09-30, TokenHub has no Lite | Pros: official, permanently free (ended with the legacy platform); Cons: Lite only (now defunct), needs Tencent Cloud account |  |
 | [B.AI](https://b.ai) | Hy3 limited-time free | Pros: anonymous; Cons: limited-time, no end date |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
@@ -460,14 +460,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://ark.cn-beijing.volces.com/api/v3` (OpenAI-compatible)
 - **Status**: Active — verified 2026-08-31 (phone + real-name required)
 
-#### Tencent Hunyuan
+#### ~~Tencent Hunyuan~~ (legacy platform shuts down 9/30, no free model on the new one)
 
 - **Official site**: https://cloud.tencent.com/product/hunyuan
-- **Free tier**: permanent free model (Hunyuan-Lite fully free, rate-limited only)
-- **What the site says**: Tencent Cloud marks Hunyuan-Lite as free forever
-- **Free models**: Hunyuan-Lite (256K context)
-- **Endpoint**: see official docs
-- **Status**: Active — verified 2026-08-31 (QQ/WeChat login)
+- **Free tier**: ~~permanent free model (Hunyuan-Lite fully free, rate-limited only)~~ ⚠️ **free model discontinued with the legacy platform**: the Tencent Cloud legacy LLM platform (including the old Hunyuan entry) stopped selling and issuing new API keys on 2026-06-30, and **shuts down completely at 2026-09-30 00:00**; **hunyuan-lite is NOT in the model list of the new TokenHub platform**, officially recommended replacement is Hy3 preview (paid, new users get a 90-day free trial quota)
+- **What the site says**: Tencent Cloud Hunyuan; existing legacy API keys keep working until 9/30, then stop for good
+- **Free models**: ~~Hunyuan-Lite (256K context)~~ (dies with the legacy platform on 2026-09-30)
+- **Endpoint**: legacy platform — see official docs; new TokenHub endpoint is `https://api.hunyuan.cloud.tencent.com/v1` (requires a new API key)
+- **Status**: ~~Active — verified 2026-08-31~~ **expiring (2026-09-08)** — Hunyuan-Lite's "free forever" is over, no longer qualifies for inclusion, entry kept for reference
 
 #### Baidu Qianfan
 
