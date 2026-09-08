@@ -59,7 +59,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
 | [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | ~$10/day credits | Pros: official AMD GPU hosting, OpenAI-compatible, no card; Cons: resets daily, high TTFT (~22s), rate-limited | High TTFT |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
@@ -103,7 +103,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta (verified working) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### GLM-4.7-Flash / GLM-4-Flash
@@ -252,13 +252,13 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: limited-time, no end date |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
-#### SenseNova 6.7 Flash-Lite
+#### SenseNova 6.8 Flash-Lite
 
-> SenseTime native multimodal agent
+> SenseTime native multimodal agent (6.7 merged in; old ID auto-redirects until 8/31)
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, 1,500 req/5h | Pros: official, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official, generous beta quota, Flash-Lite rebate ~half price; Cons: limited-time beta, paid tiers coming |  |
 
 ### Global models
 
@@ -490,11 +490,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### SenseNova (SenseTime)
 
 - **Official site**: https://platform.sensenova.cn · Token Plan: https://www.sensenova.cn/token-plan
-- **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon)
-- **What the site says**: "fully free during public beta, paid tiers launching soon"; 1,500 calls per model per 5 hours, auto-resets
-- **Free models**: DeepSeek V4 Flash, GLM-5.2 (verified working), SenseNova 6.7 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation)
+- **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon); TokenPlan credit system — general credit pool + Flash-Lite credit pool, each "rolling 60,000 credits / 5h, rolling 600,000 credits / week"
+- **What the site says**: "fully free during public beta, paid tiers launching soon"; Flash-Lite spend rebate — every 1 dedicated credit spent returns 1 general credit (~half price, rebate valid 30 days); third-party models have lower quotas than first-party
+- **Free models**: SenseNova 6.8 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation), DeepSeek V4 Flash / V4 Pro, GLM-5.2, Kimi K3 (all 8 models priced at 0, API-verified 2026-09-08)
 - **Endpoint**: `https://token.sensenova.cn/v1` (OpenAI-compatible; Anthropic-compatible endpoint also available)
-- **Status**: Active (limited-time beta) — verified 2026-08-31 (phone signup; no card, no real-name)
+- **Status**: Active (limited-time beta) — verified 2026-09-08 (phone signup; no card, no real-name; 6.7 requests auto-redirect to 6.8 until 8/31; U1 series watermark-free beta, pass `watermark: false` after it turns paid)
 
 #### ModelScope (Alibaba)
 

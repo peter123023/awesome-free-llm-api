@@ -60,7 +60,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
 | [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日 $10 等值额度 | 优势:AMD 官方 GPU 托管、OpenAI 兼容、免绑卡;限制:每日重置不过夜、TTFT 偏高(首字约 22 秒)、并发限流 | TTFT 偏高 |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
@@ -104,7 +104,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### GLM-4.7-Flash / GLM-4-Flash
@@ -253,13 +253,13 @@
 | [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
-#### SenseNova 6.7 Flash-Lite
+#### SenseNova 6.8 Flash-Lite
 
-> 商汤原生多模态智能体
+> 商汤原生多模态智能体（6.7 已并入，旧 ID 8/31 前自动重定向）
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤](https://platform.sensenova.cn) | 公测免费,每 5 小时 1500 次 | 优势:官方自营、公测期免费额度大;限制:限时公测,付费档即将上线 |  |
+| [商汤](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:官方自营、公测期免费额度大、Flash-Lite 消费返赠等效半价;限制:限时公测,付费档即将上线 |  |
 
 ### 海外模型
 
@@ -491,11 +491,11 @@
 #### 商汤 SenseNova（日日新）
 
 - **官网**：https://platform.sensenova.cn · Token Plan：https://www.sensenova.cn/token-plan
-- **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）
-- **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；每模型每 5 小时 1500 次调用，到点自动重置
-- **免费模型**：DeepSeek V4 Flash、GLM-5.2（实测可调）、SenseNova 6.7 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）
+- **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）；TokenPlan 积分体系，通用积分池 + Flash-Lite 专属积分池各「滚动 5 小时 60,000 积分 / 滚动周 600,000 积分」
+- **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；Flash-Lite 消费返赠——每消耗 1 专属积分返 1 通用积分（等效半价，返赠 30 天有效）；第三方模型额度低于自营
+- **免费模型**：SenseNova 6.8 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）、DeepSeek V4 Flash / V4 Pro、GLM-5.2、Kimi K3（8 个模型定价均为 0，2026-09-08 API 实测）
 - **接入**：`https://token.sensenova.cn/v1`（OpenAI 兼容，亦支持 Anthropic 兼容端点）
-- **状态**：Active（限时公测）— 核实于 2026-08-31（手机号注册，免绑卡、免实名）
+- **状态**：Active（限时公测）— 核实于 2026-09-08（手机号注册，免绑卡、免实名；8/31 前 6.7 请求自动重定向至 6.8；U1 系列去水印公测免费、转付费后需传 `watermark: false`）
 
 #### 魔搭 ModelScope（阿里）
 
