@@ -116,6 +116,7 @@
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
+| [TideLink](https://tidelink.xyz) | 永久免费模型,10 RPM | 优势:OpenAI 兼容聚合网关、一个 Key 调 GLM/Qwen/DeepSeek/混元/豆包、免信用卡注册;限制:免费档仅限 glm-4-flash/glm-4v-flash,10 RPM |  |
 
 ### Qwen 系列
 
@@ -546,6 +547,15 @@
 - ~~**免费模型**：新发布开源模型（DeepSeek V4 Flash 当前是否在免费名单**未确认**，未列入索引）~~
 - ~~**接入**：见官方文档~~
 - ~~**状态**：Active（额度随时可能下架）— 核实于 2026-09-02~~
+
+#### TideLink
+
+- **官网**：https://tidelink.xyz
+- **免费形式**：永久免费模型（glm-4-flash 128K 文本、glm-4v-flash 16K 视觉；限速 10 RPM，无需信用卡）
+- **网页说明**：官网定价页称「GLM-4-Flash is free」，价目表标注该模型 $0.00（Free upstream, capped daily quota）
+- **免费模型**：glm-4-flash、glm-4v-flash（免费档仅限此二模型；其余模型为付费）
+- **接入**：`https://tidelink.xyz/v1`（OpenAI 兼容；一个 Key 可调 GLM / Qwen / DeepSeek / 混元 / 豆包）
+- **状态**：Active — 核实于 2026-09-10
 
 ### 限时免费
 
