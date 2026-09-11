@@ -45,9 +45,17 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ### DeepSeek family
 
-#### DeepSeek V4 Pro
+#### DeepSeek V4.1 Flash
 
-> Flagship MoE, 1M context, strongest for coding & agents
+> 552B new-architecture MoE (8B/16B active), native multimodal, 1M context; released 2026-09-10
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| — | **No free API channel yet** (official paid, off-peak $0.15/$0.60) | Pros: MIT weights released, self-hostable; Cons: no official free tier, self-hosting needs an 8-GPU node (~510GB FP8) |  |
+
+#### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
+
+> Flagship MoE, 1M context, strongest for coding & agents. ⚠️ From 2026-09-14 12:00 the official API routes all `deepseek-v4-pro` requests to V4.1 Flash at Flash rates, until V4.1 Pro ships
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
@@ -56,7 +64,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 #### DeepSeek V4 Flash
 
-> 284B MoE, 1M context, best value for code / reasoning
+> 284B MoE, 1M context, best value for code / reasoning. ⚠️ The official model id `deepseek-v4-flash` now auto-routes to V4.1 Flash; the legacy id still works
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
@@ -74,9 +82,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
-| [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates monthly |  |
+| [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates anytime |  |
 | [ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+
+> ⚠️ **DeepSeek R1 / V3 are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11 (only V4 Flash 0731 and V4 Pro 0813 remain).
 
 #### DeepSeek R2
 
@@ -105,7 +114,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [OpenCode Zen](https://opencode.ai/zen) | limited-time free models (GLM 5.3 Flash etc.) | Pros: official OpenCode gateway, no card; Cons: only the limited-time Flash tier is free, full GLM 5.3 is paid ($1.4/$4.4) |  |
+
+> ⚠️ **GLM models have been pulled from NVIDIA NIM**: as of 2026-09-11, `integrate.api.nvidia.com/v1/models` returns no GLM model at all.
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
@@ -115,6 +127,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Zhipu BigModel](https://open.bigmodel.cn) | permanently free, rate-limited only | Pros: official, permanently free, 200K context; Cons: small Flash models only, rate-limited |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
+| [OpenCode Zen](https://opencode.ai/zen) | limited-time free (in-client) | Pros: official OpenCode gateway, no card; Cons: limited-time, client-only, free lineup changes anytime |  |
+
+> ⚠️ **GLM-4.7 is NOT in the NVIDIA NIM free lineup**: it briefly appeared in early September 2026 but had been removed from the 80 models returned by `integrate.api.nvidia.com/v1/models` as of 2026-09-11 — do not rely on it.
 
 ### Qwen family
 
@@ -125,7 +140,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+
+> ⚠️ **Qwen3.5 122B / 397B are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11.
 
 #### Qwen3 Coder 480B
 
@@ -133,8 +149,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |  |
 | [ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+
+> ⚠️ **Qwen3 Coder 480B is no longer in the OpenRouter free lineup** (verified 2026-09-11).
 
 #### Qwen3 235B
 
@@ -142,8 +159,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` rotates | Pros: aggregated routing, one API; Cons: 50 free req/day, rotates monthly |  |
 | [ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+
+> ⚠️ **Qwen3 235B is no longer in the OpenRouter free lineup** (verified 2026-09-11).
 
 #### Qwen3.8 Flash
 
@@ -188,7 +206,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [OpenCode Zen](https://opencode.ai/zen) | MiniMax M3 limited-time free (in-client) | Pros: official OpenCode gateway; Cons: client-only, M2.7 itself is paid ($0.3/$1.2) |  |
+
+> ⚠️ **MiniMax models have been pulled from NVIDIA NIM**: GLM-4.7 and MiniMax M2.1 were briefly listed in early September 2026, but both had been removed from the NIM model list as of 2026-09-11.
 
 #### MiniMax M3
 
@@ -198,7 +218,16 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
+| [OpenCode Zen](https://opencode.ai/zen) | limited-time free (in-client) | Pros: official OpenCode gateway, no card; Cons: limited-time, client-only |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (deprecation notice on site) | Pros: official, no card; Cons: deprecation notice on site, use with care | Frequent timeouts |
+
+#### MiniMax M2.1
+
+> Enhanced multilingual coding, 204K context
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| OpenCode Zen | ⚠️ deprecated (2026-03-15) | Pulled from OpenCode Zen; the official API is paid ($0.3/$1.2) |  |
 
 #### Kimi K2.6
 
@@ -217,6 +246,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits (quota/RPM limited) | Pros: official China platform, free beta, 1M context, native vision; Cons: limited-time beta, paid tiers coming, quota/RPM limited (occasional rate-limit in practice) |  |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### StepFun Step 3.7 Flash
 
@@ -224,7 +254,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
+| — | **not on NVIDIA NIM** | ⚠️ Removed from the NIM model list as of 2026-09-11; no free API channel at present |  |
 
 #### Doubao Lite
 
@@ -278,10 +308,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
-| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
 | [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (20B only) | Pros: official, no card; Cons: 40 RPM shared, only hosts gpt-oss-20b | Frequent timeouts |
+
+> ⚠️ **GPT-OSS is no longer in the OpenRouter free lineup** (verified 2026-09-11).
 
 #### Gemini 2.5 Flash / Flash-Lite
 
@@ -291,16 +322,24 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Google AI Studio](https://aistudio.google.com) | daily reset (Flash ~1,500 req/day, Flash-Lite ~1,000 req/day) | Pros: official, large free quota, no card, multimodal; Cons: needs Google account, free-tier data may be used for product improvement |  |
 
-#### Nemotron 3 Ultra / Super
+#### Nemotron 3 Ultra / Super / Lightning
 
 > NVIDIA agentic flagship, 1M context
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [OpenRouter](https://openrouter.ai) | `:free` (Ultra / Super / 3.5 Lightning) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 | [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+
+#### InKling / Ling 3.0 Flash (new OpenRouter free entries)
+
+> Thinking Machines' InKling and Ant's Ling 3.0 Flash, both multimodal with 1M / 262K context
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [OpenRouter](https://openrouter.ai) | `:free` (`inkling` / `inkling-small`, `ling-3.0-flash-sante` / `-fin` / `-vl`) | Pros: 1M-context multimodal, aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 
 #### Llama 3.3 70B
 
@@ -310,13 +349,13 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | distilled, 10K Neurons/day | Pros: low-latency edge; Cons: distilled not original, small daily quota |  |
 
-#### Llama 4 Scout
+#### ~~Llama 4 Scout~~ (no longer in the OpenRouter free lineup)
 
 > Fast & light, huge context
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| — | **no free channel** | ⚠️ As of 2026-09-11 no Llama model remains in the OpenRouter free lineup |  |
 
 #### Mistral Large / Small / Codestral
 
@@ -326,13 +365,13 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small, 10K Neurons/day | Pros: low-latency edge; Cons: Small only, small daily quota |  |
 
-#### Gemma 4 31B
+#### Gemma 4 31B / 26B
 
 > Google open model, vision + text
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | Pros: aggregated routing; Cons: 50 free req/day, rotates monthly |  |
+| [OpenRouter](https://openrouter.ai) | `:free` (both 31B and 26B-A4B) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 | [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
@@ -363,9 +402,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Official site**: https://build.nvidia.com
 - **Free tier**: permanent (40 RPM shared site-wide, no daily cap)
 - **What the site says**: "100+ models free to call" — NVIDIA-hosted inference endpoints, sign up and go, no credit card
-- **Free models**: DeepSeek V4 Flash / V4 Pro / R1, Qwen3.5 122B / 397B, GLM 5.2 / 5.1, MiniMax M2.7 / M3, Kimi K2.6, GPT-OSS, Gemma 4 31B, StepFun 3.7 Flash, Nemotron 3 Ultra / Super and 100+
+- **Free models**: DeepSeek V4 Flash / V4 Pro / R1, GLM 5.2 / 5.1, MiniMax M2.7 / M3, Kimi K2.6 / K3, GPT-OSS, Gemma 4 31B, StepFun 3.7 Flash, Nemotron 3 Ultra / Super and 100+
 - **Endpoint**: `https://integrate.api.nvidia.com/v1` (OpenAI-compatible)
-- **Status**: Active — verified 2026-09-02
+- **Status**: Active — verified 2026-09-11 (⚠️ in practice `/v1/models` now returns 80 models, and **GLM / MiniMax / Qwen3.5 are gone**; GLM-4.7 and MiniMax M2.1 were briefly listed then removed; DeepSeek V4.1 Flash is not on NIM yet)
 
 #### Google AI Studio
 
@@ -499,11 +538,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### SenseNova (SenseTime)
 
 - **Official site**: https://platform.sensenova.cn · Token Plan: https://www.sensenova.cn/token-plan
-- **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon); TokenPlan credit system — general credit pool + Flash-Lite credit pool, each "rolling 60,000 credits / 5h, rolling 600,000 credits / week"
-- **What the site says**: "fully free during public beta, paid tiers launching soon"; Flash-Lite spend rebate — every 1 dedicated credit spent returns 1 general credit (~half price, rebate valid 30 days); third-party models have lower quotas than first-party
+- **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon); TokenPlan credit system — public-beta Free tier gives **60,000 credits / 5h**, with a general pool plus a Flash-Lite-specific pool
+- **What the site says**: "fully free during public beta, paid tiers launching soon"; the Free tier covers SenseNova 6.8 Flash Lite and SenseNova U1 Fast, up to 20 API keys; Flash-Lite spend rebate — every 1 dedicated credit spent returns 1 general credit (~half price, rebate valid 30 days); third-party models have lower quotas than first-party
 - **Free models**: SenseNova 6.8 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation), DeepSeek V4 Flash / V4 Pro, GLM-5.2, Kimi K3 (all 8 models priced at 0, API-verified 2026-09-08)
 - **Endpoint**: `https://token.sensenova.cn/v1` (OpenAI-compatible; Anthropic-compatible endpoint also available)
-- **Status**: Active (limited-time beta) — verified 2026-09-08 (phone signup; no card, no real-name; 6.7 requests auto-redirect to 6.8 until 8/31; U1 series watermark-free beta, pass `watermark: false` after it turns paid)
+- **Status**: Active (limited-time beta) — verified 2026-09-11 (phone signup; no card, no real-name; ✅ `token.sensenova.cn/v1` responds correctly (401 without auth), while the widely-circulated `api.sensenova.cn/v1` returns 404 — **use `token.sensenova.cn/v1`**)
 
 #### ModelScope (Alibaba)
 
@@ -520,11 +559,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### OpenRouter
 
 - **Official site**: https://openrouter.ai
-- **Free tier**: permanent (`:free` models, 50 req/day; 1000/day after $10 lifetime top-up)
-- **What the site says**: multi-model router advertising 20+ free models; `openrouter/free` auto-routes between them
-- **Free models**: GPT-OSS 120B / 20B, Nemotron 3 Ultra / Super, Gemma 4 31B, Qwen3 235B, Llama 4 Scout and more (**list rotates monthly** — DeepSeek / Mistral have been pulled entirely before; check `openrouter.ai/models?max_price=0` first)
+- **Free tier**: permanent (`:free` models, 50 req/day and 20 req/min; 1000/day after a $10 lifetime top-up)
+- **What the site says**: multi-model router exposing a `:free` lineup; `openrouter/free` auto-routes between them (⚠️ the widely-quoted "200 req/day" is outdated — the official limits page states 50/1000)
+- **Free models**: `thinkingmachines/inkling(-small)` (1M-context multimodal), `nvidia/nemotron-3-ultra-550b`, `nemotron-3-super-120b`, `nemotron-3.5-lightning`, `gemma-4-26b-a4b`, `gemma-4-31b`, `inclusionai/ling-3.0-flash-sante/-fin/-vl`, `nex-agi/nex-n2.5-pro/-mini`, `cohere/north-mini-code`, `poolside/laguna-s-2.1/-xs-2.1`, `dots-studio/dots-3-note-preview`, `liquid/lfm-2.5-2.6b` — **19 in total** (⚠️ **DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama are all absent**; check `openrouter.ai/models?max_price=0` first)
 - **Endpoint**: `https://openrouter.ai/api/v1` (append `:free` to the model name)
-- **Status**: Active — verified 2026-08-31
+- **Status**: Active — verified 2026-09-11 (free lineup re-verified live: 19 `:free` models; 50 req/day, 1,000 after $10)
 
 #### AIHubMix
 
@@ -534,6 +573,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: glm-4.7-flash-free, hy3-free, minimax-m3-free, k2.6-code-preview-free, gpt-oss-20b-free, nemotron-3-ultra/super-free, gemma-4-31b-it-free, xiaomi-mimo-v2.5(-pro)-free, coding-glm-5.3-free, gpt-5.5-free, gemini-3.8-flash-free and 50+ more
 - **Endpoint**: `https://aihubmix.com/v1` (Chat Completions / Messages / Responses compatible)
 - **Status**: Active — verified 2026-09-05 ($1 top-up required for daily quotas; shared free pool)
+
+#### OpenCode Zen
+
+- **Official site**: [https://opencode.ai/zen](https://opencode.ai/zen) ([pricing](https://opencode.ai/docs/zen/))
+- **Free tier**: limited-time free models (Big Pickle, MiMo-V2.5 Free, Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.3 Contributor Free — $0 for input, output and cache read/write)
+- **What the site says**: OpenCode's official model gateway; the pricing page explicitly marks those 6 models as Free and notes they are "available for a limited time while the team collects feedback"; **the platform itself is not free** — DeepSeek / GLM / Kimi / Qwen and the rest are pay-per-token
+- **Free models**: Big Pickle (stealth model), MiMo-V2.5 Free, Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.3 Contributor Free
+- **Endpoint**: `https://opencode.ai/zen/v1` (OpenAI-compatible; some models use `/messages` Anthropic or `/responses`)
+- **Status**: Active (limited-time) — verified 2026-09-11 (⚠️ the widely-cited `deepseek-v4-flash-free` is actually **paid** ($0.14/$0.28) and not on the free list)
 
 #### ~~Chutes~~ (retired)
 
@@ -622,6 +670,7 @@ Full template and rules: [CONTRIBUTING.md](CONTRIBUTING.md).
 Known sources of drift, flagged explicitly in each entry:
 
 - **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
+- **Free lineups churn more than you think.** Verified 2026-09-11: none of OpenRouter's 19 `:free` models is a DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama model; NVIDIA NIM's 80 models no longer include GLM, MiniMax, Qwen3.5, DeepSeek R1/V3 or StepFun — a model listed here may already be gone when you read it, so run a `curl` check first.
 - **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's limited-time models) publish no end date.
 - **Some "free" tiers require a credit card**, a phone number, or real-name verification.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.

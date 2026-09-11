@@ -46,9 +46,17 @@
 
 ### DeepSeek 系列
 
-#### DeepSeek V4 Pro
+#### DeepSeek V4.1 Flash
 
-> 旗舰 MoE,1M 上下文,编程与智能体场景最强
+> 552B 新架构 MoE（8B/16B 激活）,原生多模态,1M 上下文；2026-09-10 发布
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| — | **暂无免费 API 渠道**（官方付费,闲时 $0.15/$0.60） | 优势:MIT 权重已开源,可自部署;限制:官方无免费层,自部署需 8 卡节点(~510GB FP8) |  |
+
+#### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
+
+> 旗舰 MoE,1M 上下文,编程与智能体场景最强。⚠️ 官方 API 自 2026-09-14 12:00 起将 `deepseek-v4-pro` 请求全部转发到 V4.1 Flash 并按 Flash 价计费，直至 V4.1 Pro 上线
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
@@ -57,7 +65,7 @@
 
 #### DeepSeek V4 Flash
 
-> 284B MoE,1M 上下文,代码 / 推理性价比首选
+> 284B MoE,1M 上下文,代码 / 推理性价比首选。⚠️ 官方模型名 `deepseek-v4-flash` 已自动路由到 V4.1 Flash,旧 ID 仍可用
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
@@ -75,9 +83,10 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |  |
-| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单按月轮换 |  |
+| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单随时轮换 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+
+> ⚠️ **DeepSeek R1 / V3 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除（仅剩 V4 Flash 0731 与 V4 Pro 0813）。
 
 #### DeepSeek R2
 
@@ -106,7 +115,10 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [OpenCode Zen](https://opencode.ai/zen) | 限时免费模型(GLM 5.3 Flash 等) | 优势:OpenCode 官方网关、免卡;限制:仅限时免费的 Flash 款,正式版 GLM 5.3 为付费($1.4/$4.4) |  |
+
+> ⚠️ **GLM 系列已从 NVIDIA NIM 下架**：截至 2026-09-11，`integrate.api.nvidia.com/v1/models` 已不再返回任何 GLM 模型。
 
 #### GLM-4.7-Flash / GLM-4-Flash
 
@@ -116,6 +128,9 @@
 |------|------|------|------|
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
+| [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、无卡;限制:限时免费,仅客户端内使用,免费名单随时变动 |  |
+
+> ⚠️ **GLM-4.7 不在 NVIDIA NIM 免费名单**：2026-09 初一度上架，但截至 2026-09-11 已从 `integrate.api.nvidia.com/v1/models` 的 80 个模型中移除，勿再依赖。
 
 ### Qwen 系列
 
@@ -126,7 +141,8 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+
+> ⚠️ **Qwen3.5 122B / 397B 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除。
 
 #### Qwen3 Coder 480B
 
@@ -134,8 +150,9 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、模型全;限制:免费质量较低——单模型约 500 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+
+> ⚠️ **Qwen3 Coder 480B 已不在 OpenRouter 免费名单**（2026-09-11 实测）。
 
 #### Qwen3 235B
 
@@ -143,8 +160,9 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换 | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、模型全;限制:免费质量较低——单模型约 500 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+
+> ⚠️ **Qwen3 235B 已不在 OpenRouter 免费名单**（2026-09-11 实测）。
 
 #### Qwen3.8 Flash
 
@@ -189,7 +207,9 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [OpenCode Zen](https://opencode.ai/zen) | MiniMax M3 限时免费(客户端内) | 优势:OpenCode 官方网关;限制:仅客户端内使用,M2.7 为付费($0.3/$1.2) |  |
+
+> ⚠️ **MiniMax 系列已从 NVIDIA NIM 下架**：2026-09 初曾短暂上架 GLM-4.7 与 MiniMax M2.1，但截至 2026-09-11 两者均已从 NIM 模型列表移除。
 
 #### MiniMax M3
 
@@ -199,7 +219,16 @@
 |------|------|------|------|
 | [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
+| [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、免卡;限制:限时免费,仅客户端内使用 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(官方标注即将弃用) | 优势:官方托管、免绑卡;限制:官网标注即将弃用,慎用 | 经常超时 |
+
+#### MiniMax M2.1
+
+> 多语言编程强化版,204K 上下文
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| OpenCode Zen | ⚠️ 已弃用(2026-03-15) | 该模型在 OpenCode Zen 已下架,官方 API 为付费($0.3/$1.2) |  |
 
 #### Kimi K2.6
 
@@ -218,6 +247,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分(额度/RPM 有限) | 优势:国产官方、公测免费、1M 上下文、原生视觉;限制:限时公测,付费档即将上线,额度/RPM 有限(实测偶发限流) |  |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### StepFun Step 3.7 Flash
 
@@ -225,7 +255,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
+| — | **不在 NVIDIA NIM** | ⚠️ 截至 2026-09-11 已从 NIM 模型列表移除，暂无免费 API 渠道 |  |
 
 #### 豆包 Doubao Lite
 
@@ -279,10 +309,11 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |  |
-| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由、兼容多端;限制:免费仅 50 次/天,名单按月轮换 |  |
 | [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(仅 20B) | 优势:官方托管、免绑卡;限制:40 RPM 全站共享,仅托管 gpt-oss-20b | 经常超时 |
+
+> ⚠️ **GPT-OSS 已不在 OpenRouter 免费名单**（2026-09-11 实测）。
 
 #### Gemini 2.5 Flash / Flash-Lite
 
@@ -292,16 +323,24 @@
 |------|------|------|------|
 | [Google AI Studio](https://aistudio.google.com) | 按天重置(Flash 约 1500 次/日、Flash-Lite 约 1000 次/日) | 优势:官方大额免费、免绑卡、多模态;限制:需 Google 账号,免费层数据可能用于改进产品 |  |
 
-#### Nemotron 3 Ultra / Super
+#### Nemotron 3 Ultra / Super / Lightning
 
 > NVIDIA 智能体旗舰,1M 上下文
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [OpenRouter](https://openrouter.ai) | `:free`（Ultra / Super / 3.5 Lightning） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 | [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+
+#### InKling / Ling 3.0 Flash（OpenRouter 新晋免费）
+
+> Thinking Machines 的 InKling 与蚂蚁的 Ling 3.0 Flash,均为 1M / 262K 上下文多模态
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [OpenRouter](https://openrouter.ai) | `:free`（`inkling` / `inkling-small`、`ling-3.0-flash-sante` / `-fin` / `-vl`） | 优势:1M 上下文多模态、聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 
 #### Llama 3.3 70B
 
@@ -311,13 +350,13 @@
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟;限制:蒸馏版非原版、每日额度小 |  |
 
-#### Llama 4 Scout
+#### ~~Llama 4 Scout~~（已不在 OpenRouter 免费名单）
 
 > 轻量高速,超长上下文
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| — | **无免费渠道** | ⚠️ 截至 2026-09-11，OpenRouter 免费名单中已无任何 Llama 模型 |  |
 
 #### Mistral Large / Small / Codestral
 
@@ -327,13 +366,13 @@
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | Small,1 万 Neurons/日 | 优势:边缘低延迟;限制:仅 Small 版、每日额度小 |  |
 
-#### Gemma 4 31B
+#### Gemma 4 31B / 26B
 
 > Google 开源,视觉 + 文本
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [OpenRouter](https://openrouter.ai) | `:free` | 优势:聚合路由;限制:免费仅 50 次/天,名单按月轮换 |  |
+| [OpenRouter](https://openrouter.ai) | `:free`（31B 与 26B-A4B 两款） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 | [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
@@ -364,9 +403,9 @@
 - **官网**：https://build.nvidia.com
 - **免费形式**：永久免费层（40 RPM 全站共享，无每日上限）
 - **网页说明**：官网称「100+ 模型免费调用」——NVIDIA 托管的推理端点，注册即可用，无需信用卡
-- **免费模型**：DeepSeek V4 Flash / V4 Pro / R1、Qwen3.5 122B / 397B、GLM 5.2 / 5.1、MiniMax M2.7 / M3、Kimi K2.6、GPT-OSS、Gemma 4 31B、StepFun 3.7 Flash、Nemotron 3 Ultra / Super 等 100+
+- **免费模型**：DeepSeek V4 Flash / V4 Pro / R1、GLM 5.2 / 5.1、MiniMax M2.7 / M3、Kimi K2.6 / K3、GPT-OSS、Gemma 4 31B、StepFun 3.7 Flash、Nemotron 3 Ultra / Super 等 100+
 - **接入**：`https://integrate.api.nvidia.com/v1`（OpenAI 兼容）
-- **状态**：Active — 核实于 2026-09-02
+- **状态**：Active — 核实于 2026-09-11（⚠️ 实测 `/v1/models` 现返回 80 个模型，**GLM / MiniMax / Qwen3.5 已不在列**；曾短暂上架 GLM-4.7 与 MiniMax M2.1 后又移除，DeepSeek V4.1 Flash 尚未上架）
 
 #### Google AI Studio
 
@@ -500,11 +539,11 @@
 #### 商汤 SenseNova（日日新）
 
 - **官网**：https://platform.sensenova.cn · Token Plan：https://www.sensenova.cn/token-plan
-- **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）；TokenPlan 积分体系，通用积分池 + Flash-Lite 专属积分池各「滚动 5 小时 60,000 积分 / 滚动周 600,000 积分」
-- **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；Flash-Lite 消费返赠——每消耗 1 专属积分返 1 通用积分（等效半价，返赠 30 天有效）；第三方模型额度低于自营
+- **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）；TokenPlan 积分体系，公测 Free 档 **60,000 积分 / 5 小时**，通用积分池 + Flash-Lite 专属积分池
+- **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；公测 Free 档含 SenseNova 6.8 Flash Lite 与 SenseNova U1 Fast，最多 20 个 API Key；Flash-Lite 消费返赠——每消耗 1 专属积分返 1 通用积分（等效半价，返赠 30 天有效）；第三方模型额度低于自营
 - **免费模型**：SenseNova 6.8 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）、DeepSeek V4 Flash / V4 Pro、GLM-5.2、Kimi K3（8 个模型定价均为 0，2026-09-08 API 实测）
 - **接入**：`https://token.sensenova.cn/v1`（OpenAI 兼容，亦支持 Anthropic 兼容端点）
-- **状态**：Active（限时公测）— 核实于 2026-09-08（手机号注册，免绑卡、免实名；8/31 前 6.7 请求自动重定向至 6.8；U1 系列去水印公测免费、转付费后需传 `watermark: false`）
+- **状态**：Active（限时公测）— 核实于 2026-09-11（手机号注册，免绑卡、免实名；✅ 实测 `token.sensenova.cn/v1` 正常响应 401/需鉴权，而网传的 `api.sensenova.cn/v1` 返回 404，**请以 `token.sensenova.cn/v1` 为准**）
 
 #### 魔搭 ModelScope（阿里）
 
@@ -521,11 +560,11 @@
 #### OpenRouter
 
 - **官网**：https://openrouter.ai
-- **免费形式**：永久免费（`:free` 模型 50 次/天；累计充值 $10 后 1000 次/天）
-- **网页说明**：多模型聚合路由，官网标注 20+ 个免费模型，`openrouter/free` 可自动路由
-- **免费模型**：GPT-OSS 120B / 20B、Nemotron 3 Ultra / Super、Gemma 4 31B、Qwen3 235B、Llama 4 Scout 等（**名单按月轮换**，DeepSeek / Mistral 曾整段下架，用前先查 `openrouter.ai/models?max_price=0`）
+- **免费形式**：永久免费（`:free` 模型 50 次/天，20 次/分钟；累计充值 $10 后升至 1000 次/天）
+- **网页说明**：多模型聚合路由，官网提供 `:free` 免费模型清单，`openrouter/free` 可自动路由（⚠️ 网传「200 次/天」为过时信息，官方限速页现行标准为 50/1000）
+- **免费模型**：`thinkingmachines/inkling(-small)`（1M 上下文多模态）、`nvidia/nemotron-3-ultra-550b`、`nemotron-3-super-120b`、`nemotron-3.5-lightning`、`gemma-4-26b-a4b`、`gemma-4-31b`、`inclusionai/ling-3.0-flash-sante/-fin/-vl`、`nex-agi/nex-n2.5-pro/-mini`、`cohere/north-mini-code`、`poolside/laguna-s-2.1/-xs-2.1`、`dots-studio/dots-3-note-preview`、`liquid/lfm-2.5-2.6b` 等 **19 个**（**名单随时轮换**——**DeepSeek / GLM / Qwen / MiniMax / Kimi 均不在免费名单**，用前先查 `openrouter.ai/models?max_price=0`）
 - **接入**：`https://openrouter.ai/api/v1`（模型名务必带 `:free` 后缀）
-- **状态**：Active — 核实于 2026-08-31
+- **状态**：Active — 核实于 2026-09-11（免费名单已实测刷新：19 个 `:free` 模型；每日额度 50 次，充值 $10 后 1000 次）
 
 #### AIHubMix
 
@@ -535,6 +574,15 @@
 - **免费模型**：glm-4.7-flash-free、hy3-free、minimax-m3-free、k2.6-code-preview-free、gpt-oss-20b-free、nemotron-3-ultra/super-free、gemma-4-31b-it-free、mimo-v2.5(-pro)-free、coding-glm-5.3-free、gpt-5.5-free、gemini-3.8-flash-free 等 56 个
 - **接入**：`https://aihubmix.com/v1`（兼容 Chat Completions / Messages / Responses 三协议）
 - **状态**：Active — 核实于 2026-09-05（充值 $1 才转每日配额；全免费模型共享额度池）
+
+#### OpenCode Zen
+
+- **官网**：[https://opencode.ai/zen](https://opencode.ai/zen)（[定价页](https://opencode.ai/docs/zen/)）
+- **免费形式**：限时免费模型（Big Pickle、MiMo-V2.5 Free、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.3 Contributor Free —— 输入/输出/缓存读写全 $0）
+- **网页说明**：OpenCode 官方模型网关，官网定价页将上述 6 款明确标注为 Free，并说明"限时免费、用于收集反馈改进模型"；**并非整个平台免费**——DeepSeek / GLM / Kimi / Qwen 等主流模型均为按量付费
+- **免费模型**：Big Pickle（隐身模型）、MiMo-V2.5 Free、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.3 Contributor Free
+- **接入**：`https://opencode.ai/zen/v1`（OpenAI 兼容；部分模型走 `/messages` Anthropic 协议或 `/responses`）
+- **状态**：Active（限时免费）— 核实于 2026-09-11（⚠️ 网传的 `deepseek-v4-flash-free` **实为付费**（$0.14/$0.28），不在免费名单）
 
 #### ~~Chutes~~（已失效）
 
@@ -623,6 +671,7 @@
 以下是常见的信息偏差，我们会在条目中显式标注：
 
 - **"免费层"不等于"永久免费"。** Google 在 2025 年 12 月将 Gemini 免费额度砍掉约 80%，其他家随时可能跟进。
+- **免费名单的流动性比想象中大。** 2026-09-11 实测：OpenRouter 的 19 个 `:free` 模型中**已不含任何 DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama 模型**；NVIDIA NIM 的 80 个模型中也**已移除 GLM、MiniMax、Qwen3.5、DeepSeek R1/V3、StepFun**——收录的模型可能在你看到时已经下架，用前务必跑一次 `curl` 确认。
 - **"限时免费"随时可能结束。** 活动期 API（如 B.AI 的限时免费模型）没有公开的截止日期，消失也不会提前通知。
 - **部分"免费"需要绑信用卡**才能开通，或需要手机号/实名验证。
 - **你的数据可能被用于训练。** Google（免费层）、Mistral（Experiment 计划）、Groq 以及 OpenRouter 的 `:free` 上游普遍会在免费流量上做训练，部分支持关闭。
