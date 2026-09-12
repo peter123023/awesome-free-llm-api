@@ -51,9 +51,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: allowance undisclosed, renews every 4 weeks, gateway is young |  |
+| [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: ⚠️ **region-blocked for Mainland China, Hong Kong and Macao**, requiring an overseas network; allowance undisclosed, renews every 4 weeks, gateway is young | Region-restricted |
 
-> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). The only confirmed free entry point is the Token Harbor free plan.
+> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). ⚠️ **Token Harbor is region-blocked** — `https://tokenharbor.ai/v1` returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (verified 2026-09-12). **In short, V4.1 Flash currently has no free entry point that works out of the box from Mainland China.**
 
 #### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
 
@@ -531,7 +531,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free tier**: permanent free model (Spark Lite, unlimited tokens, rate-limited to QPS 2)
 - **What the site says**: iFlytek's official platform; Spark Lite is permanently free for real-name-verified individual accounts, no token cap
 - **Free models**: Spark Lite (lightweight, unlimited tokens, QPS 2)
-- **Endpoint**: https://xinghuo.xfyun.cn/sparkapi (APIKey/APISecret auth; OpenAI-compatible endpoint per official docs)
+- **Endpoint**: `https://spark-api-open.xf-yun.com/v1` (OpenAI-compatible; APIKey/APISecret auth, keys issued from the [console](https://xinghuo.xfyun.cn/sparkapi))
 - **Status**: Active — verified 2026-09-05 (real-name verification required)
 
 #### SenseNova (SenseTime)
@@ -632,7 +632,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free tier**: Free plan at $0/month with a monthly free allowance (renews on a **4-week rolling** cycle; unused room does not carry forward); Agent Pass at $1.99/month ($0.99 first month)
 - **What the site says**: small gateway; the pricing page lists **DeepSeek V4 Flash, DeepSeek V4.1 Flash and MiMo V2.5** on the Free plan and notes "Promotional models added over time" (the lineup rotates); note that free requests may be saved by the platform
 - **Free models**: DeepSeek V4 Flash, DeepSeek V4.1 Flash, MiMo V2.5
-- **Status**: Active (small gateway) — verified 2026-09-12 (⚠️ the **exact allowance is unpublished**; the free allowance and any paid Pass pool into **one shared pool**, and subscribing does not replace the free allowance)
+- **Endpoint**: `https://tokenharbor.ai/v1` (OpenAI-compatible; generate an API key after signing up)
+- **Status**: Active (small gateway, **⚠️ unavailable from Mainland China / Hong Kong / Macao**) — verified 2026-09-12 (⚠️ the endpoint returns `{"type":"region_blocked"}` in practice; the message states it "Cannot serve requests from … **Mainland China, Hong Kong and Macau**", so **readers in Mainland China need an overseas network path** — and the operator asks users to turn off VPNs and retry, since it only sees the country your connection exits from; ⚠️ the **exact allowance is unpublished**; the free allowance and any paid Pass pool into **one shared pool**, and subscribing does not replace the free allowance)
 
 #### TokenRouter
 
@@ -693,6 +694,7 @@ Known sources of drift, flagged explicitly in each entry:
 - **Some "free" tiers require a credit card**, a phone number, or real-name verification.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
 - **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
+- **Some overseas gateways apply regional blocks.** Token Harbor returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (2026-09-12). Even with a free allowance, such endpoints require an overseas network path from Mainland China — and the operator typically asks you to turn VPNs off, since it only sees the country your connection exits from.
 - **"Free signup credits" ≠ free.** DeepSeek's official signup grant is confirmed gone (balance 0 as of 2026-08-31); the official channel is now "cheap", not "free".
 
 ## License

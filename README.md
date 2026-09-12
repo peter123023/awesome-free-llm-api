@@ -52,9 +52,9 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:免费额度未公开、按 4 周滚动刷新,网关资历浅 |  |
+| [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:⚠️ **中国大陆/香港/澳门被区域封锁**,需境外网络;额度未公开、按 4 周滚动刷新,网关资历浅 | 区域受限 |
 
-> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。目前可确认的免费入口仅 Token Harbor 免费档。
+> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。⚠️ **Token Harbor 有区域封锁**——实测 `https://tokenharbor.ai/v1` 返回 `region_blocked`，明确拒绝中国大陆/香港/澳门（2026-09-12 实测）。**综上，V4.1 Flash 目前没有对国内读者开箱可用的免费入口。**
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
@@ -532,7 +532,7 @@
 - **免费形式**：永久免费模型（Spark Lite 无限 Token，仅限速 QPS 2）
 - **网页说明**：讯飞官方开放平台；Spark Lite 个人实名认证后永久免费、不限 Token
 - **免费模型**：Spark Lite（轻量基础版，无限 Token，QPS 2）
-- **接入**：[https://xinghuo.xfyun.cn/sparkapi](https://xinghuo.xfyun.cn/sparkapi)（讯飞 APIKey/APISecret 鉴权；OpenAI 兼容端点见官方文档）
+- **接入**：`https://spark-api-open.xf-yun.com/v1`（OpenAI 兼容；APIKey/APISecret 鉴权，密钥在 [控制台](https://xinghuo.xfyun.cn/sparkapi) 申请）
 - **状态**：Active — 核实于 2026-09-05（需实名）
 
 #### 商汤 SenseNova（日日新）
@@ -633,7 +633,8 @@
 - **免费形式**：Free 档 $0/月，含每月免费额度（按 **4 周滚动**刷新，不过期结转）；另有 Agent Pass $1.99/月（首月 $0.99）
 - **网页说明**：小型网关；官网定价页列 Free 档含 **DeepSeek V4 Flash、DeepSeek V4.1 Flash、MiMo V2.5** 三款，并称「Promotional models added over time」（免费名单会轮换）；注意免费请求可能被平台保存
 - **免费模型**：DeepSeek V4 Flash、DeepSeek V4.1 Flash、MiMo V2.5
-- **状态**：Active（小型网关）— 核实于 2026-09-12（⚠️ 免费额度**具体数额未公开**；免费档与付费 Pass 的额度**合并为一个池子**，订阅不会替换已有免费额度）
+- **接入**：`https://tokenharbor.ai/v1`（OpenAI 兼容，注册后生成 API Key）
+- **状态**：Active（小型网关，**⚠️ 中国大陆/香港/澳门不可用**）— 核实于 2026-09-12（⚠️ 实测该端点返回 `{"type":"region_blocked"}`，原文写明「Cannot serve requests from … **Mainland China, Hong Kong and Macau**」，故**国内读者需自备境外网络环境**，且官方要求关闭 VPN 重试——它只能看到连接出口国；⚠️ 免费额度**具体数额未公开**；免费档与付费 Pass 的额度**合并为一个池子**，订阅不会替换已有免费额度）
 
 #### TokenRouter
 
@@ -694,6 +695,7 @@
 - **部分"免费"需要绑信用卡**才能开通，或需要手机号/实名验证。
 - **你的数据可能被用于训练。** Google（免费层）、Mistral（Experiment 计划）、Groq 以及 OpenRouter 的 `:free` 上游普遍会在免费流量上做训练，部分支持关闭。
 - **小型网关的免费额度最不稳定。** Token Harbor / BazaarLink 这类新晋网关验证有限、随时可能关停或收费，只适合原型验证，别托付生产负载。
+- **部分境外网关对国内做区域封锁。** Token Harbor 实测直接返回 `region_blocked`，明文拒绝中国大陆/香港/澳门（2026-09-12）；此类端点即使有免费额度，国内也需自备境外网络，且官方通常要求关闭 VPN——它只能看到连接出口国。
 - **"官方注册送额度"不等于免费。** 例如 DeepSeek 官方 API 的试用赠送已确认取消（2026-08-31 实测余额为 0），官方渠道现在是"低价"而非"免费"。
 
 ## 许可证
