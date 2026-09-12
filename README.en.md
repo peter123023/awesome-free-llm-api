@@ -52,9 +52,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: allowance undisclosed, renews every 4 weeks, gateway is young |  |
-| [OrcaRouter](https://www.orcarouter.ai) | Free pool runs whichever the upstream picks; may not include it | Pros: zero-markup gateway, no card; Cons: the free pool is V4 Flash, not V4.1 — **V4.1 is billed** ($0.15/$0.60), and it is not guaranteed to rotate into the free list | Paid |
 
-> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). The only confirmed free entry point is the Token Harbor free plan.
+> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). The only confirmed free entry point is the Token Harbor free plan.
 
 #### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
 

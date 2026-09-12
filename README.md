@@ -53,9 +53,8 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:免费额度未公开、按 4 周滚动刷新,网关资历浅 |  |
-| [OrcaRouter](https://www.orcarouter.ai) | 免费池按上游选型,可能轮空 | 优势:零加价网关、免卡;限制:免费池为 V4 Flash 而非 V4.1,**V4.1 走付费**($0.15/$0.60),是否轮入免费名单不保证 | 需付费 |
 
-> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。目前可确认的免费入口仅 Token Harbor 免费档。
+> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。目前可确认的免费入口仅 Token Harbor 免费档。
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
