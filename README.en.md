@@ -51,10 +51,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | Within the monthly starter allowance (amount undisclosed) | Pros: now hosted on Ollama's official cloud, sign-up and go, no card; Cons: allowance is small and undisclosed, 1 concurrency only, credits needed beyond it |  |
-| [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, carries V4.1 Flash; Cons: allowance undisclosed, renews every 4 weeks, gateway is young |  |
+| [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: allowance undisclosed, renews every 4 weeks, gateway is young |  |
+| [OrcaRouter](https://www.orcarouter.ai) | Free pool runs whichever the upstream picks; may not include it | Pros: zero-markup gateway, no card; Cons: the free pool is V4 Flash, not V4.1 — **V4.1 is billed** ($0.15/$0.60), and it is not guaranteed to rotate into the free list | Paid |
 
-> ⚠️ **No official free tier**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M); the channels above are third-party and their free allowances can change at any time.
+> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). The only confirmed free entry point is the Token Harbor free plan.
 
 #### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
 
@@ -72,7 +72,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: free allowance unpublished, 429 rate limits, best-effort not production |  |
 | [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
@@ -110,7 +110,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official hosting, no card, 1.3M context & multimodal, no daily cap; Cons: 40 RPM shared, queues at peak | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
 | [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 
 #### GLM 5.2 / 5.1
@@ -120,7 +120,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free models (GLM 5.3 Flash etc.) | Pros: official OpenCode gateway, no card; Cons: only the limited-time Flash tier is free, full GLM 5.3 is paid ($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash is now on NVIDIA NIM**: as of 2026-09-12, `integrate.api.nvidia.com/v1/models` returns 82 models including `z-ai/glm-5.3-flash` (1.3M context, multimodal, 40 RPM). Note this is not "the whole GLM family is back" — GLM 5.2 / 5.1 / 4.7 are still absent.
@@ -222,7 +222,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (in-client) | Pros: official OpenCode gateway, no card; Cons: limited-time, client-only |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (deprecation notice on site) | Pros: official, no card; Cons: deprecation notice on site, use with care | Frequent timeouts |
@@ -241,7 +241,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -315,7 +315,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (20B only) | Pros: official, no card; Cons: 40 RPM shared, only hosts gpt-oss-20b | Frequent timeouts |
 
@@ -336,7 +336,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` (Ultra / Super / 3.5 Lightning) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -379,7 +379,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` (both 31B and 26B-A4B) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
-| [Ollama Cloud](https://ollama.com) | monthly starter credits (amount unpublished) | Pros: official Ollama cloud hosting, sign up & go, no card; Cons: small unpublished free quota, 1 concurrent request, extra credits needed beyond it |  |
+| [Ollama Cloud](https://ollama.com) | Free plan includes a small starter allowance (amount unpublished, starter models only) | Pros: official cloud hosting, sign up & go, no card; Cons: ⚠️ the Free plan is **limited to the "starter models" subset — flagship models are not included**; calling V4.1 Flash requires buying credits (pay-per-token, off-peak $0.15/$0.60); allowance unpublished, 1 concurrent request | Paid to unlock |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent | Pros: official, no card; Cons: 40 RPM shared | Frequent timeouts |
 
@@ -469,12 +469,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 #### Ollama Cloud
 
-- **Official site**: https://ollama.com (cloud model catalog: https://ollama.com/search?c=cloud)
-- **Free tier**: permanent (Free plan includes starter usage credits, refresh monthly, never expire; amount not published)
-- **What the site says**: pricing page lists Free at $0 — "Starter usage credits included / Access to starter models"; cloud models bill per token against the credits; add credits to unlock all models
-- **Free models**: **deepseek-v4.1-flash**, deepseek-v4-pro:0813, deepseek-v4-flash:0731, glm-5.1 / 5.2 / 5.3 / 5.3-flash, kimi-k2.6 / k2.7-code / k3, minimax-m2.7 / m3, qwen3.5:397b, gpt-oss:20b / 120b, gemma4:31b, nemotron-3-super / ultra / nano:30b, mistral-large-3:675b (20 cloud models in total; the starter subset follows the official site)
-- **Endpoint**: `https://ollama.com/api/chat` (Ollama API; API key: https://ollama.com/settings/keys)
-- **Status**: Active — verified 2026-09-12 (in practice `/api/tags` returns 20 cloud models; ✅ **`deepseek-v4.1-flash` newly added** — one of the confirmed free entry points for V4.1 Flash; monthly starter credits, amount unpublished; 1 concurrent request)
+- **Official site**: https://ollama.com ([pricing](https://ollama.com/pricing) · cloud model catalog: https://ollama.com/search?c=cloud)
+- **Free tier**: Free plan at $0, including a small starter allowance (refreshes monthly, does not roll over, **exact amount unpublished**) that **covers only the "starter models" subset**
+- **What the site says**: the pricing page states plainly — "Run models locally / Starter usage credits included / **Includes access to starter models** / Add credits to unlock **all** models". In other words, **the Free plan reaches only the starter subset; flagship models must be unlocked with purchased credits**. Pro is $20/mo ($60 credits included), Max $100/mo ($300 credits, 10 concurrent)
+- **Available models (require purchased credits)**: deepseek-v4.1-flash ($0.15/$0.60 off-peak), deepseek-v4-pro, deepseek-v4-flash, glm-5.1 / 5.2 / 5.3 / 5.3-flash, kimi-k2.6 / k2.7-code / k3, minimax-m2.7 / m3, qwen3.5:397b, gpt-oss:20b / 120b, gemma4, nemotron-3-nano / super / ultra, mistral-large-3 (19 models in the cloud catalog)
+- **Endpoint**: `https://ollama.com/api/chat` (Ollama API; API key: https://ollama.com/settings/keys — **calling without a key returns `{"error":"Unauthorized"}`**)
+- **Status**: Active (**limited free scope**) — verified 2026-09-12 (⚠️ **important correction**: this entry previously claimed "V4.1 Flash is a free entry point", which was a misreading — the 19-20 models returned by `/api/tags` are merely the **cloud catalog**, not a free list. Calling `deepseek-v4.1-flash` without an API key returns Unauthorized, and **V4.1 Flash is a flagship model requiring purchased credits, not part of the free starter subset**. The Free plan's real value is a small undisclosed allowance on starter-size models; 1 concurrent request, allowance resets monthly from your signup date and does not roll over)
+
+> ℹ️ **Strictly speaking this channel only partly meets the inclusion bar**: a free allowance exists but its size is unpublished, and **the official starter model list has never been published** — readers must check their own available models on the [settings page](https://ollama.com/settings). Most people signing in see only the local-model download entry on the Downloads page, which is expected — **cloud free allowances are not surfaced there**.
 
 ### China platforms
 

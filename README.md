@@ -52,10 +52,10 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:目前已上架官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
-| [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、含 V4.1 Flash;限制:免费额度未公开、按 4 周滚动刷新,网关资历浅 |  |
+| [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:免费额度未公开、按 4 周滚动刷新,网关资历浅 |  |
+| [OrcaRouter](https://www.orcarouter.ai) | 免费池按上游选型,可能轮空 | 优势:零加价网关、免卡;限制:免费池为 V4 Flash 而非 V4.1,**V4.1 走付费**($0.15/$0.60),是否轮入免费名单不保证 | 需付费 |
 
-> ⚠️ **官方无免费层**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）；上表为第三方渠道，免费额度随时可能调整。
+> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。目前可确认的免费入口仅 Token Harbor 免费档。
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
@@ -73,7 +73,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、429 限流、best-effort 非生产可用 |  |
 | [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
@@ -111,7 +111,7 @@
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、1.3M 上下文多模态、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
 | [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 
 #### GLM 5.2 / 5.1
@@ -121,7 +121,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费模型(GLM 5.3 Flash 等) | 优势:OpenCode 官方网关、免卡;限制:仅限时免费的 Flash 款,正式版 GLM 5.3 为付费($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash 已在 NVIDIA NIM 上架**：截至 2026-09-12 实测 `integrate.api.nvidia.com/v1/models` 共 82 个模型，其中 `z-ai/glm-5.3-flash` 在列（1.3M 上下文、多模态、40 RPM）。注意这不是"整个 GLM 系列回归"——GLM 5.2 / 5.1 / 4.7 仍未在列。
@@ -223,7 +223,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、免卡;限制:限时免费,仅客户端内使用 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(官方标注即将弃用) | 优势:官方托管、免绑卡;限制:官网标注即将弃用,慎用 | 经常超时 |
@@ -242,7 +242,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
@@ -316,7 +316,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(仅 20B) | 优势:官方托管、免绑卡;限制:40 RPM 全站共享,仅托管 gpt-oss-20b | 经常超时 |
 
@@ -337,7 +337,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free`（Ultra / Super / 3.5 Lightning） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
@@ -380,7 +380,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free`（31B 与 26B-A4B 两款） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
-| [Ollama Cloud](https://ollama.com) | 每月 starter 额度内(数额未公开) | 优势:Ollama 官方云托管、注册即用、无卡;限制:免费额度小且未公开、仅 1 并发,超额需购 credits |  |
+| [Ollama Cloud](https://ollama.com) | 免费档含少量 starter 额度(数额未公开,仅覆盖 starter 模型) | 优势:官方云托管、注册即用、无卡;限制:⚠️ 免费档**仅限「starter 模型」子集,旗舰款不在内**——实测调用 V4.1 Flash 需先购 credits(按量付费,闲时 $0.15/$0.60);额度未公开、仅 1 并发 | 需付费解锁 |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费 | 优势:官方托管、免绑卡;限制:40 RPM 全站共享 | 经常超时 |
 
@@ -470,12 +470,14 @@
 
 #### Ollama Cloud
 
-- **官网**：[https://ollama.com](https://ollama.com)（[云模型目录](https://ollama.com/search?c=cloud)）
-- **免费形式**：永久免费层（Free 档注册即含 starter 用量额度，按月刷新不过期；具体数额未公开）
-- **网页说明**：官网定价页 Free 档 $0 —— "Starter usage credits included / Access to starter models"；云模型按 token 计价从额度扣除，加 credits 可解锁全部模型
-- **免费模型**：**deepseek-v4.1-flash**、deepseek-v4-pro:0813、deepseek-v4-flash:0731、glm-5.1 / 5.2 / 5.3 / 5.3-flash、kimi-k2.6 / k2.7-code / k3、minimax-m2.7 / m3、qwen3.5:397b、gpt-oss:20b / 120b、gemma4:31b、nemotron-3-super / ultra / nano:30b、mistral-large-3:675b（共 20 个，starter 子集以官网为准）
-- **接入**：`https://ollama.com/api/chat`（Ollama API；API Key：[https://ollama.com/settings/keys](https://ollama.com/settings/keys)）
-- **状态**：Active — 核实于 2026-09-12（实测 `/api/tags` 返回 20 个云模型，✅ **新上架 `deepseek-v4.1-flash`**——这是 V4.1 Flash 目前可确认的免费入口之一；免费额度为月度 starter 用量、数额未公开；仅 1 并发）
+- **官网**：[https://ollama.com](https://ollama.com)（[定价页](https://ollama.com/pricing) · [云模型目录](https://ollama.com/search?c=cloud)）
+- **免费形式**：Free 档 $0，含少量 starter 用量额度（按月刷新、不结转，**具体数额未公开**），**仅覆盖「starter 模型」子集**
+- **网页说明**：官网定价页 Free 档明确写 "Run models locally / Starter usage credits included / **Includes access to starter models** / Add credits to unlock **all** models"——即**免费档只能调 starter 子集，旗舰模型需购买 credits 解锁**；Pro $20/月（含 $60 credits）、Max $100/月（含 $300 credits，10 并发）
+- **可用模型（需付费 credits 解锁）**：deepseek-v4.1-flash（$0.15/$0.60 闲时）、deepseek-v4-pro、deepseek-v4-flash、glm-5.1 / 5.2 / 5.3 / 5.3-flash、kimi-k2.6 / k2.7-code / k3、minimax-m2.7 / m3、qwen3.5:397b、gpt-oss:20b / 120b、gemma4、nemotron-3-nano / super / ultra、mistral-large-3（云目录共 19 款）
+- **接入**：`https://ollama.com/api/chat`（Ollama API；API Key：[https://ollama.com/settings/keys](https://ollama.com/settings/keys)，**未带 key 返回 `{"error":"Unauthorized"}`**）
+- **状态**：Active（**免费范围有限**）— 核实于 2026-09-12（⚠️ **重要更正**：本条目此前写成「V4.1 Flash 是免费入口」属于误读——`/api/tags` 返回 19-20 款只是**云目录**，不等于免费清单。实测无 API Key 调用 `deepseek-v4.1-flash` 直接返回 Unauthorized，**V4.1 Flash 属需付费解锁的旗舰款，不在免费 starter 子集内**。免费档真实价值＝少量未公开额度 + starter 小模型；Free 档 1 并发，额度按月从注册日重置、不结转）
+
+> ℹ️ **本渠道严格说只部分符合收录标准**：免费额度存在但未公开数额，且**官方从未公布 starter 模型清单**，读者需在 [设置页](https://ollama.com/settings) 查看自己的可用模型。多数读者登录后在 Downloads 页只看到本地模型下载入口，属于正常——**云模型的免费额度不体现在下载页**。
 
 ### 中国平台
 
