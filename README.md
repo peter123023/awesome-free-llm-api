@@ -63,7 +63,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM 无每日上限 | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大、1M 上下文;限制:限时公测,付费档即将上线 |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大、1M 上下文;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 
 #### DeepSeek V4 Flash
 
@@ -71,10 +71,10 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线 |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、429 限流、best-effort 非生产可用 |  |
-| [Hugging Face](https://huggingface.co) | 共享端点限流 | 优势:免费、社区模型全;限制:共享端点限流严重、无 SLA | 限流严重 |
+| [Hugging Face](https://huggingface.co) | 每月 $0.10 免费推理额度,超额按量付费 | 优势:社区模型极全、OpenAI 兼容;限制:免费额度仅 $0.10/月、超额即按量付费(hard stop),共享端点限流、无 SLA | 额度极小 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
 
 #### DeepSeek R1 / V3
@@ -116,7 +116,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线 |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费模型(GLM 5.3 Flash 等) | 优势:OpenCode 官方网关、免卡;限制:仅限时免费的 Flash 款,正式版 GLM 5.3 为付费($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash 已在 NVIDIA NIM 上架**：截至 2026-09-12 实测 `integrate.api.nvidia.com/v1/models` 共 82 个模型，其中 `z-ai/glm-5.3-flash` 在列（1.3M 上下文、多模态、40 RPM）。注意这不是"整个 GLM 系列回归"——GLM 5.2 / 5.1 / 4.7 仍未在列。
@@ -245,7 +245,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分(额度/RPM 有限) | 优势:国产官方、公测免费、1M 上下文、原生视觉;限制:限时公测,付费档即将上线,额度/RPM 有限(实测偶发限流) |  |
+| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分(额度/RPM 有限) | 优势:国产官方、公测免费、1M 上下文、原生视觉;限制:限时公测,付费档即将上线,额度/RPM 有限(实测偶发限流),随时可能转付费 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### StepFun Step 3.7 Flash
@@ -298,7 +298,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:官方自营、公测期免费额度大、Flash-Lite 消费返赠等效半价;限制:限时公测,付费档即将上线 |  |
+| [商汤](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:官方自营、公测期免费额度大、Flash-Lite 消费返赠等效半价;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 
 ### 海外模型
 
@@ -320,7 +320,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [Google AI Studio](https://aistudio.google.com) | 按天重置(Flash 约 1500 次/日、Flash-Lite 约 1000 次/日) | 优势:官方大额免费、免绑卡、多模态;限制:需 Google 账号,免费层数据可能用于改进产品 |  |
+| [Google AI Studio](https://aistudio.google.com) | 按天重置(2.5 Pro 5 RPM/50 RPD、Flash 15 RPM/1500 RPD、Flash-Lite 30 RPM/1500 RPD) | 优势:官方免费、免绑卡、多模态、1M 上下文;限制:2.5 Pro 免费档仅 5 RPM/50 RPD(trial-only)、需 Google 账号、免费层数据可能用于改进产品、高峰实际吞吐远低于标称 |  |
 
 #### Nemotron 3 Ultra / Super / Lightning
 
@@ -409,7 +409,7 @@
 - **官网**：https://aistudio.google.com
 - **免费形式**：永久免费层（按天重置）
 - **网页说明**：Google 官方 AI 开发平台，免费层提供 Gemini 系列模型 API 调用
-- **免费模型**：Gemini 2.5 Flash（约 1500 次/天）、Flash-Lite（约 1000 次/天）、Gemini 3.x Flash（预览，限流更严）；2.5 Pro 已移出免费层（2026-04-01 起）
+- **免费模型**：Gemini 2.5 Pro（免费档 **5 RPM / 50 RPD / 1M TPM**，仅够试用、trial-only）、2.5 Flash（15 RPM / 1,500 RPD）、Flash-Lite（30 RPM / 1,500 RPD）、Gemini 3.x Flash（预览，限流更严）；⚠️ **2.5 Pro 仍在免费层**（与旧文档「2026-04-01 移出」相反），只是免费档额度极低；⚠️ 2025-12 起免费配额已被大幅削减，高峰时段实际可用量远低于标称（社区实测 Flash 高峰仅约 20 次/日）
 - **接入**：`https://generativelanguage.googleapis.com/v1beta`（原生 SDK 亦可）
 - **状态**：Active — 核实于 2026-08-31
 
@@ -443,11 +443,11 @@
 #### Hugging Face
 
 - **官网**：https://huggingface.co
-- **免费形式**：永久免费（共享推理端点，限流）
-- **网页说明**：最大的开源模型库，提供免费推理 token（Inference API）
-- **免费模型**：数千个社区与官方模型（DeepSeek V4 Flash 等也在列）
-- **接入**：`https://router.huggingface.co/hf-inference`（`InferenceClient` / REST）
-- **状态**：Active — 核实于 2026-08-31
+- **免费形式**：每月 **$0.10** 免费推理额度（Inference Providers 路由计费，按上游原价零加价），超额后按量付费（免费用户到额度即停、hard stop，需购 credits 才继续）
+- **网页说明**：最大的开源模型库，提供 Inference Providers 路由推理；所有用户每月获 $0.10 免费额度用于试用，超出部分按量计费
+- **免费模型**：10 万+ 社区与官方模型（DeepSeek V4 Flash 等可按路由调用，但消耗的是免费额度，额度耗尽即停）
+- **接入**：`https://router.huggingface.co/hf-inference`（`InferenceClient` / REST，鉴权用 HF User Access Token）
+- **状态**：Active — 核实于 2026-09-14（⚠️ **免费额度已大幅缩水**：2026 年起免费用户仅 $0.10/月推理额度，不再是「永久免费共享端点」；PRO $9/月也仅 $2/月额度。免费档只够极小实验，生产请购 credits）
 
 #### AMD Token Factory（Radeon Cloud）
 
@@ -537,12 +537,14 @@
 
 #### 商汤 SenseNova（日日新）
 
+> ⚠️ **公测免费「随时可能转付费」**：商汤官方明确「付费档位即将上线」且**未公布任何截止日期**。公测 Free 档随时可能结束并转为按量付费——**请勿将生产负载或关键链路依赖于此渠道**；每次调用前请到官网确认当前是否仍免费。
+
 - **官网**：https://platform.sensenova.cn · Token Plan：https://www.sensenova.cn/token-plan
 - **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）；TokenPlan 积分体系——通用积分池与 Flash-Lite 专属积分池**各自**享有 **60,000 积分 / 滚动 5 小时** + **600,000 积分 / 滚动周**
 - **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；公测 Free 档含 SenseNova 6.8 Flash Lite 与 SenseNova U1 Fast，最多 20 个 API Key；Flash-Lite 消费返赠——每消耗 1 专属积分返 1 通用积分（返赠 30 天有效且**不占用滚动额度**，等效半价）；第三方模型额度低于自营
 - **免费模型**：SenseNova 6.8 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）、DeepSeek V4 Flash / V4 Pro、GLM-5.2、Kimi K3（8 个模型定价均为 0，2026-09-08 API 实测）
 - **接入**：`https://token.sensenova.cn/v1`（OpenAI 兼容，亦支持 Anthropic 兼容端点）
-- **状态**：Active（限时公测）— 核实于 2026-09-12（手机号注册，免绑卡、免实名；✅ 官方文档确认公测期 Free 档 **¥0/月** 且**未公布结束日期**；✅ 实测 `token.sensenova.cn/v1` 正常响应 401/需鉴权，而网传的 `api.sensenova.cn/v1` 返回 404，**请以 `token.sensenova.cn/v1` 为准**；实测延迟偏高，Kimi K3 消耗积分最快）
+- **状态**：Active（限时公测，**随时可能转付费**）— 核实于 2026-09-14（手机号注册，免绑卡、免实名；✅ 官方文档确认公测期 Free 档 **¥0/月** 但**未公布结束日期**，付费档「即将上线」；✅ 实测 `token.sensenova.cn/v1` 正常响应 401/需鉴权，而网传的 `api.sensenova.cn/v1` 返回 404，**请以 `token.sensenova.cn/v1` 为准**；实测延迟偏高，Kimi K3 消耗积分最快）
 
 #### 魔搭 ModelScope（阿里）
 
@@ -609,19 +611,19 @@
 
 - **官网**：https://b.ai · API 文档：https://b.ai/docs
 - **免费形式**：限时免费（4 个模型 0 Credits；**无公开截止日期，随时可能结束**）
-- **网页说明**：AI Agent 基础设施平台；API 兼容 OpenAI / Anthropic 协议。**2026-09-03 起 DeepSeek V4 Flash 与 Vision Exp 已结束免费**，改为阶梯折扣（高峰 5 折、空闲低至官方价 2.5 折），其余 4 个模型仍为 0 Credits
+- **网页说明**：AI Agent 基础设施平台；API 兼容 OpenAI / Anthropic 协议。**2026-09-03 起 DeepSeek V4 Flash 与 V4 Flash Vision Exp 已结束免费**（转阶梯折扣：高峰 5 折、空闲低至官方价 2.5 折）；其余 4 个模型仍为 0 Credits。**未扩大免费阵容**——DeepSeek 于 9/10 发布 V4.1 Flash、9/14 退役旧 Flash 名，旧 `deepseek-v4-flash` 请求现路由到 V4.1 Flash 并按 Flash 价计费，B.AI 从未免费提供 V4.1 Flash
 - **免费模型**：GLM-5.3-Flash（Ox Alpha）、Qwen3.8 Flash、Hy3、MiMo-V2.5
 - **接入**：`https://api.b.ai/v1`（国内访问不畅时用备用域名 `api.bankofai.io`，OpenAI 兼容）
-- **状态**：Active（限时）— 核实于 2026-09-04
+- **状态**：Active（限时）— 核实于 2026-09-14（⚠️ 仍为 4 款免费，V4 Flash / V4 Flash Vision 已转付费折扣，勿按旧「6 款免费」信息收录）
 
 #### Experiential Labs
 
 - **官网**：[https://platform.experientiallabs.ai](https://platform.experientiallabs.ai)（YC 背景，自称「开源版 OpenRouter」）
-- **免费形式**：限时免费（Promotional 档，输入/输出全 $0；Free plan 月度配额刷新，新组织另送 welcome credits）
+- **免费形式**：限时免费（Promotional 档标 $0 输入/输出的模型仍在，但 Free plan 改为**每月有限 credits 额度，约 500 credits/月**，1 credit = 1 美分；超额即停、无自动转付费；新组织另送 welcome credits）
 - **网页说明**：商业模式是「用免费流量换训练数据」——官方提供上传 traces 作为遥测的流程；免费层即获客投资，**额度随时可能收缩**
-- **免费模型**：`Qwen3.8 27B free`（1M 上下文、192 tok/s、80.2% uptime）、`DeepSeek V4 Flash free`（1.05M、141 tok/s、100% uptime）、`GPT-5.6 Luna free`（1.05M、154 tok/s、97.5%）、`Claude Fable 5.1 free`（1M、86.9 tok/s、**72.5% uptime**）、`GPT-6 Astra free`（1.05M、88 tok/s、89%）——后两款原价均为 $10/$50
+- **免费模型**：`Qwen3.8 27B free`（1M 上下文、192 tok/s、80.2% uptime）、`DeepSeek V4 Flash free`（1.05M、141 tok/s、100% uptime）、`GPT-5.6 Luna free`（1.05M、154 tok/s、97.5%）、`Claude Fable 5.1 free`（1M、86.9 tok/s、**72.5% uptime**）、`GPT-6 Astra free`（1.05M、88 tok/s、89%）——后两款原价均为 $10/$50（模型标 $0 但受每月约 500 credits 总额约束）
 - **接入**：`https://api.experientiallabs.ai/v1`（OpenAI 兼容，需注册生成 key）
-- **状态**：Active（限时）— 核实于 2026-09-12（⚠️ **免费层 uptime 偏低**：Claude Fable 5.1 仅 72.5%、TTFT 约 4.5 秒；1 credit = 1 美分，额度耗尽返回错误且**明确说明重试无效**；仅适合尝鲜，勿放入生产链路）
+- **状态**：Active（限时）— 核实于 2026-09-14（⚠️ **免费层 uptime 偏低**：Claude Fable 5.1 仅 72.5%、TTFT 约 4.5 秒；**免费额度已收紧至约 500 credits/月**，额度耗尽返回错误且明确说明重试无效**；仅适合尝鲜，勿放入生产链路）
 
 ### 小型网关（谨慎）
 

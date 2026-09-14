@@ -62,7 +62,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM, no daily cap | Pros: official, no credit card, no daily cap; Cons: 40 RPM shared across all models | Frequent timeouts |
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota, 1M context; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota, 1M context; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 
 #### DeepSeek V4 Flash
 
@@ -70,10 +70,10 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: free allowance unpublished, 429 rate limits, best-effort not production |  |
-| [Hugging Face](https://huggingface.co) | shared endpoint, rate-limited | Pros: free, huge model catalog; Cons: heavily rate-limited shared endpoint, no SLA | Heavy rate limits |
+| [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 
 #### DeepSeek R1 / V3
@@ -115,7 +115,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free models (GLM 5.3 Flash etc.) | Pros: official OpenCode gateway, no card; Cons: only the limited-time Flash tier is free, full GLM 5.3 is paid ($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash is now on NVIDIA NIM**: as of 2026-09-12, `integrate.api.nvidia.com/v1/models` returns 82 models including `z-ai/glm-5.3-flash` (1.3M context, multimodal, 40 RPM). Note this is not "the whole GLM family is back" — GLM 5.2 / 5.1 / 4.7 are still absent.
@@ -244,7 +244,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits (quota/RPM limited) | Pros: official China platform, free beta, 1M context, native vision; Cons: limited-time beta, paid tiers coming, quota/RPM limited (occasional rate-limit in practice) |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits (quota/RPM limited) | Pros: official China platform, free beta, 1M context, native vision; Cons: limited-time beta, paid tiers coming, quota/RPM limited (occasional rate-limit in practice), can switch to paid anytime |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### StepFun Step 3.7 Flash
@@ -297,7 +297,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official, generous beta quota, Flash-Lite rebate ~half price; Cons: limited-time beta, paid tiers coming |  |
+| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official, generous beta quota, Flash-Lite rebate ~half price; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 
 ### Global models
 
@@ -319,7 +319,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [Google AI Studio](https://aistudio.google.com) | daily reset (Flash ~1,500 req/day, Flash-Lite ~1,000 req/day) | Pros: official, large free quota, no card, multimodal; Cons: needs Google account, free-tier data may be used for product improvement |  |
+| [Google AI Studio](https://aistudio.google.com) | daily reset (2.5 Pro 5 RPM/50 RPD, Flash 15 RPM/1,500 RPD, Flash-Lite 30 RPM/1,500 RPD) | Pros: official, free, no card, multimodal, 1M context; Cons: 2.5 Pro free tier is only 5 RPM/50 RPD (trial-only), needs Google account, free-tier data may be used for product improvement, real throughput far below nominal at peak |  |
 
 #### Nemotron 3 Ultra / Super / Lightning
 
@@ -408,7 +408,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Official site**: https://aistudio.google.com
 - **Free tier**: permanent (daily reset)
 - **What the site says**: Google's official AI dev platform; the free tier exposes Gemini models over the API
-- **Free models**: Gemini 2.5 Flash (~1,500 req/day), Flash-Lite (~1,000 req/day), Gemini 3.x Flash (preview, stricter limits); 2.5 Pro removed from the free tier (since 2026-04-01)
+- **Free models**: Gemini 2.5 Pro (free tier **5 RPM / 50 RPD / 1M TPM**, trial-only), 2.5 Flash (15 RPM / 1,500 RPD), Flash-Lite (30 RPM / 1,500 RPD), Gemini 3.x Flash (preview, stricter limits); ⚠️ **2.5 Pro is still in the free tier** (contrary to the old "removed 2026-04-01" note), just at a very low free allowance; ⚠️ the free quota was sharply cut in Dec 2025 and real-world throughput at peak is far below nominal (community reports Flash ~20 req/day at peak)
 - **Endpoint**: `https://generativelanguage.googleapis.com/v1beta` (native SDK also available)
 - **Status**: Active — verified 2026-08-31
 
@@ -442,11 +442,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### Hugging Face
 
 - **Official site**: https://huggingface.co
-- **Free tier**: permanent (shared inference endpoints, rate-limited)
-- **What the site says**: the largest open model hub, with free inference tokens (Inference API)
-- **Free models**: thousands of community & official models (incl. DeepSeek V4 Flash)
-- **Endpoint**: `https://router.huggingface.co/hf-inference` (`InferenceClient` / REST)
-- **Status**: Active — verified 2026-08-31
+- **Free tier**: **$0.10** free inference credits per month (Inference Providers routed billing, zero markup at upstream list price); pay-as-you-go beyond — free users hit a hard stop at the credit limit and must buy credits to continue
+- **What the site says**: the largest open model hub, offering Inference Providers routed inference; every user gets $0.10/month free credits for trials, billed pay-as-you-go after
+- **Free models**: 100k+ community & official models (DeepSeek V4 Flash etc. can be called via routing, but consume the free credit and stop when exhausted)
+- **Endpoint**: `https://router.huggingface.co/hf-inference` (`InferenceClient` / REST, auth with HF User Access Token)
+- **Status**: Active — verified 2026-09-14 (⚠️ **free quota has shrunk sharply**: since 2026 free users get only $0.10/month inference credit, no longer "permanently free shared endpoints"; PRO at $9/mo is only $2/month. The free tier is good for tiny experiments only — buy credits for production)
 
 #### AMD Token Factory (Radeon Cloud)
 
@@ -536,12 +536,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 #### SenseNova (SenseTime)
 
+> ⚠️ **The beta-free tier "can switch to paid at any time"**: SenseTime explicitly states paid tiers are "coming soon" and has **published no end date**. The beta Free tier can end and flip to pay-per-use at any moment — **do not depend on this channel for production or critical paths**; always check the official site before each call to confirm it is still free.
+
 - **Official site**: https://platform.sensenova.cn · Token Plan: https://www.sensenova.cn/token-plan
 - **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon); TokenPlan credit system — the general pool and the Flash-Lite-specific pool **each** get **60,000 credits / rolling 5h** plus **600,000 credits / rolling week**
 - **What the site says**: "fully free during public beta, paid tiers launching soon"; the Free tier covers SenseNova 6.8 Flash Lite and SenseNova U1 Fast, up to 20 API keys; Flash-Lite spend rebate — every 1 dedicated credit spent returns 1 general credit (rebate valid 30 days and **does not consume the rolling quota**, effectively half price); third-party models have lower quotas than first-party
 - **Free models**: SenseNova 6.8 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation), DeepSeek V4 Flash / V4 Pro, GLM-5.2, Kimi K3 (all 8 models priced at 0, API-verified 2026-09-08)
 - **Endpoint**: `https://token.sensenova.cn/v1` (OpenAI-compatible; Anthropic-compatible endpoint also available)
-- **Status**: Active (limited-time beta) — verified 2026-09-12 (phone signup; no card, no real-name; ✅ the official docs confirm the beta Free tier is **¥0/month** with **no published end date**; ✅ `token.sensenova.cn/v1` responds correctly (401 without auth), while the widely-circulated `api.sensenova.cn/v1` returns 404 — **use `token.sensenova.cn/v1`**; measured latency is on the high side, and Kimi K3 burns credits fastest)
+- **Status**: Active (limited-time beta, **can switch to paid at any time**) — verified 2026-09-14 (phone signup; no card, no real-name; ✅ the official docs confirm the beta Free tier is **¥0/month** but with **no published end date**, and paid tiers are "coming soon"; ✅ `token.sensenova.cn/v1` responds correctly (401 without auth), while the widely-circulated `api.sensenova.cn/v1` returns 404 — **use `token.sensenova.cn/v1`**; measured latency is on the high side, and Kimi K3 burns credits fastest)
 
 #### ModelScope (Alibaba)
 
@@ -608,19 +610,19 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 - **Official site**: https://b.ai · API docs: https://b.ai/docs
 - **Free tier**: limited-time (4 models at 0 Credits; **no published end date, can end anytime**)
-- **What the site says**: AI-agent infrastructure platform; API is OpenAI- and Anthropic-compatible. **Since 2026-09-03 DeepSeek V4 Flash and Vision Exp are no longer free** — they moved to tiered discounts (50% off at peak, down to 25% of list price off-peak); the other 4 models remain at 0 Credits
+- **What the site says**: AI-agent infrastructure platform; API is OpenAI- and Anthropic-compatible. **Since 2026-09-03 DeepSeek V4 Flash and V4 Flash Vision Exp are no longer free** (moved to tiered discounts: 50% off at peak, down to 25% of list price off-peak); the other 4 models remain at 0 Credits. **The free lineup did NOT expand** — DeepSeek launched V4.1-Flash on 9/10 and retired the old Flash names on 9/14; legacy `deepseek-v4-flash` requests now route to V4.1-Flash at Flash rates, and B.AI never offered V4.1-Flash for free
 - **Free models**: GLM-5.3-Flash (Ox Alpha), Qwen3.8 Flash, Hy3, MiMo-V2.5
 - **Endpoint**: `https://api.b.ai/v1` (use `api.bankofai.io` if the main domain is unreachable from China; OpenAI-compatible)
-- **Status**: Active (limited-time) — verified 2026-09-04
+- **Status**: Active (limited-time) — verified 2026-09-14 (⚠️ still 4 free models; V4 Flash / V4 Flash Vision moved to paid discounts — do not record the stale "6 free models" claim)
 
 #### Experiential Labs
 
 - **Official site**: [https://platform.experientiallabs.ai](https://platform.experientiallabs.ai) (YC-backed; calls itself "the open-source OpenRouter")
-- **Free tier**: limited-time (Promotional tier, $0 in / $0 out; the Free plan quota refreshes monthly and new organizations get welcome credits)
+- **Free tier**: limited-time (models marked $0 in/out still exist, but the Free plan is now a **capped monthly credit allowance of ~500 credits/month**, 1 credit = 1 cent; hard stop when exhausted, no auto-upgrade to paid; new orgs also get welcome credits)
 - **What the site says**: the business model is "free traffic in exchange for training data" — the platform documents a flow for uploading traces as telemetry, so the free tier is a customer-acquisition investment and **the allowance can shrink at any time**
-- **Free models**: `Qwen3.8 27B free` (1M context, 192 tok/s, 80.2% uptime), `DeepSeek V4 Flash free` (1.05M, 141 tok/s, 100% uptime), `GPT-5.6 Luna free` (1.05M, 154 tok/s, 97.5%), `Claude Fable 5.1 free` (1M, 86.9 tok/s, **72.5% uptime**), `GPT-6 Astra free` (1.05M, 88 tok/s, 89%) — the latter two list at $10/$50
+- **Free models**: `Qwen3.8 27B free` (1M context, 192 tok/s, 80.2% uptime), `DeepSeek V4 Flash free` (1.05M, 141 tok/s, 100% uptime), `GPT-5.6 Luna free` (1.05M, 154 tok/s, 97.5%), `Claude Fable 5.1 free` (1M, 86.9 tok/s, **72.5% uptime**), `GPT-6 Astra free` (1.05M, 88 tok/s, 89%) — the latter two list at $10/$50 (models marked $0 still fall under the ~500 credits/month cap)
 - **Endpoint**: `https://api.experientiallabs.ai/v1` (OpenAI-compatible, register for a key)
-- **Status**: Active (limited-time) — verified 2026-09-12 (⚠️ **low uptime on the free tier**: Claude Fable 5.1 only 72.5%, TTFT ~4.5s; 1 credit = 1 cent, and once depleted it returns an error that **explicitly says retrying will not help**; for tasting only, do not put it in a production path)
+- **Status**: Active (limited-time) — verified 2026-09-14 (⚠️ **low uptime on the free tier**: Claude Fable 5.1 only 72.5%, TTFT ~4.5s; **free allowance tightened to ~500 credits/month**, and once depleted it returns an error that explicitly says retrying will not help**; for tasting only, do not put it in a production path)
 
 ### Small gateways (use with care)
 
