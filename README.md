@@ -130,6 +130,8 @@
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、无卡;限制:限时免费,仅客户端内使用,免费名单随时变动 |  |
+| [TideLink](https://tidelink.xyz) | 永久免费层(免卡注册,默认 glm-4.7-flash;上游免费池拥堵时自动降级 glm-4-flash 兜底,仍 $0) | 优势:OpenAI 兼容网关、免卡注册、免费档随上游自动降级不中断;限制:仅 Flash 小模型免费,付费档聚合 GLM/Qwen/DeepSeek 等主流模型 |  |
+
 
 > ⚠️ **GLM-4.7 不在 NVIDIA NIM 免费名单**：2026-09 初一度上架后又移除；截至 2026-09-12，NIM 上仅新上架了 `z-ai/glm-5.3-flash` 一款，GLM-4.7 仍不在列，勿再依赖。
 
@@ -591,6 +593,15 @@
 - **免费模型**：`orcarouter/free`（按难度智能路由免费池）、`z-ai/glm-5.3-flash-free`、`deepseek/deepseek-v4-flash-free`、`tencent/hy3-free`（2026-09-12 实测 `/v1/models` 195 个中的免费 4 款）
 - **接入**：`https://api.orcarouter.ai/v1`（OpenAI 兼容，注册免卡）
 - **状态**：Active（限流）— 核实于 2026-09-12（2026-09-07 免费默认模型由 Qwen3.8-27B 换成 GLM-5.3 Flash：质量分 4→8、上下文 262K→1M，但 TTFT 1.96s→7.66s、吞吐 196→74 tok/s；⚠️ 未充值账号日额度更小，`429 + Retry-After` = 限流、无 header 的 429 = prompt 超长；官方明示为 best-effort，非生产容量）
+
+#### TideLink
+
+- **官网**：[https://tidelink.xyz](https://tidelink.xyz)（[Pricing](https://tidelink.xyz/pricing.html)）
+- **免费形式**：永久免费层（无需绑卡注册，注册即送免费额度；默认免费模型 `glm-4.7-flash`，视觉 `glm-4.6v-flash` 免费；上游免费池拥堵时自动降级到 `glm-4-flash`/`glm-4v-flash` 兜底，仍 $0）
+- **网页说明**：官网标注免费档含当前世代智谱 Flash 模型，OpenAI 兼容网关，明确「no card required」
+- **免费模型**：`glm-4.7-flash`（默认）、`glm-4.6v-flash`（视觉）、`glm-4-flash`、`glm-4v-flash`（自动降级兜底）；付费档聚合 GLM / Qwen / DeepSeek 等主流模型
+- **接入**：`https://tidelink.xyz/v1`（OpenAI 兼容；另提供 Anthropic 兼容端点 `/v1/messages`）
+- **状态**：Active — 核实于 2026-09-14（免卡注册免费档实测可调；免费模型随上游免费池自动降级兜底，无断供）
 
 #### Chutes ~~（已失效）~~
 
