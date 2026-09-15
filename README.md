@@ -672,6 +672,7 @@
 - **网页说明**：台湾 LLM 网关，官网列「免費模型 1」并说明「免費額度，超出後自動轉為付費計價」；`auto:free` 会自动路由到当前最合适的免费模型
 - **免费模型**：`auto:free`（智能路由免费池）、`qwen/qwen3.7-flash:free`（视觉语言推理模型）
 - **接入**：`https://api.bazaarlink.ai/v1`（OpenAI 兼容）
+- [HostDeFi](https://hostdefi.com) — free token-safety scanner grading tokens A+–F from on-chain checks (mint/freeze authority, liquidity, holder concentration) across Solana + 7 EVM chains. Keyless REST API, hosted MCP, x402 endpoints.
 - **状态**：Active（小型网关）— 核实于 2026-09-12（✅ 实测 `/v1/models` 171 个模型中 `auto:free` 与 `qwen/qwen3.7-flash:free` 的 pricing 均为 0，**免费层已恢复**，此前 2026-09-05 的「已失效」判断有误；⚠️ 2026-09-05 起停用 agent 自助注册端点（`/api/agents/register` 返回 410）以防免费层被滥用，需正常注册账号后在面板建 key）
 
 ## 参与贡献
