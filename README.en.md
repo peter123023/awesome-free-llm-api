@@ -83,6 +83,8 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: free allowance unpublished, 429 rate limits, best-effort not production |  |
+| [BazaarLink](https://bazaarlink.ai) | free tier `deepseek-v4-flash-0731free:free` ($0 in / $0 out) | Pros: Taiwan-based gateway, no card, includes the 0731 build; Cons: young small gateway, rate-limited, free allowance unpublished |  |
+| [OpenCode Zen](https://opencode.ai/zen) | limited-time free (`deepseek-v4-flash-free`) | Pros: OpenCode's official gateway, no card, 1M context; Cons: limited-time free can end anytime, data may be used to improve the model during the free period, lineup flips back and forth (showed billing on 9/11) |  |
 | [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 
@@ -579,7 +581,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **What the site says**: multi-model router exposing a `:free` lineup; `openrouter/free` auto-routes between them (⚠️ the widely-quoted "200 req/day" is outdated — the official limits page states 50/1000)
 - **Free models**: `thinkingmachines/inkling(-small)` (1M-context multimodal), `nvidia/nemotron-3-ultra-550b`, `nemotron-3-super-120b`, `nemotron-3.5-lightning`, `gemma-4-26b-a4b`, `gemma-4-31b`, `inclusionai/ling-3.0-flash-sante/-fin/-vl`, `nex-agi/nex-n2.5-pro/-mini`, `cohere/north-mini-code`, `poolside/laguna-s-2.1/-xs-2.1`, `dots-studio/dots-3-note-preview` (512K), `liquid/lfm-2.5-2.6b` — **19 in total** (⚠️ **DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama are all absent**; check `openrouter.ai/models?max_price=0` first)
 - **Endpoint**: `https://openrouter.ai/api/v1` (append `:free` to the model name)
-- **Status**: Active — verified 2026-09-12 (free lineup re-verified live: 19 `:free` models; 50 req/day, 1,000 after $10. ⚠️ the free pool churns daily — on 9/8 two MiniMax models left and two Nex AGI N2.5 models entered; "lands in the free pool on launch day" is a cold-start signal, not a long-term commitment, so always keep a fallback)
+- **Status**: Active — verified 2026-09-20 (free lineup re-verified live: 21 `:free` models — new entries include Nex AGI N2.5 mini/pro, `z-ai/glm-5.2`, Poolside Laguna ×2, Thinking Machines Inkling ×2, Ling 3.0 Flash ×3 (Fin/Sante/VL), Liquid LFM 2.5, Cohere North Mini Code, five NVIDIA Nemotron variants, Gemma 4 ×2 and Qwen3.8-27B; `dots-3-note-preview:free` leaves on 9/30. 50 req/day, 1,000 after $10. ⚠️ the free pool churns daily — "lands in the free pool on launch day" is a cold-start signal, not a long-term commitment, so always keep a fallback)
 
 #### AIHubMix
 
@@ -593,20 +595,20 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### OpenCode Zen
 
 - **Official site**: [https://opencode.ai/zen](https://opencode.ai/zen) ([pricing](https://opencode.ai/docs/zen/))
-- **Free tier**: limited-time free models (Big Pickle, MiMo-V2.5 Free, Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.3 Contributor Free — $0 for input, output and cache read/write)
-- **What the site says**: OpenCode's official model gateway; the pricing page explicitly marks those 6 models as Free and notes they are "available for a limited time while the team collects feedback"; **the platform itself is not free** — DeepSeek / GLM / Kimi / Qwen and the rest are pay-per-token
-- **Free models**: Big Pickle (stealth model), MiMo-V2.5 Free, Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.3 Contributor Free
+- **Free tier**: limited-time free models (DeepSeek V4 Flash, MiMo-V2.5, Ling 3.0 Flash Fin, Nemotron 3 Ultra, Nemotron 3.5 Lightning, Muse Spark 1.2 / 1.3 Contributor, Jev 1.13, Big Pickle — $0 for input, output and cache read/write)
+- **What the site says**: OpenCode's official model gateway; the pricing page explicitly marks the free models as Free and notes they are "available for a limited time while the team collects feedback"; **the platform itself is not free** — the full DeepSeek / GLM / Kimi / Qwen editions are pay-per-token
+- **Free models**: DeepSeek V4 Flash Free (1M context), MiMo-V2.5 Free (multimodal), Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.2 / 1.3 Contributor Free, Jev 1.13 Free (decision model, Evaluation API), Big Pickle (stealth model) — 8 in the live `/v1/models` on 2026-09-20
 - **Endpoint**: `https://opencode.ai/zen/v1` (OpenAI-compatible; some models use `/messages` Anthropic or `/responses`)
-- **Status**: Active (limited-time) — verified 2026-09-11 (⚠️ the widely-cited `deepseek-v4-flash-free` is actually **paid** ($0.14/$0.28) and not on the free list)
+- **Status**: Active (limited-time) — verified 2026-09-20 (⚠️ `deepseek-v4-flash-free` showed pay-per-token pricing ($0.14/$0.28) on 2026-09-11 but was back on the official free list by 2026-09-20 — the free lineup flips back and forth, always check the current site list before calling)
 
 #### OrcaRouter
 
 - **Official site**: [https://www.orcarouter.ai](https://www.orcarouter.ai) ([docs](https://docs.orcarouter.ai))
 - **Free tier**: free pool rate-limited per workspace (allowance unpublished); **0% token markup** on the paid side (pass-through at upstream list price)
 - **What the site says**: an OpenAI-compatible LLM routing gateway with 200+ models behind one endpoint; free models are catalog models exposed under separate free IDs with identical weights/capabilities, running in an isolated rate-limited pool — **a saturated free model will not silently fall back to its paid counterpart**
-- **Free models**: `orcarouter/free` (difficulty-aware routing across the free pool), `z-ai/glm-5.3-flash-free`, `deepseek/deepseek-v4-flash-free`, `tencent/hy3-free` (4 free of 195 models in the live `/v1/models` on 2026-09-12)
+- **Free models**: `orcarouter/free` (difficulty-aware routing across the free pool), `z-ai/glm-5.3-flash-free`, `deepseek/deepseek-v4-flash-free`, `tencent/hy3-free` (4 free of 197 models in the live `/v1/models` on 2026-09-20)
 - **Endpoint**: `https://api.orcarouter.ai/v1` (OpenAI-compatible, no card required)
-- **Status**: Active (rate-limited) — verified 2026-09-12 (on 2026-09-07 the free default switched from Qwen3.8-27B to GLM-5.3 Flash: quality score 4→8, context 262K→1M, but TTFT 1.96s→7.66s and throughput 196→74 tok/s; ⚠️ accounts that never purchased credit get a smaller daily allowance, `429 + Retry-After` means the window is full while a 429 without the header means the prompt is too long; the vendor explicitly calls it best-effort, not production capacity)
+- **Status**: Active (rate-limited) — verified 2026-09-20 (on 2026-09-07 the free default switched from Qwen3.8-27B to GLM-5.3 Flash: quality score 4→8, context 262K→1M, but TTFT 1.96s→7.66s and throughput 196→74 tok/s; ⚠️ accounts that never purchased credit get a smaller daily allowance, `429 + Retry-After` means the window is full while a 429 without the header means the prompt is too long; the vendor explicitly calls it best-effort, not production capacity)
 
 #### Chutes ~~(retired)~~
 
@@ -682,11 +684,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### BazaarLink
 
 - **Official site**: https://bazaarlink.ai ([free-model rules](https://bazaarlink.ai/docs/api#free-models))
-- **Free tier**: free model tier (`auto:free` smart routing across the free pool plus `qwen/qwen3.7-flash:free`, $0 in / $0 out, rate-limited, no card required)
+- **Free tier**: free model tier (`auto:free` smart routing across the free pool plus `qwen/qwen3.7-flash:free` and `deepseek/deepseek-v4-flash-0731free:free`, $0 in / $0 out, rate-limited, no card required)
 - **What the site says**: a Taiwan-based LLM gateway; the site lists "1 free model" and notes "free allowance, auto-switching to paid billing beyond it"; `auto:free` routes to whichever free model currently fits best
-- **Free models**: `auto:free` (free-pool smart routing), `qwen/qwen3.7-flash:free` (vision-language reasoning model)
+- **Free models**: `auto:free` (free-pool smart routing), `qwen/qwen3.7-flash:free` (vision-language reasoning), `deepseek/deepseek-v4-flash-0731free:free` (new as of 2026-09-20)
 - **Endpoint**: `https://api.bazaarlink.ai/v1` (OpenAI-compatible)
-- **Status**: Active (small gateway) — verified 2026-09-12 (✅ live `/v1/models` returns 171 models, with both `auto:free` and `qwen/qwen3.7-flash:free` priced at 0 — **the free tier has been restored**; the earlier "retired 2026-09-05" call was wrong. ⚠️ since 2026-09-05 the self-serve agent registration endpoint (`/api/agents/register`) returns 410 to curb free-tier abuse — register normally and create a key in the dashboard)
+- **Status**: Active (small gateway) — verified 2026-09-20 (✅ live `/v1/models` returns 175 models, with three `*:free` models priced at 0 (auto / qwen3.7-flash / deepseek-v4-flash-0731) — the free tier holds. ⚠️ since 2026-09-05 the self-serve agent registration endpoint (`/api/agents/register`) returns 410 to curb free-tier abuse — register normally and create a key in the dashboard)
 
 ## Contributing
 
@@ -706,7 +708,7 @@ Full template and rules: [CONTRIBUTING.md](CONTRIBUTING.md).
 Known sources of drift, flagged explicitly in each entry:
 
 - **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
-- **Free lineups churn more than you think.** Verified 2026-09-11: none of OpenRouter's 19 `:free` models is a DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama model; NVIDIA NIM's 80 models no longer include GLM, MiniMax, Qwen3.5, DeepSeek R1/V3 or StepFun — a model listed here may already be gone when you read it, so run a `curl` check first.
+- **Free lineups churn more than you think.** On 2026-09-11 OpenRouter's 19 `:free` models contained no DeepSeek / GLM / Qwen models; nine days later (2026-09-20) the pool grew to 21 and re-admitted GLM-5.2 and Qwen3.8-27B. NVIDIA NIM's 80+ models have also repeatedly added and dropped GLM, MiniMax, DeepSeek R1/V3 and StepFun — a model listed here may already be gone when you read it, so run a `curl` check first.
 - **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's former limited-time tier) publish no end date.
 - **Some "free" tiers require a credit card**, a phone number, or real-name verification. Example: Vercel AI Gateway's $5/month free credit explicitly requires **a valid payment method on file** before it can be used (`To use free AI Gateway Credits, add a valid payment method to your team.`, verified 2026-09-20) — having a card on file does not mean being charged, but the barrier is real.
 - **Not every "free model" generates text.** Structured decision models like Jev (state plus typed questions in, choices/scores/probabilities out) are served over Evaluation or Decisions APIs and **cannot be used as chat models**; OpenAI-compatible chat/completions calling conventions usually do not apply.
