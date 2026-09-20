@@ -116,7 +116,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official hosting, no card, 1.3M context & multimodal, no daily cap; Cons: 40 RPM shared, queues at peak | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
-| [B.AI](https://b.ai) | limited-time free (0 Credits) | Pros: anonymous, $0 output; Cons: no end date published, could end anytime |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 
 #### GLM 5.2 / 5.1
@@ -180,7 +179,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: no end date published |  |
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast inference (700+ tok/s); Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (Qwen3.8-Flash-Next) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 
@@ -280,7 +278,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | ~~[Tencent Hunyuan](https://cloud.tencent.com/product/hunyuan)~~ | ~~Lite permanently free~~ legacy platform shuts down 2026-09-30, TokenHub has no Lite | Pros: official, permanently free (ended with the legacy platform); Cons: Lite only (now defunct), needs Tencent Cloud account |  |
-| [B.AI](https://b.ai) | Hy3 limited-time free | Pros: anonymous; Cons: limited-time, no end date |  |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, 429 rate limits, best-effort not production |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
@@ -298,7 +295,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [B.AI](https://b.ai) | limited-time free | Pros: anonymous, $0 output; Cons: limited-time, no end date |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 
 #### SenseNova 6.8 Flash-Lite
@@ -628,11 +624,11 @@ All of the above is **API-level free**: you get an API key and call it over an H
 #### B.AI
 
 - **Official site**: https://b.ai · API docs: https://b.ai/docs
-- **Free tier**: limited-time (4 models at 0 Credits; **no published end date, can end anytime**)
-- **What the site says**: AI-agent infrastructure platform; API is OpenAI- and Anthropic-compatible. **Since 2026-09-03 DeepSeek V4 Flash and V4 Flash Vision Exp are no longer free** (moved to tiered discounts: 50% off at peak, down to 25% of list price off-peak); the other 4 models remain at 0 Credits. **The free lineup did NOT expand** — DeepSeek launched V4.1-Flash on 9/10 and retired the old Flash names on 9/14; legacy `deepseek-v4-flash` requests now route to V4.1-Flash at Flash rates, and B.AI never offered V4.1-Flash for free
-- **Free models**: GLM-5.3-Flash (Ox Alpha), Qwen3.8 Flash, Hy3, MiMo-V2.5
+- **Free tier**: ~~limited-time (0 Credits)~~ **ENDED** — since 2026-09-16 17:00 (Singapore time) every model moved to at least a 10% discount; the platform has zero 0-Credit models left
+- **What the site says**: AI-agent infrastructure platform; API is OpenAI- and Anthropic-compatible. Free-tier timeline (per the official promo page): 8/17 DeepSeek V4 Flash free → 9/3 tiered discount (50% peak / 25% off-peak); 8/21 Hy3, 8/24 MiMo-V2.5, 8/29 GLM-5.3-Flash / Qwen3.8-Flash free → 9/12 GLM-5.3-Flash and V4.1-Flash moved to 10% discount → **9/16 17:00 Qwen3.8-Flash / Hy3 / MiMo-V2.5 also moved to 10% discount — the free tier is gone**
+- **Free models**: ~~GLM-5.3-Flash (Ox Alpha), Qwen3.8 Flash, Hy3, MiMo-V2.5~~ (all ended; now at least 10% off)
 - **Endpoint**: `https://api.b.ai/v1` (use `api.bankofai.io` if the main domain is unreachable from China; OpenAI-compatible)
-- **Status**: Active (limited-time) — verified 2026-09-14 (⚠️ still 4 free models; V4 Flash / V4 Flash Vision moved to paid discounts — do not record the stale "6 free models" claim)
+- **Status**: **Inactive (free tier ended 2026-09-16)** — verified 2026-09-20 (⚠️ no longer listed as a free channel; re-evaluate if a free tier returns)
 
 #### Experiential Labs
 
@@ -711,7 +707,7 @@ Known sources of drift, flagged explicitly in each entry:
 
 - **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
 - **Free lineups churn more than you think.** Verified 2026-09-11: none of OpenRouter's 19 `:free` models is a DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama model; NVIDIA NIM's 80 models no longer include GLM, MiniMax, Qwen3.5, DeepSeek R1/V3 or StepFun — a model listed here may already be gone when you read it, so run a `curl` check first.
-- **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's limited-time models) publish no end date.
+- **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's former limited-time tier) publish no end date.
 - **Some "free" tiers require a credit card**, a phone number, or real-name verification. Example: Vercel AI Gateway's $5/month free credit explicitly requires **a valid payment method on file** before it can be used (`To use free AI Gateway Credits, add a valid payment method to your team.`, verified 2026-09-20) — having a card on file does not mean being charged, but the barrier is real.
 - **Not every "free model" generates text.** Structured decision models like Jev (state plus typed questions in, choices/scores/probabilities out) are served over Evaluation or Decisions APIs and **cannot be used as chat models**; OpenAI-compatible chat/completions calling conventions usually do not apply.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.

@@ -117,7 +117,6 @@
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、1.3M 上下文多模态、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
-| [B.AI](https://b.ai) | 限时免费(0 Credits) | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期,随时可能结束 |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 
 #### GLM 5.2 / 5.1
@@ -181,7 +180,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |  |
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理(700+ token/s);限制:30 RPM / 1000 RPD,TPM 8K |  |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(Qwen3.8-Flash-Next) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 
@@ -281,7 +279,6 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | ~~[腾讯混元](https://cloud.tencent.com/product/hunyuan)~~ | ~~Lite 永久免费~~ 旧平台 2026-09-30 停服，新平台 TokenHub 无 Lite | 优势:官方永久免费(已随旧平台下线终结);限制:仅 Lite 免费(已失效),需腾讯云账号实名 |  |
-| [B.AI](https://b.ai) | Hy3 限时免费 | 优势:匿名免注册;限制:限时免费无截止日期 |  |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、429 限流、best-effort 非生产可用 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
@@ -299,7 +296,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [B.AI](https://b.ai) | 限时免费 | 优势:匿名免注册、输出 $0;限制:限时免费无截止日期 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 
 #### SenseNova 6.8 Flash-Lite
@@ -629,11 +625,11 @@
 #### B.AI
 
 - **官网**：https://b.ai · API 文档：https://b.ai/docs
-- **免费形式**：限时免费（4 个模型 0 Credits；**无公开截止日期，随时可能结束**）
-- **网页说明**：AI Agent 基础设施平台；API 兼容 OpenAI / Anthropic 协议。**2026-09-03 起 DeepSeek V4 Flash 与 V4 Flash Vision Exp 已结束免费**（转阶梯折扣：高峰 5 折、空闲低至官方价 2.5 折）；其余 4 个模型仍为 0 Credits。**未扩大免费阵容**——DeepSeek 于 9/10 发布 V4.1 Flash、9/14 退役旧 Flash 名，旧 `deepseek-v4-flash` 请求现路由到 V4.1 Flash 并按 Flash 价计费，B.AI 从未免费提供 V4.1 Flash
-- **免费模型**：GLM-5.3-Flash（Ox Alpha）、Qwen3.8 Flash、Hy3、MiMo-V2.5
+- **免费形式**：~~限时免费（0 Credits）~~ **已结束** — 2026-09-16 17:00（新加坡时间）起全部模型转为最低 10% 折扣，平台已无任何 0 Credits 模型
+- **网页说明**：AI Agent 基础设施平台；API 兼容 OpenAI / Anthropic 协议。免费档时间线（据官方公告页）：8/17 DeepSeek V4 Flash 免费 → 9/3 转阶梯折扣（高峰 5 折、空闲 2.5 折）；8/21 Hy3、8/24 MiMo-V2.5、8/29 GLM-5.3-Flash / Qwen3.8-Flash 免费 → 9/12 GLM-5.3-Flash 与 V4.1 Flash 转 10% 折扣 → **9/16 17:00 起 Qwen3.8-Flash / Hy3 / MiMo-V2.5 也转 10% 折扣，免费档彻底结束**
+- **免费模型**：~~GLM-5.3-Flash（Ox Alpha）、Qwen3.8 Flash、Hy3、MiMo-V2.5~~（均已结束免费，现最低 10% 折扣）
 - **接入**：`https://api.b.ai/v1`（国内访问不畅时用备用域名 `api.bankofai.io`，OpenAI 兼容）
-- **状态**：Active（限时）— 核实于 2026-09-14（⚠️ 仍为 4 款免费，V4 Flash / V4 Flash Vision 已转付费折扣，勿按旧「6 款免费」信息收录）
+- **状态**：**已失效（免费档 2026-09-16 结束）** — 核实于 2026-09-20（⚠️ 本仓库不再将其列为免费渠道；如未来重新开放免费档再评估收录）
 
 #### Experiential Labs
 
@@ -712,7 +708,7 @@
 
 - **"免费层"不等于"永久免费"。** Google 在 2025 年 12 月将 Gemini 免费额度砍掉约 80%，其他家随时可能跟进。
 - **免费名单的流动性比想象中大。** 2026-09-11 实测：OpenRouter 的 19 个 `:free` 模型中**已不含任何 DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama 模型**；NVIDIA NIM 的 80 个模型中也**已移除 GLM、MiniMax、Qwen3.5、DeepSeek R1/V3、StepFun**——收录的模型可能在你看到时已经下架，用前务必跑一次 `curl` 确认。
-- **"限时免费"随时可能结束。** 活动期 API（如 B.AI 的限时免费模型）没有公开的截止日期，消失也不会提前通知。
+- **"限时免费"随时可能结束。** 活动期 API（如曾经的 B.AI 限时免费档）没有公开的截止日期，消失也不会提前通知。
 - **部分"免费"需要绑信用卡**才能开通，或需要手机号/实名验证。例：Vercel AI Gateway 的每月 $5 免费额度，官方明确要求**先绑定有效支付方式**才可启用（`To use free AI Gateway Credits, add a valid payment method to your team.`，2026-09-20 核实）——绑卡不等于扣费，但门槛确实存在。
 - **不是所有"免费模型"都在生成文本。** Jev 这类**结构化决策模型**（输入状态 + 带类型的问题，输出选项/评分/概率）走的是 Evaluation 或 Decisions 类接口，**不能当聊天模型用**，OpenAI 兼容的 chat/completions 调用方式往往不适用。
 - **你的数据可能被用于训练。** Google（免费层）、Mistral（Experiment 计划）、Groq 以及 OpenRouter 的 `:free` 上游普遍会在免费流量上做训练，部分支持关闭。
