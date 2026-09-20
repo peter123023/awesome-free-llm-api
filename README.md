@@ -54,8 +54,6 @@
 |------|------|------|------|
 | [Vercel AI Gateway](https://vercel.com/ai-gateway) | ⚠️ **限时促销免费**（原价 $0.042/M 输入，输出免费） | 优势:官方渠道、零 token 加价、促销期内 0 成本；限制:⚠️ **促销 2026-09-25 结束**、**需先绑支付方式**才能启用免费额度、32K 上下文、**走 Evaluation / TypeSafe API 而非 chat/completions**、免费档限流更低 | 促销期内可用 |
 
-> ⚠️ **只有 Vercel 这一条，且是十天促销**。**OpenRouter 不是免费入口**——`typesafe/jev-1.13` 实测 `prompt: 0.000000042`（$0.042/M 输入）、`completion: 0`，**输入按 token 收费**，只有输出免费，不能算免费渠道（2026-09-20 实测 `/api/v1/models/typesafe/jev-1.13/endpoints`）。⚠️ **Venice API 上没有这个模型**——多家媒体（含 HuggingNews）报道「Jev 在 Venice API 免费 beta」，但实测拉取 Venice 完整目录 117 个模型，**无任何 Jev / TypeSafe 条目**，该报道不成立（2026-09-20 实测）。⚠️ **TypeSafe 官网从未提供免费层**——官网只有 $0.042/M 输入计价。**综上，Jev 目前唯一的免费入口是 Vercel 的限时促销，9 月 25 日后即归零。**
-
 ### DeepSeek 系列
 
 #### DeepSeek V4.1 Flash

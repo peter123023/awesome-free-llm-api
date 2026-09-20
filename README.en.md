@@ -53,8 +53,6 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [Vercel AI Gateway](https://vercel.com/ai-gateway) | ⚠️ **Limited-time promotional free** (list price $0.042/M input, output free) | Pros: official channel, zero token markup, $0 cost during the promo; Cons: ⚠️ **promo ends 2026-09-25**, **requires a payment method on file** to enable free credits, 32K context, **served over the Evaluation / TypeSafe API rather than chat/completions**, lower rate limits on the free tier | Usable during promo |
 
-> ⚠️ **Vercel is the only route, and it is a ten-day promo**. **OpenRouter is not a free entry point** — `typesafe/jev-1.13` measured `prompt: 0.000000042` ($0.042/M input) and `completion: 0`, so **input is billed per token** and only output is free; it does not qualify as a free channel (verified 2026-09-20 via `/api/v1/models/typesafe/jev-1.13/endpoints`). ⚠️ **Venice API does not carry this model** — several outlets (including HuggingNews) reported "Jev is free in beta on the Venice API", but a full pull of Venice's 117-model catalog shows **no Jev or TypeSafe entry at all**, so the report does not hold (verified 2026-09-20). ⚠️ **TypeSafe's own site has never offered a free tier** — only $0.042/M input pricing. **In short, the only free entry point for Jev today is Vercel's limited-time promo, which goes to zero after September 25.**
-
 ### DeepSeek family
 
 #### DeepSeek V4.1 Flash
