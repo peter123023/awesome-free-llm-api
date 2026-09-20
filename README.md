@@ -44,6 +44,18 @@
 
 ## 模型免费渠道索引
 
+### 结构化决策模型（非生成式）
+
+#### TypeSafe AI Jev
+
+> TypeSafe AI 的首个 System One 模型，2026-09-15 早期访问发布；**不生成文本**，输入一段状态 + 一组带类型的问题，输出选项（choice）、评分（score）和布尔概率（noul）
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [Vercel AI Gateway](https://vercel.com/ai-gateway) | ⚠️ **限时促销免费**（原价 $0.042/M 输入，输出免费） | 优势:官方渠道、零 token 加价、促销期内 0 成本；限制:⚠️ **促销 2026-09-25 结束**、**需先绑支付方式**才能启用免费额度、32K 上下文、**走 Evaluation / TypeSafe API 而非 chat/completions**、免费档限流更低 | 促销期内可用 |
+
+> ⚠️ **只有 Vercel 这一条，且是十天促销**。**OpenRouter 不是免费入口**——`typesafe/jev-1.13` 实测 `prompt: 0.000000042`（$0.042/M 输入）、`completion: 0`，**输入按 token 收费**，只有输出免费，不能算免费渠道（2026-09-20 实测 `/api/v1/models/typesafe/jev-1.13/endpoints`）。⚠️ **Venice API 上没有这个模型**——多家媒体（含 HuggingNews）报道「Jev 在 Venice API 免费 beta」，但实测拉取 Venice 完整目录 117 个模型，**无任何 Jev / TypeSafe 条目**，该报道不成立（2026-09-20 实测）。⚠️ **TypeSafe 官网从未提供免费层**——官网只有 $0.042/M 输入计价。**综上，Jev 目前唯一的免费入口是 Vercel 的限时促销，9 月 25 日后即归零。**
+
 ### DeepSeek 系列
 
 #### DeepSeek V4.1 Flash
@@ -558,6 +570,15 @@
 
 ### 聚合与网关
 
+#### Vercel AI Gateway
+
+- **官网**：[https://vercel.com/ai-gateway](https://vercel.com/ai-gateway)（[定价页](https://vercel.com/docs/ai-gateway/pricing) · [入门文档](https://vercel.com/docs/ai-gateway/getting-started)）
+- **免费形式**：免费档含 **每月 $5 额度**（首次发出 AI Gateway 请求时开始计时），可用范围限 **Free Tier eligible 模型子集**，每模型限流低于付费档；**Jev 在促销期内标价 Free**
+- **网页说明**：Vercel 官方托管网关，官网称「no markup and no platform fee on tokens」——按上游原价转发、零加价；免费档原文「**To use free AI Gateway Credits, add a valid payment method to your team.**」（用免费额度**必须先绑定有效支付方式**）
+- **免费模型**：**`typesafe-ai/jev`（限时促销，2026-09-25 结束）** + Free Tier eligible 模型子集（⚠️ 官方**未公布完整白名单**，需登录 dashboard 自行 browse「Free Tier models」）
+- **接入**：`https://ai-gateway.vercel.sh/v1`（OpenAI 兼容）；⚠️ **Jev 必须走 Evaluation 端点 `POST /v1/evaluate`**，请求体为 `{model, state, questions}`，**不能用 `chat/completions`**（2026-09-20 实测：`/v1/evaluate` 带 Jev 模型返回 `Authentication failed` 即端点正确、缺鉴权，而 `/v1/evaluations`、`/v1/decisions` 均返回 404 不存在）
+- **状态**：Active（限时促销）— 核实于 2026-09-20（⚠️ 三个必须记住的边界：①**促销 2026-09-25 结束**，页面原文 `Promotional pricing ends on September 25, 2026`；②**免费额度需先绑支付方式**，但不充值就不扣费（`Commitment: None`）；③**一旦主动购买 credits，账号转入付费档、每月 $5 免费额度永久失效**，官方原文 `Once you purchase credits, your account transitions to the paid tier and the monthly free credit no longer applies.`——建议先用完免费额度再考虑充值）
+
 #### OpenRouter
 
 - **官网**：https://openrouter.ai
@@ -694,7 +715,8 @@
 - **"免费层"不等于"永久免费"。** Google 在 2025 年 12 月将 Gemini 免费额度砍掉约 80%，其他家随时可能跟进。
 - **免费名单的流动性比想象中大。** 2026-09-11 实测：OpenRouter 的 19 个 `:free` 模型中**已不含任何 DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama 模型**；NVIDIA NIM 的 80 个模型中也**已移除 GLM、MiniMax、Qwen3.5、DeepSeek R1/V3、StepFun**——收录的模型可能在你看到时已经下架，用前务必跑一次 `curl` 确认。
 - **"限时免费"随时可能结束。** 活动期 API（如 B.AI 的限时免费模型）没有公开的截止日期，消失也不会提前通知。
-- **部分"免费"需要绑信用卡**才能开通，或需要手机号/实名验证。
+- **部分"免费"需要绑信用卡**才能开通，或需要手机号/实名验证。例：Vercel AI Gateway 的每月 $5 免费额度，官方明确要求**先绑定有效支付方式**才可启用（`To use free AI Gateway Credits, add a valid payment method to your team.`，2026-09-20 核实）——绑卡不等于扣费，但门槛确实存在。
+- **不是所有"免费模型"都在生成文本。** Jev 这类**结构化决策模型**（输入状态 + 带类型的问题，输出选项/评分/概率）走的是 Evaluation 或 Decisions 类接口，**不能当聊天模型用**，OpenAI 兼容的 chat/completions 调用方式往往不适用。
 - **你的数据可能被用于训练。** Google（免费层）、Mistral（Experiment 计划）、Groq 以及 OpenRouter 的 `:free` 上游普遍会在免费流量上做训练，部分支持关闭。
 - **小型网关的免费额度最不稳定。** Token Harbor / BazaarLink 这类新晋网关验证有限、随时可能关停或收费，只适合原型验证，别托付生产负载。
 - **部分境外网关对国内做区域封锁。** Token Harbor 实测直接返回 `region_blocked`，明文拒绝中国大陆/香港/澳门（2026-09-12）；此类端点即使有免费额度，国内也需自备境外网络，且官方通常要求关闭 VPN——它只能看到连接出口国。

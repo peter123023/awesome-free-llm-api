@@ -43,6 +43,18 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ## Model Index
 
+### Structured decision models (non-generative)
+
+#### TypeSafe AI Jev
+
+> TypeSafe AI's first System One model, released in early access on 2026-09-15; it **does not generate text** — you send a state plus a set of typed questions, and it returns choices, scores and boolean probabilities
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Vercel AI Gateway](https://vercel.com/ai-gateway) | ⚠️ **Limited-time promotional free** (list price $0.042/M input, output free) | Pros: official channel, zero token markup, $0 cost during the promo; Cons: ⚠️ **promo ends 2026-09-25**, **requires a payment method on file** to enable free credits, 32K context, **served over the Evaluation / TypeSafe API rather than chat/completions**, lower rate limits on the free tier | Usable during promo |
+
+> ⚠️ **Vercel is the only route, and it is a ten-day promo**. **OpenRouter is not a free entry point** — `typesafe/jev-1.13` measured `prompt: 0.000000042` ($0.042/M input) and `completion: 0`, so **input is billed per token** and only output is free; it does not qualify as a free channel (verified 2026-09-20 via `/api/v1/models/typesafe/jev-1.13/endpoints`). ⚠️ **Venice API does not carry this model** — several outlets (including HuggingNews) reported "Jev is free in beta on the Venice API", but a full pull of Venice's 117-model catalog shows **no Jev or TypeSafe entry at all**, so the report does not hold (verified 2026-09-20). ⚠️ **TypeSafe's own site has never offered a free tier** — only $0.042/M input pricing. **In short, the only free entry point for Jev today is Vercel's limited-time promo, which goes to zero after September 25.**
+
 ### DeepSeek family
 
 #### DeepSeek V4.1 Flash
@@ -557,6 +569,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 ### Aggregators & gateways
 
+#### Vercel AI Gateway
+
+- **Site**: [https://vercel.com/ai-gateway](https://vercel.com/ai-gateway) ([pricing](https://vercel.com/docs/ai-gateway/pricing) · [getting started](https://vercel.com/docs/ai-gateway/getting-started))
+- **Free tier**: The free tier includes **$5/month** (the clock starts on your first AI Gateway request), limited to **Free Tier eligible models**, with lower per-model rate limits than the paid tier; **Jev is listed as Free during the promo**
+- **What the site says**: Vercel's managed gateway; the docs state "no markup and no platform fee on tokens" — provider list price, zero markup. On the free tier: "**To use free AI Gateway Credits, add a valid payment method to your team.**" (a payment method is required to enable free credits)
+- **Free models**: **`typesafe-ai/jev` (limited-time promo, ends 2026-09-25)** plus the Free Tier eligible subset (⚠️ the full allowlist is **not published** — browse "Free Tier models" from your dashboard once signed in)
+- **Endpoint**: `https://ai-gateway.vercel.sh/v1` (OpenAI-compatible); ⚠️ **Jev must go through the Evaluation endpoint `POST /v1/evaluate`** with a `{model, state, questions}` body — it **cannot be called via `chat/completions`** (verified 2026-09-20: `/v1/evaluate` with the Jev model returns `Authentication failed`, i.e. the endpoint is correct but unauthenticated, whereas `/v1/evaluations` and `/v1/decisions` both return 404)
+- **Status**: Active (limited-time promo) — verified 2026-09-20 (⚠️ three boundaries to remember: ① **the promo ends 2026-09-25**, page text `Promotional pricing ends on September 25, 2026`; ② **free credits require a payment method on file**, but nothing is charged unless you top up (`Commitment: None`); ③ **purchasing credits moves the account to the paid tier and permanently voids the $5/month free credit** — `Once you purchase credits, your account transitions to the paid tier and the monthly free credit no longer applies.` Exhaust the free credit before considering a top-up.)
+
 #### OpenRouter
 
 - **Official site**: https://openrouter.ai
@@ -693,7 +714,8 @@ Known sources of drift, flagged explicitly in each entry:
 - **A "free tier" is not "free forever".** Google cut Gemini free quotas by ~80% in December 2025; others may follow.
 - **Free lineups churn more than you think.** Verified 2026-09-11: none of OpenRouter's 19 `:free` models is a DeepSeek / GLM / Qwen / MiniMax / Kimi / Llama model; NVIDIA NIM's 80 models no longer include GLM, MiniMax, Qwen3.5, DeepSeek R1/V3 or StepFun — a model listed here may already be gone when you read it, so run a `curl` check first.
 - **"Limited-time free" can end without warning.** Promo APIs (e.g. B.AI's limited-time models) publish no end date.
-- **Some "free" tiers require a credit card**, a phone number, or real-name verification.
+- **Some "free" tiers require a credit card**, a phone number, or real-name verification. Example: Vercel AI Gateway's $5/month free credit explicitly requires **a valid payment method on file** before it can be used (`To use free AI Gateway Credits, add a valid payment method to your team.`, verified 2026-09-20) — having a card on file does not mean being charged, but the barrier is real.
+- **Not every "free model" generates text.** Structured decision models like Jev (state plus typed questions in, choices/scores/probabilities out) are served over Evaluation or Decisions APIs and **cannot be used as chat models**; OpenAI-compatible chat/completions calling conventions usually do not apply.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
 - **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
 - **Some overseas gateways apply regional blocks.** Token Harbor returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (2026-09-12). Even with a free allowance, such endpoints require an overseas network path from Mainland China — and the operator typically asks you to turn VPNs off, since it only sees the country your connection exits from.
