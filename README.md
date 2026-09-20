@@ -53,8 +53,9 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:⚠️ **中国大陆/香港/澳门被区域封锁**,需境外网络;额度未公开、按 4 周滚动刷新,网关资历浅 | 区域受限 |
+| [onomeo](https://onomeo.com) | 每日签到额度内(第 7 天起 3500 / 天,约合 6 次) | 优势:免卡免实名、未设区域封锁、OpenAI 兼容,**当前少见的 V4.1 Flash 免费入口**;限制:小型网关、个人运营,额度按字符计、一天只够个位数次,全站共享池 450 次 / 5 小时 | 随上游波动 |
 
-> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。⚠️ **Token Harbor 有区域封锁**——实测 `https://tokenharbor.ai/v1` 返回 `region_blocked`，明确拒绝中国大陆/香港/澳门（2026-09-12 实测）。**综上，V4.1 Flash 目前没有对国内读者开箱可用的免费入口。**
+> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。⚠️ **Token Harbor 有区域封锁**——实测 `https://tokenharbor.ai/v1` 返回 `region_blocked`，明确拒绝中国大陆/香港/澳门（2026-09-12 实测）。**综上，V4.1 Flash 目前没有对国内读者开箱可用的免费入口。** ✅ **2026-09-20 补充**：新增 onomeo 一条，它未设区域封锁、免卡免实名，是目前少见的 V4.1 Flash 免费入口；但额度按字符计，3500 / 天只够约 6 次，且全站共享池仅 450 次 / 5 小时，属试用级别，不改变「入口稀缺」的整体判断。
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
@@ -118,6 +119,7 @@
 |------|------|------|------|
 | [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费模型(GLM 5.3 Flash 等) | 优势:OpenCode 官方网关、免卡;限制:仅限时免费的 Flash 款,正式版 GLM 5.3 为付费($1.4/$4.4) |  |
+| [onomeo](https://onomeo.com) | 每日签到额度内(3500 / 天,约合 GLM-5.2 4 次) | 优势:免卡免实名、OpenAI 兼容、未设区域封锁;限制:小型网关、个人运营,额度按字符计,一天只够个位数次 | 随上游波动 |
 
 > ✅ **GLM-5.3-Flash 已在 NVIDIA NIM 上架**：截至 2026-09-12 实测 `integrate.api.nvidia.com/v1/models` 共 82 个模型，其中 `z-ai/glm-5.3-flash` 在列（1.3M 上下文、多模态、40 RPM）。注意这不是"整个 GLM 系列回归"——GLM 5.2 / 5.1 / 4.7 仍未在列。
 
@@ -142,6 +144,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内 | 优势:国产、模型全家桶;限制:免费质量较低——与全站共享每日 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+| [onomeo](https://onomeo.com) | 每日签到额度内(3500 / 天,约合 397B 1 次) | 优势:免卡免实名、无需阿里云实名、OpenAI 兼容;限制:小型网关、个人运营,**一天只够 1 次 397B**,全站共享池 450 次 / 5 小时 | 随上游波动 |
 
 > ⚠️ **Qwen3.5 122B / 397B 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除。
 
@@ -673,6 +676,15 @@
 - **免费模型**：`auto:free`（智能路由免费池）、`qwen/qwen3.7-flash:free`（视觉语言推理模型）
 - **接入**：`https://api.bazaarlink.ai/v1`（OpenAI 兼容）
 - **状态**：Active（小型网关）— 核实于 2026-09-12（✅ 实测 `/v1/models` 171 个模型中 `auto:free` 与 `qwen/qwen3.7-flash:free` 的 pricing 均为 0，**免费层已恢复**，此前 2026-09-05 的「已失效」判断有误；⚠️ 2026-09-05 起停用 agent 自助注册端点（`/api/agents/register` 返回 410）以防免费层被滥用，需正常注册账号后在面板建 key）
+
+#### onomeo
+
+- **官网**：https://onomeo.com（[文档](https://onomeo.com/docs) · [模型页](https://onomeo.com/models) · [公开信息接口](https://onomeo.com/api/info)）
+- **免费形式**：每日签到领额度——第 1 天 1200，连签七天按 1200 / 1500 / 1800 / 2200 / 2600 / 3000 / 3500 递增，第 7 天起稳定 3500 / 天，断签回第 1 天；**额度按字符计、不按次数**（中日韩字符 1 字 = 1 额度，其余 4 字 = 1 额度，发送与返回合计扣除）；免绑卡、免实名
+- **网页说明**：个人开发者运营的 OpenAI 兼容网关，把各家**免费档**聚到一个 endpoint。`/api/info` 无需登录即可查到全部模型名、各模型实测均耗、签到阶梯、三层限速数字和近期健康度（`modelHealth` 记录各模型近期成功 / 失败次数），本条所有数字均可自行核对
+- **免费模型**：36 个——DeepSeek V4 Flash、**DeepSeek V4.1 Flash**、GLM-5.2、Qwen3.5-397B-A17B、Qwen3.8-Flash-Next、Gemini 3 Flash / 3.1 Flash-Lite、gpt-oss-120b / 20b、Llama 4 Scout、MiniMax M2.7、Codestral、Ministral 8B / 3B、Nemotron 3 Super 120B、Intern-S2-Preview、GLM-4-9B、Qwen2.5-7B 等（名单随上游轮换，以 `/api/info` 为准）
+- **接入**：`https://onomeo.com/v1`（OpenAI 兼容）；另有 Anthropic 格式 `POST /v1/messages` 供 Claude Code 一类只认该协议的工具使用，**但该端点只接受 `my/` 前缀的模型名（用户自带上游密钥），不走站内免费额度**
+- **状态**：Active（小型网关）— 核实于 2026-09-20（⚠️ **额度折成次数很少**：按 `/api/info` 的实测均耗，3500 额度约合 Qwen3.5-397B 1 次、GLM-5.2 4 次、DeepSeek V4.1 Flash 6 次，而 gpt-oss-120b、Gemini 3.1 Flash-Lite 这类轻模型约 200 次——**挑轻模型才够日常用**；⚠️ 限速三层叠加：每把 key 12 次 / 分钟、每账号 60 次 / 5 小时、每 IP 120 次 / 5 小时，且**全站共享池只有 450 次 / 5 小时**，高峰会排不上；⚠️ 上游多为各家免费档，稳定性随上游波动；官方未声明区域封锁，但站点在 Cloudflare 后面，大陆直连速度未实测）
 
 ## 参与贡献
 

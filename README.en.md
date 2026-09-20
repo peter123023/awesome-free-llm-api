@@ -52,8 +52,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: ⚠️ **region-blocked for Mainland China, Hong Kong and Macao**, requiring an overseas network; allowance undisclosed, renews every 4 weeks, gateway is young | Region-restricted |
+| [onomeo](https://onomeo.com) | Within the daily check-in allowance (3,500/day from day 7, about 6 calls) | Pros: no card, no ID check, no region block, OpenAI-compatible, **one of the few free entry points for V4.1 Flash**; Cons: small gateway run by one person, credits counted in characters so a day is only single-digit calls, site-wide pool of 450 requests per 5 hours | Tracks upstream |
 
-> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). ⚠️ **Token Harbor is region-blocked** — `https://tokenharbor.ai/v1` returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (verified 2026-09-12). **In short, V4.1 Flash currently has no free entry point that works out of the box from Mainland China.**
+> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). ⚠️ **Token Harbor is region-blocked** — `https://tokenharbor.ai/v1` returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (verified 2026-09-12). **In short, V4.1 Flash currently has no free entry point that works out of the box from Mainland China.** ✅ **Added 2026-09-20**: onomeo has been added — no region block, no card and no ID check, making it one of the few free entry points for V4.1 Flash; its credits are counted in characters, so 3,500 per day is about 6 calls, and the site-wide pool is 450 requests per 5 hours, which keeps it at trial scale and does not change the overall picture of scarce entry points.
 
 #### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
 
@@ -117,6 +118,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free models (GLM 5.3 Flash etc.) | Pros: official OpenCode gateway, no card; Cons: only the limited-time Flash tier is free, full GLM 5.3 is paid ($1.4/$4.4) |  |
+| [onomeo](https://onomeo.com) | Within the daily check-in allowance (3,500/day, about 4 GLM-5.2 calls) | Pros: no card, no ID check, OpenAI-compatible, no region block; Cons: small gateway run by one person, credits counted in characters, single-digit calls per day | Tracks upstream |
 
 > ✅ **GLM-5.3-Flash is now on NVIDIA NIM**: as of 2026-09-12, `integrate.api.nvidia.com/v1/models` returns 82 models including `z-ai/glm-5.3-flash` (1.3M context, multimodal, 40 RPM). Note this is not "the whole GLM family is back" — GLM 5.2 / 5.1 / 4.7 are still absent.
 
@@ -141,6 +143,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [ModelScope](https://modelscope.cn) | within shared quota | Pros: China-native, full Qwen family; Cons: low-quality free tier — shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [onomeo](https://onomeo.com) | Within the daily check-in allowance (3,500/day, about 1 call on 397B) | Pros: no card, no ID check, no Alibaba Cloud identity verification, OpenAI-compatible; Cons: small gateway run by one person, **one 397B call per day**, site-wide pool of 450 requests per 5 hours | Tracks upstream |
 
 > ⚠️ **Qwen3.5 122B / 397B are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11.
 
@@ -672,6 +675,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Free models**: `auto:free` (free-pool smart routing), `qwen/qwen3.7-flash:free` (vision-language reasoning model)
 - **Endpoint**: `https://api.bazaarlink.ai/v1` (OpenAI-compatible)
 - **Status**: Active (small gateway) — verified 2026-09-12 (✅ live `/v1/models` returns 171 models, with both `auto:free` and `qwen/qwen3.7-flash:free` priced at 0 — **the free tier has been restored**; the earlier "retired 2026-09-05" call was wrong. ⚠️ since 2026-09-05 the self-serve agent registration endpoint (`/api/agents/register`) returns 410 to curb free-tier abuse — register normally and create a key in the dashboard)
+
+#### onomeo
+
+- **Website**: https://onomeo.com ([docs](https://onomeo.com/docs) · [models](https://onomeo.com/models) · [public info endpoint](https://onomeo.com/api/info))
+- **Free tier**: daily check-in credits — 1,200 on day 1, rising through 1,200 / 1,500 / 1,800 / 2,200 / 2,600 / 3,000 / 3,500 over a seven-day streak and staying at 3,500 per day from day 7; a missed day resets to day 1. **Credits are counted in characters, not requests** (1 credit per CJK character, 1 credit per 4 other characters, charged on prompt plus completion combined). No card, no ID verification
+- **Notes**: an OpenAI-compatible gateway run by a solo developer that pools other providers' **free tiers** behind one endpoint. `/api/info` is public and unauthenticated: model list, measured average cost per model, the check-in ladder, all three rate-limit layers, and recent health (`modelHealth` holds recent success / failure counts), so every number in this entry can be checked independently
+- **Free models**: 36 — DeepSeek V4 Flash, **DeepSeek V4.1 Flash**, GLM-5.2, Qwen3.5-397B-A17B, Qwen3.8-Flash-Next, Gemini 3 Flash / 3.1 Flash-Lite, gpt-oss-120b / 20b, Llama 4 Scout, MiniMax M2.7, Codestral, Ministral 8B / 3B, Nemotron 3 Super 120B, Intern-S2-Preview, GLM-4-9B, Qwen2.5-7B and others (the list rotates with upstreams; `/api/info` is authoritative)
+- **Access**: `https://onomeo.com/v1` (OpenAI-compatible); an Anthropic-format `POST /v1/messages` endpoint also exists for tools such as Claude Code that speak nothing else, **but it accepts only model names prefixed with `my/` (the user's own upstream key) and does not draw on the site's free credits**
+- **Status**: Active (small gateway) — verified 2026-09-20 (⚠️ **credits convert to very few calls**: using the measured averages in `/api/info`, 3,500 credits is roughly 1 Qwen3.5-397B call, 4 GLM-5.2 calls or 6 DeepSeek V4.1 Flash calls, versus about 200 calls on light models such as gpt-oss-120b or Gemini 3.1 Flash-Lite — **pick a light model to get a usable day**; ⚠️ three stacked rate limits: 12 requests per minute per key, 60 per account per 5 hours, 120 per IP per 5 hours, and the **site-wide shared pool is only 450 requests per 5 hours**, so peak hours queue; ⚠️ most upstreams are other providers' free tiers, so stability tracks theirs; no region block is declared, but the site sits behind Cloudflare and direct access from Mainland China has not been measured)
 
 ## Contributing
 
