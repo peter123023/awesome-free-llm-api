@@ -81,33 +81,12 @@ All of the above is **API-level free**: you get an API key and call it over an H
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official & most stable, no credit card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: free allowance unpublished, 429 rate limits, best-effort not production |  |
 | [BazaarLink](https://bazaarlink.ai) | free tier `deepseek-v4-flash-0731free:free` ($0 in / $0 out) | Pros: Taiwan-based gateway, no card, includes the 0731 build; Cons: young small gateway, rate-limited, free allowance unpublished |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (`deepseek-v4-flash-free`) | Pros: OpenCode's official gateway, no card, 1M context; Cons: limited-time free can end anytime, data may be used to improve the model during the free period, lineup flips back and forth (showed billing on 9/11) |  |
 | [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
-
-#### DeepSeek R1 / V3
-
-> Deep-reasoning model / general flagship
-
-| Free channel | Free tier | Pros / Cons | API quality |
-|------|------|------|------|
-| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
-| [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates anytime |  |
-| [ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
-
-> ⚠️ **DeepSeek R1 / V3 are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11 (only V4 Flash 0731 and V4 Pro 0813 remain).
-
-#### DeepSeek R2
-
-> Next-gen general model
-
-| Free channel | Free tier | Pros / Cons | API quality |
-|------|------|------|------|
-| [Volcano Ark](https://console.volcengine.com/ark) | within collaboration-plan free quota (2M tokens/day) | Pros: large 2M tokens/day free quota; Cons: needs Volcengine account + real-name, check console |  |
 
 ### GLM family
 
@@ -406,6 +385,26 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 10K Neurons/day | Pros: low-latency edge; Cons: small daily quota |  |
+
+#### DeepSeek R1 / V3
+
+> Deep-reasoning model / general flagship
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 distilled, 10K Neurons/day | Pros: low-latency edge inference; Cons: distilled not original, small daily quota |  |
+| [OpenRouter](https://openrouter.ai) | `:free` rotates, may be absent | Pros: one API for many models; Cons: 50 free req/day (1,000 after $10), lineup rotates anytime |  |
+| [ModelScope](https://modelscope.cn) | R1 ~200 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — R1 ~200/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+
+> ⚠️ **DeepSeek R1 / V3 are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11 (only V4 Flash 0731 and V4 Pro 0813 remain).
+
+#### DeepSeek R2
+
+> Next-gen general model
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Volcano Ark](https://console.volcengine.com/ark) | within collaboration-plan free quota (2M tokens/day) | Pros: large 2M tokens/day free quota; Cons: needs Volcengine account + real-name, check console |  |
 
 
 ## Free Channels

@@ -82,33 +82,12 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管最稳、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、429 限流、best-effort 非生产可用 |  |
 | [BazaarLink](https://bazaarlink.ai) | 免费档 `deepseek-v4-flash-0731free:free`(输入/输出均 $0) | 优势:台湾网关、免绑卡、含 0731 正式版;限制:小型网关资历浅、限流使用、免费额度未公开 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(`deepseek-v4-flash-free`) | 优势:OpenCode 官方网关、免卡、1M 上下文;限制:限时免费随时结束、免费期数据用于改进模型、名单反复横跳(9/11 曾显示计费) |  |
 | [Hugging Face](https://huggingface.co) | 每月 $0.10 免费推理额度,超额按量付费 | 优势:社区模型极全、OpenAI 兼容;限制:免费额度仅 $0.10/月、超额即按量付费(hard stop),共享端点限流、无 SLA | 额度极小 |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
-
-#### DeepSeek R1 / V3
-
-> 深度推理模型 / 通用旗舰
-
-| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
-| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |  |
-| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单随时轮换 |  |
-| [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
-
-> ⚠️ **DeepSeek R1 / V3 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除（仅剩 V4 Flash 0731 与 V4 Pro 0813）。
-
-#### DeepSeek R2
-
-> 新一代通用模型
-
-| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
-| [火山方舟](https://console.volcengine.com/ark) | 协作奖励计划免费额度内(每日 200 万 token) | 优势:每日 200 万 token 大额免费;限制:需注册火山引擎并实名,额度以控制台为准 |  |
 
 ### GLM 系列
 
@@ -407,6 +386,26 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [Cloudflare](https://developers.cloudflare.com/workers-ai) | 1 万 Neurons/日 | 优势:边缘低延迟;限制:每日额度小 |  |
+
+#### DeepSeek R1 / V3
+
+> 深度推理模型 / 通用旗舰
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [Cloudflare](https://developers.cloudflare.com/workers-ai) | R1 蒸馏版,1 万 Neurons/日 | 优势:边缘节点低延迟、每日免费;限制:仅蒸馏版非原版、额度小 |  |
+| [OpenRouter](https://openrouter.ai) | `:free` 名单轮换,可能不含 | 优势:一站式聚合、OpenAI 兼容;限制:免费仅 50 次/天($10 后 1000),名单随时轮换 |  |
+| [魔搭 ModelScope](https://modelscope.cn) | R1 约 200 次/日 | 优势:国产、模型全;限制:免费质量较低——R1 仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
+
+> ⚠️ **DeepSeek R1 / V3 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除（仅剩 V4 Flash 0731 与 V4 Pro 0813）。
+
+#### DeepSeek R2
+
+> 新一代通用模型
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [火山方舟](https://console.volcengine.com/ark) | 协作奖励计划免费额度内(每日 200 万 token) | 优势:每日 200 万 token 大额免费;限制:需注册火山引擎并实名,额度以控制台为准 |  |
 
 
 ## 免费渠道一览
