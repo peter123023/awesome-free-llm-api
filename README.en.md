@@ -62,8 +62,9 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: ⚠️ **region-blocked for Mainland China, Hong Kong and Macao**, requiring an overseas network; allowance undisclosed, renews every 4 weeks, gateway is young | Region-restricted |
+| [Onomeo](https://onomeo.com/zh) | check-in daily allowance (1,473 credits/answer, ~135 answers/day) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, works off a topped-up check-in allowance, supports image input; Cons: not a free tier, manual daily check-in required, public-beta aggregator can change anytime, ~83% availability |  |
 
-> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). ⚠️ **Token Harbor is region-blocked** — `https://tokenharbor.ai/v1` returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (verified 2026-09-12). **In short, V4.1 Flash currently has no free entry point that works out of the box from Mainland China.**
+> ⚠️ **No official free tier, and third-party free entry points are scarce**: DeepSeek itself is paid only (off-peak $0.15/$0.60 per 1M). ⚠️ **Ollama Cloud is not a free entry point** — V4.1 Flash is in its cloud catalog, but it is a flagship model unlocked with purchased credits, while the free plan covers only the starter subset (verified 2026-09-12). ⚠️ **OrcaRouter does not offer free V4.1 either** — `deepseek/deepseek-v4.1-flash` is billed at $0.15/$0.60 on its price list, and its free pool holds only V4 Flash (`deepseek-v4-flash-free`) plus Hy3 and GLM-5.3-Flash (verified 2026-09-12). ⚠️ **Token Harbor is region-blocked** — `https://tokenharbor.ai/v1` returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (verified 2026-09-12). **In short, V4.1 Flash has no "free tier" entry point — the only way to use it for free is Onomeo's check-in-based daily allowance (~135 answers/day, see the channel entry), which is not a free tier.**
 
 #### ~~DeepSeek V4 Pro~~ (official routing retired from 2026-09-14)
 
@@ -119,6 +120,7 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official hosting, no card, 1.3M context & multimodal, no daily cap; Cons: 40 RPM shared, queues at peak | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
+| [Onomeo](https://onomeo.com/zh) | check-in daily allowance (`z-ai/glm-5.3-flash-free`, 195 credits/answer, ~1,025 answers/day) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, 1M context; Cons: not a free tier, manual daily check-in required, availability ~55% per the vendor, public-beta aggregator can change anytime |  |
 
 #### GLM 5.2 / 5.1
 
@@ -320,6 +322,14 @@ All of the above is **API-level free**: you get an API key and call it over an H
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (20B only) | Pros: official, no card; Cons: 40 RPM shared, only hosts gpt-oss-20b | Frequent timeouts |
 
 > ⚠️ **GPT-OSS is no longer in the OpenRouter free lineup** (verified 2026-09-11).
+
+#### GPT-6 Astra
+
+> OpenAI flagship model (`gpt-6-astra`)
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Onomeo](https://onomeo.com/zh) | check-in daily allowance (47,100 credits/answer, ~4 answers/day) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, even flagship models are covered by the allowance; Cons: not a free tier, tiny daily allowance, manual daily check-in required, ~66% availability, public-beta aggregator can change anytime |  |
 
 #### Gemini 2.5 Flash / Flash-Lite
 
@@ -610,6 +620,15 @@ All of the above is **API-level free**: you get an API key and call it over an H
 - **Endpoint**: `https://api.orcarouter.ai/v1` (OpenAI-compatible, no card required)
 - **Status**: Active (rate-limited) — verified 2026-09-20 (on 2026-09-07 the free default switched from Qwen3.8-27B to GLM-5.3 Flash: quality score 4→8, context 262K→1M, but TTFT 1.96s→7.66s and throughput 196→74 tok/s; ⚠️ accounts that never purchased credit get a smaller daily allowance, `429 + Retry-After` means the window is full while a 429 without the header means the prompt is too long; the vendor explicitly calls it best-effort, not production capacity)
 
+#### Onomeo
+
+- **Official site**: https://onomeo.com/zh ([models page](https://onomeo.com/zh/models))
+- **Free tier**: check-in-based daily allowance (not a free-tier model) — daily check-in grants up to 200,000 credits (cap reached after a 7-day streak), surveys and referrals grant 50,000 each (both sides); membership $5/month adds 10,000,000 credits monthly
+- **What the site says**: a Chinese aggregator gateway (public beta), one key for 54 models behind an OpenAI-compatible endpoint; the vendor itself says "some features are still being polished"
+- **Free models**: the check-in allowance covers the whole catalog — `deepseek-v4-flash` (23 credits/answer ≈ 8,695 answers/day), `deepseek-v4.1-flash` (1,473 ≈ 135/day), `z-ai/glm-5.3-flash-free` (195 ≈ 1,025/day), `gpt-5.6-luna` (7 ≈ 28,571/day), `gemini-3.1-flash-lite` (13 ≈ 15,384/day), flagship `gpt-6-astra` (47,100 ≈ 4/day) and more
+- **Endpoint**: `https://onomeo.com/v1` (OpenAI-compatible; verified 2026-09-22 — keyless calls return 401 `bad_key`, reachable from Mainland China without a proxy)
+- **Status**: Active (check-in-based) — verified 2026-09-22 (⚠️ **the free mechanism is "earn allowance by checking in", not a free tier**: credits expire daily and require a manual check-in every day; third-party aggregator running its own allowance pool (the `:free` models appear to be relayed from OpenRouter's free pool), may change rules or shut down at any time during the public beta; the vendor itself lists availability as low as 55% for some models (glm-5.3-flash-free, hy3-free), no SLA; upstream training policy unstated — treat your prompts as possibly used for training)
+
 #### Chutes ~~(retired)~~
 
 ~~Retired (re-confirmed 2026-09-12): `llm.chutes.ai/v1/models` does list 30+ models, but the official pricing page **prices every one of them** (DeepSeek V4 Flash 0731 at $0.44/$1.32, Kimi K3 at $3.00/$15.00) — no free endpoint found. Entry kept for reference.~~
@@ -714,6 +733,7 @@ Known sources of drift, flagged explicitly in each entry:
 - **Not every "free model" generates text.** Structured decision models like Jev (state plus typed questions in, choices/scores/probabilities out) are served over Evaluation or Decisions APIs and **cannot be used as chat models**; OpenAI-compatible chat/completions calling conventions usually do not apply.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
 - **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
+- **"Check-in for credits" is not a "free-tier model".** Aggregator platforms like Onomeo trade check-ins/surveys for a daily allowance — the whole catalog is callable but consumption varies wildly (one flagship answer burns thousands of credits, just a few per day), credits expire daily and must be claimed manually, and public-beta platforms can change the rules at any time.
 - **Some overseas gateways apply regional blocks.** Token Harbor returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (2026-09-12). Even with a free allowance, such endpoints require an overseas network path from Mainland China — and the operator typically asks you to turn VPNs off, since it only sees the country your connection exits from.
 - **"Free signup credits" ≠ free.** DeepSeek's official signup grant is confirmed gone (balance 0 as of 2026-08-31); the official channel is now "cheap", not "free".
 
