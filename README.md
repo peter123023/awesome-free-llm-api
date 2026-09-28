@@ -147,6 +147,8 @@
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、无卡;限制:限时免费,仅客户端内使用,免费名单随时变动 |  |
+| [TideLink](https://tidelink.xyz) | 永久免费层(免卡注册,默认 glm-4.7-flash;上游免费池拥堵时自动降级 glm-4-flash 兜底,仍 $0) | 优势:OpenAI 兼容网关、免卡注册、免费档随上游自动降级不中断;限制:仅 Flash 小模型免费,付费档聚合 GLM/Qwen/DeepSeek 等主流模型 |  |
+
 
 > ⚠️ **GLM-4.7 不在 NVIDIA NIM 免费名单**：2026-09 初一度上架后又移除；截至 2026-09-12，NIM 上仅新上架了 `z-ai/glm-5.3-flash` 一款，GLM-4.7 仍不在列，勿再依赖。
 
@@ -653,6 +655,15 @@
 - **免费模型**：签到额度覆盖全目录 47 款；下表为 2026-09-27 从 `/zh/models` 内嵌数据实测的**单次最低消耗**（签到满额 20 万可调次数 = 200,000 ÷ 消耗）：`gemini-3.1-flash-lite`（9 ≈ 22,222 次，最划算）、`gemini-3-flash-preview`（21）、`poolside/laguna-s-2.1:free`（21）、`dots-3-note-preview:free`（22）、`stepfun/step-3.7-flash:free`（43）、`glm-5.3`（517 ≈ 386 次）、`gemini-3.1-pro-preview`（867）、`stealth/space-bunny-alpha`（1,932，匿名模型，详见[匿名模型](#匿名模型stealth)）、`deepseek-v4-flash`（2,385 ≈ 83 次）、`tencent/hy3-free`（2,712）、`gpt-6-luna`（2,917）、`gpt-6-astra`（3,948 ≈ 50 次）、`z-ai/glm-5.3-flash-free`（3,149 ≈ 63 次）、`deepseek-v4.1-flash`（8,409 ≈ 23 次）、`Qwen/Qwen3.8-Flash-Next`（41,457 ≈ 4 次，最贵）
 - **接入**：`https://onomeo.com/v1`（OpenAI 兼容；2026-09-22 实测无 key 调用返回 401 `bad_key`，国内直连可通）
 - **状态**：Active（签到制）— 核实于 2026-09-27（⚠️ **免费方式是「签到领取额度」，不是免费档**：额度当日有效、需每天手动签到；聚合自建额度池（目录里大量 `:free` 款与 OpenRouter 免费池同名，疑似转接），公测期随时可能改规则或关停。✅ 实测 47 款全部带 `training` 标记，**多数为 `trains`**（gemini 全系、gpt-6 系列、glm-5.3 等），少数 `no` / `optout` / `unknown`——**按「请求内容可能被用于训练」对待**。实测可用率（`health.ok/failed`）参差：`deepseek-v4.1-flash`、`deepseek-v4-flash`、`z-ai/glm-5.3-flash-free`、`glm-5.3` 均 100%，但 `gemini-3.7-flash` 仅 36%、`claude-opus-5.5` 57%、`cohere/north-mini-code:free` 与 `nemotron-3.5-lightning` 均 56%，无 SLA。⚠️ 另有三重限流：premium 模型每日额度上限（见上）、全站 premium 预算分四批释放（UTC 00/06/12/18，每批三成预留给已购买账号，未购买账号用完即返 503 `premium_budget_exhausted` 带 `reserved:true`）、以及 5 小时窗口的账号/IP 调用次数上限（`perAccountWindowMax` 60、`perIpWindowMax` 120））
+
+#### TideLink
+
+- **官网**：[https://tidelink.xyz](https://tidelink.xyz)（[Pricing](https://tidelink.xyz/pricing.html)）
+- **免费形式**：永久免费层（无需绑卡注册，注册即送免费额度；默认免费模型 `glm-4.7-flash`，视觉 `glm-4.6v-flash` 免费；上游免费池拥堵时自动降级到 `glm-4-flash`/`glm-4v-flash` 兜底，仍 $0）
+- **网页说明**：官网标注免费档含当前世代智谱 Flash 模型，OpenAI 兼容网关，明确「no card required」
+- **免费模型**：`glm-4.7-flash`（默认）、`glm-4.6v-flash`（视觉）、`glm-4-flash`、`glm-4v-flash`（自动降级兜底）；付费档聚合 GLM / Qwen / DeepSeek 等主流模型
+- **接入**：`https://tidelink.xyz/v1`（OpenAI 兼容；另提供 Anthropic 兼容端点 `/v1/messages`）
+- **状态**：Active — 核实于 2026-09-14（免卡注册免费档实测可调；免费模型随上游免费池自动降级兜底，无断供）
 
 #### Chutes ~~（已失效）~~
 
