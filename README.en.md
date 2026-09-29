@@ -100,6 +100,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota, 1M context; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
 
 #### DeepSeek V4 Flash
 
@@ -112,8 +113,17 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (`deepseek-v4-flash-free`) | Pros: OpenCode's official gateway, no card, 1M context; Cons: limited-time free can end anytime, data may be used to improve the model during the free period, lineup flips back and forth (showed billing on 9/11) |  |
 | [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
 
 ### GLM family
+
+#### GLM-5.3
+
+> Zhipu's general-purpose GLM-5.3 model
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
 
 #### GLM-5.3 Flash
 
@@ -181,6 +191,14 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 > ⚠️ **Qwen3 235B is no longer in the OpenRouter free lineup** (verified 2026-09-11).
 
+#### Qwen3.8 27B
+
+> Lightweight general-purpose model
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
+
 #### Qwen3.8 Flash
 
 > Lightweight multimodal, strong Chinese writing
@@ -217,6 +235,30 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 ### Other China-native models
 
+#### Intern S2
+
+> Intern AI's scientific multimodal model S2
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (no Ink Point deduction) | Pros: official research platform, OpenAI/Anthropic-compatible, 50 RPM / 2M TPM; Cons: limited-time, 5-hour / 7-day caps, no public end date |  |
+
+#### Atria-Dawn-Preview
+
+> Research model available on the Intern AI Discovery Platform
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (no Ink Point deduction) | Pros: official research platform, OpenAI/Anthropic-compatible, 50 RPM / 2M TPM; Cons: limited-time, 5-hour / 7-day caps, no public end date |  |
+
+#### Agents-A1
+
+> Agent model available on the Intern AI Discovery Platform
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (no Ink Point deduction) | Pros: official research platform, OpenAI/Anthropic-compatible, 50 RPM / 2M TPM; Cons: limited-time, 5-hour / 7-day caps, no public end date |  |
+
 #### MiniMax M2.7
 
 > 230B, coding / reasoning / office
@@ -235,6 +277,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (in-client) | Pros: official OpenCode gateway, no card; Cons: limited-time, client-only |  |
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
 
 #### MiniMax M2.1
 
@@ -252,6 +295,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [Intern AI · Discovery Platform](https://discovery-home.intern-ai.org.cn) | limited-time free (10 Ink Points/month, credit-based) | Pros: official research platform, OpenAI/Anthropic-compatible; Cons: limited-time, 50 RPM / 2M TPM, 5-hour / 7-day caps; |  |
 
 #### Kimi K3
 
@@ -683,6 +727,15 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Free models**: `Qwen3.8 27B free` (1M context, 192 tok/s, 80.2% uptime), `DeepSeek V4 Flash free` (1.05M, 141 tok/s, 100% uptime), `GPT-5.6 Luna free` (1.05M, 154 tok/s, 97.5%), `Claude Fable 5.1 free` (1M, 86.9 tok/s, **72.5% uptime**), `GPT-6 Astra free` (1.05M, 88 tok/s, 89%) — the latter two list at $10/$50 (models marked $0 still fall under the ~500 credits/month cap)
 - **Endpoint**: `https://api.experientiallabs.ai/v1` (OpenAI-compatible, register for a key)
 - **Status**: Active (limited-time) — verified 2026-09-14 (⚠️ **low uptime on the free tier**: Claude Fable 5.1 only 72.5%, TTFT ~4.5s; **free allowance tightened to ~500 credits/month**, and once depleted it returns an error that explicitly says retrying will not help**; for tasting only, do not put it in a production path)
+
+#### Intern AI · Discovery Platform
+
+- **Official site**: [https://discovery-home.intern-ai.org.cn](https://discovery-home.intern-ai.org.cn) (API docs: [https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=3](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=3))
+- **Free tier**: limited-time free; limited-time-free models do not consume credits, and registered users receive 10 Ink Points (platform credits) per month. **The console says 1 Ink Point can deduct up to 50M tokens; in a measured chat call using `deepseek-v4-flash-0731`, 1 Ink Point covered about 0.75M tokens**. 50 RPM, 2M TPM, plus 5-hour and 7-day limits; these caps are sufficient to cover the free allowance
+- **What the site says**: `书生·端砚现已推出本地客户端及科研模型“墨点计划”（Token Plan）。测试期间，每位用户每月可获免费Token，用于调用多元模型与相关科研服务，欢迎广大科研工作者踊跃试用。` (Shanghai AI Laboratory; **no end date stated**)
+- **Free models**: limited-time, no Ink Point deduction: `书生-S2`, `Atria-Dawn-Preview`, `Agents-A1` (official docs mark them as limited-time free). Credit-based: `DeepSeek-V4-Flash-0731`, `DeepSeek-V4-Flash-Vision`, `DeepSeek-V4-Pro-0813`, `GLM-5.3`, `Kimi-K2.6`, `MiniMax-M3`, `Qwen3.8-27B`
+- **Endpoint**: OpenAI-compatible `https://discovery-api.intern-ai.org.cn/v1`; Anthropic-compatible `https://discovery-api.intern-ai.org.cn`
+- **Status**: **Active (limited-time)** — verified 2026-09-29
 
 ### Small gateways (use with care)
 
