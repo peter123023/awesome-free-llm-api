@@ -78,7 +78,8 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| ~~Vercel AI Gateway~~ **（Jev 促销 2026-09-25 已结束）** | ~~限时促销免费~~ → 按量计费（$0.042/M 输入，输出 $0） | ⚠️ **促销已到期**：Jev 恢复原价，不再免费；每月 $5 免费额度仍在，但仅限 Free Tier eligible 子集且**需先绑支付方式** | 促销已结束 |
+| ~~Vercel AI Gateway~~ **（Jev 促销 2026-09-25 已结束）** | ~~限时促销免费~~ → 按量计费（$0.042/M 输入，输出 $0） | ⚠️ **促销已到期**：Jev 恢复原价，不再免费；每月 $5 免费额度仍在，但仅限 Free Tier eligible 子集且**需先绑支付方式**；⚠️ **2026-09-30 实测 Vercel 目录 394 个模型中 `freeTier=true` 的为 0 个**，Jev 的 `pricing` 字段是 `input=0.000000042 / output=0`——**输出免费但输入按 token 收费，不算免费档**（2026-09-30 实测） | 促销已结束 |
+| — | **无其他免费渠道** | ⚠️ **2026-09-30 全网核实**：① TypeSafe 官方 `api.typesafe.ai/v1/systemone` 端点存在（无 key 返 403 `Must supply an API key!`），但**新用户注册自 2026-09-22 起已暂停**，且定价同为 $0.042/M 输入；② OpenRouter 仅有 `typesafe/jev-router`，`pricing` 为 `-1/-1`（不走 OpenRouter 计费），实际按官方价走；③ Cloudflare Workers AI 官方模型页**查无 Jev / TypeSafe**（二手资料有误）；④ Jev 定位为「按 token 收费 + 输出免费」的极廉价档，**属付费模型，不属免费渠道** | — |
 
 ### DeepSeek 系列
 
@@ -100,7 +101,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:国产官方、公测期免费用量大、1M 上下文;限制:限时公测,付费档即将上线,随时可能转付费 |  |
+| [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:上海人工智能实验室官方平台、墨点额度每月自动到账、免绑卡、同时支持 OpenAI 与 Anthropic 协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、科研向平台非通用聊天网关、额度不可提现、规则随时可能调整 |  |
 
 #### DeepSeek V4 Flash
 
@@ -112,6 +113,7 @@
 | [BazaarLink](https://bazaarlink.ai) | 免费档 `deepseek-v4-flash-0731free:free`(输入/输出均 $0) | 优势:台湾网关、免绑卡、含 0731 正式版;限制:小型网关资历浅、限流使用、免费额度未公开 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(`deepseek-v4-flash-free`) | 优势:OpenCode 官方网关、免卡、1M 上下文;限制:限时免费随时结束、免费期数据用于改进模型、名单反复横跳(9/11 曾显示计费) |  |
 | [Hugging Face](https://huggingface.co) | 每月 $0.10 免费推理额度,超额按量付费 | 优势:社区模型极全、OpenAI 兼容;限制:免费额度仅 $0.10/月、超额即按量付费(hard stop),共享端点限流、无 SLA | 额度极小 |
+| [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:官方唯一明示的换算基准模型、上海 AI 实验室官方平台、每月自动到账、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、1 墨点为「最多」抵 50,000,000（调用贵模型消耗更快）、科研向平台 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
 
 ### GLM 系列
@@ -126,6 +128,7 @@
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(`z-ai/glm-5.3-flash-free`,3,149 额度/次,签到满额 20 万约可调 63 次) | 优势:国内直连、OpenAI 兼容、1M 上下文;限制:非免费档、需每日手动签到、单次成本较 9/22 涨约 16 倍、公测聚合平台随时可能变;⚠️ 同平台的旗舰 `glm-5.3`(非 flash)属 premium 款,受每日 5 万额度上限约束 |  |
+| [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:上海 AI 实验室官方平台、每月自动到账、免绑卡、1M 上下文、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、⚠️ 未经证实 GLM-5.3 是否在墨点免费池内（官方页面仅明示 V4-Flash）、科研向平台 |  |
 
 #### GLM 5.2 / 5.1
 
@@ -133,7 +136,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费(实测可调,滚动 5h 60k 积分) | 优势:国产官方、公测免费且实测可调;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费模型(GLM 5.3 Flash 等) | 优势:OpenCode 官方网关、免卡;限制:仅限时免费的 Flash 款,正式版 GLM 5.3 为付费($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash 已在 NVIDIA NIM 上架**：截至 2026-09-12 实测 `integrate.api.nvidia.com/v1/models` 共 82 个模型，其中 `z-ai/glm-5.3-flash` 在列（1.3M 上下文、多模态、40 RPM）。注意这不是"整个 GLM 系列回归"——GLM 5.2 / 5.1 / 4.7 仍未在列。
@@ -253,6 +255,7 @@
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:上海 AI 实验室官方平台、每月自动到账、免绑卡、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、⚠️ 未经证实 Kimi-K2.6 是否在墨点免费池内（官方页面仅明示 V4-Flash）、科研向平台 |  |
 
 #### Kimi K3
 
@@ -260,7 +263,6 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [商汤 SenseNova](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分(额度/RPM 有限) | 优势:国产官方、公测免费、1M 上下文、原生视觉;限制:限时公测,付费档即将上线,额度/RPM 有限(实测偶发限流),随时可能转付费 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
 
 #### StepFun Step 3.7 Flash
@@ -304,14 +306,6 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-
-#### SenseNova 6.8 Flash-Lite
-
-> 商汤原生多模态智能体（6.7 已并入，旧 ID 8/31 前自动重定向）
-
-| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
-| [商汤](https://platform.sensenova.cn) | 公测免费,滚动 5h 60k 积分 | 优势:官方自营、公测期免费额度大、Flash-Lite 消费返赠等效半价;限制:限时公测,付费档即将上线,随时可能转付费 |  |
 
 ### 海外模型
 
@@ -576,17 +570,6 @@
 - **接入**：`https://spark-api-open.xf-yun.com/v1`（OpenAI 兼容；APIKey/APISecret 鉴权，密钥在 [控制台](https://xinghuo.xfyun.cn/sparkapi) 申请）
 - **状态**：Active — 核实于 2026-09-05（需实名）
 
-#### 商汤 SenseNova（日日新）
-
-> ⚠️ **公测免费「随时可能转付费」**：商汤官方明确「付费档位即将上线」且**未公布任何截止日期**。公测 Free 档随时可能结束并转为按量付费——**请勿将生产负载或关键链路依赖于此渠道**；每次调用前请到官网确认当前是否仍免费。
-
-- **官网**：https://platform.sensenova.cn · Token Plan：https://www.sensenova.cn/token-plan
-- **免费形式**：限时免费（公测期完全免费，付费档位 Lite/Pro 即将上线）；TokenPlan 积分体系——通用积分池与 Flash-Lite 专属积分池**各自**享有 **60,000 积分 / 滚动 5 小时** + **600,000 积分 / 滚动周**
-- **网页说明**：官网称"公测期完全免费开放，付费档位即将上线"；公测 Free 档含 SenseNova 6.8 Flash Lite 与 SenseNova U1 Fast，最多 20 个 API Key；Flash-Lite 消费返赠——每消耗 1 专属积分返 1 通用积分（返赠 30 天有效且**不占用滚动额度**，等效半价）；第三方模型额度低于自营
-- **免费模型**：SenseNova 6.8 Flash-Lite（多模态智能体）、SenseNova U1 Fast（信息图生成）、SenseNova U1.5 Lite（图片创作）、DeepSeek V4 Flash / V4 Pro、GLM-5.2、Kimi K3（8 个模型定价均为 0，2026-09-08 API 实测）
-- **接入**：`https://token.sensenova.cn/v1`（OpenAI 兼容，亦支持 Anthropic 兼容端点）
-- **状态**：Active（限时公测，**随时可能转付费**）— 核实于 2026-09-14（手机号注册，免绑卡、免实名；✅ 官方文档确认公测期 Free 档 **¥0/月** 但**未公布结束日期**，付费档「即将上线」；✅ 实测 `token.sensenova.cn/v1` 正常响应 401/需鉴权，而网传的 `api.sensenova.cn/v1` 返回 404，**请以 `token.sensenova.cn/v1` 为准**；实测延迟偏高，Kimi K3 消耗积分最快）
-
 #### 魔搭 ModelScope（阿里）
 
 - **官网**：https://modelscope.cn
@@ -596,6 +579,18 @@
 - **接入**：`https://api-inference.modelscope.cn/v1`（OpenAI 兼容）
 - **状态**：Active — 核实于 2026-09-02（需阿里云账号 + 实名）
 - **⚠️ 免费质量较低**：单模型仅 100~500 次/日，与全站共享每日 2000 次总量（高峰可能被挤占）；仅限个人学习与非商业用途；共享算力排队，无 SLA
+
+#### 书生·端砚 墨点计划（Intern InkStone Token Plan）
+
+- **官网**：https://discovery.intern-ai.org.cn · Token Plan：https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0
+- **免费形式**：测试期每月自动赠送「墨点」额度，按墨点折算 tokens（**1 墨点最多可抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例**——官网原文写作 `5000,0000`，有排版笔误，正确值为 5,000 万）
+- **网页说明**：上海人工智能实验室 2026 浦江创新论坛发布的科研模型计划，官方新闻称「测试期间，每位用户每月可获免费 Token」；⚠️ **官方从未公布每月赠送多少墨点**，实际余额需注册后在 Token Plan 页查看（未登录时全部渲染为 `--`）
+- **免费模型**：⚠️ 官方页面仅明示 DeepSeek-V4-Flash 一个换算基准；完整模型清单需登录后在「模型列表」页查看
+- **接入**：`https://discovery-api.intern-ai.org.cn/v1`（OpenAI 兼容）；同时支持 Anthropic 协议，Base URL 为 `https://discovery-api.intern-ai.org.cn`（不带 `/v1`）——**这一点在同类免费渠道里少见**
+- **状态**：Active（测试期免费，规则可能调整）— 核实于 2026-09-30（`discovery-api.intern-ai.org.cn/v1/models` 无 key 返 401 `invalid_api_key`，端点确认存在；需手机号注册，免绑卡）
+- **⚠️ 额度不可提现**：墨点仅站内消耗，不能兑换现金或转出；「1 墨点抵 50,000,000」是**上限**而非固定值，调用更贵的模型消耗更快
+- **限流**：RPM + TPM + 墨点余额**三重限制**，且**全部 API Key 共享账户额度**（非每个 Key 独立配额）；单账号最多 10 个 API Key，Key 默认 6 个月有效期
+- **⚠️ 定位差异**：科研向平台（生命科学、材料、半导体、核聚变、气象），非通用聊天 API 网关；提额联系 `tokenplan@pjlab.org.cn`
 
 ### 聚合与网关
 

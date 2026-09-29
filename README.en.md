@@ -78,6 +78,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | ~~Vercel AI Gateway~~ **(Jev promo ended 2026-09-25)** | ~~limited-time promotional free~~ → pay-per-token ($0.042/M input, $0 output) | ⚠️ **the promo has expired**: Jev is back at list price and no longer free; the $5/month credit remains but covers only the Free Tier eligible subset and **requires a payment method on file** | Promo over |
+| — | **no other free channel** | ⚠️ **full sweep 2026-09-30**: ① the official `api.typesafe.ai/v1/systemone` endpoint exists (no key → 403 `Must supply an API key!`) but **new signups have been paused since 2026-09-22**, and its pricing is the same $0.042/M input; ② OpenRouter only carries `typesafe/jev-router` with `pricing` `-1/-1` (not billed through OpenRouter), so the official price applies; ③ Cloudflare Workers AI's official model page **has no Jev / TypeSafe entry** (secondary sources are wrong); ④ Jev is positioned as an extremely cheap pay-per-token tier with free output — **a paid model, not a free channel** | — |
 
 ### DeepSeek family
 
@@ -99,7 +100,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official China platform, generous beta quota, 1M context; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
+| [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: official platform by Shanghai AI Laboratory, allowance tops up monthly, no card required, both OpenAI and Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, research-oriented platform rather than a general chat gateway, quota not withdrawable, terms can change |  |
 
 #### DeepSeek V4 Flash
 
@@ -112,6 +113,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (`deepseek-v4-flash-free`) | Pros: OpenCode's official gateway, no card, 1M context; Cons: limited-time free can end anytime, data may be used to improve the model during the free period, lineup flips back and forth (showed billing on 9/11) |  |
 | [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
+| [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: the only model the platform explicitly names as its conversion baseline, official Shanghai AI Lab platform, monthly top-up, OpenAI + Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, "up to" 50,000,000 per dot (faster models burn it quicker), research-oriented platform |  |
 
 ### GLM family
 
@@ -125,6 +127,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 | [Onomeo](https://onomeo.com/zh) | check-in daily allowance (`z-ai/glm-5.3-flash-free`, 3,149 credits/answer, ~63 answers off a full 200k check-in) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, 1M context; Cons: not a free tier, manual daily check-in required, ~16x costlier per call than the 9/22 figure, public-beta aggregator can change anytime; ⚠️ the flagship `glm-5.3` (non-flash) on the same platform is a premium model subject to the 50k credits/day cap |  |
+| [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: official Shanghai AI Lab platform, monthly top-up, no card required, 1M context, OpenAI + Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, ⚠️ unverified whether GLM-5.3 is in the ink-dot free pool (the platform only names V4-Flash), research-oriented platform |  |
 
 #### GLM 5.2 / 5.1
 
@@ -132,7 +135,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta (verified working, rolling 5h 60k credits) | Pros: official China platform, verified working; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free models (GLM 5.3 Flash etc.) | Pros: official OpenCode gateway, no card; Cons: only the limited-time Flash tier is free, full GLM 5.3 is paid ($1.4/$4.4) |  |
 
 > ✅ **GLM-5.3-Flash is now on NVIDIA NIM**: as of 2026-09-12, `integrate.api.nvidia.com/v1/models` returns 82 models including `z-ai/glm-5.3-flash` (1.3M context, multimodal, 40 RPM). Note this is not "the whole GLM family is back" — GLM 5.2 / 5.1 / 4.7 are still absent.
@@ -252,6 +254,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: official Shanghai AI Lab platform, monthly top-up, no card required, OpenAI + Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, ⚠️ unverified whether Kimi K2.6 is in the ink-dot free pool (the platform only names V4-Flash), research-oriented platform |  |
 
 #### Kimi K3
 
@@ -259,7 +262,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits (quota/RPM limited) | Pros: official China platform, free beta, 1M context, native vision; Cons: limited-time beta, paid tiers coming, quota/RPM limited (occasional rate-limit in practice), can switch to paid anytime |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
 
 #### StepFun Step 3.7 Flash
@@ -303,14 +305,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-
-#### SenseNova 6.8 Flash-Lite
-
-> SenseTime native multimodal agent (6.7 merged in; old ID auto-redirects until 8/31)
-
-| Free channel | Free tier | Pros / Cons | API quality |
-|------|------|------|------|
-| [SenseNova](https://platform.sensenova.cn) | free public beta, rolling 5h 60k credits | Pros: official, generous beta quota, Flash-Lite rebate ~half price; Cons: limited-time beta, paid tiers coming, can switch to paid anytime |  |
 
 ### Global models
 
@@ -575,17 +569,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoint**: `https://spark-api-open.xf-yun.com/v1` (OpenAI-compatible; APIKey/APISecret auth, keys issued from the [console](https://xinghuo.xfyun.cn/sparkapi))
 - **Status**: Active — verified 2026-09-05 (real-name verification required)
 
-#### SenseNova (SenseTime)
-
-> ⚠️ **The beta-free tier "can switch to paid at any time"**: SenseTime explicitly states paid tiers are "coming soon" and has **published no end date**. The beta Free tier can end and flip to pay-per-use at any moment — **do not depend on this channel for production or critical paths**; always check the official site before each call to confirm it is still free.
-
-- **Official site**: https://platform.sensenova.cn · Token Plan: https://www.sensenova.cn/token-plan
-- **Free tier**: limited-time (open beta, fully free; paid Lite/Pro tiers coming soon); TokenPlan credit system — the general pool and the Flash-Lite-specific pool **each** get **60,000 credits / rolling 5h** plus **600,000 credits / rolling week**
-- **What the site says**: "fully free during public beta, paid tiers launching soon"; the Free tier covers SenseNova 6.8 Flash Lite and SenseNova U1 Fast, up to 20 API keys; Flash-Lite spend rebate — every 1 dedicated credit spent returns 1 general credit (rebate valid 30 days and **does not consume the rolling quota**, effectively half price); third-party models have lower quotas than first-party
-- **Free models**: SenseNova 6.8 Flash-Lite (multimodal agent), SenseNova U1 Fast (infographics), SenseNova U1.5 Lite (image generation), DeepSeek V4 Flash / V4 Pro, GLM-5.2, Kimi K3 (all 8 models priced at 0, API-verified 2026-09-08)
-- **Endpoint**: `https://token.sensenova.cn/v1` (OpenAI-compatible; Anthropic-compatible endpoint also available)
-- **Status**: Active (limited-time beta, **can switch to paid at any time**) — verified 2026-09-14 (phone signup; no card, no real-name; ✅ the official docs confirm the beta Free tier is **¥0/month** but with **no published end date**, and paid tiers are "coming soon"; ✅ `token.sensenova.cn/v1` responds correctly (401 without auth), while the widely-circulated `api.sensenova.cn/v1` returns 404 — **use `token.sensenova.cn/v1`**; measured latency is on the high side, and Kimi K3 burns credits fastest)
-
 #### ModelScope (Alibaba)
 
 - **Official site**: https://modelscope.cn
@@ -595,6 +578,18 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoint**: `https://api-inference.modelscope.cn/v1` (OpenAI-compatible)
 - **Status**: Active — verified 2026-09-02 (Alibaba Cloud account + real-name verification required)
 - **⚠️ Low-quality free tier**: only ~100–500 req/day per model, shares the 2,000 req/day total pool (busy days can be crowded out); personal / non-commercial use only; shared GPUs may queue, no SLA
+
+#### Intern InkStone Token Plan (墨点计划)
+
+- **Official site**: https://discovery.intern-ai.org.cn · Token Plan: https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0
+- **Free tier**: a monthly "ink dot" (墨点) allowance is granted automatically during the beta, converted to tokens (**1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash** — the page renders `5000,0000`, a typo; the correct figure is 50 million)
+- **Official wording**: launched by Shanghai AI Laboratory at the 2026 Pujiang Innovation Forum; the announcement says "during the beta, every user receives free tokens each month". ⚠️ **The exact monthly grant was never published** — you must sign in to see your actual balance (everything renders as `--` when logged out)
+- **Free models**: ⚠️ the platform only names DeepSeek-V4-Flash as its conversion baseline; the full catalog requires signing in
+- **Endpoint**: `https://discovery-api.intern-ai.org.cn/v1` (OpenAI-compatible); it also speaks the Anthropic protocol at `https://discovery-api.intern-ai.org.cn` (no `/v1`) — **rare among free channels**
+- **Status**: Active (free during the beta, terms may change) — verified 2026-09-30 (`/v1/models` without a key returns 401 `invalid_api_key`, so the endpoint exists; phone-number registration, no card required)
+- **⚠️ Not withdrawable**: ink dots are platform-internal only; "up to 50,000,000 per dot" is a ceiling, not a fixed value, and pricier models burn them faster
+- **Rate limits**: RPM + TPM + ink-dot balance, triple-capped, and **all API keys share the account quota** (not per-key); up to 10 keys per account, 6-month default validity
+- **⚠️ Different scope**: a research platform (life sciences, materials, semiconductors, fusion, meteorology), not a general-purpose chat API gateway; quota requests go to `tokenplan@pjlab.org.cn`
 
 ### Aggregators & gateways
 
