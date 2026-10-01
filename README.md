@@ -60,13 +60,12 @@
 |------|------|------|------|------|------|
 | **Space Bunny Alpha** | [OpenRouter](https://openrouter.ai) | 限时免费（`stealth/space-bunny-alpha`，输入/输出均 $0） | 1M / 524,288 | ⚠️ 官方原文：prompt 与 completion **可能被上游保留**，但**不用于训练** | ✅ 实测 pricing 字段 `prompt=0`、`completion=0`；3 天可用率 98.82%、吞吐 89 tok/s、TTFT 1.36s |
 | **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0） | 1M / 524,288 | ✅ **零保留、不用于训练**（Zen 官方原文） | 两条通道 ID 不同：Zen 带 `-free` 后缀，OpenRouter **不带** `:free` 后缀 |
-| **Big Pickle** | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`big-pickle`，三档均 $0） | 官方未公布 | ⚠️ Zen 隐私页列为例外：**免费期收集的数据可能用于改进模型** | 仅在 Zen 提供，OpenRouter 目录中查无此模型 |
 
 - **接入**：
   - OpenRouter：`POST https://openrouter.ai/api/v1/chat/completions`，模型名 `stealth/space-bunny-alpha`（**不要加 `:free` 后缀，加了会 404**）
-  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free` / `big-pickle`（`@ai-sdk/openai-compatible`）
-- **状态**：限时免费 — **复核于 2026-10-01**（两款均在售：Zen `/v1/models` 84 个模型中两款都在；OpenRouter 目录中`stealth/space-bunny-alpha` 仍在且 `prompt=0`/`completion=0` 两端全 0。✅ **Space Bunny Free 实测无需 API key 即可真实调用** Zen `POST /v1/chat/completions` 返回 200、署名 "Space Bunny"、`cost:"0"`。⚠️ **Big Pickle 外部调用被拒**：无 key 稳定返回 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*），带假 key 则 401——**其free tier 仅限 OpenCode 客户端内部使用，外部直连 API 不可用**。两款官方原文均为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**均无公开截止日期**）
-- ⚠️ **使用建议**：只当评测端点用，**不要放进生产链路**。匿名模型的身份、长期定价、数据处理承诺全部悬空，且可能随时消失；敏感数据是否可发送，取决于你实际用的那家网关的条款（Zen 的 Space Bunny 零保留，OpenRouter 的则可能保留）。
+  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）
+  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）
+- **状态**：限时免费 — **复核于 2026-10-01**（Space Bunny Free 在售：Zen `/v1/models` 84 个模型中在列，**实测无需 API key 即可真实调用**，`POST /v1/chat/completions` 返回 200、署名 "Space Bunny"、`cost:"0"`；OpenRouter 目录中 `stealth/space-bunny-alpha` 仍在且 `prompt=0`/`completion=0` 两端全 0。官方原文为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**无公开截止日期**。⚠️ 同批的 `big-pickle` 已从本节移除——实测无 key 稳定返回 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*），带假 key 则 401，**外部直连 API 不可用**，不符合本仓库「能拿 API Key 通过 endpoint 调用」的收录标准）
 
 ## 模型免费渠道索引
 
@@ -624,11 +623,11 @@
 #### OpenCode Zen
 
 - **官网**：[https://opencode.ai/zen](https://opencode.ai/zen)（[定价页](https://opencode.ai/docs/zen/)）
-- **免费形式**：限时免费模型（DeepSeek V4 Flash、MiMo-V2.5、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor、Jev 1.13、Big Pickle —— 输入/输出/缓存读写全 $0）
+- **免费形式**：限时免费模型（DeepSeek V4 Flash、MiMo-V2.5、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor、Jev 1.13 —— 输入/输出/缓存读写全 $0）
 - **网页说明**：OpenCode 官方模型网关，官网定价页将上述免费款明确标注为 Free，并说明"限时免费、用于收集反馈改进模型"；**并非整个平台免费**——DeepSeek / GLM / Kimi / Qwen 的正式版均为按量付费
-- **免费模型**：DeepSeek V4 Flash Free（1M 上下文）、MiMo-V2.5 Free（多模态）、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free、Jev 1.13 Free（判别类，走 Evaluation API）、Big Pickle（隐身模型）——共 8 款（2026-09-20 `/v1/models` 实测）
+- **免费模型**：DeepSeek V4 Flash Free（1M 上下文）、MiMo-V2.5 Free（多模态）、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free、Jev 1.13 Free（判别类，走 Evaluation API）——共 7 款（2026-10-01 `/v1/models` 实测）
 - **接入**：`https://opencode.ai/zen/v1`（OpenAI 兼容；部分模型走 `/messages` Anthropic 协议或 `/responses`）
-- **状态**：Active（限时免费）— 核实于 2026-09-27（✅ `/v1/models` 目录 74 → **82 个**，`-free` 款 8 → **11 个**，新进 `space-bunny-free`、`longcat-2.5-preview-free`、`mimo-v2.6-flash-free`（其中 `space-bunny-free` 与 `big-pickle` 为匿名模型，详见[匿名模型](#匿名模型stealth)）；⚠️ `deepseek-v4-flash-free` 曾在 2026-09-11 实测显示按量计费（$0.14/$0.28），9/20 起回到免费清单——免费名单反复横跳，调用前以官网当前清单为准）
+- **状态**：Active（限时免费）— 核实于 2026-10-01（✅ `/v1/models` 目录 **84 个模型**，其中 `-free` 款 11 个，含 `space-bunny-free`（匿名模型，详见[匿名模型](#匿名模型stealth)）；⚠️ `big-pickle` 虽在目录中但**外部直连 API 不可用**（无 key 返 403 `FreeTierError`，带假 key 返 401），故未列入免费清单；⚠️ `deepseek-v4-flash-free` 曾在 2026-09-11 实测显示按量计费（$0.14/$0.28），9/20 起回到免费清单——免费名单反复横跳，调用前以官网当前清单为准）
 
 #### OrcaRouter
 
