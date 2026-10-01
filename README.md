@@ -65,7 +65,7 @@
 - **接入**：
   - OpenRouter：`POST https://openrouter.ai/api/v1/chat/completions`，模型名 `stealth/space-bunny-alpha`（**不要加 `:free` 后缀，加了会 404**）
   - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free` / `big-pickle`（`@ai-sdk/openai-compatible`）
-- **状态**：限时免费 — 核实于 2026-09-27（两款均为 OpenCode Zen 官方标注的 stealth model，原文均为 *"free on OpenCode for a limited time"*，官方说明是 *"The team is using this time to collect feedback and improve the model"*。Space Bunny 首发公告为"免费一周"，约 2026-09-30 到期，**无公开截止日期**。Space Bunny 同时可经 Onomeo 签到额度调用，实测单次消耗 1,932，签到满额 20 万约可调 103 次）
+- **状态**：限时免费 — **复核于 2026-10-01**（两款均在售：Zen `/v1/models` 84 个模型中两款都在；OpenRouter 目录中`stealth/space-bunny-alpha` 仍在且 `prompt=0`/`completion=0` 两端全 0。✅ **Space Bunny Free 实测无需 API key 即可真实调用** Zen `POST /v1/chat/completions` 返回 200、署名 "Space Bunny"、`cost:"0"`。⚠️ **Big Pickle 外部调用被拒**：无 key 稳定返回 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*），带假 key 则 401——**其free tier 仅限 OpenCode 客户端内部使用，外部直连 API 不可用**。两款官方原文均为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**均无公开截止日期**）
 - ⚠️ **使用建议**：只当评测端点用，**不要放进生产链路**。匿名模型的身份、长期定价、数据处理承诺全部悬空，且可能随时消失；敏感数据是否可发送，取决于你实际用的那家网关的条款（Zen 的 Space Bunny 零保留，OpenRouter 的则可能保留）。
 
 ## 模型免费渠道索引
