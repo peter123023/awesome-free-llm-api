@@ -57,14 +57,12 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Model | Free channel | Free tier | Context / Max output | Data policy | Notes |
 |-------|--------------|-----------|----------------------|-------------|-------|
-| **Space Bunny Alpha** | [OpenRouter](https://openrouter.ai) | Limited-time free (`stealth/space-bunny-alpha`, $0 input and output) | 1M / 524,288 | ⚠️ Official wording: prompts and completions **may be retained** by the provider, but are **not used for training** | ✅ Measured `pricing` fields `prompt=0`, `completion=0`; 3-day availability 98.82%, throughput 89 tok/s, TTFT 1.36s |
-| **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | Limited-time free (`space-bunny-free`, $0 across Input / Output / Cached Read) | 1M / 524,288 | ✅ **Zero retention, not used for training** (OpenCode Zen's own wording) | The model ID differs per channel: Zen uses the `-free` suffix, OpenRouter has **no** `:free` suffix |
+| **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | Limited-time free (`space-bunny-free`, $0 across Input / Output / Cached Read) | 1M / 524,288 | ✅ **Zero retention, not used for training** (OpenCode Zen's own wording) | ✅ Re-verified 2026-10-06: of Zen's 13 `*-free` models, **only this one is callable via the external API**; the model ID carries the `-free` suffix |
 
 - **Endpoints**:
-  - OpenRouter: `POST https://openrouter.ai/api/v1/chat/completions`, model `stealth/space-bunny-alpha` (**do not append a `:free` suffix — that returns 404**)
-  - OpenCode Zen: `POST https://opencode.ai/zen/v1/chat/completions`, model `space-bunny-free` (`@ai-sdk/openai-compatible`)
-  - OpenCode Zen: `POST https://opencode.ai/zen/v1/chat/completions`, model `space-bunny-free` (`@ai-sdk/openai-compatible`)
-- **Status**: limited-time free — **re-verified 2026-10-01** (Space Bunny Free is listed: Zen `/v1/models` carries it among 84 models, and it is **callable with no API key at all** — `POST /v1/chat/completions` returns 200, signed "Space Bunny", with `cost:"0"`; OpenRouter still lists `stealth/space-bunny-alpha` at `prompt=0` and `completion=0`. The official wording is "free on OpenCode for a limited time", described as time to "collect feedback and improve the model"; it launched with a "free for one week" announcement (roughly expiring 2026-09-30) and **has no published end date**. ⚠️ `big-pickle` from the same batch has been removed from this section — without a key it consistently returns 403 `FreeTierError` ("OpenCode's free tier can only be used from within OpenCode") and a fake key returns 401, so **it is not reachable via direct external API calls** and fails this repo's rule of thumb: collect channels that can actually be called with an API key through an endpoint)
+  - OpenCode Zen: `POST https://opencode.ai/zen/v1/chat/completions`, model `space-bunny-free` (`@ai-sdk/openai-compatible`, **verified to need no API key**)
+  - ⚠️ The OpenRouter channel was delisted on 2026-10-06; the former endpoint `POST https://openrouter.ai/api/v1/chat/completions` with model `stealth/space-bunny-alpha` no longer works
+- **Status**: limited-time free — **re-verified 2026-10-06** (available on Zen: listed among the 86 models returned by `/v1/models`, and **callable with no API key at all** — `POST /v1/chat/completions` returns 200 with correct content, `cost:"0"`, and 128 prompt tokens served from cache. The official wording is "free on OpenCode for a limited time", described as time to "collect feedback and improve the model"; it launched with a "free for one week" announcement (roughly expiring 2026-09-30) and **has no published end date**. ❌ **Delisted from OpenRouter**: the live `/api/v1/models` (464 models) returns **zero** hits for `bunny` / `stealth` / `pickle`, and a direct `chat/completions` call returns 401 `No cookie auth credentials found` — that channel is gone, so its row has been removed from the table above. ⚠️ **The other 12 Zen `*-free` models are not externally callable** (each tested individually on 2026-10-06): `big-pickle`, `fledge-alpha-free`, `nemotron-3-ultra-free`, `nemotron-3.5-lightning-free`, `ling-3.0-flash-fin-free`, `ling-3.1-flash-free`, `longcat-2.5-preview-free`, `mimo-v2.5-free` and `mimo-v2.6-flash-free` all return 403 `FreeTierError` ("OpenCode's free tier can only be used from within OpenCode"); `muse-spark-1.2/1.3-contributor-free` return 403 `RegionError` ("not available in your country"); `deepseek-v4-flash-free` reports "Model is unavailable"; `jev-1.13-free` returns 500. **Only `space-bunny-free` returns 200**, which is why this section keeps just that one. ⚠️ `big-pickle` from the same batch has been removed — it is still listed on Zen, but is not reachable through direct external API calls and fails this repo's rule of thumb: collect channels that can actually be called with an API key through an endpoint)
 
 ## Model Index
 
@@ -87,7 +85,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official hosting, no card, no daily cap; Cons: 40 RPM shared, queues at peak | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: official hosting, no card, no credits or daily cap, 1M context; Cons: SMS phone verification required, 40 RPM shared, queues at peak | Frequent timeouts |
 | [Token Harbor](https://tokenharbor.ai) | Within the free monthly allowance (renews on a 4-week rolling cycle) | Pros: small gateway, no card required, **the Free plan explicitly includes V4.1 Flash**; Cons: ⚠️ **region-blocked for Mainland China, Hong Kong and Macao**, requiring an overseas network; allowance undisclosed, renews every 4 weeks, gateway is young | Region-restricted |
 | [Onomeo](https://onomeo.com/zh) | check-in daily allowance (8,409 credits/answer, ~23 answers off a full 200k check-in) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, works off a topped-up check-in allowance, supports image input; Cons: not a free tier, manual daily check-in required, costly per call (1,473 on 9/22 has risen to 8,409), public-beta aggregator can change anytime |  |
 
@@ -122,7 +120,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official hosting, no card, 1.3M context & multimodal, no daily cap; Cons: 40 RPM shared, queues at peak | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: official hosting, no card, no credits or daily cap, 1.3M context & multimodal; Cons: SMS phone verification required, 40 RPM shared, queues at peak | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 | [Onomeo](https://onomeo.com/zh) | check-in daily allowance (`z-ai/glm-5.3-flash-free`, 3,149 credits/answer, ~63 answers off a full 200k check-in) | Pros: reachable from Mainland China without a proxy, OpenAI-compatible, 1M context; Cons: not a free tier, manual daily check-in required, ~16x costlier per call than the 9/22 figure, public-beta aggregator can change anytime; ⚠️ the flagship `glm-5.3` (non-flash) on the same platform is a premium model subject to the 50k credits/day cap |  |
@@ -252,7 +250,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: official hosting, no card, no credits or daily cap; Cons: SMS phone verification required, 40 RPM shared | Frequent timeouts |
 | [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: official Shanghai AI Lab platform, monthly top-up, no card required, OpenAI + Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, ⚠️ unverified whether Kimi K2.6 is in the ink-dot free pool (the platform only names V4-Flash), research-oriented platform |  |
 
 #### Kimi K3
@@ -261,7 +259,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: official, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: official hosting, no card, no credits or daily cap, 1M context; Cons: SMS phone verification required, 40 RPM shared | Frequent timeouts |
 
 #### StepFun Step 3.7 Flash
 
@@ -315,7 +313,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast; Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent (20B only) | Pros: official, no card; Cons: 40 RPM shared, only hosts gpt-oss-20b | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap, 20B only) | Pros: official hosting, no card, no credits or daily cap; Cons: SMS phone verification required, 40 RPM shared, only hosts gpt-oss-20b | Frequent timeouts |
 
 > ⚠️ **GPT-OSS is no longer in the OpenRouter free lineup** (verified 2026-09-11).
 
@@ -343,7 +341,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` (Ultra / Super / 3.5 Lightning) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent, 40 RPM | Pros: NVIDIA's own flagship, no card, no daily cap; Cons: 40 RPM shared | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: NVIDIA's own flagship, no card, no credits or daily cap, 1M context; Cons: SMS phone verification required, 40 RPM shared, hosts Ultra/Lightning only (Super delisted) | Frequent timeouts |
 
 #### InKling / Ling 3.0 Flash (new OpenRouter free entries)
 
@@ -385,7 +383,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` (both 31B and 26B-A4B) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
-| [NVIDIA NIM](https://build.nvidia.com) | permanent (31B only) | Pros: official, no card; Cons: 40 RPM shared, NIM hosts only `gemma-4-31b-it`, no 26B-A4B | Frequent timeouts |
+| [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap, 31B only) | Pros: official hosting, no card, no credits or daily cap; Cons: SMS phone verification required, 40 RPM shared, NIM hosts only `gemma-4-31b-it`, no 26B-A4B | Frequent timeouts |
 
 #### Whisper
 
@@ -431,11 +429,12 @@ Stealth models are not like the other channels in this list. Up front, the prope
 #### NVIDIA NIM
 
 - **Official site**: https://build.nvidia.com
-- **Free tier**: permanent (40 RPM shared site-wide, no daily cap)
-- **What the site says**: "100+ models free to call" — NVIDIA-hosted inference endpoints, sign up and go, no credit card
-- **Free models**: **`deepseek-ai/deepseek-v4.1-flash` (newly listed 2026-09-27)**, **`z-ai/glm-5.3` / `z-ai/glm-5.3-flash`**, `moonshotai/kimi-k2.6`, `moonshotai/kimi-k3`, `google/gemma-4-31b-it`, `nvidia/nemotron-3-ultra-550b` / `nemotron-3-super-120b` / `nemotron-3.5-lightning-30b`, `openai/gpt-oss-20b`, `mistralai/mistral-large` / `mistral-large-2-instruct`, `poolside/laguna-xs-2.1` and more (check the live `/v1/models`; ⚠️ **V4 Flash 0731, V4 Pro 0813 and MiniMax M3 have all been delisted**)
+- **Free tier**: permanent (**no token cap / no credits**, 40 RPM shared site-wide, no daily cap)
+- **What the site says**: "100+ models free to call" — NVIDIA-hosted inference endpoints, sign up and go, no credit card. ⚠️ **The mechanism has changed: the old "~1,000 credits" allowance is gone.** NVIDIA's account verification dialog now reads *"Unlimited API requests without daily limits"* — there is no token quota any more, and **the only ceiling is roughly 40 RPM per key** (no official way to raise it on the free tier)
+- **Free models**: **`deepseek-ai/deepseek-v4.1-flash` (newly listed 2026-09-27)**, **`z-ai/glm-5.3` / `z-ai/glm-5.3-flash`**, `moonshotai/kimi-k2.6`, `moonshotai/kimi-k3`, `google/gemma-4-31b-it`, `nvidia/nemotron-3-ultra-550b-a55b` / `nemotron-3.5-lightning-30b-a3b` (⚠️ **`nemotron-3-super-120b-a12b` was delisted on 2026-10-03**), `openai/gpt-oss-20b`, `mistralai/mistral-large` / `mistral-large-2-instruct`, `poolside/laguna-xs-2.1` and more (check the live `/v1/models`; ⚠️ **V4 Flash 0731, V4 Pro 0813 and MiniMax M3 have all been delisted**)
 - **Endpoint**: `https://integrate.api.nvidia.com/v1` (OpenAI-compatible)
-- **Status**: Active — verified 2026-09-27 (in practice `/v1/models` returns **82 models** — the same count as 9/12, but with a **large lineup swap**: ✅ newly added `deepseek-ai/deepseek-v4.1-flash` and `z-ai/glm-5.3`; ❌ **removed `deepseek-v4-flash-0731`, `deepseek-v4-pro-0813` and every MiniMax entry**. NIM now carries only V4.1 Flash and `deepseek-coder-6.7b-instruct` from DeepSeek, so **V4 Flash / V4 Pro have no free tier left on NIM**; MiniMax / Qwen / StepFun / Ling still absent, GLM 5.2 / 5.1 / 4.7 have not returned. ⚠️ An unchanged count does not mean an unchanged lineup — always diff the model IDs)
+- **Sign-up requirement**: **SMS phone verification is mandatory** (the API key page shows a "We'll need to verify your phone number" modal and withholds the key until a one-time code is entered). ⚠️ Some country/region prefixes are not on the supported list and cannot register at all; NVIDIA states virtual numbers and borrowed SIMs violate its terms and risk account revocation
+- **Status**: Active — verified 2026-10-03 (in practice `/v1/models` returns **80 models**, one fewer than the 82 on 9/27: `nvidia/nemotron-3-super-120b-a12b` has been delisted; ⚠️ a changing count does not mean an unchanged lineup — always diff the model IDs). From DeepSeek, NIM now carries only `deepseek-ai/deepseek-v4.1-flash` and `deepseek-coder-6.7b-instruct`, so **V4 Flash / V4 Pro have no free tier left on NIM**; MiniMax / Qwen / StepFun / Ling are still absent and GLM 5.2 / 5.1 / 4.7 have not returned. Newly added flagships `moonshotai/kimi-k3`, `z-ai/glm-5.3`, `z-ai/glm-5.3-flash` all ship a 1M context (Kimi K3 cannot disable thinking; multi-turn calls must pass back `reasoning_content` and `tool_calls`)
 
 #### Google AI Studio
 

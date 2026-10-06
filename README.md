@@ -58,14 +58,12 @@
 
 | 模型 | 免费渠道 | 免费形式 | 上下文 / 输出 | 数据政策 | 备注 |
 |------|------|------|------|------|------|
-| **Space Bunny Alpha** | [OpenRouter](https://openrouter.ai) | 限时免费（`stealth/space-bunny-alpha`，输入/输出均 $0） | 1M / 524,288 | ⚠️ 官方原文：prompt 与 completion **可能被上游保留**，但**不用于训练** | ✅ 实测 pricing 字段 `prompt=0`、`completion=0`；3 天可用率 98.82%、吞吐 89 tok/s、TTFT 1.36s |
-| **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0） | 1M / 524,288 | ✅ **零保留、不用于训练**（Zen 官方原文） | 两条通道 ID 不同：Zen 带 `-free` 后缀，OpenRouter **不带** `:free` 后缀 |
+| **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0） | 1M / 524,288 | ✅ **零保留、不用于训练**（Zen 官方原文） | ✅ 复核于 2026-10-06：Zen 13 个 `*-free` 模型中**仅此款外部 API 可调**；模型 ID 带 `-free` 后缀 |
 
 - **接入**：
-  - OpenRouter：`POST https://openrouter.ai/api/v1/chat/completions`，模型名 `stealth/space-bunny-alpha`（**不要加 `:free` 后缀，加了会 404**）
-  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）
-  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）
-- **状态**：限时免费 — **复核于 2026-10-01**（Space Bunny Free 在售：Zen `/v1/models` 84 个模型中在列，**实测无需 API key 即可真实调用**，`POST /v1/chat/completions` 返回 200、署名 "Space Bunny"、`cost:"0"`；OpenRouter 目录中 `stealth/space-bunny-alpha` 仍在且 `prompt=0`/`completion=0` 两端全 0。官方原文为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**无公开截止日期**。⚠️ 同批的 `big-pickle` 已从本节移除——实测无 key 稳定返回 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*），带假 key 则 401，**外部直连 API 不可用**，不符合本仓库「能拿 API Key 通过 endpoint 调用」的收录标准）
+  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`，**实测无需 API key**）
+  - ⚠️ OpenRouter 通道已于 2026-10-06 下架，原端点 `POST https://openrouter.ai/api/v1/chat/completions` + 模型名 `stealth/space-bunny-alpha` 不再可用
+- **状态**：限时免费 — **复核于 2026-10-06**（Zen 侧在售且可用：`/v1/models` 86 个模型中在列，**实测无需 API key 即可真实调用**，`POST /v1/chat/completions` 返回 200、内容正确、`cost:"0"`、prompt 命中缓存 128 tokens。官方原文为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**无公开截止日期**。❌ **OpenRouter 已下架**：实测 `/api/v1/models`（464 个模型）里 `bunny` / `stealth` / `pickle` **全部零命中**，直连 `chat/completions` 返 401 `No cookie auth credentials found`，该通道已失效故本表删除其行。⚠️ **Zen 上其余 12 个 `*-free` 模型外部均不可调**（2026-10-06 逐个实测）：`big-pickle`、`fledge-alpha-free`、`nemotron-3-ultra-free`、`nemotron-3.5-lightning-free`、`ling-3.0-flash-fin-free`、`ling-3.1-flash-free`、`longcat-2.5-preview-free`、`mimo-v2.5-free`、`mimo-v2.6-flash-free` 均 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*）；`muse-spark-1.2/1.3-contributor-free` 403 `RegionError`（*"not available in your country"*）；`deepseek-v4-flash-free` 报 *Model is unavailable*；`jev-1.13-free` 500。**只有 `space-bunny-free` 返回 200**，故本节只保留它。⚠️ 同批的 `big-pickle` 已从本节移除——它仍在 Zen 目录里，但外部直连 API 不可用，不符合本仓库「能拿 API Key 通过 endpoint 调用」的收录标准）
 
 ## 模型免费渠道索引
 
@@ -88,7 +86,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限、1M 上下文;限制:需短信验证手机号,40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:⚠️ **中国大陆/香港/澳门被区域封锁**,需境外网络;额度未公开、按 4 周滚动刷新,网关资历浅 | 区域受限 |
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(8,409 额度/次,签到满额 20 万约可调 23 次) | 优势:国内直连、OpenAI 兼容、签到满额即可调、支持图片输入;限制:非免费档、需每日手动签到、单次成本偏高(9/22 记录的 1,473 已涨至 8,409)、公测聚合平台随时可能变 |  |
 
@@ -123,7 +121,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、1.3M 上下文多模态、无每日上限;限制:40 RPM 全站共享,高峰期需排队 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限、1.3M 上下文多模态;限制:需短信验证手机号,40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(`z-ai/glm-5.3-flash-free`,3,149 额度/次,签到满额 20 万约可调 63 次) | 优势:国内直连、OpenAI 兼容、1M 上下文;限制:非免费档、需每日手动签到、单次成本较 9/22 涨约 16 倍、公测聚合平台随时可能变;⚠️ 同平台的旗舰 `glm-5.3`(非 flash)属 premium 款,受每日 5 万额度上限约束 |  |
@@ -253,7 +251,7 @@
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限;限制:需短信验证手机号,40 RPM 全站共享 | 经常超时 |
 | [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:上海 AI 实验室官方平台、每月自动到账、免绑卡、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、⚠️ 未经证实 Kimi-K2.6 是否在墨点免费池内（官方页面仅明示 V4-Flash）、科研向平台 |  |
 
 #### Kimi K3
@@ -262,7 +260,7 @@
 
 | 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
 |------|------|------|------|
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方托管、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限、1M 上下文;限制:需短信验证手机号,40 RPM 全站共享 | 经常超时 |
 
 #### StepFun Step 3.7 Flash
 
@@ -316,7 +314,7 @@
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1000 次/日 | 优势:LPU 极速推理;限制:30 RPM / 1000 RPD,TPM 8K |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(仅 20B) | 优势:官方托管、免绑卡;限制:40 RPM 全站共享,仅托管 gpt-oss-20b | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token,仅 20B) | 优势:官方托管、免绑卡、无积分/无日限;限制:需短信验证手机号,40 RPM 全站共享,仅托管 gpt-oss-20b | 经常超时 |
 
 > ⚠️ **GPT-OSS 已不在 OpenRouter 免费名单**（2026-09-11 实测）。
 
@@ -344,7 +342,7 @@
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free`（Ultra / Super / 3.5 Lightning） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费,40 RPM | 优势:官方自营旗舰、免绑卡、无每日上限;限制:40 RPM 全站共享 | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方自营旗舰、免绑卡、无积分/无日限、1M 上下文;限制:需短信验证手机号,40 RPM 全站共享,仅托管 Ultra/Lightning(Super 已下架) | 经常超时 |
 
 #### InKling / Ling 3.0 Flash（OpenRouter 新晋免费）
 
@@ -386,7 +384,7 @@
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free`（31B 与 26B-A4B 两款） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
-| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(仅 31B) | 优势:官方托管、免绑卡;限制:40 RPM 全站共享,NIM 仅托管 `gemma-4-31b-it`,无 26B-A4B | 经常超时 |
+| [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token,仅 31B) | 优势:官方托管、免绑卡、无积分/无日限;限制:需短信验证手机号,40 RPM 全站共享,NIM 仅托管 `gemma-4-31b-it`,无 26B-A4B | 经常超时 |
 
 #### Whisper
 
@@ -432,11 +430,12 @@
 #### NVIDIA NIM
 
 - **官网**：https://build.nvidia.com
-- **免费形式**：永久免费层（40 RPM 全站共享，无每日上限）
-- **网页说明**：官网称「100+ 模型免费调用」——NVIDIA 托管的推理端点，注册即可用，无需信用卡
-- **免费模型**：**`deepseek-ai/deepseek-v4.1-flash`（2026-09-27 新上架）**、**`z-ai/glm-5.3` / `z-ai/glm-5.3-flash`**、`moonshotai/kimi-k2.6`、`moonshotai/kimi-k3`、`google/gemma-4-31b-it`、`nvidia/nemotron-3-ultra-550b` / `nemotron-3-super-120b` / `nemotron-3.5-lightning-30b`、`openai/gpt-oss-20b`、`mistralai/mistral-large` / `mistral-large-2-instruct`、`poolside/laguna-xs-2.1` 等（以 `/v1/models` 实测为准；⚠️ **V4 Flash 0731、V4 Pro 0813、MiniMax M3 均已下架**）
+- **免费形式**：永久免费层（**不限 token / 无积分额度**，40 RPM 全站共享，无每日上限）
+- **网页说明**：官网称「100+ 模型免费调用」——NVIDIA 托管的推理端点，注册即可用，无需信用卡。⚠️ **机制已变更：旧的「约 1,000 积分」额度制已作废**，官方账号验证弹窗现写明 *"Unlimited API requests without daily limits"*，即不再有 token 额度上限，**唯一上限是约 40 RPM / key**（免费档无官方提额通道）
+- **免费模型**：**`deepseek-ai/deepseek-v4.1-flash`（2026-09-27 新上架）**、**`z-ai/glm-5.3` / `z-ai/glm-5.3-flash`**、`moonshotai/kimi-k2.6`、`moonshotai/kimi-k3`、`google/gemma-4-31b-it`、`nvidia/nemotron-3-ultra-550b-a55b` / `nemotron-3.5-lightning-30b-a3b`（⚠️ **`nemotron-3-super-120b-a12b` 已于 2026-10-03 下架**）、`openai/gpt-oss-20b`、`mistralai/mistral-large` / `mistral-large-2-instruct`、`poolside/laguna-xs-2.1` 等（以 `/v1/models` 实测为准；⚠️ **V4 Flash 0731、V4 Pro 0813、MiniMax M3 均已下架**）
 - **接入**：`https://integrate.api.nvidia.com/v1`（OpenAI 兼容）
-- **状态**：Active — 核实于 2026-09-27（实测 `/v1/models` 返回 **82 个模型**，与 9/12 同为 82 但**成员大幅换血**：✅ 新上架 `deepseek-ai/deepseek-v4.1-flash`、`z-ai/glm-5.3`；❌ **移除 `deepseek-v4-flash-0731`、`deepseek-v4-pro-0813`、全部 MiniMax 条目**。NIM 上 DeepSeek 现仅剩 V4.1 Flash 与 `deepseek-coder-6.7b-instruct` 两款，**V4 Flash / V4 Pro 在 NIM 已无可用免费档**；MiniMax / Qwen / StepFun / Ling 仍不在列，GLM 5.2 / 5.1 / 4.7 亦未回归。⚠️ 数量不变不代表阵容不变，务必逐款核对模型 ID）
+- **注册门槛**：**必须短信验证手机号**（API Key 页会弹「We'll need to verify your phone number」，未验证不发 key），⚠️ 部分国家/地区号段不在支持列表，无法注册；NVIDIA 明确虚拟号与借用 SIM 违反条款、可能封号
+- **状态**：Active — 核实于 2026-10-03（实测 `/v1/models` 返回 **80 个模型**，较 9/27 的 82 个**再减 1 个**：`nvidia/nemotron-3-super-120b-a12b` 下架；⚠️ 数量变化不代表阵容不变，务必逐款核对模型 ID）。DeepSeek 侧现仅剩 `deepseek-ai/deepseek-v4.1-flash` 与 `deepseek-coder-6.7b-instruct` 两款，**V4 Flash / V4 Pro 在 NIM 已无可用免费档**；MiniMax / Qwen / StepFun / Ling 仍不在列，GLM 5.2 / 5.1 / 4.7 亦未回归。旗舰新增 `moonshotai/kimi-k3`、`z-ai/glm-5.3`、`z-ai/glm-5.3-flash` 四款均为 1M 上下文（Kimi K3 思考不可关闭，多轮需回传 `reasoning_content` 与 `tool_calls`）
 
 #### Google AI Studio
 
