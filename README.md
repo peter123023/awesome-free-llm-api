@@ -658,6 +658,16 @@
 - ~~**接入**：见官方文档~~
 - ~~**状态**：Active（额度随时可能下架）— 核实于 2026-09-02~~
 
+#### NovAI (AI API Pro)
+
+- **官网**：https://aiapi-pro.com（[模型目录](https://aiapi-pro.com/models) · [API 文档](https://aiapi-pro.com/docs)）
+- **免费形式**：永久免费模型（无 token 上限、无需信用卡）；另有注册送 $2 额度（属赠额，不计入免费层）
+- **网页说明**：官网 llms.txt「Free models (unlimited)」列出 glm-4.7-flash、glm-4.6v-flash、glm-4.1v-thinking-flash、cogview-3-flash、cogvideox-flash 为免费无限；透明页标注 0% 平台加价、透传官方价
+- **免费模型**：glm-4.7-flash、glm-4.6v-flash（vision）、glm-4.1v-thinking-flash、cogview-3-flash（图像）、cogvideox-flash（视频）
+- **接入**：OpenAI 兼容 Base URL `https://aiapi-pro.com/v1`
+- **状态**：**Active** — 核实于 2026-10-11
+
+
 ### 限时免费
 
 #### B.AI
