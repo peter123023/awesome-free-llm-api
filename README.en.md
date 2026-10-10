@@ -657,6 +657,16 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - ~~**Endpoint**: see official docs~~
 - ~~**Status**: Active (quota can disappear anytime) — verified 2026-09-02~~
 
+#### NovAI (AI API Pro)
+
+- **Site**: https://aiapi-pro.com ([model catalog](https://aiapi-pro.com/models) · [API docs](https://aiapi-pro.com/docs))
+- **Free form**: permanently free models (no token cap, no credit card); plus a $2 signup credit (a grant, not counted as the free tier)
+- **Official note**: site llms.txt "Free models (unlimited)" lists glm-4.7-flash, glm-4.6v-flash, glm-4.1v-thinking-flash, cogview-3-flash, cogvideox-flash as free & unlimited; transparency page states 0% platform markup (pass-through provider price)
+- **Free models**: glm-4.7-flash, glm-4.6v-flash (vision), glm-4.1v-thinking-flash, cogview-3-flash (image), cogvideox-flash (video)
+- **Access**: OpenAI-compatible Base URL `https://aiapi-pro.com/v1`
+- **Status**: **Active** — verified 2026-10-11
+
+
 ### Limited-time free
 
 #### B.AI
