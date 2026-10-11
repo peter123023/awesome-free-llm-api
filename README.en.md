@@ -62,20 +62,8 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoints**:
   - OpenCode Zen: `POST https://opencode.ai/zen/v1/chat/completions`, model `space-bunny-free` (`@ai-sdk/openai-compatible`, **verified to need no API key**)
   - ⚠️ The OpenRouter channel was delisted on 2026-10-06; the former endpoint `POST https://openrouter.ai/api/v1/chat/completions` with model `stealth/space-bunny-alpha` no longer works
-- **Status**: limited-time free — **re-verified 2026-10-06** (available on Zen: listed among the 86 models returned by `/v1/models`, and **callable with no API key at all** — `POST /v1/chat/completions` returns 200 with correct content, `cost:"0"`, and 128 prompt tokens served from cache. The official wording is "free on OpenCode for a limited time", described as time to "collect feedback and improve the model"; it launched with a "free for one week" announcement (roughly expiring 2026-09-30) and **has no published end date**. ❌ **Delisted from OpenRouter**: the live `/api/v1/models` (464 models) returns **zero** hits for `bunny` / `stealth` / `pickle`, and a direct `chat/completions` call returns 401 `No cookie auth credentials found` — that channel is gone, so its row has been removed from the table above. ⚠️ **The other 12 Zen `*-free` models are not externally callable** (each tested individually on 2026-10-06): `big-pickle`, `fledge-alpha-free`, `nemotron-3-ultra-free`, `nemotron-3.5-lightning-free`, `ling-3.0-flash-fin-free`, `ling-3.1-flash-free`, `longcat-2.5-preview-free`, `mimo-v2.5-free` and `mimo-v2.6-flash-free` all return 403 `FreeTierError` ("OpenCode's free tier can only be used from within OpenCode"); `muse-spark-1.2/1.3-contributor-free` return 403 `RegionError` ("not available in your country"); `deepseek-v4-flash-free` reports "Model is unavailable"; `jev-1.13-free` returns 500. **Only `space-bunny-free` returns 200**, which is why this section keeps just that one. ⚠️ `big-pickle` from the same batch has been removed — it is still listed on Zen, but is not reachable through direct external API calls and fails this repo's rule of thumb: collect channels that can actually be called with an API key through an endpoint)
 
 ## Model Index
-
-### Structured decision models (non-generative)
-
-#### TypeSafe AI Jev
-
-> TypeSafe AI's first System One model, released in early access on 2026-09-15; it **does not generate text** — you send a state plus a set of typed questions, and it returns choices, scores and boolean probabilities
-
-| Free channel | Free tier | Pros / Cons | API quality |
-|------|------|------|------|
-| ~~Vercel AI Gateway~~ **(Jev promo ended 2026-09-25)** | ~~limited-time promotional free~~ → pay-per-token ($0.042/M input, $0 output) | ⚠️ **the promo has expired**: Jev is back at list price and no longer free; the $5/month credit remains but covers only the Free Tier eligible subset and **requires a payment method on file** | Promo over |
-| — | **no other free channel** | ⚠️ **full sweep 2026-09-30**: ① the official `api.typesafe.ai/v1/systemone` endpoint exists (no key → 403 `Must supply an API key!`) but **new signups have been paused since 2026-09-22**, and its pricing is the same $0.042/M input; ② OpenRouter only carries `typesafe/jev-router` with `pricing` `-1/-1` (not billed through OpenRouter), so the official price applies; ③ Cloudflare Workers AI's official model page **has no Jev / TypeSafe entry** (secondary sources are wrong); ④ Jev is positioned as an extremely cheap pay-per-token tier with free output — **a paid model, not a free channel** | — |
 
 ### DeepSeek family
 
@@ -621,9 +609,9 @@ Stealth models are not like the other channels in this list. Up front, the prope
 #### OpenCode Zen
 
 - **Official site**: [https://opencode.ai/zen](https://opencode.ai/zen) ([pricing](https://opencode.ai/docs/zen/))
-- **Free tier**: limited-time free models (DeepSeek V4 Flash, MiMo-V2.5, Ling 3.0 Flash Fin, Nemotron 3 Ultra, Nemotron 3.5 Lightning, Muse Spark 1.2 / 1.3 Contributor, Jev 1.13 — $0 across input, output and cache read/write)
+- **Free tier**: limited-time free models (DeepSeek V4 Flash, MiMo-V2.5, Ling 3.0 Flash Fin, Nemotron 3 Ultra, Nemotron 3.5 Lightning, Muse Spark 1.2 / 1.3 Contributor — $0 across input, output and cache read/write)
 - **What the site says**: OpenCode's official model gateway; the pricing page explicitly marks the free models as Free and notes they are "available for a limited time while the team collects feedback"; **the platform itself is not free** — the full DeepSeek / GLM / Kimi / Qwen editions are pay-per-token
-- **Free models**: DeepSeek V4 Flash Free (1M context), MiMo-V2.5 Free (multimodal), Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.2 / 1.3 Contributor Free, Jev 1.13 Free (decision model, via the Evaluation API) — 7 total (verified against `/v1/models` on 2026-10-01)
+- **Free models**: DeepSeek V4 Flash Free (1M context), MiMo-V2.5 Free (multimodal), Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, Muse Spark 1.2 / 1.3 Contributor Free — 6 total (verified against `/v1/models` on 2026-10-01; Jev 1.13 Free removed — `jev-1.13-free` returned 500 on 2026-10-06, not callable)
 - **Endpoint**: `https://opencode.ai/zen/v1` (OpenAI-compatible; some models use `/messages` Anthropic or `/responses`)
 - **Status**: Active (limited-time) — verified 2026-10-01 (✅ the catalog carries **84 models**, of which 11 carry the `-free` suffix, including `space-bunny-free` (a stealth model — see [Stealth Models](#stealth-models)); ⚠️ `big-pickle` is in the catalog but **not reachable via direct external API calls** (no key returns 403 `FreeTierError`, a fake key returns 401), so it is left out of the free list; ⚠️ `deepseek-v4-flash-free` showed pay-per-token pricing in a 2026-09-11 check ($0.14/$0.28) and returned to the free list on 9/20 — the lineup flips back and forth, so check the current catalog before calling)
 

@@ -63,20 +63,8 @@
 - **接入**：
   - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`，**实测无需 API key**）
   - ⚠️ OpenRouter 通道已于 2026-10-06 下架，原端点 `POST https://openrouter.ai/api/v1/chat/completions` + 模型名 `stealth/space-bunny-alpha` 不再可用
-- **状态**：限时免费 — **复核于 2026-10-06**（Zen 侧在售且可用：`/v1/models` 86 个模型中在列，**实测无需 API key 即可真实调用**，`POST /v1/chat/completions` 返回 200、内容正确、`cost:"0"`、prompt 命中缓存 128 tokens。官方原文为 *"free on OpenCode for a limited time"*，说明是 *"collect feedback and improve the model"*；Space Bunny 首发公告为"免费一周"（约 2026-09-30 到期），**无公开截止日期**。❌ **OpenRouter 已下架**：实测 `/api/v1/models`（464 个模型）里 `bunny` / `stealth` / `pickle` **全部零命中**，直连 `chat/completions` 返 401 `No cookie auth credentials found`，该通道已失效故本表删除其行。⚠️ **Zen 上其余 12 个 `*-free` 模型外部均不可调**（2026-10-06 逐个实测）：`big-pickle`、`fledge-alpha-free`、`nemotron-3-ultra-free`、`nemotron-3.5-lightning-free`、`ling-3.0-flash-fin-free`、`ling-3.1-flash-free`、`longcat-2.5-preview-free`、`mimo-v2.5-free`、`mimo-v2.6-flash-free` 均 403 `FreeTierError`（*"OpenCode's free tier can only be used from within OpenCode"*）；`muse-spark-1.2/1.3-contributor-free` 403 `RegionError`（*"not available in your country"*）；`deepseek-v4-flash-free` 报 *Model is unavailable*；`jev-1.13-free` 500。**只有 `space-bunny-free` 返回 200**，故本节只保留它。⚠️ 同批的 `big-pickle` 已从本节移除——它仍在 Zen 目录里，但外部直连 API 不可用，不符合本仓库「能拿 API Key 通过 endpoint 调用」的收录标准）
 
 ## 模型免费渠道索引
-
-### 结构化决策模型（非生成式）
-
-#### TypeSafe AI Jev
-
-> TypeSafe AI 的首个 System One 模型，2026-09-15 早期访问发布；**不生成文本**，输入一段状态 + 一组带类型的问题，输出选项（choice）、评分（score）和布尔概率（noul）
-
-| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
-|------|------|------|------|
-| ~~Vercel AI Gateway~~ **（Jev 促销 2026-09-25 已结束）** | ~~限时促销免费~~ → 按量计费（$0.042/M 输入，输出 $0） | ⚠️ **促销已到期**：Jev 恢复原价，不再免费；每月 $5 免费额度仍在，但仅限 Free Tier eligible 子集且**需先绑支付方式**；⚠️ **2026-09-30 实测 Vercel 目录 394 个模型中 `freeTier=true` 的为 0 个**，Jev 的 `pricing` 字段是 `input=0.000000042 / output=0`——**输出免费但输入按 token 收费，不算免费档**（2026-09-30 实测） | 促销已结束 |
-| — | **无其他免费渠道** | ⚠️ **2026-09-30 全网核实**：① TypeSafe 官方 `api.typesafe.ai/v1/systemone` 端点存在（无 key 返 403 `Must supply an API key!`），但**新用户注册自 2026-09-22 起已暂停**，且定价同为 $0.042/M 输入；② OpenRouter 仅有 `typesafe/jev-router`，`pricing` 为 `-1/-1`（不走 OpenRouter 计费），实际按官方价走；③ Cloudflare Workers AI 官方模型页**查无 Jev / TypeSafe**（二手资料有误）；④ Jev 定位为「按 token 收费 + 输出免费」的极廉价档，**属付费模型，不属免费渠道** | — |
 
 ### DeepSeek 系列
 
@@ -622,9 +610,9 @@
 #### OpenCode Zen
 
 - **官网**：[https://opencode.ai/zen](https://opencode.ai/zen)（[定价页](https://opencode.ai/docs/zen/)）
-- **免费形式**：限时免费模型（DeepSeek V4 Flash、MiMo-V2.5、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor、Jev 1.13 —— 输入/输出/缓存读写全 $0）
+- **免费形式**：限时免费模型（DeepSeek V4 Flash、MiMo-V2.5、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor —— 输入/输出/缓存读写全 $0）
 - **网页说明**：OpenCode 官方模型网关，官网定价页将上述免费款明确标注为 Free，并说明"限时免费、用于收集反馈改进模型"；**并非整个平台免费**——DeepSeek / GLM / Kimi / Qwen 的正式版均为按量付费
-- **免费模型**：DeepSeek V4 Flash Free（1M 上下文）、MiMo-V2.5 Free（多模态）、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free、Jev 1.13 Free（判别类，走 Evaluation API）——共 7 款（2026-10-01 `/v1/models` 实测）
+- **免费模型**：DeepSeek V4 Flash Free（1M 上下文）、MiMo-V2.5 Free（多模态）、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free——共 6 款（2026-10-01 `/v1/models` 实测；⚠️ 原列 Jev 1.13 Free 已于 2026-10-06 实测 `jev-1.13-free` 返回 500 不可用，已移出免费清单）
 - **接入**：`https://opencode.ai/zen/v1`（OpenAI 兼容；部分模型走 `/messages` Anthropic 协议或 `/responses`）
 - **状态**：Active（限时免费）— 核实于 2026-10-01（✅ `/v1/models` 目录 **84 个模型**，其中 `-free` 款 11 个，含 `space-bunny-free`（匿名模型，详见[匿名模型](#匿名模型stealth)）；⚠️ `big-pickle` 虽在目录中但**外部直连 API 不可用**（无 key 返 403 `FreeTierError`，带假 key 返 401），故未列入免费清单；⚠️ `deepseek-v4-flash-free` 曾在 2026-09-11 实测显示按量计费（$0.14/$0.28），9/20 起回到免费清单——免费名单反复横跳，调用前以官网当前清单为准）
 
