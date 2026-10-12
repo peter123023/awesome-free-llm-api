@@ -58,10 +58,11 @@
 
 | 模型 | 免费渠道 | 免费形式 | 上下文 / 输出 | 数据政策 | 备注 |
 |------|------|------|------|------|------|
-| **Space Bunny Alpha** | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0） | 1M / 524,288 | ✅ **零保留、不用于训练**（Zen 官方原文） | ✅ 复核于 2026-10-06：Zen 13 个 `*-free` 模型中**仅此款外部 API 可调**；模型 ID 带 `-free` 后缀 |
+| ~~**Space Bunny Alpha**~~ | ~~[OpenCode Zen](https://opencode.ai/zen)~~ | ~~限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0）~~ | ~~1M / 524,288~~ | ~~✅ **零保留、不用于训练**（Zen 官方原文）~~ | ~~⚠️ 复核于 2026-10-12：Zen 免费层**已锁死为仅 OpenCode 客户端内可用**——无 key、带有效 Zen API key 实测均返 403 `FreeTierError`（"can only be used from within OpenCode"；2026-10-06 时此款尚可免 key 外部调用，该窗口已关闭）；模型仍在 Zen 目录，但外部 endpoint 调不通，只能在 OpenCode 客户端里用~~ |
+| ~~**Big Pickle**~~ | ~~[OpenCode Zen](https://opencode.ai/zen)~~ | ~~限时免费（`big-pickle`，无 `-free` 后缀；官方 docs 原文 "a stealth model that's free on OpenCode for a limited time"）~~ | ~~200K（第三方实测，官方目录未公布）/ 未公布~~ | ~~⚠️ **免费期数据可用于改进模型**（Zen 官方 privacy 例外清单明示）~~ | ~~⚠️ 复核于 2026-10-12：与 Space Bunny 同境——无 key、带有效 Zen API key 实测均返 403 `FreeTierError`，只能在 OpenCode 客户端内调用；身份未确认（第三方称其后端在 GLM / DeepSeek / Qwen 权重间轮换，未经官方证实；目录 `owned_by` 仅标 opencode）~~ |
 
 - **接入**：
-  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`，**实测无需 API key**）
+  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）；⚠️ 2026-10-12 实测：免 key 返 403，**带有效 Zen API key 同样返 403** `FreeTierError`（"can only be used from within OpenCode"；该 key 有效性已验证——同 key 调付费模型返 402 余额不足，说明鉴权通过）——此免费层只能在 OpenCode 客户端内调用，外部 endpoint 调不通
   - ⚠️ OpenRouter 通道已于 2026-10-06 下架，原端点 `POST https://openrouter.ai/api/v1/chat/completions` + 模型名 `stealth/space-bunny-alpha` 不再可用
 
 ## 模型免费渠道索引
@@ -77,8 +78,9 @@
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限、1M 上下文;限制:需短信验证手机号,40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [Token Harbor](https://tokenharbor.ai) | 免费层月额度内(4 周滚动刷新) | 优势:小型网关、免卡注册、**Free 档明确含 V4.1 Flash**;限制:⚠️ **中国大陆/香港/澳门被区域封锁**,需境外网络;额度未公开、按 4 周滚动刷新,网关资历浅 | 区域受限 |
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(8,409 额度/次,签到满额 20 万约可调 23 次) | 优势:国内直连、OpenAI 兼容、签到满额即可调、支持图片输入;限制:非免费档、需每日手动签到、单次成本偏高(9/22 记录的 1,473 已涨至 8,409)、公测聚合平台随时可能变 |  |
+| [魔搭 ModelScope](https://modelscope.cn) | 共享额度内（全站 2000 次/日） | 优势:国产、国内直连免代理、OpenAI 兼容、目录含 `deepseek-ai/DeepSeek-V4.1-Flash`（2026-10-12 实测在列）;限制:免费质量较低——与全站共享每日 2000 次总量、单模型约 500 次/日，需阿里云实名、仅限个人非商业用途 | 质量较低 |
 
-> ⚠️ **官方无免费层，第三方免费入口也很有限**：DeepSeek 官方仅付费（闲时 $0.15/$0.60 per 1M）。⚠️ **Ollama Cloud 不是免费入口**——V4.1 Flash 已上架其云目录，但属需购 credits 解锁的旗舰款，免费档只覆盖 starter 子集（2026-09-12 实测）。⚠️ **OrcaRouter 也不提供 V4.1 的免费**——`deepseek/deepseek-v4.1-flash` 在其价目表内按 $0.15/$0.60 计费，免费池只有 V4 Flash（`deepseek-v4-flash-free`）及 Hy3、GLM-5.3-Flash（2026-09-12 实测）。⚠️ **Token Harbor 有区域封锁**——实测 `https://tokenharbor.ai/v1` 返回 `region_blocked`，明确拒绝中国大陆/香港/澳门（2026-09-12 实测）。✅ **但 NVIDIA NIM 已上架 V4.1 Flash**（2026-09-27 实测 `deepseek-ai/deepseek-v4.1-flash` 在列，永久免费 40 RPM、免绑卡）——**这是目前 V4.1 Flash 唯一的「档位免费」入口**，Token Harbor 虽有 Free 档但对国内封锁，Onomeo 则是签到额度非免费档。**
+> ⚠️ **官方无免费层**（仅付费，闲时 $0.15/$0.60 per 1M）。Ollama Cloud、OrcaRouter 均不提供 V4.1 免费。✅ 真正的「档位免费」入口有两个：**NVIDIA NIM**（永久免费 40 RPM、免绑卡）与**魔搭 ModelScope**（每日免费额度内、国内直连）；Token Harbor 对国内封锁、Onomeo 为签到额度，均非真正免费档。
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
@@ -561,7 +563,7 @@
 - **官网**：https://modelscope.cn
 - **免费形式**：永久免费（所有注册用户免费推理，每日总 2000 次，单模型 100~500 次/日不等）
 - **网页说明**：阿里达摩院开源模型社区，官网明确「所有注册用户均可免费推理」；DeepSeek-R1 约 200 次/日
-- **免费模型**：DeepSeek V4 Flash / R1、Qwen3 Coder 480B、Qwen3 235B、Qwen2.5 72B、GLM-4.5、MiniMax-M1 等近 3000 个开源模型
+- **免费模型**：DeepSeek V4.1 Flash / V4 Flash / V4 Pro / R1、Qwen3 Coder 480B、Qwen3 235B、Qwen2.5 72B、GLM-4.5、MiniMax-M1 等近 3000 个开源模型（V4.1 Flash 于 2026-10-12 实测在 `api-inference` 目录，模型 ID `deepseek-ai/DeepSeek-V4.1-Flash`）
 - **接入**：`https://api-inference.modelscope.cn/v1`（OpenAI 兼容）
 - **状态**：Active — 核实于 2026-09-02（需阿里云账号 + 实名）
 - **⚠️ 免费质量较低**：单模型仅 100~500 次/日，与全站共享每日 2000 次总量（高峰可能被挤占）；仅限个人学习与非商业用途；共享算力排队，无 SLA
@@ -610,11 +612,11 @@
 #### OpenCode Zen
 
 - **官网**：[https://opencode.ai/zen](https://opencode.ai/zen)（[定价页](https://opencode.ai/docs/zen/)）
-- **免费形式**：限时免费模型（DeepSeek V4 Flash、MiMo-V2.5、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor —— 输入/输出/缓存读写全 $0）
+- **免费形式**：限时免费模型（Ling 3.1 Flash、MiMo-V2.6-Flash、Nemotron 3.5 Lightning、Muse Spark 1.2 / 1.3 Contributor、LongCat 2.5 Preview、Step 5 Preview、Jev 1.13、Space Bunny —— 输入/输出/缓存读写全 $0）
 - **网页说明**：OpenCode 官方模型网关，官网定价页将上述免费款明确标注为 Free，并说明"限时免费、用于收集反馈改进模型"；**并非整个平台免费**——DeepSeek / GLM / Kimi / Qwen 的正式版均为按量付费
-- **免费模型**：DeepSeek V4 Flash Free（1M 上下文）、MiMo-V2.5 Free（多模态）、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free——共 6 款（2026-10-01 `/v1/models` 实测；⚠️ 原列 Jev 1.13 Free 已于 2026-10-06 实测 `jev-1.13-free` 返回 500 不可用，已移出免费清单）
+- **免费模型**：Ling 3.1 Flash Free、MiMo-V2.6-Flash Free、Nemotron 3.5 Lightning Free、Muse Spark 1.2 / 1.3 Contributor Free、LongCat 2.5 Preview Free、Step 5 Preview Free、Jev 1.13 Free、Space Bunny Free——共 9 款 `-free`（2026-10-12 `/v1/models` 实测；另有 `big-pickle` 免后缀免费款）；⚠️ **2026-10-12 实测 Zen 免费层只能在 OpenCode 客户端内调用**：9 个 `-free` 无 key 全部返 403 `FreeTierError`（"can only be used from within OpenCode"，Origin/Referer/x-session-id 等伪装头均无效），**带有效 Zen API key 实测同样全部 403**（key 有效性已验证：同 key 调付费模型返 402 余额不足）；`jev-1.13-free` 2026-10-06 实测返 500、可用性存疑；`deepseek-v4-flash-free` 已退出免费名单改按量计费——名单轮换极快，调用前以官网当前清单为准
 - **接入**：`https://opencode.ai/zen/v1`（OpenAI 兼容；部分模型走 `/messages` Anthropic 协议或 `/responses`）
-- **状态**：Active（限时免费）— 核实于 2026-10-01（✅ `/v1/models` 目录 **84 个模型**，其中 `-free` 款 11 个，含 `space-bunny-free`（匿名模型，详见[匿名模型](#匿名模型stealth)）；⚠️ `big-pickle` 虽在目录中但**外部直连 API 不可用**（无 key 返 403 `FreeTierError`，带假 key 返 401），故未列入免费清单；⚠️ `deepseek-v4-flash-free` 曾在 2026-09-11 实测显示按量计费（$0.14/$0.28），9/20 起回到免费清单——免费名单反复横跳，调用前以官网当前清单为准）
+- **状态**：Active（限时免费）— 核实于 2026-10-12（✅ `/v1/models` 目录 **82 个模型**，其中 `-free` 款 9 个，含 `space-bunny-free`（匿名模型，详见[匿名模型](#匿名模型stealth)）；⚠️ **2026-10-12 实测 Zen 免费层只能在 OpenCode 客户端内调用**：9 个 `-free` 无 key、带有效 key 均返 403 `FreeTierError`（key 有效性已验证），外部 endpoint 调不通；`deepseek-v4-flash-free` 已退出免费名单改按量计费）
 
 #### OrcaRouter
 
