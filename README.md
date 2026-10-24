@@ -58,15 +58,14 @@
 
 | 模型 | 免费渠道 | 免费形式 | 上下文 / 输出 | 数据政策 | 备注 |
 |------|------|------|------|------|------|
-| ~~**Space Bunny Alpha**~~ | ~~[OpenCode Zen](https://opencode.ai/zen)~~ | ~~限时免费（`space-bunny-free`，Input / Output / Cached Read 三档均 $0）~~ | ~~1M / 524,288~~ | ~~✅ **零保留、不用于训练**（Zen 官方原文）~~ | ~~⚠️ 复核于 2026-10-12：Zen 免费层**已锁死为仅 OpenCode 客户端内可用**——无 key、带有效 Zen API key 实测均返 403 `FreeTierError`（"can only be used from within OpenCode"；2026-10-06 时此款尚可免 key 外部调用，该窗口已关闭）；模型仍在 Zen 目录，但外部 endpoint 调不通，只能在 OpenCode 客户端里用~~；⚠️ **2026-10-24 再复核：`space-bunny-free` 已从 Zen `/v1/models` 目录彻底消失**——不再是「调不通」，而是已被下架 |
-| ~~**Big Pickle**~~ | ~~[OpenCode Zen](https://opencode.ai/zen)~~ | ~~限时免费（`big-pickle`，无 `-free` 后缀；官方 docs 原文 "a stealth model that's free on OpenCode for a limited time"）~~ | ~~200K（第三方实测，官方目录未公布）/ 未公布~~ | ~~⚠️ **免费期数据可用于改进模型**（Zen 官方 privacy 例外清单明示）~~ | ~~⚠️ 复核于 2026-10-12：与 Space Bunny 同境——无 key、带有效 Zen API key 实测均返 403 `FreeTierError`，只能在 OpenCode 客户端内调用；身份未确认（第三方称其后端在 GLM / DeepSeek / Qwen 权重间轮换，未经官方证实；目录 `owned_by` 仅标 opencode）~~；2026-10-24 复核：`big-pickle` **仍在 Zen 目录**，但免 key 调用依旧返 403 `FreeTierError` |
 | **Glyph Cluster** | [BazaarLink](https://bazaarlink.ai) · [Vercel AI Gateway](https://vercel.com/ai-gateway) | 免费档 $0（`stealth/glyph-cluster`；BazaarLink 的免费路由需写成 `stealth/glyph-cluster:free`） | 256K / 未公布 | 未公布（BazaarLink 目录标 `owned_by: stealth`、`zdr_available: false`） | ⚠️ 2026-10-07 上架，2026-10-24 实测两处目录均在列、定价均为 $0；无厂商名、无公开 benchmark；BazaarLink 侧受免费档共享额度约束（未充值 10 RPM / 每日 60 加权单位） |
 
-> ℹ️ **匿名代号会被「揭晓」**：Reflection 的 **Beam**（501B MoE）此前正是以匿名代号 `cat-jam`（OpenCode 通道）/ `MissingNo`（Nous Portal）流通，2026-10-16 权重与身份公开后即转为具名模型（见[海外模型](#海外模型)）。这说明匿名模型通常只是**揭晓前的临时窗口**——Space Bunny Alpha 是反例：等不到揭晓就已下架。
+> ℹ️ **匿名代号会被「揭晓」**：Reflection 的 **Beam**（501B MoE）此前正是以匿名代号 `cat-jam`（OpenCode 通道）/ `MissingNo`（Nous Portal）流通，2026-10-16 权重与身份公开后即转为具名模型（见[海外模型](#海外模型)）。这说明匿名模型通常只是**揭晓前的临时窗口**；反过来也有等不到揭晓就消失的——OpenCode Zen 上那批匿名款（`space-bunny-free`、`big-pickle`）已全部退出本表，详见下方接入说明。
 
-- **接入**：
-  - OpenCode Zen：`POST https://opencode.ai/zen/v1/chat/completions`，模型名 `space-bunny-free`（`@ai-sdk/openai-compatible`）；⚠️ 2026-10-12 实测：免 key 返 403，**带有效 Zen API key 同样返 403** `FreeTierError`（"can only be used from within OpenCode"；该 key 有效性已验证——同 key 调付费模型返 402 余额不足，说明鉴权通过）——此免费层只能在 OpenCode 客户端内调用，外部 endpoint 调不通；⚠️ 2026-10-24 复核：`space-bunny-free` 已不在目录（下架），`big-pickle` 仍在目录但同样 403
-  - ⚠️ OpenRouter 通道已于 2026-10-06 下架，原端点 `POST https://openrouter.ai/api/v1/chat/completions` + 模型名 `stealth/space-bunny-alpha` 不再可用
+- **接入**（对应上表在列的 Glyph Cluster，2026-10-24 实测端点可达、均返 401 缺鉴权）：
+  - BazaarLink：`POST https://api.bazaarlink.ai/v1/chat/completions`，模型名 `stealth/glyph-cluster:free`
+  - Vercel AI Gateway：`POST https://ai-gateway.vercel.sh/v1/chat/completions`，模型名 `stealth/glyph-cluster`
+- **已移除的匿名款（备查）**：OpenCode Zen 的 `space-bunny-free`（`POST https://opencode.ai/zen/v1/chat/completions`）与 `big-pickle` —— ⚠️ 2026-10-12 实测免 key 与带有效 Zen API key 均返 403 `FreeTierError`（"can only be used from within OpenCode"；key 有效性已验证：同 key 调付费模型返 402 余额不足），免费层只能在 OpenCode 客户端内调用；⚠️ 2026-10-24 复核：`space-bunny-free` 已下架、`big-pickle` 仍在 Zen 目录但同样 403，故从本表删除。另有 OpenRouter 的 `stealth/space-bunny-alpha` 通道已于 2026-10-06 下架，原端点 `POST https://openrouter.ai/api/v1/chat/completions` 不再可用
 
 ## 模型免费渠道索引
 
