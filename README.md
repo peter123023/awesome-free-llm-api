@@ -153,6 +153,14 @@
 
 > ⚠️ **Qwen3.5 122B / 397B 已不在 NVIDIA NIM**：截至 2026-09-11 已从 NIM 模型列表移除。
 
+#### Qwen3 Coder Plus
+
+> 代码专项，1M 上下文
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [xKiro AI](https://xkiro.com) | 免费档（`qwen/qwen3-coder-plus:free`，`access_tier: free`） | 优势:1M 上下文、补齐了 Qwen3 Coder 480B 下架后本仓库的代码模型空白;限制:⚠️ 需注册拿 key、未做端到端实测 |  |
+
 #### Qwen3 Coder 480B
 
 > 代码专项 SOTA,Agent 编码
@@ -172,6 +180,14 @@
 | [魔搭 ModelScope](https://modelscope.cn) | 约 500 次/日 | 优势:国产、模型全;限制:免费质量较低——单模型约 500 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
 
 > ⚠️ **Qwen3 235B 已不在 OpenRouter 免费名单**（2026-09-11 实测）。
+
+#### Qwen3.8 Max / Qwen3.7 Max
+
+> 阿里旗舰 Max 档，1M 上下文（此前本仓库 Qwen 系列几乎无优质免费渠道）
+
+| 免费渠道 | 免费形式 | 优势 / 限制 | API 质量 |
+|------|------|------|------|
+| [xKiro AI](https://xkiro.com) | 免费档（`qwen/qwen3.8-max:free`、`qwen/qwen3.7-max:free`，`access_tier: free`） | 优势:**目前唯一的 Qwen Max 系免费入口**、1M 上下文、第三方目录记 5M tokens/日;限制:⚠️ **需注册拿 key**（免 key 实测 401），端到端调用未经本仓库实测，网关资历浅 |  |
 
 #### Qwen3.8 Flash
 
@@ -329,6 +345,7 @@
 | [Vercel AI Gateway](https://vercel.com/ai-gateway) | 限时免费零价路由（`reflection/beam-free` 与 `reflection/beam`，均 $0/$0） | 优势:Reflection 官方直供、1M 上下文、可调 reasoning effort、支持工具调用与结构化输出、零数据保留;限制:⚠️ 限时免费且两种 ID 行为不同——官方原文「`-free` 后缀款在免费期结束时**停止服务**，无后缀款会自动转入计费」;走免费额度需先绑支付方式 |  |
 | [BazaarLink](https://bazaarlink.ai) | 免费档 $0（`reflection/beam:free` / `reflection/beam-free:free`） | 优势:免卡注册、1M 上下文、2026-10-24 实测在免费模型页且在列;限制:免费档共享额度（未充值 10 RPM / 每日 60 加权单位，UTC 00:00 重置） |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费（`beam-free`） | 优势:OpenCode 官方网关、免卡;限制:⚠️ 2026-10-24 实测免 key 返 403 `FreeTierError`——**只能在 OpenCode 客户端内调用**，外部 endpoint 调不通 | 客户端锁定 |
+| [Kilo Gateway](https://kilo.ai) | 免费档 $0（`reflection/beam-free`） | 优势:**免注册免 key**——2026-10-24 实测免 key POST 返 200，官方文档明文允许匿名调用免费款、限 200 次/小时/IP;限制:⚠️ 该款目录标 `mayTrainOnYourPrompts: true`，限流按出口 IP 计 |  |
 | [Ollama Cloud](https://ollama.com) | 限时免费（`beam:cloud`） | 优势:零数据保留、`ollama run beam:cloud` 直接跑云原生、可挂 Claude Code / Codex;限制:限时免费未公布截止日期、Free 档仅 1 并发 |  |
 
 > ⚠️ **Reflection 官方 API 是免费公测**（`https://api.reflection.ai/openai/v1`，模型 ID `Beam-1.0-501B-A23B`），但**未公布按量定价、需注册拿 key**；2026-10-24 实测无 key 请求被其边缘网关挡回 403（HTTP 层即拦截，不是鉴权响应）。按本仓库「注册赠送额度不收」的口径，官方公测额度**不列入索引**。OpenRouter 侧 `reflection/beam-1.0-501b-a23b` 为**付费**（$0.25 / $1 per 1M），别与免费路由混淆。
@@ -357,6 +374,7 @@
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free`（Ultra / Super / 3.5 Lightning / 3.5 Super VL / 3 Nano Omni） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换;2026-10-24 实测：`nemotron-3-super-120b-a12b:free` **已回归免费池**（10-03 曾在 NIM 下架，OpenRouter 侧仍免费），另新增 `nemotron-3.5-super-vl:free`、`nemotron-3-nano-omni-30b-a3b-reasoning:free` |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
+| [Kilo Gateway](https://kilo.ai) | 免费档 $0（`:free` 后缀款，共 6 款 Nemotron） | 优势:**免注册免 key**、官方明文支持匿名调用、200 次/小时/IP，2026-10-24 实测 `nemotron-3.5-lightning:free` 与 `nemotron-3-ultra-550b-a55b:free` 免 key 均返 200;限制:⚠️ `nemotron-3-super-120b-a12b:free` 实测返 404（上游缺失）、`mayTrainOnYourPrompts` 为 true |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方自营旗舰、免绑卡、无积分/无日限、1M 上下文;限制:需短信验证手机号,40 RPM 全站共享,仅托管 Ultra/Lightning(Super 已下架) | 经常超时 |
 
 #### InKling / ~~Ling 3.0 Flash~~（OpenRouter 新晋免费）
@@ -625,6 +643,15 @@
 - **接入**：`https://openrouter.ai/api/v1`（绝大多数模型名需带 `:free` 后缀；⚠️ 例外是 `stealth/space-bunny-alpha`，它没有后缀且定价已为 0，加了后缀反而 404，详见[匿名模型](#匿名模型stealth)）
 - **状态**：Active — 核实于 2026-10-24（目录 **469 个模型**、定价为 0 的 **20 个路由**；较 9/27 的 17 个再变：✅ 新增 `recursive/flint-v1.0:free`、`xingchen-agi/xing4.0-29b-a4b:free`、`nvidia/nemotron-3.5-super-vl:free`、`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`、`nvidia/nemotron-3.5-content-safety:free`，`nvidia/nemotron-3-super-120b-a12b:free` **回归**；❌ 退出 `inclusionai/ling-3.0-flash-sante` / `-fin` / `-vl` **三款全退**（目录仍在但改按量计费）、`nex-agi/nex-n2.5-pro` / `-mini`、`gemma-4-31b` 改名 `gemma-4-31b-it`。每日额度 50 次，充值 $10 后 1000 次。⚠️ 免费池一周可换 4 款，「发布当天进免费池」是冷启动信号而非长期承诺，务必留 fallback）
 
+#### Kilo Gateway
+
+- **官网**：https://kilo.ai（Kilo Code 官方网关；[文档](https://kilo.ai/docs)）
+- **免费形式**：✅ **官方明确支持匿名调用**——文档原文「The gateway allows unauthenticated access for free models only. Anonymous requests are identified by IP address and are subject to rate limiting (**200 requests per hour per IP**)」，即**不注册、不拿 key 也能调所有 `:free` 模型**
+- **网页说明**：代理 OpenRouter / NVIDIA / Poolside / Recursive 等上游的免费池，一个端点覆盖多家；付费模型必须登录（实测返 401 `PAID_MODEL_AUTH_REQUIRED`），免费模型免鉴权
+- **免费模型**：2026-10-24 实测 `/v1/models` **402 个模型**、目录字段 `isFree: true` 的 **17 款**：`nvidia/nemotron-3-ultra-550b-a55b:free`（1M）、`nvidia/nemotron-3.5-lightning:free`（1M）、`nvidia/nemotron-3.5-super-vl:free`（1M）、`nvidia/nemotron-3-super-120b-a12b:free`、`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`、`nvidia/nemotron-3.5-content-safety:free`、`reflection/beam-free`（1M）、`recursive/flint-v1.0:free`、`poolside/laguna-s-2.1:free` / `laguna-xs-2.1:free`、`cohere/north-mini-code:free`、`dots-studio/dots-3-note-preview:free`（512K）、`liquid/lfm-2.5-2.6b:free`、`xingchen-agi/xing4.0-29b-a4b:free`、`openrouter/free`、`kilo-auto/free`、`stealth/glyph-cluster`（匿名模型，详见[匿名模型](#匿名模型stealth)）
+- **接入**：`https://api.kilo.ai/api/gateway/v1`（OpenAI 兼容；`https://api.kilo.ai/api/gateway` 同样 200）
+- **状态**：Active — 核实于 2026-10-24（✅ **本仓库目前唯一「免注册、免 key 实测 200」的渠道**：`nvidia/nemotron-3.5-lightning:free`、`nvidia/nemotron-3-ultra-550b-a55b:free`、`reflection/beam-free`、`recursive/flint-v1.0:free`、`poolside/laguna-s-2.1:free`、`dots-studio/dots-3-note-preview:free`、`cohere/north-mini-code:free` 免 key POST 全部返 200；付费款返 401 `PAID_MODEL_AUTH_REQUIRED`。⚠️ 个别款上游不稳：`nvidia/nemotron-3-super-120b-a12b:free` 实测返 404（上游函数不存在）、`kilo-auto/free` 与 `stealth/glyph-cluster` 偶发 503 `upstream_error`。⚠️ **17 款免费款的 `mayTrainOnYourPrompts` 全部为 `true`**，别传敏感数据。⚠️ 限流按出口 IP 计 200 次/小时，共用出口（公司、机场节点）会互相挤占）
+
 #### AIHubMix
 
 - **官网**：[https://aihubmix.com](https://aihubmix.com)（[免费模型专页](https://aihubmix.com/models/free)）
@@ -741,6 +768,15 @@
 - **免费模型**：官方免费模型页 2026-10-24 实测 **6 款**：`qwen/qwen3.7-flash`、`nvidia/nemotron-3.5-lightning-free`、`reflection/beam`、`stealth/glyph-cluster`（匿名模型，详见[匿名模型](#匿名模型stealth)）、`reflection/beam-free`、`deepseek/deepseek-v4-flash-0731free`；加 `auto:free`（智能路由免费池）共 7 个 `:free` 路由
 - **接入**：`https://api.bazaarlink.ai/v1`（OpenAI 兼容）
 - **状态**：Active（小型网关）— 核实于 2026-10-24（✅ 实测 `/v1/models` **124 个模型**、7 个 `:free` 路由的 pricing 均为 0，免费层持续有效；✅ **免费额度已公开**（此前记的「额度未公开」已过时）：未充值账号 **10 RPM / 每日 60 加权单位**，已充值 **20 RPM / 每日 120 加权单位**，全站免费上限 20 RPM、单账号并发 2 个请求，每日 UTC 00:00 重置，长输入消耗更多单位；⚠️ 目录从 175 → 128 → 124 持续缩水；⚠️ 2026-09-05 起停用 agent 自助注册端点（`/api/agents/register` 返回 410）以防免费层被滥用，需正常注册账号后在面板建 key）
+#### xKiro AI
+
+- **官网**：https://xkiro.com（[文档](https://docs.xkiro.com)）
+- **免费形式**：免费档（目录字段 `access_tier: free` 的款不消耗额度），第三方目录记 **5M tokens/日，仅限免费款**；同时支持 OpenAI `/v1/chat/completions` 与 Anthropic `/v1/messages` 两种协议
+- **网页说明**：聚合 Qwen / Cohere / Mistral / MiniMax / 美团等多家；模型 ID 带 `:free` 后缀的多为 Qwen 系，不带后缀的也有大量 `free` 档（Cohere、Mistral 全家桶）；免费额度只覆盖 `access_tier: free`，另有 paid / premium 档需付费
+- **免费模型**：2026-10-24 实测 `/v1/models` **97 个模型**、其中 **`access_tier: free` 共 47 款**——Qwen 全家桶（`qwen3.8-max` / `qwen3.7-max` / `qwen3.7-plus` / `qwen3.5-plus` / `qwen3.5-flash` / `qwen3.6-plus` / `qwen3.7-flash` / `qwen3.8-omni-flash` 均为 1M 上下文；`qwen3-coder-plus` 1M；另有 `qwen3-max`、`qwen3.5-397b-a17b`、`qwen3.6-27b` / `35b-a3b` 等）、Cohere（`command-a` 288K / `command-a-plus` 436K / `command-a-reasoning` / `command-a-vision` / `north-mini-code` 256K / aya 系列）、Mistral（`mistral-large-2512` / `medium-3.5` / `small-2603` / `devstral-medium` / `codestral-2508`，均 256K）、美团 `meituan/longcat-2.0` 与 `meituan/longcat-2.5-preview`（1M）等
+- **接入**：`https://api.xkiro.com/v1`（OpenAI 兼容；也接受 `Authorization` 或 `x-api-key` 头）
+- **状态**：Active（小型网关）— 核实于 2026-10-24（⚠️ **需注册拿 key**：实测免 key POST 返 401 `Missing ClientApiKey`，**端到端调用未经本仓库实测**，额度依据官方目录字段与第三方目录同日 verified 记录；⚠️ 本仓库 Qwen 系列长期缺优质免费渠道——只剩魔搭的低质量共享额度与 Groq 的小杯款，xKiro 是目前唯一能免费拿到 **Qwen Max / Coder Plus 且带 1M 上下文**的入口，价值高但验证不足，先当原型用）
+
 
 ## 参与贡献
 

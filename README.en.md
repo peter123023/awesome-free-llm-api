@@ -152,6 +152,14 @@ Stealth models are not like the other channels in this list. Up front, the prope
 
 > ⚠️ **Qwen3.5 122B / 397B are no longer on NVIDIA NIM**: removed from the NIM model list as of 2026-09-11.
 
+#### Qwen3 Coder Plus
+
+> Code-specialised, 1M context
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [xKiro AI](https://xkiro.com) | free tier (`qwen/qwen3-coder-plus:free`, `access_tier: free`) | Pros: 1M context, fills the coding-model gap this repo has had since Qwen3 Coder 480B was delisted; Cons: ⚠️ a key is required, end-to-end calls unverified |  |
+
 #### Qwen3 Coder 480B
 
 > SOTA coding model, agentic coding
@@ -171,6 +179,14 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [ModelScope](https://modelscope.cn) | ~500 req/day | Pros: China-native, huge catalog; Cons: low-quality free tier — ~500/day, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 
 > ⚠️ **Qwen3 235B is no longer in the OpenRouter free lineup** (verified 2026-09-11).
+
+#### Qwen3.8 Max / Qwen3.7 Max
+
+> Alibaba's flagship Max tier, 1M context (this repo previously had almost no decent free channel for Qwen)
+
+| Free channel | Free tier | Pros / Cons | API quality |
+|------|------|------|------|
+| [xKiro AI](https://xkiro.com) | free tier (`qwen/qwen3.8-max:free`, `qwen/qwen3.7-max:free`, `access_tier: free`) | Pros: **the only free entry point to the Qwen Max line right now**, 1M context, catalogs record 5M tokens/day; Cons: ⚠️ **a key is required** (keyless calls return 401), end-to-end calls unverified by this repo, young gateway |  |
 
 #### Qwen3.8 Flash
 
@@ -328,6 +344,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [Vercel AI Gateway](https://vercel.com/ai-gateway) | limited-time zero-priced routes (`reflection/beam-free` and `reflection/beam`, both $0/$0) | Pros: served by Reflection itself, 1M context, adjustable reasoning effort, tool calling and structured outputs, zero data retention; Cons: ⚠️ limited-time, and the two ids behave differently — per the official note, the `-free` variant **stops serving when the free period ends** while the unsuffixed one silently rolls over to paid rates; using the free credit requires a payment method on file |  |
 | [BazaarLink](https://bazaarlink.ai) | free-tier $0 (`reflection/beam:free` / `reflection/beam-free:free`) | Pros: no card on signup, 1M context, on the free-models page as of 2026-10-24; Cons: shared free allowance (10 RPM / 60 weighted units per day without credit, 20 RPM / 120 with credit) |  |
 | [OpenCode Zen](https://opencode.ai/zen) | limited-time free (`beam-free`) | Pros: official OpenCode gateway, no card; Cons: ⚠️ verified 2026-10-24: keyless calls return 403 `FreeTierError` — **usable only inside the OpenCode client**, unreachable from outside | Client-locked |
+| [Kilo Gateway](https://kilo.ai) | free-tier $0 (`reflection/beam-free`) | Pros: **no signup, no key** — a keyless POST returned 200 on 2026-10-24 and the docs explicitly allow anonymous calls to free models at 200 req/hr/IP; Cons: ⚠️ the catalog flags this model `mayTrainOnYourPrompts: true`, and the limit is counted per egress IP |  |
 | [Ollama Cloud](https://ollama.com) | limited-time free (`beam:cloud`) | Pros: zero data retention, `ollama run beam:cloud` works out of the box, can drive Claude Code / Codex; Cons: no published end date for the free period, Free plan is 1 concurrent request |  |
 
 > ⚠️ **Reflection's own API is a free public beta** (`https://api.reflection.ai/openai/v1`, model id `Beam-1.0-501B-A23B`), but **it publishes no per-token prices and you must register for a key**; on 2026-10-24 a keyless request was blocked at the edge with 403 (an HTTP-level block, not an auth response). Under this repo's rule that signup grants do not count, the official beta allowance is **not listed in the index**. On OpenRouter, `reflection/beam-1.0-501b-a23b` is **paid** ($0.25 / $1 per 1M) — don't confuse it with the free routes.
@@ -356,6 +373,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [OpenRouter](https://openrouter.ai) | `:free` (Ultra / Super / 3.5 Lightning / 3.5 Super VL / 3 Nano Omni) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime; verified 2026-10-24: `nemotron-3-super-120b-a12b:free` is **back in the free pool** (it was delisted from NIM on 10-03 but stayed free on OpenRouter), plus new `nemotron-3.5-super-vl:free` and `nemotron-3-nano-omni-30b-a3b-reasoning:free` |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
+| [Kilo Gateway](https://kilo.ai) | free-tier $0 (`:free` variants, 6 Nemotron entries) | Pros: **no signup, no key**, anonymous access documented by the vendor, 200 req/hr/IP; verified 2026-10-24: `nemotron-3.5-lightning:free` and `nemotron-3-ultra-550b-a55b:free` both returned 200 keyless; Cons: ⚠️ `nemotron-3-super-120b-a12b:free` returned 404 (missing upstream), `mayTrainOnYourPrompts` is true |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: NVIDIA's own flagship, no card, no credits or daily cap, 1M context; Cons: SMS phone verification required, 40 RPM shared, hosts Ultra/Lightning only (Super delisted) | Frequent timeouts |
 
 #### InKling / ~~Ling 3.0 Flash~~ (new OpenRouter free entries)
@@ -624,6 +642,15 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoint**: `https://openrouter.ai/api/v1` (most model names need the `:free` suffix; ⚠️ the exception is `stealth/space-bunny-alpha`, which carries no suffix and is already priced at 0 — appending one returns 404. See [Stealth Models](#stealth-models))
 - **Status**: Active — verified 2026-10-24 (**469 models** in the catalog, **20 zero-priced routes**; changed again from the 17 on 9/27: ✅ added `recursive/flint-v1.0:free`, `xingchen-agi/xing4.0-29b-a4b:free`, `nvidia/nemotron-3.5-super-vl:free`, `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`, `nvidia/nemotron-3.5-content-safety:free`, with `nvidia/nemotron-3-super-120b-a12b:free` **returning**; ❌ dropped `inclusionai/ling-3.0-flash-sante` / `-fin` / `-vl` — **all three left** (still in the catalog but metered) — plus `nex-agi/nex-n2.5-pro` / `-mini`, and `gemma-4-31b` renamed to `gemma-4-31b-it`. 50 req/day, 1,000 after $10. ⚠️ four models can leave in a week — "lands in the free pool on launch day" is a cold-start signal, not a long-term commitment, so always keep a fallback)
 
+#### Kilo Gateway
+
+- **Site**: https://kilo.ai (the official Kilo Code gateway; [docs](https://kilo.ai/docs))
+- **Free tier**: ✅ **anonymous access is officially supported** — the docs say "The gateway allows unauthenticated access for free models only. Anonymous requests are identified by IP address and are subject to rate limiting (**200 requests per hour per IP**)", i.e. **you can call every `:free` model without signing up or holding a key**
+- **Notes**: proxies the free pools of OpenRouter / NVIDIA / Poolside / Recursive and others behind one endpoint; paid models require sign-in (verified: 401 `PAID_MODEL_AUTH_REQUIRED`) while free models need no auth at all
+- **Free models**: the 2026-10-24 `/v1/models` check shows **402 models**, of which **17 carry `isFree: true`**: `nvidia/nemotron-3-ultra-550b-a55b:free` (1M), `nvidia/nemotron-3.5-lightning:free` (1M), `nvidia/nemotron-3.5-super-vl:free` (1M), `nvidia/nemotron-3-super-120b-a12b:free`, `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`, `nvidia/nemotron-3.5-content-safety:free`, `reflection/beam-free` (1M), `recursive/flint-v1.0:free`, `poolside/laguna-s-2.1:free` / `laguna-xs-2.1:free`, `cohere/north-mini-code:free`, `dots-studio/dots-3-note-preview:free` (512K), `liquid/lfm-2.5-2.6b:free`, `xingchen-agi/xing4.0-29b-a4b:free`, `openrouter/free`, `kilo-auto/free`, `stealth/glyph-cluster` (a stealth model — see [Stealth Models](#stealth-models))
+- **Endpoint**: `https://api.kilo.ai/api/gateway/v1` (OpenAI-compatible; `https://api.kilo.ai/api/gateway` works too)
+- **Status**: Active — verified 2026-10-24 (✅ **the only channel in this repo that we confirmed reachable at 200 with no signup and no key**: keyless POSTs to `nvidia/nemotron-3.5-lightning:free`, `nvidia/nemotron-3-ultra-550b-a55b:free`, `reflection/beam-free`, `recursive/flint-v1.0:free`, `poolside/laguna-s-2.1:free`, `dots-studio/dots-3-note-preview:free` and `cohere/north-mini-code:free` all returned 200; paid models return 401 `PAID_MODEL_AUTH_REQUIRED`. ⚠️ Some upstreams are flaky: `nvidia/nemotron-3-super-120b-a12b:free` returned 404 (missing upstream function) and `kilo-auto/free` / `stealth/glyph-cluster` intermittently return 503 `upstream_error`. ⚠️ **All 17 free entries set `mayTrainOnYourPrompts` to `true`** — don't send sensitive data. ⚠️ The limit counts per egress IP at 200/hour, so shared exits (offices, proxy nodes) compete with each other)
+
 #### AIHubMix
 
 - **Official site**: https://aihubmix.com (free model list: https://aihubmix.com/models/free)
@@ -740,6 +767,15 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Free models**: the free-models page showed **6 entries** on 2026-10-24: `qwen/qwen3.7-flash`, `nvidia/nemotron-3.5-lightning-free`, `reflection/beam`, `stealth/glyph-cluster` (a stealth model — see [Stealth Models](#stealth-models)), `reflection/beam-free`, `deepseek/deepseek-v4-flash-0731free`; with `auto:free` that is 7 `:free` routes
 - **Endpoint**: `https://api.bazaarlink.ai/v1` (OpenAI-compatible)
 - **Status**: Active (small gateway) — verified 2026-10-24 (✅ live `/v1/models` returns **124 models** with 7 `:free` routes priced at 0 — the free tier holds; ✅ **the allowance is now published**: 10 RPM / 60 weighted units per day without credit, 20 RPM / 120 with credit, 20 RPM site-wide, 2 concurrent per account, reset at 00:00 UTC, longer inputs cost more units; ⚠️ the catalog keeps shrinking: 175 → 128 → 124; ⚠️ since 2026-09-05 the self-serve agent registration endpoint (`/api/agents/register`) returns 410 to curb free-tier abuse — register normally and create a key in the dashboard)
+#### xKiro AI
+
+- **Site**: https://xkiro.com ([docs](https://docs.xkiro.com))
+- **Free tier**: a free tier (models flagged `access_tier: free` cost nothing), recorded by third-party catalogs as **5M tokens/day, free models only**; speaks both OpenAI `/v1/chat/completions` and Anthropic `/v1/messages`
+- **Notes**: aggregates Qwen / Cohere / Mistral / MiniMax / Meituan and more; `:free` suffixed IDs are mostly Qwen, while plenty of unsuffixed ones are free too (the whole Cohere and Mistral lineups); the allowance only covers `access_tier: free` — paid / premium tiers cost money
+- **Free models**: the 2026-10-24 `/v1/models` check shows **97 models**, **47 of them `access_tier: free`** — the full Qwen lineup (`qwen3.8-max` / `qwen3.7-max` / `qwen3.7-plus` / `qwen3.5-plus` / `qwen3.5-flash` / `qwen3.6-plus` / `qwen3.7-flash` / `qwen3.8-omni-flash`, all 1M context; `qwen3-coder-plus` at 1M; plus `qwen3-max`, `qwen3.5-397b-a17b`, `qwen3.6-27b` / `35b-a3b`), Cohere (`command-a` 288K / `command-a-plus` 436K / `command-a-reasoning` / `command-a-vision` / `north-mini-code` 256K / the aya family), Mistral (`mistral-large-2512` / `medium-3.5` / `small-2603` / `devstral-medium` / `codestral-2508`, all 256K), Meituan `meituan/longcat-2.0` and `meituan/longcat-2.5-preview` (1M) and more
+- **Endpoint**: `https://api.xkiro.com/v1` (OpenAI-compatible; accepts either `Authorization` or `x-api-key`)
+- **Status**: Active (small gateway) — verified 2026-10-24 (⚠️ **a key is required**: keyless POSTs return 401 `Missing ClientApiKey`, so **end-to-end calls were not verified by this repo**; the allowance comes from the catalog field plus a third-party catalog verified the same day. ⚠️ This repo has long lacked a good free channel for Qwen — only ModelScope's low-quality shared quota and a couple of Groq small models — so xKiro is currently the only free way to reach **Qwen Max / Coder Plus with a 1M context**. High value, thin verification: treat it as prototype-only)
+
 
 ## Contributing
 
