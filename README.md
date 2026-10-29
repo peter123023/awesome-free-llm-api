@@ -25,6 +25,7 @@
   - [聚合与网关](#聚合与网关)
   - [限时免费](#限时免费)
   - [小型网关（谨慎）](#小型网关谨慎)
+  - [客户端内免费（无公开 API）](#客户端内免费无公开-api)
 - [参与贡献](#参与贡献)
 - [免责声明](#免责声明)
 - [许可证](#许可证)
@@ -42,6 +43,8 @@
 | **限时/限量免费** | 明确标注"限时免费 / Limited-Time Free / 限量免费"的模型或渠道 | `limited-free` |
 
 以上都限定为 **API 层面的免费**：能申请 API Key、能通过 HTTP endpoint / SDK 程序化调用。仅网页对话免费（如各家官网的 Chat 页面）不在此列。
+
+**唯一例外**是[客户端内免费](#客户端内免费无公开-api)一节：Freebuff、AtomCode 这类把额度锁在自家客户端、拿不到公开 endpoint 的产品，单独列出仅供了解——**不属于收录渠道，不进模型索引，也不代表其条款允许外部调用**（Freebuff 的条款反而明令禁止）。
 
 ## 匿名模型（Stealth）
 
@@ -751,15 +754,6 @@
 - **接入**：`https://free.empero.org/v1`（OpenAI 兼容，Key 任意）
 - **状态**：Active（小型网关）— 核实于 2026-09-05（⚠️ 实测经常调不通 `upstream_down`、繁忙时 503，仅适合原型调试）
 
-#### AtomCode（CodingPlan）
-
-- **官网**：https://ai.atomgit.com/serverless-api
-- **免费形式**：CodingPlan Lite 体验版——限时免费、每日限量 500 人领取、7 天有效、约 200 次调用 / 5 小时
-- **网页说明**：AtomGit（智谱生态）终端 AI 编程工具的免费额度；**非标准 API 渠道**——额度仅限 AtomCode 客户端内使用，不支持第三方 endpoint 调用
-- **免费模型**：mimo-v2.5、qwen3.8-27b、deepseek-v4-flash（以客户端内列表为准）
-- **接入**：安装 AtomCode 客户端，AtomGit 账号登录后自动领取（无公开 endpoint）
-- **状态**：Active（限时）— 核实于 2026-09-05（严格说不符合本仓库"API Key + endpoint"收录标准，收录仅供了解）
-
 #### BazaarLink
 
 - **官网**：https://bazaarlink.ai（[免费模型规则](https://bazaarlink.ai/docs/api#free-models)）
@@ -776,6 +770,29 @@
 - **免费模型**：2026-10-24 实测 `/v1/models` **97 个模型**、其中 **`access_tier: free` 共 47 款**——Qwen 全家桶（`qwen3.8-max` / `qwen3.7-max` / `qwen3.7-plus` / `qwen3.5-plus` / `qwen3.5-flash` / `qwen3.6-plus` / `qwen3.7-flash` / `qwen3.8-omni-flash` 均为 1M 上下文；`qwen3-coder-plus` 1M；另有 `qwen3-max`、`qwen3.5-397b-a17b`、`qwen3.6-27b` / `35b-a3b` 等）、Cohere（`command-a` 288K / `command-a-plus` 436K / `command-a-reasoning` / `command-a-vision` / `north-mini-code` 256K / aya 系列）、Mistral（`mistral-large-2512` / `medium-3.5` / `small-2603` / `devstral-medium` / `codestral-2508`，均 256K）、美团 `meituan/longcat-2.0` 与 `meituan/longcat-2.5-preview`（1M）等
 - **接入**：`https://api.xkiro.com/v1`（OpenAI 兼容；也接受 `Authorization` 或 `x-api-key` 头）
 - **状态**：Active（小型网关）— 核实于 2026-10-24（⚠️ **需注册拿 key**：实测免 key POST 返 401 `Missing ClientApiKey`，**端到端调用未经本仓库实测**，额度依据官方目录字段与第三方目录同日 verified 记录；⚠️ 本仓库 Qwen 系列长期缺优质免费渠道——只剩魔搭的低质量共享额度与 Groq 的小杯款，xKiro 是目前唯一能免费拿到 **Qwen Max / Coder Plus 且带 1M 上下文**的入口，价值高但验证不足，先当原型用）
+
+
+### 客户端内免费（无公开 API）
+
+> 下面这些产品把免费额度锁在自家客户端里：**没有公开 endpoint，也没有可以拿来做第三方调用的 API Key**。收录它们只为让读者知道「这些模型确实能白嫖，但只能在该产品内用」，**不是**能接进自己程序的渠道。列进本节不等于允许外部调用——Freebuff 的条款甚至明令禁止。
+
+#### Freebuff
+
+- **官网**：[https://freebuff.com](https://freebuff.com)（[定价页](https://freebuff.com/plans)）
+- **免费形式**：Free 档「每天补满 30 小时」的会话时长（按模型折算，各模型额度不通用）；广告资助，不绑卡、不按 token 计
+- **网页说明**：Codebuff 团队的免费 coding agent（Codebuff Pro 为付费档），提供 CLI（`npm install -g freebuff`）、桌面、Web 三种客户端；官方口径是「the free coding agent」「funded by ads」，定价页写明 Free 档 `30 hours refilled daily`
+- **免费模型**：Free 档明列 MiMo v2.6 Flash（Slow / Fast）、DeepSeek V4.1 Flash 10/17、Claude Haiku 5.5（100k 上下文）；同页另有 GLM 5.3 Flash、GPT-6 Luna、MiMo 2.6 Pro、Muse Spark 1.3、Nemotron 3.5 Lightning、Solar Mini 4 / Pro 4、Glyph Cluster 的每小时折算表，但未标注各自归属哪一档
+- **接入**：**无公开 endpoint、无 API Key**——`/docs`、`/api/models`、`/api/v1/models` 打开都是站点的 `Page not found` 页（2026-10-29 核实）；官网只有首页、`/plans`、`/cli`、`/app` 等产品页；登录凭证只是客户端本地的 `~/.config/manicode/credentials.json` 里的 `authToken`
+- **状态**：Active（客户端锁定，**不可当上游**）— 核实于 2026-10-29（⚠️ **条款明文禁止外部调用**：ToS「Free Access and Human Use」禁止 "call the underlying servers or endpoints directly or through scripts, custom clients, wrappers, integrations, or third-party software"，同时禁止 resell / rent / proxy / relay 与共享账号——社区反代（Freebuff2API、freebuff2api-workers）属违约，本仓库不推荐；⚠️ **区域限制**：full 模式仅覆盖 25+ 国家，其余地区或挂 VPN 时降级为 limited mode，只剩 DeepSeek V4 Flash、每天 6 个 1 小时会话，而用 VPN 伪装地区本身也违反条款；⚠️ **隐私代价高**：为投放个性化广告会扫描项目内的配置/文档文件、采集发送前的输入与交互行为，标了「May use data for AI training」的模型其提交内容可能被授权或出售给第三方用于训练；⚠️ **免费口径自相矛盾**：10-09 发布文写 limited mode 为「DeepSeek V4 Flash + 6 × 1 小时」，现定价页写「30 小时/天」而同页折算表又给出 52 小时，条款另保留随时调整模型与额度的权利）
+
+#### AtomCode（CodingPlan）
+
+- **官网**：https://ai.atomgit.com/serverless-api
+- **免费形式**：CodingPlan Lite 体验版——限时免费、每日限量 500 人领取、7 天有效、约 200 次调用 / 5 小时
+- **网页说明**：AtomGit（智谱生态）终端 AI 编程工具的免费额度；**非标准 API 渠道**——额度仅限 AtomCode 客户端内使用，不支持第三方 endpoint 调用
+- **免费模型**：mimo-v2.5、qwen3.8-27b、deepseek-v4-flash（以客户端内列表为准）
+- **接入**：安装 AtomCode 客户端，AtomGit 账号登录后自动领取（无公开 endpoint）
+- **状态**：Active（限时）— 核实于 2026-09-05（严格说不符合本仓库"API Key + endpoint"收录标准，收录仅供了解）
 
 
 ## 参与贡献
@@ -803,6 +820,7 @@
 - **你的数据可能被用于训练。** Google（免费层）、Mistral（Experiment 计划）、Groq 以及 OpenRouter 的 `:free` 上游普遍会在免费流量上做训练，部分支持关闭。
 - **匿名模型的身份风险被低估。** [匿名模型](#匿名模型stealth)节里的模型没有可查的开发者，长期定价与数据处理承诺都悬空，且可能随时消失——只当评测端点，别进生产链路；敏感数据务必按你实际用的那家网关的条款判断，同一模型在不同网关可能一个零保留、一个会留存。
 - **小型网关的免费额度最不稳定。** Token Harbor / BazaarLink 这类新晋网关验证有限、随时可能关停或收费，只适合原型验证，别托付生产负载。
+- **「客户端内免费」不是渠道，反代也不是解法。** Freebuff / OpenCode Zen / AtomCode 这类把额度锁在自家客户端的服务，社区常有一键反代成 OpenAI 兼容 API 的开源项目，但条款多明文禁止直连 endpoint、禁止 proxy / relay——用了就是违约，封号与额度清零风险自负，本列表只把它们记在[客户端内免费](#客户端内免费无公开-api)一节备查。
 - **「有额度」≠「能随意调用」。** 签到制平台常对旗舰模型另设**每日消耗上限**——Onomeo 有 13 款 premium 模型，未购买额度的账号每天最多消耗 50,000 额度（购买后 30 万），所以哪怕签到攒到 20 万，`gpt-6-astra` 也只能调约 12 次/天，超限直接返 402 不扣额度。**判断能调几次要看两处：单次成本 × 每日上限，取小的那个。**
 - **「签到领额度」不是「免费档模型」。** Onomeo 这类聚合平台用签到/问卷换每日额度——全目录都能调但消耗差异极大（实测同平台内 `gemini-3.1-flash-lite` 一次 9 额度、`deepseek-v4.1-flash` 8,409、`Qwen3.8-Flash-Next` 41,457，**相差四千倍**），额度当日有效、需每天手动领取，且公测平台随时可能改规则。⚠️ **额度消耗会随上游定价上调而暴涨**——Onomeo 上 `deepseek-v4.1-flash` 5 天内从 1,473 涨到 8,409，引用「每天能调多少次」务必标注核实日期。
 - **部分境外网关对国内做区域封锁。** Token Harbor 实测直接返回 `region_blocked`，明文拒绝中国大陆/香港/澳门（2026-09-12）；此类端点即使有免费额度，国内也需自备境外网络，且官方通常要求关闭 VPN——它只能看到连接出口国。

@@ -24,6 +24,7 @@ This list covers only APIs you can **keep calling** for free — **permanently f
   - [Aggregators & gateways](#aggregators--gateways)
   - [Limited-time free](#limited-time-free)
   - [Small gateways (use with care)](#small-gateways-use-with-care)
+  - [Client-only free (no public API)](#client-only-free-no-public-api)
 - [Contributing](#contributing)
 - [Disclaimer](#disclaimer)
 - [License](#license)
@@ -41,6 +42,8 @@ Only **two** categories:
 | **Limited / time-limited free** | Models or channels explicitly labeled "Limited-Time Free / Limited Free" | `limited-free` |
 
 All of the above is **API-level free**: you get an API key and call it over an HTTP endpoint / SDK. A free web chat UI (e.g. a provider's chat page) does **not** count.
+
+The **one exception** is the [Client-only free](#client-only-free-no-public-api) section: products like Freebuff and AtomCode that keep their allowance inside their own client and expose no public endpoint. They are listed for reference only — **not collected channels, not in the model index, and not an endorsement that their terms allow external calls** (Freebuff's terms forbid them).
 
 ## Stealth Models
 
@@ -750,15 +753,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoint**: `https://free.empero.org/v1` (OpenAI-compatible, any key)
 - **Status**: Active (small gateway) — verified 2026-09-05 (⚠️ often unreachable in practice — `upstream_down`; 503 when busy; prototypes only)
 
-#### AtomCode (CodingPlan)
-
-- **Official site**: https://ai.atomgit.com/serverless-api
-- **Free tier**: CodingPlan Lite trial — limited-time free, 500 claims/day, valid 7 days, ~200 calls per 5h rolling window
-- **What the site says**: free quota inside AtomCode, the terminal AI coding tool from AtomGit (Zhipu ecosystem); **not a standard API channel** — the quota only works inside the AtomCode client, no third-party endpoint access
-- **Free models**: mimo-v2.5, qwen3.8-27b, deepseek-v4-flash (per the client's model list)
-- **Endpoint**: none public — install the AtomCode client and sign in with an AtomGit account to claim the quota
-- **Status**: Active (limited-time) — verified 2026-09-05 (does not really meet this repo's "API key + endpoint" bar; listed for reference only)
-
 #### BazaarLink
 
 - **Official site**: https://bazaarlink.ai ([free-model rules](https://bazaarlink.ai/docs/api#free-models))
@@ -775,6 +769,29 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Free models**: the 2026-10-24 `/v1/models` check shows **97 models**, **47 of them `access_tier: free`** — the full Qwen lineup (`qwen3.8-max` / `qwen3.7-max` / `qwen3.7-plus` / `qwen3.5-plus` / `qwen3.5-flash` / `qwen3.6-plus` / `qwen3.7-flash` / `qwen3.8-omni-flash`, all 1M context; `qwen3-coder-plus` at 1M; plus `qwen3-max`, `qwen3.5-397b-a17b`, `qwen3.6-27b` / `35b-a3b`), Cohere (`command-a` 288K / `command-a-plus` 436K / `command-a-reasoning` / `command-a-vision` / `north-mini-code` 256K / the aya family), Mistral (`mistral-large-2512` / `medium-3.5` / `small-2603` / `devstral-medium` / `codestral-2508`, all 256K), Meituan `meituan/longcat-2.0` and `meituan/longcat-2.5-preview` (1M) and more
 - **Endpoint**: `https://api.xkiro.com/v1` (OpenAI-compatible; accepts either `Authorization` or `x-api-key`)
 - **Status**: Active (small gateway) — verified 2026-10-24 (⚠️ **a key is required**: keyless POSTs return 401 `Missing ClientApiKey`, so **end-to-end calls were not verified by this repo**; the allowance comes from the catalog field plus a third-party catalog verified the same day. ⚠️ This repo has long lacked a good free channel for Qwen — only ModelScope's low-quality shared quota and a couple of Groq small models — so xKiro is currently the only free way to reach **Qwen Max / Coder Plus with a 1M context**. High value, thin verification: treat it as prototype-only)
+
+
+### Client-only free (no public API)
+
+> These products lock their free allowance inside their own client: **no public endpoint and no API key you could use from a third-party app**. They are listed so readers know the models really are free to use there — **not** as a channel you can wire into your own program. Being in this section does not mean external calls are allowed; Freebuff's terms forbid them outright.
+
+#### Freebuff
+
+- **Official site**: [https://freebuff.com](https://freebuff.com) ([plans](https://freebuff.com/plans))
+- **Free tier**: the Free plan grants "30 hours refilled daily" of session time (converted per model, not interchangeable across models); ad-funded, no card, no token metering
+- **What the site says**: the free coding agent from the Codebuff team (Codebuff Pro is the paid tier), shipped as a CLI (`npm install -g freebuff`), a desktop app and a web app; the site calls itself "the free coding agent" and "funded by ads", and the plans page states the Free plan gets `30 hours refilled daily`
+- **Free models**: the Free plan names MiMo v2.6 Flash (Slow / Fast), DeepSeek V4.1 Flash 10/17 and Claude Haiku 5.5 (100k context); the same page also carries an hours-per-day table for GLM 5.3 Flash, GPT-6 Luna, MiMo 2.6 Pro, Muse Spark 1.3, Nemotron 3.5 Lightning, Solar Mini 4 / Pro 4 and Glyph Cluster, without saying which plan each one belongs to
+- **Endpoint**: **none public, no API key** — `/docs`, `/api/models` and `/api/v1/models` all land on the site's `Page not found` (checked 2026-10-29) and the only pages are product pages like the homepage, `/plans`, `/cli` and `/app`; the only credential is an `authToken` in the client's local `~/.config/manicode/credentials.json`
+- **Status**: Active (client-locked, **not usable as an upstream**) — verified 2026-10-29 (⚠️ **the terms forbid external calls outright**: "Free Access and Human Use" bars anyone from accessing "the underlying servers or endpoints directly or through scripts, custom clients, wrappers, integrations, or third-party software", and also bans resell / rent / proxy / relay and shared accounts — community reverse proxies (Freebuff2API, freebuff2api-workers) therefore breach the terms and are not recommended here; ⚠️ **regional**: full mode covers only 25+ countries, everywhere else (or behind a VPN) drops to limited mode with DeepSeek V4 Flash alone and 6 one-hour sessions a day — and spoofing your region with a VPN itself violates the terms; ⚠️ **expensive privacy trade**: to target ads the clients scan project config/doc files and collect pre-send typing and interaction signals, and models labelled "May use data for AI training" may have their submissions licensed or sold to third parties for training; ⚠️ **the allowance contradicts itself**: the 2026-10-09 launch post describes limited mode as "DeepSeek V4 Flash + 6 × 1 hour" while the plans page says "30 hours a day" and its own conversion table shows 52 hours, and the terms reserve the right to change models and limits at any time)
+
+#### AtomCode (CodingPlan)
+
+- **Official site**: https://ai.atomgit.com/serverless-api
+- **Free tier**: CodingPlan Lite trial — limited-time free, 500 claims/day, valid 7 days, ~200 calls per 5h rolling window
+- **What the site says**: free quota inside AtomCode, the terminal AI coding tool from AtomGit (Zhipu ecosystem); **not a standard API channel** — the quota only works inside the AtomCode client, no third-party endpoint access
+- **Free models**: mimo-v2.5, qwen3.8-27b, deepseek-v4-flash (per the client's model list)
+- **Endpoint**: none public — install the AtomCode client and sign in with an AtomGit account to claim the quota
+- **Status**: Active (limited-time) — verified 2026-09-05 (does not really meet this repo's "API key + endpoint" bar; listed for reference only)
 
 
 ## Contributing
@@ -801,6 +818,7 @@ Known sources of drift, flagged explicitly in each entry:
 - **Not every "free model" generates text.** Structured decision models like Jev (state plus typed questions in, choices/scores/probabilities out) are served over Evaluation or Decisions APIs and **cannot be used as chat models**; OpenAI-compatible chat/completions calling conventions usually do not apply.
 - **Your data may be used for training.** Google (free tier), Mistral (Experiment), Groq, and most OpenRouter `:free` upstreams train on free traffic; some let you opt out.
 - **Small gateways are the least stable.** Newcomers like Token Harbor / BazaarLink are barely battle-tested — fine for prototypes, never for production.
+- **"Free inside the client" is not a channel, and a reverse proxy is not a workaround.** Services such as Freebuff / OpenCode Zen / AtomCode lock their allowance to their own clients, and the community keeps shipping one-file reverse proxies that expose them as OpenAI-compatible APIs — but the terms usually forbid calling `endpoints directly` and forbid `proxy / relay` outright. Using one breaches the agreement, with suspension and quota clawback on you; this list keeps them in [Client-only free](#client-only-free-no-public-api) for reference only.
 - **"Having credits" is not "being able to call freely."** Check-in platforms often cap daily spend on flagship models separately — Onomeo has 13 premium models limited to 50,000 credits/day for accounts that have not bought credits (300,000 after buying), so even a full 200k check-in gets you only about 12 `gpt-6-astra` calls a day, and going over returns 402 with nothing deducted. **Work out the real ceiling from two numbers: per-call cost × daily cap, whichever is smaller.**
 - **"Check-in for credits" is not a "free-tier model".** Aggregator platforms like Onomeo trade check-ins/surveys for a daily allowance — the whole catalog is callable but consumption varies wildly (measured on one platform: `gemini-3.1-flash-lite` costs 9 credits per answer, `deepseek-v4.1-flash` 8,409, `Qwen3.8-Flash-Next` 41,457 — a **4,000x spread**), credits expire daily and must be claimed manually, and public-beta platforms can change the rules at any time. ⚠️ **Per-call cost can spike as upstream pricing moves** — Onomeo's `deepseek-v4.1-flash` went from 1,473 to 8,409 in five days, so any "how many calls per day" claim must carry the date it was verified.
 - **Some overseas gateways apply regional blocks.** Token Harbor returned `region_blocked`, explicitly refusing Mainland China, Hong Kong and Macao (2026-09-12). Even with a free allowance, such endpoints require an overseas network path from Mainland China — and the operator typically asks you to turn VPNs off, since it only sees the country your connection exits from.
