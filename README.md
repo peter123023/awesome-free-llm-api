@@ -85,8 +85,9 @@
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(8,409 额度/次,签到满额 20 万约可调 23 次) | 优势:国内直连、OpenAI 兼容、签到满额即可调、支持图片输入;限制:非免费档、需每日手动签到、单次成本偏高(9/22 记录的 1,473 已涨至 8,409)、公测聚合平台随时可能变 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内（全站 2000 次/日） | 优势:国产、国内直连免代理、OpenAI 兼容、目录含 `deepseek-ai/DeepSeek-V4.1-Flash`（2026-10-12 实测在列）;限制:免费质量较低——与全站共享每日 2000 次总量、单模型约 500 次/日，需阿里云实名、仅限个人非商业用途 | 质量较低 |
 | [BeatAPI](https://beatapi.io) | 限时免费（`deepseek-v4.1-flash-free`，输入/输出均 $0） | 优势:OpenAI 兼容、免卡免充值、**零余额即可调用**、每日 2000 次成功请求、国内直连可通;限制:⚠️ **首充前仅 1 次成功请求/分钟**（任意充值后 10 次/分钟），免费为限时提供、名单随时变，2026-10 新上线的折扣转售商，端到端调用未经本仓库实测 | 未实测 |
+| [Zro (MoonMath)](https://zro.moonmath.ai) | 免费档每日额度（`deepseek-v4.1-flash`，每日重置、数值未公开） | 优势:一手推理服务、OpenAI 兼容、零请求保留且不用于训练、无需付费、国内直连可通;限制:每日免费额度未公开、仅 Flash 模型免费、一人一号禁止多账号刷额度、端到端未实测 | 未实测 |
 
-> ⚠️ **官方无免费层**（仅付费，闲时 $0.15/$0.60 per 1M）。Ollama Cloud、OrcaRouter 均不提供 V4.1 免费。✅ 真正的「档位免费」入口有三个：**NVIDIA NIM**（永久免费 40 RPM、免绑卡）、**魔搭 ModelScope**（每日免费额度内、国内直连）与 **BeatAPI**（限时免费 `deepseek-v4.1-flash-free`，零余额可调但仅 1 次/分钟）；Token Harbor 对国内封锁、Onomeo 为签到额度，均非真正免费档。
+> ⚠️ **官方无免费层**（仅付费，闲时 $0.15/$0.60 per 1M）。Ollama Cloud、OrcaRouter 均不提供 V4.1 免费。✅ 真正的「档位免费」入口有四个：**NVIDIA NIM**（永久免费 40 RPM、免绑卡）、**魔搭 ModelScope**（每日免费额度内、国内直连）、**BeatAPI**（限时免费 `deepseek-v4.1-flash-free`，零余额可调但仅 1 次/分钟）与 **Zro**（免费档每日额度、零请求保留）；Token Harbor 对国内封锁、Onomeo 为签到额度，均非真正免费档。
 
 #### ~~DeepSeek V4 Pro~~（2026-09-14 起官方路由退役）
 
@@ -121,6 +122,7 @@
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
 | [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 限时免费(ZZ.ai) | 优势:AMD 官方托管、每日 $10 等值额度;限制:限时免费、TTFT 偏高、并发限流 | TTFT 偏高 |
 | [BeatAPI](https://beatapi.io) | 限时免费（`glm-5.3-flash-free`，输入/输出均 $0） | 优势:OpenAI 兼容、免卡免充值、零余额即可调用、每日 2000 次成功请求;限制:⚠️ **首充前仅 1 次成功请求/分钟**（充值后 10 次/分钟）、免费层限时、端到端调用未实测 | 未实测 |
+| [Zro (MoonMath)](https://zro.moonmath.ai) | 免费档每日额度（`glm-5.3-flash`，每日重置、数值未公开） | 优势:一手推理服务、OpenAI 兼容、零请求保留且不用于训练、无需付费、236 tok/s、1M 上下文;限制:每日免费额度未公开、仅 Flash 模型免费、一人一号禁止多账号刷额度、端到端未实测 | 未实测 |
 | [Onomeo](https://onomeo.com/zh) | 签到制每日额度(`z-ai/glm-5.3-flash-free`,3,149 额度/次,签到满额 20 万约可调 63 次) | 优势:国内直连、OpenAI 兼容、1M 上下文;限制:非免费档、需每日手动签到、单次成本较 9/22 涨约 16 倍、公测聚合平台随时可能变;⚠️ 同平台的旗舰 `glm-5.3`(非 flash)属 premium 款,受每日 5 万额度上限约束 |  |
 | [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:上海 AI 实验室官方平台、每月自动到账、免绑卡、1M 上下文、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、⚠️ 未经证实 GLM-5.3 是否在墨点免费池内（官方页面仅明示 V4-Flash）、科研向平台 |  |
 
@@ -782,6 +784,15 @@
 - **免费模型**：2026-11-02 官方能力目录 `POST /v1/capabilities/search`（**免 key**）返回 **6 款** `$0 input / $0 output`：`deepseek-v4.1-flash-free`、`gemini-3.8-flash-free`、`glm-5.3-flash-free`、`minimax-m3.1-flash-free`、`jev-1.13-free`、`jev-1.14-free`。⚠️ 首页只宣传 4 款（无 Jev 两款），**文案滞后于目录**，以目录为准；官方明示「免费名单随时变，不要硬编码 id」；`jev-*` 是结构化决策模型（输入 state + questions，不能当聊天模型用，详见[免责声明](#免责声明)）
 - **接入**：`https://api.beatapi.io/v1`（OpenAI 兼容：`/v1/chat/completions`、`/v1/responses`；另支持 Anthropic `/v1/messages` 与 Gemini 原生格式；文本也可走 `https://direct.beatapi.io`）。注册后在 dashboard 建 key，免费模型零余额可调
 - **状态**：Active（限时免费，**端到端未经本仓库实测**）— 核实于 2026-11-02（✅ 端点真实：`/v1/models` 无 key 返 `missing_api_key`、假 key 返 `invalid_api_key`；✅ **免 key 的 `capabilities/inspect` 直接读出** `limits.rate_limit`：`successful_requests_per_day: 2000`、`before_first_top_up: 1`、`after_top_up: 10`、`applies_to: each account`；✅ 国内直连可通，无 `region_blocked`；⚠️ 免费额度调用付费模型返 `403 forbidden`；⚠️ 2026-10 才上线的小型折扣转售商，无 SLA，免费层随时可能收紧或停止；⚠️ 隐私政策（2026-10-06）称不用客户内容训练通用模型、不出售数据，但明示「不承诺每个上游零保留」）
+
+#### Zro (MoonMath)
+
+- **官网**：[https://zro.moonmath.ai](https://zro.moonmath.ai)（[定价](https://zro.moonmath.ai/pricing)、[模型目录](https://zro.moonmath.ai/model-catalog)、[文档](https://zro.moonmath.ai/docs)）
+- **免费形式**：免费档（Free plan，**$0/月**）——**每日免费用量、每日重置**，覆盖 `deepseek-v4.1-flash` 与 `glm-5.3-flash` 两款 Flash；无需付费即可使用（「免卡」为 $0 档推断，注册未实测）；每日额度具体数值未公开
+- **网页说明**：MoonMath.ai 的一手私有推理服务（面向 coding agent），自称「Private / Uncensored models」。定价页原文："Free plan for Flash models. $0 per month. included daily usage. Free daily usage on GLM-5.3 Flash and DeepSeek V4.1 Flash. Resets every day."，并标 OpenAI-compatible API、Zero request retention、No training on requests。付费档 Pro $20/月（含 $40 用量）、Max $60/月（含 $120 用量）；用量包 $5 起、90 天过期
+- **免费模型**：免费档覆盖 `deepseek-v4.1-flash`、`glm-5.3-flash` 两款 Flash；同站付费模型 `glm-5.3`、`dolly1-security`、`dolly2-security`（后两者为「无审查」安全模型）不在免费档
+- **接入**：`https://zro.moonmath.ai/v1`（OpenAI 兼容 `/v1/chat/completions`、`/v1/responses`）；Anthropic Messages 用 base `https://zro.moonmath.ai`；`Authorization: Bearer sk-...`；每请求经 EU 网关鉴权路由，推理可选 EU/US
+- **状态**：Active（免费档，**端到端未经本仓库实测**）— 核实于 2026-11-03（✅ 端点真实：`/v1/models` 无 key 返 401、假 key 返 LiteLLM 的 `token_not_found_in_db`；✅ 国内直连可通，无 `region_blocked`；✅ 隐私：服务条款与隐私声明均写明「零请求保留、不用于训练」，网关层禁用内容日志；⚠️ **每日免费额度具体数值未公开**；⚠️ 一人一号，禁止多账号刷免费额度与转售原始访问（自建应用/agent 允许）；⚠️ 2026 年新站、无 SLA，免费档随时可能收紧；⚠️ 「免卡」为 $0 档推断，注册未实测）
 
 ### 客户端内免费（无公开 API）
 
