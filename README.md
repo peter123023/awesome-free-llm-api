@@ -697,6 +697,15 @@
 - **接入**：`https://onomeo.com/v1`（OpenAI 兼容；2026-09-22 实测无 key 调用返回 401 `bad_key`，国内直连可通）
 - **状态**：Active（签到制）— 核实于 2026-09-27（⚠️ **免费方式是「签到领取额度」，不是免费档**：额度当日有效、需每天手动签到；聚合自建额度池（目录里大量 `:free` 款与 OpenRouter 免费池同名，疑似转接），公测期随时可能改规则或关停。✅ 实测 47 款全部带 `training` 标记，**多数为 `trains`**（gemini 全系、gpt-6 系列、glm-5.3 等），少数 `no` / `optout` / `unknown`——**按「请求内容可能被用于训练」对待**。实测可用率（`health.ok/failed`）参差：`deepseek-v4.1-flash`、`deepseek-v4-flash`、`z-ai/glm-5.3-flash-free`、`glm-5.3` 均 100%，但 `gemini-3.7-flash` 仅 36%、`claude-opus-5.5` 57%、`cohere/north-mini-code:free` 与 `nemotron-3.5-lightning` 均 56%，无 SLA。⚠️ 另有三重限流：premium 模型每日额度上限（见上）、全站 premium 预算分四批释放（UTC 00/06/12/18，每批三成预留给已购买账号，未购买账号用完即返 503 `premium_budget_exhausted` 带 `reserved:true`）、以及 5 小时窗口的账号/IP 调用次数上限（`perAccountWindowMax` 60、`perIpWindowMax` 120））
 
+#### AnyAPI.ai
+
+- **官网**：https://anyapi.ai（[定价页](https://anyapi.ai/pricing) · [文档](https://docs.anyapi.ai)）
+- **免费形式**：永久免费层——Free 计划每日 **100,000 ₳nytokens**，每 24 小时重置，**不需要信用卡**；免费模型在网页 Playground 内不限量，API 调用从同一日额度中按模型扣除
+- **网页说明**：聚合网关，官方称覆盖 **400+ 模型**（Anthropic、OpenAI、Google、xAI、DeepSeek、Qwen、Moonshot、Z.ai 等）；按 **₳nytokens** 逐 token 计费，付费方案以美元标价：Developer \$19.90/月（100M ₳）、Pro \$95.90/月（500M ₳）、Enterprise \$279.90/月（1.5B ₳），按量付费最低 \$20；官方 FAQ 原文写明「All payments are final and non-refundable」，除法律要求或服务条款另有说明
+- **免费模型**：站点模型页中带 `-free` 后缀的 5 款（2026-11-04 从 sitemap 实测）：`google-gemma-3n-4b-free`、`inclusionai-ling-3-0-flash-fin-free`、`inclusionai-ling-3-0-flash-sante-free`、`qwen-qwen2-5-coder-32b-instruct-free`、`qwen-qwen3-8-27b-free`；定价页把免费档写成「All free models」——⚠️ 官方没有公布逐模型的免费白名单，完整清单以定价页和模型页为准
+- **接入**：`https://api.anyapi.ai/v1`（OpenAI 兼容；2026-11-04 实测无 key 请求 `/v1/models` 返回 401 `Invalid credentials`，说明端点存活）；同一主机 `https://api.anyapi.ai` 提供 Anthropic Messages 端点，Claude Code 可直接把 `ANTHROPIC_BASE_URL` 指向它
+- **状态**：Active（免费层）— 核实于 2026-11-04（⚠️ 没有公开状态页；根域 `anyapi.ai/v1/models` 返回 404，API 只在子域 `api.anyapi.ai` 上；域名 2025-05 启用，运营时间较短；免费额度 24 小时重置且不结转，取消订阅后订阅额度作废）
+
 #### Chutes ~~（已失效）~~
 
 ~~已失效（2026-09-12 复核维持；2026-10-24 再复核：**目录已缩至 14 款，且全部为 `-TEE` 变体、全部标价**，无一为 $0——DeepSeek V4 Flash 0731 $0.44/$1.32、Kimi K3 $1.85/$9.50、GLM-5.2 $1.25/$3.95）：`llm.chutes.ai/v1/models` 未发现任何免费端点；内容保留备查。~~
