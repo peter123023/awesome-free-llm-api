@@ -727,6 +727,15 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Endpoint**: `https://api.experientiallabs.ai/v1` (OpenAI-compatible, register for a key)
 - **Status**: Active (limited-time) — verified 2026-09-14 (⚠️ **low uptime on the free tier**: Claude Fable 5.1 only 72.5%, TTFT ~4.5s; **free allowance tightened to ~500 credits/month**, and once depleted it returns an error that explicitly says retrying will not help**; for tasting only, do not put it in a production path)
 
+#### JZSTOKEN
+
+- **Official site**: https://jzstoken.com
+- **Free tier**: limited-time 鈥?`jzs-max-3.0` free until **2026-11-30 (UTC)**; requires a Dedicated key (Standard keys do not include this model); balance is shared across keys; top-up starts at $1.50
+- **What the site says**: the homepage Featured models table marks `jzs-max-3.0` as "Free until Nov 30, 2026 (UTC)"
+- **Free models**: `jzs-max-3.0`
+- **Endpoint**: OpenAI-compatible Base URL `https://jzstoken.com/api/v1`
+- **Status**: **Active (limited-time)** 鈥?verified `2026-11-06`
+
 ### Small gateways (use with care)
 
 > Barely battle-tested newcomers. Free quotas can disappear or turn paid anytime — **prototypes only, never production**.

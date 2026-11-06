@@ -728,6 +728,15 @@
 - **接入**：`https://api.experientiallabs.ai/v1`（OpenAI 兼容，需注册生成 key）
 - **状态**：Active（限时）— 核实于 2026-09-14（⚠️ **免费层 uptime 偏低**：Claude Fable 5.1 仅 72.5%、TTFT 约 4.5 秒；**免费额度已收紧至约 500 credits/月**，额度耗尽返回错误且明确说明重试无效**；仅适合尝鲜，勿放入生产链路）
 
+#### JZSTOKEN
+
+- **瀹樼綉**锛歨ttps://jzstoken.com
+- **鍏嶈垂褰㈠紡**锛氶檺鏃跺厤璐?鈥?`jzs-max-3.0` free until **2026-11-30 (UTC)**锛涢渶 Dedicated key锛圫tandard key 涓嶅惈璇ユā鍨嬶級锛涗綑棰濊法 key 鍏辩敤锛涘厖鍊艰捣姝?$1.50
+- **缃戦〉璇存槑**锛氶椤?Featured models 琛ㄥ皢 `jzs-max-3.0` 鏍囨敞涓?"Free until Nov 30, 2026 (UTC)"
+- **鍏嶈垂妯″瀷**锛歚jzs-max-3.0`
+- **鎺ュ叆**锛歄penAI 鍏煎 Base URL `https://jzstoken.com/api/v1`
+- **鐘舵€?*锛?*Active锛堥檺鏃讹級** 鈥?鏍稿疄浜?`2026-11-06`
+
 ### 小型网关（谨慎）
 
 > 以下新晋网关验证有限、免费额度随时可能关停或收费，**只适合原型验证，别托付生产负载**。
