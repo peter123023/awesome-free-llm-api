@@ -146,7 +146,7 @@
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、无卡;限制:限时免费,仅客户端内使用,免费名单随时变动 |  |
-| [NovAI](https://aiapi-pro.com) | 永久免费层:每天 10 次,充值后这 5 个模型不限次 | 优势:OpenAI 兼容、免卡注册、聚合 111 个国产模型;限制:未充值每天 10 次、每分钟 5 次 |  |
+| [NovAI](https://aiapi-pro.com) | 永久免费层:每天 10 次,充值后这 5 个模型不限次 | 优势:OpenAI 兼容、免卡注册、聚合 109 个国产模型;限制:未充值每天 10 次、每分钟 5 次 |  |
 
 > ⚠️ **GLM-4.7 不在 NVIDIA NIM 免费名单**：2026-09 初一度上架后又移除；截至 2026-09-12，NIM 上仅新上架了 `z-ai/glm-5.3-flash` 一款，GLM-4.7 仍不在列，勿再依赖。
 
