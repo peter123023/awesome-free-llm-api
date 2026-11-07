@@ -662,7 +662,7 @@
 #### NovAI
 
 - **官网**：[https://aiapi-pro.com](https://aiapi-pro.com)（[文档](https://aiapi-pro.com/docs) · [逐模型价格表](https://aiapi-pro.com/china-ai-leaderboard.json)）
-- **免费形式**：永久免费层——5 个模型**每天 10 次、每分钟 5 次**；**充值任意金额后这 5 个模型不再限次**；注册另赠 $2（14 天有效，不含图像/视频模型）
+- **免费形式**：转发智谱 Flash 免费额度（上游 `owned_by: zhipu`，非第一方免费层）——5 个模型**每天 10 次、每分钟 5 次**；**充值任意金额后这 5 个模型不再限次**；注册另赠 $2（14 天有效，不含图像/视频模型）
 - **网页说明**：官网 FAQ 原文「Five models are free to call … with up to 10 free-model calls per day on the free tier」；文档原文「Never-topped-up accounts run at 5 requests per minute with daily free-model caps. Accounts with any completed top-up have no NovAI-side rate limits.」
 - **免费模型**：`glm-4.7-flash`、`glm-4.6v-flash`、`glm-4.1v-thinking-flash`（文本/视觉）、`cogview-3-flash`（图像）、`cogvideox-flash`（视频）
 - **接入**：`https://aiapi-pro.com/v1`（OpenAI 兼容）
