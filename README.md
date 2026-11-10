@@ -86,6 +86,7 @@
 | [魔搭 ModelScope](https://modelscope.cn) | 共享额度内（全站 2000 次/日） | 优势:国产、国内直连免代理、OpenAI 兼容、目录含 `deepseek-ai/DeepSeek-V4.1-Flash`（2026-10-12 实测在列）;限制:免费质量较低——与全站共享每日 2000 次总量、单模型约 500 次/日，需阿里云实名、仅限个人非商业用途 | 质量较低 |
 | [BeatAPI](https://beatapi.io) | 限时免费（`deepseek-v4.1-flash-free`，输入/输出均 $0） | 优势:OpenAI 兼容、免卡免充值、**零余额即可调用**、每日 2000 次成功请求、国内直连可通;限制:⚠️ **首充前仅 1 次成功请求/分钟**（任意充值后 10 次/分钟），免费为限时提供、名单随时变，2026-10 新上线的折扣转售商，端到端调用未经本仓库实测 | 未实测 |
 | [Zro (MoonMath)](https://zro.moonmath.ai) | 免费档每日额度（`deepseek-v4.1-flash`，每日重置、数值未公开） | 优势:一手推理服务、OpenAI 兼容、零请求保留且不用于训练、无需付费、国内直连可通;限制:每日免费额度未公开、仅 Flash 模型免费、一人一号禁止多账号刷额度、端到端未实测 | 未实测 |
+| [cheapllm.shop](https://cheapllm.shop) | 公测期间完全免费、不限速；公测结束后永久免费层（每账号每小时至少 5,000 输入 + 1,000 输出 token） | 优势:OpenAI 与 Anthropic 双协议兼容、免绑卡（邮箱注册）、支持图片输入、[免费层写在官方文档](https://cheapllm.shop/docs#free-tier);限制:单一模型(`deepseek-v4.1-flash-1017`)、2026-11 新上线的小型服务、繁忙时请求排队最多 30 秒再返 503、国内直连未测试 | 未实测 |
 
 > ⚠️ **官方无免费层**（仅付费，闲时 $0.15/$0.60 per 1M）。Ollama Cloud、OrcaRouter 均不提供 V4.1 免费。✅ 真正的「档位免费」入口有四个：**NVIDIA NIM**（永久免费 40 RPM、免绑卡）、**魔搭 ModelScope**（每日免费额度内、国内直连）、**BeatAPI**（限时免费 `deepseek-v4.1-flash-free`，零余额可调但仅 1 次/分钟）与 **Zro**（免费档每日额度、零请求保留）；Token Harbor 对国内封锁、Onomeo 为签到额度，均非真正免费档。
 
@@ -793,6 +794,15 @@
 - **免费模型**：免费档覆盖 `deepseek-v4.1-flash`、`glm-5.3-flash` 两款 Flash；同站付费模型 `glm-5.3`、`dolly1-security`、`dolly2-security`（后两者为「无审查」安全模型）不在免费档
 - **接入**：`https://zro.moonmath.ai/v1`（OpenAI 兼容 `/v1/chat/completions`、`/v1/responses`）；Anthropic Messages 用 base `https://zro.moonmath.ai`；`Authorization: Bearer sk-...`；每请求经 EU 网关鉴权路由，推理可选 EU/US
 - **状态**：Active（免费档，**端到端未经本仓库实测**）— 核实于 2026-11-03（✅ 端点真实：`/v1/models` 无 key 返 401、假 key 返 LiteLLM 的 `token_not_found_in_db`；✅ 国内直连可通，无 `region_blocked`；✅ 隐私：服务条款与隐私声明均写明「零请求保留、不用于训练」，网关层禁用内容日志；⚠️ **每日免费额度具体数值未公开**；⚠️ 一人一号，禁止多账号刷免费额度与转售原始访问（自建应用/agent 允许）；⚠️ 2026 年新站、无 SLA，免费档随时可能收紧；⚠️ 「免卡」为 $0 档推断，注册未实测）
+
+#### cheapllm.shop
+
+- **官网**：https://cheapllm.shop（[免费层与限额](https://cheapllm.shop/docs#free-tier) · [文档](https://cheapllm.shop/docs) · [服务条款](https://cheapllm.shop/terms)）
+- **免费形式**：**公测期间完全免费、不限速**（无 RPM/TPM 上限，繁忙时排队重试最多 30 秒）；公测结束后每个账号保留**永久免费层**：每小时（滚动窗口、全部 Key 合计）**至少 5,000 输入 token + 1,000 输出 token**，超出部分按 token 计费
+- **网页说明**：官方文档原文「When the beta ends, every account keeps a permanent free tier, with no card: at least 5,000 input tokens and 1,000 output tokens per hour … These numbers can go up, never below that minimum.」；公测结束前会邮件通知所有账号
+- **免费模型**：DeepSeek V4.1 Flash 1017（`deepseek-v4.1-flash-1017`，支持图片输入与推理）
+- **接入**：`https://cheapllm.shop/v1`（OpenAI 兼容：`/v1/chat/completions`、`/v1/responses`）；Anthropic 协议 `https://cheapllm.shop`（`/v1/messages`）。邮箱注册即得 API Key，无需绑卡
+- **状态**：Active（公测免费）— 核实于 2026-11-10（⚠️ 2026-11 新上线的小型服务、无 SLA；单一模型；国内直连未测试）
 
 ### 客户端内免费（无公开 API）
 
