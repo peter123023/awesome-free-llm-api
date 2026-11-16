@@ -148,6 +148,8 @@
 | [智谱 BigModel](https://open.bigmodel.cn) | 永久免费,仅限速 | 优势:官方永久免费、200K 上下文、无需付费;限制:仅 Flash 小模型,有速率限制 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [OpenCode Zen](https://opencode.ai/zen) | 限时免费(客户端内) | 优势:OpenCode 官方网关、无卡;限制:限时免费,仅客户端内使用,免费名单随时变动 |  |
+| [TideLink](https://tidelink.xyz) | 永久免费层(免卡注册,默认 glm-4.7-flash;上游免费池拥堵时自动降级 glm-4-flash 兜底,仍 $0) | 优势:OpenAI 兼容网关、免卡注册、免费档随上游自动降级不中断;限制:仅 Flash 小模型免费,付费档聚合 GLM/Qwen/DeepSeek 等主流模型 |  |
+
 
 > ⚠️ **GLM-4.7 不在 NVIDIA NIM 免费名单**：2026-09 初一度上架后又移除；截至 2026-09-12，NIM 上仅新上架了 `z-ai/glm-5.3-flash` 一款，GLM-4.7 仍不在列，勿再依赖。
 
@@ -699,6 +701,15 @@
 - **模型成本（2026-11-12 内嵌 `rows` 实测，仅供相对比较）**：`deepseek-flash` 2,368、`hy4-preview` 705、`glm-5.3` 845、`kimi-k3` 1,560、`claude-haiku-5.5` 1,770、`gpt-6.1-sol` 3,348、`gemini-3.8-flash` 3,755、`deepseek-v4.1-flash-1017` 5,609、`gpt-6-luna` 7,168、`glm-5.3-flash` 7,701、`gpt-6.1-terra` 18,859、`claude-sonnet-5.5` 45,615、`claude-opus-5.5` 57,811、`grok-4.7` 140,810、`qwen3.8-max` 396,776（额度/次，`null` = 暂无采样）。⚠️ 旧表里的 `deepseek-v4.1-flash` 8,409、`z-ai/glm-5.3-flash-free` 3,149、`gpt-6-astra` 3,948 等 ID 已不存在于当前目录
 - **接入**：`https://onomeo.com/v1`（OpenAI 兼容；2026-09-22 实测无 key 调用返回 401 `bad_key`，国内直连可通；2026-11-12 复核端点未变）
 - **状态**：⚠️ **机制待核实（2026-11-12）** — 站点改版后签到/问卷文案下线、premium 改为 `buyersOnly`，**当前是否仍存在无需付费的调用额度，本仓库无法证实**；2026-11-12 抓到的其他配置：`perMinute: 60`、`perAccountWindowMax: 30`、`perIpWindowMax: 60`、`windowMinutes: 300`（均较 9-27 记录的 60 / 120 收紧）、`training` 大量标 `trains`。在官方重新明示免费方式前，**建议不要把 Onomeo 当作稳定免费渠道**，索引中引用它的行请一并留意
+
+#### TideLink
+
+- **官网**：[https://tidelink.xyz](https://tidelink.xyz)（[Pricing](https://tidelink.xyz/pricing.html)）
+- **免费形式**：永久免费层（无需绑卡注册，注册即送免费额度；默认免费模型 `glm-4.7-flash`，视觉 `glm-4.6v-flash` 免费；上游免费池拥堵时自动降级到 `glm-4-flash`/`glm-4v-flash` 兜底，仍 $0）
+- **网页说明**：官网标注免费档含当前世代智谱 Flash 模型，OpenAI 兼容网关，明确「no card required」
+- **免费模型**：`glm-4.7-flash`（默认）、`glm-4.6v-flash`（视觉）、`glm-4-flash`、`glm-4v-flash`（自动降级兜底）；付费档聚合 GLM / Qwen / DeepSeek 等主流模型
+- **接入**：`https://tidelink.xyz/v1`（OpenAI 兼容；另提供 Anthropic 兼容端点 `/v1/messages`）
+- **状态**：Active — 核实于 2026-09-14（免卡注册免费档实测可调；免费模型随上游免费池自动降级兜底，无断供）
 
 #### Chutes ~~（已失效）~~
 
