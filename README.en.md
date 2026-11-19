@@ -88,6 +88,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [BeatAPI](https://beatapi.io) | limited-time free (`deepseek-v4.1-flash-free`, $0 in / $0 out) | Pros: OpenAI-compatible, no card and no top-up, **works on a zero balance**, 2,000 successful requests/day, reachable directly from Mainland China; Cons: ⚠️ **only 1 successful request per minute before the first top-up** (10/min after any top-up), free access is limited-time with a lineup that changes, discounted reseller launched in Oct 2026, end-to-end calls unverified | Unverified |
 | [Zro (MoonMath)](https://zro.moonmath.ai) | free-tier daily allowance (`deepseek-v4.1-flash`, resets daily, amount unpublished) | Pros: first-party inference, OpenAI-compatible, zero request retention and no training, no payment needed, reachable directly from Mainland China; Cons: daily free amount unpublished, only the Flash models are free, one account per person (no multi-account farming), end-to-end unverified | Unverified |
 | [cheapllm.shop](https://cheapllm.shop) | limited-time free ($0 during beta, no rate limit; the ToS promises a permanent ≥5,000 / 1,000 tokens-per-hour allowance after beta) | Pros: signup is just email + password — no card, no phone, no email verification — and the key is issued immediately; OpenAI-compatible, reachable directly from Mainland China, no per-key rate limit; Cons: ⚠️ the legal notice leaves every operator detail blank, the service is about a week old with no third-party coverage, no SLA and accounts can be closed without reason, fallback inference providers may retain data for training, end-to-end unverified | Unverified |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | daily allowance (1 credit/day, 5/day for the first 14 days) | Pros: official AMD hosting, OpenAI-compatible, no card; Cons: phone number (default +86) and email required, credit-based, rate-limited |  |
 
 > ⚠️ **No official free tier** (paid only, off-peak $0.15/$0.60 per 1M). Ollama Cloud and OrcaRouter do not offer free V4.1. ✅ Five genuine "free tier" entry points: **NVIDIA NIM** (permanent free at 40 RPM, no card), **ModelScope** (within its daily free allowance, direct access from China), **BeatAPI** (limited-time `deepseek-v4.1-flash-free`, zero balance works but only 1 request/minute), **Zro** (a free daily allowance, zero retention) and **cheapllm.shop** ($0 during beta; the ToS promises a permanent allowance of ≥5,000 / 1,000 tokens per hour after beta); Token Harbor is region-blocked; ⚠️ **Onomeo was redesigned on 2026-11-12 with its check-in mechanism removed and its free entry path unverified**, so it is no longer counted here as "check-in credits".
 
@@ -111,6 +112,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [Hugging Face](https://huggingface.co) | $0.10 free inference credits/month, pay-as-you-go beyond | Pros: huge model catalog, OpenAI-compatible; Cons: only $0.10/month free credit, pay-as-you-go after (hard stop), rate-limited shared endpoint, no SLA | Tiny quota |
 | [ModelScope](https://modelscope.cn) | ~200 req/day | Pros: China-native, OpenAI-compatible, huge catalog; Cons: low-quality free tier — only ~200 req/day per model, shares a 2,000/day pool, Alibaba real-name, personal/non-commercial only | Low quality |
 | [Intern InkStone Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | free monthly ink-dot allowance during the beta, converted to tokens (1 ink dot covers up to 50,000,000 tokens, priced with DeepSeek-V4-Flash) | Pros: the only model the platform explicitly names as its conversion baseline, official Shanghai AI Lab platform, monthly top-up, OpenAI + Anthropic protocols; Cons: ⚠️ the exact monthly ink-dot grant was never published, you must sign in to check your balance, "up to" 50,000,000 per dot (faster models burn it quicker), research-oriented platform |  |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | daily allowance (1 credit/day, 5/day for the first 14 days) | Pros: official AMD hosting, OpenAI-compatible, no card; Cons: phone number (default +86) and email required, credit-based, rate-limited |  |
 
 ### GLM family
 
@@ -122,7 +124,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap), 40 RPM | Pros: official hosting, no card, no credits or daily cap, 1.3M context & multimodal; Cons: SMS phone verification required, 40 RPM shared, queues at peak | Frequent timeouts |
 | [OrcaRouter](https://www.orcarouter.ai) | free pool, rate-limited, zero markup | Pros: 200+ models behind one gateway, 0% token markup, no card; Cons: allowance unpublished, became the free default on 2026-09-07 replacing Qwen3.8-27B, high TTFT (~7.66s) | Rate-limited |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (ZZ.ai) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | daily allowance (1 credit/day, 5/day for the first 14 days) | Pros: official AMD hosting, OpenAI-compatible, no card; Cons: phone number (default +86) and email required, credit-based, rate-limited |  |
 | [BeatAPI](https://beatapi.io) | limited-time free (`glm-5.3-flash-free`, $0 in / $0 out) | Pros: OpenAI-compatible, no card and no top-up, works on a zero balance, 2,000 successful requests/day; Cons: ⚠️ **only 1 successful request per minute before the first top-up** (10/min after), limited-time free tier, end-to-end calls unverified | Unverified |
 | [Zro (MoonMath)](https://zro.moonmath.ai) | free-tier daily allowance (`glm-5.3-flash`, resets daily, amount unpublished) | Pros: first-party inference, OpenAI-compatible, zero request retention and no training, no payment needed, 236 tok/s, 1M context; Cons: daily free amount unpublished, only the Flash models are free, one account per person (no multi-account farming), end-to-end unverified | Unverified |
 | ~~[Onomeo](https://onomeo.com/zh)~~ | ⚠️ mechanism unverified (2026-11-12) | ⚠️ After the redesign the ID `z-ai/glm-5.3-flash-free` no longer exists (it is now `glm-5.3-flash`, cost 7,701); check-in copy and the "50k/day premium cap" rule are both gone. The old "3,149 credits/answer, ~63 answers" figure is void |  |
@@ -205,7 +207,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | Free channel | Free tier | Pros / Cons | API quality |
 |------|------|------|------|
 | [Groq](https://console.groq.com) | 1,000 req/day | Pros: LPU ultra-fast inference (700+ tok/s); Cons: 30 RPM / 1,000 RPD, 8K TPM |  |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | limited-time free (Qwen3.8-Flash-Next) | Pros: official AMD hosting, ~$10/day; Cons: limited-time, high TTFT, rate-limited | High TTFT |
 
 #### Qwen3.6 27B
 
@@ -428,6 +429,7 @@ Stealth models are not like the other channels in this list. Up front, the prope
 | [OpenRouter](https://openrouter.ai) | `:free` (both 31B and 26B-A4B) | Pros: aggregated routing; Cons: 50 free req/day, lineup rotates anytime |  |
 | [AIHubMix](https://aihubmix.com/models/free) | free tier (100 req/day after one-time $1 top-up) | Pros: subsidized free models, OpenAI-compatible, no card on signup; Cons: 10 trial calls only before top-up, 1M tokens/day shared across the free pool |  |
 | [NVIDIA NIM](https://build.nvidia.com) | permanent (no token cap, 31B only) | Pros: official hosting, no card, no credits or daily cap; Cons: SMS phone verification required, 40 RPM shared, NIM hosts only `gemma-4-31b-it`, no 26B-A4B | Frequent timeouts |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | daily allowance (1 credit/day, 5/day for the first 14 days) | Pros: official AMD hosting, OpenAI-compatible, no card; Cons: phone number (default +86) and email required, credit-based, rate-limited |  |
 
 #### Whisper
 
@@ -524,15 +526,6 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **Free models**: 100k+ community & official models (DeepSeek V4 Flash etc. can be called via routing, but consume the free credit and stop when exhausted)
 - **Endpoint**: `https://router.huggingface.co/hf-inference` (`InferenceClient` / REST, auth with HF User Access Token)
 - **Status**: Active — verified 2026-09-14 (⚠️ **free quota has shrunk sharply**: since 2026 free users get only $0.10/month inference credit, no longer "permanently free shared endpoints"; PRO at $9/mo is only $2/month. The free tier is good for tiny experiments only — buy credits for production)
-
-#### AMD Token Factory (Radeon Cloud)
-
-- **Official site**: https://developer.amd.com.cn/radeon/tokenfactory
-- **Free tier**: ~$10 worth of credits daily, resets each day
-- **What the site says**: AMD Radeon Cloud's official inference platform; log in to claim a daily free quota, OpenAI-compatible
-- **Free models**: DeepSeek V4 Flash 0731 (Free), MiniCPM5-1B (Free), GLM-5.3-Flash (limited, ZZ.ai), Qwen3.8-Flash-Next (limited, AMD GPU Cloud)
-- **Endpoint**: `https://developer.amd.com.cn/radeon/api/v1` (OpenAI-compatible)
-- **Status**: Active — verified 2026-09-02 (high TTFT, ~22s first-token latency)
 
 #### Ollama Cloud
 
@@ -632,6 +625,15 @@ Stealth models are not like the other channels in this list. Up front, the prope
 - **⚠️ Not withdrawable**: ink dots are platform-internal only; "up to 50,000,000 per dot" is a ceiling, not a fixed value, and pricier models burn them faster
 - **Rate limits**: RPM + TPM + ink-dot balance, triple-capped, and **all API keys share the account quota** (not per-key); up to 10 keys per account, 6-month default validity
 - **⚠️ Different scope**: a research platform (life sciences, materials, semiconductors, fusion, meteorology), not a general-purpose chat API gateway; quota requests go to `tokenplan@pjlab.org.cn`
+
+#### AMD Token Factory (Radeon Cloud)
+
+- **Website**: https://developer.amd.com.cn/login?source=bjOVsdlfc
+- **Free tier**: 1 credit/day free, 5 credits/day during the first 14 days after sign-up, reset at 00:00 Beijing time
+- **What the site says**: "Public Free Model APIs — Ready-to-use free API endpoints" (12 models marked FREE)
+- **Free models**: MiMo-V2.6-Flash, DeepSeek-V4.1-Flash, DeepSeek-V4-Flash, GLM-5.3-Flash, Qwen3.8-27B, Gemma-4-31B-IT, MiniCPM-V-4.7-35B-A3B, MiniCPM-V-4.7-1B, MiniCPM5-2B (chat); d3, d3-flash, Clef (classifier)
+- **Access**: `https://developer.amd.com.cn/radeon/api/v1` (OpenAI-compatible)
+- **Status**: Active — verified 2026-11-18 (sign-up needs a phone number, default +86, and an email)
 
 ### Aggregators & gateways
 
