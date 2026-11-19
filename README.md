@@ -89,7 +89,7 @@
 | [BeatAPI](https://beatapi.io) | 限时免费（`deepseek-v4.1-flash-free`，输入/输出均 $0） | 优势:OpenAI 兼容、免卡免充值、**零余额即可调用**、每日 2000 次成功请求、国内直连可通;限制:⚠️ **首充前仅 1 次成功请求/分钟**（任意充值后 10 次/分钟），免费为限时提供、名单随时变，2026-10 新上线的折扣转售商，端到端调用未经本仓库实测 | 未实测 |
 | [Zro (MoonMath)](https://zro.moonmath.ai) | 免费档每日额度（`deepseek-v4.1-flash`，每日重置、数值未公开） | 优势:一手推理服务、OpenAI 兼容、零请求保留且不用于训练、无需付费、国内直连可通;限制:每日免费额度未公开、仅 Flash 模型免费、一人一号禁止多账号刷额度、端到端未实测 | 未实测 |
 | [cheapllm.shop](https://cheapllm.shop) | 限时免费（beta 期 $0、无速率限制；ToS 承诺 beta 后每小时 ≥5,000/1,000 tokens 的永久免费额度） | 优势:注册只需邮箱+密码、无卡无手机号无邮箱验证即拿 key、OpenAI 兼容、国内直连可通;限制:⚠️ 法律信息页主体信息全空、上线仅一周无第三方验证、无 SLA 且可无理由封号、备用推理商可能保留数据用于训练、端到端未实测 | 未实测 |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
 
 > ⚠️ **官方无免费层**（仅付费，闲时 $0.15/$0.60 per 1M）。Ollama Cloud、OrcaRouter 均不提供 V4.1 免费。✅ 真正的「档位免费」入口有五个：**NVIDIA NIM**（永久免费 40 RPM、免绑卡）、**魔搭 ModelScope**（每日免费额度内、国内直连）、**BeatAPI**（限时免费 `deepseek-v4.1-flash-free`，零余额可调但仅 1 次/分钟）、**Zro**（免费档每日额度、零请求保留）与 **cheapllm.shop**（beta 期 $0，ToS 承诺 beta 后每小时 ≥5,000/1,000 tokens 的永久免费额度）；Token Harbor 对国内封锁；⚠️ **Onomeo 已于 2026-11-12 改版、签到机制下线，免费入口待核实**，不再按「签到额度」计入本表。
 
@@ -113,7 +113,7 @@
 | [Hugging Face](https://huggingface.co) | 每月 $0.10 免费推理额度,超额按量付费 | 优势:社区模型极全、OpenAI 兼容;限制:免费额度仅 $0.10/月、超额即按量付费(hard stop),共享端点限流、无 SLA | 额度极小 |
 | [书生·端砚 墨点计划](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0) | 测试期每月赠送墨点，按墨点折算 tokens（1 墨点最多抵 50,000,000 tokens，以 DeepSeek-V4-Flash 为例） | 优势:官方唯一明示的换算基准模型、上海 AI 实验室官方平台、每月自动到账、OpenAI + Anthropic 双协议; ⚠️ 官方从未公布每月赠送多少墨点、需注册才能查看实际余额、1 墨点为「最多」抵 50,000,000（调用贵模型消耗更快）、科研向平台 |  |
 | [魔搭 ModelScope](https://modelscope.cn) | 约 200 次/日 | 优势:国产、OpenAI 兼容、模型全;限制:免费质量较低——单模型仅约 200 次/日,与全站共享 2000 次总量,需阿里云实名,仅限个人非商业用途 | 质量较低 |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
 
 ### GLM 系列
 
@@ -125,7 +125,7 @@
 |------|------|------|------|
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token),40 RPM | 优势:官方托管、免绑卡、无积分/无日限、1.3M 上下文多模态;限制:需短信验证手机号,40 RPM 全站共享,高峰期需排队 | 经常超时 |
 | [OrcaRouter](https://www.orcarouter.ai) | 免费池限流,零加价 | 优势:200+ 模型统一网关、0% token 加价、免卡;限制:免费额度未公开、2026-09-07 起替换 Qwen3.8-27B 成为免费默认,TTFT 偏高(约 7.66 秒) | 限流 |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
 | [BeatAPI](https://beatapi.io) | 限时免费（`glm-5.3-flash-free`，输入/输出均 $0） | 优势:OpenAI 兼容、免卡免充值、零余额即可调用、每日 2000 次成功请求;限制:⚠️ **首充前仅 1 次成功请求/分钟**（充值后 10 次/分钟）、免费层限时、端到端调用未实测 | 未实测 |
 | [Zro (MoonMath)](https://zro.moonmath.ai) | 免费档每日额度（`glm-5.3-flash`，每日重置、数值未公开） | 优势:一手推理服务、OpenAI 兼容、零请求保留且不用于训练、无需付费、236 tok/s、1M 上下文;限制:每日免费额度未公开、仅 Flash 模型免费、一人一号禁止多账号刷额度、端到端未实测 | 未实测 |
 | ~~[Onomeo](https://onomeo.com/zh)~~ | ⚠️ 机制待核实（2026-11-12） | ⚠️ 站点改版后 `z-ai/glm-5.3-flash-free` 这个 ID 已不存在于当前目录（现为 `glm-5.3-flash`，cost 7,701），签到文案与「premium 每日 5 万上限」规则均已下线；原「3,149 额度/次、约 63 次」作废 |  |
@@ -430,7 +430,7 @@
 | [OpenRouter](https://openrouter.ai) | `:free`（31B 与 26B-A4B 两款） | 优势:聚合路由;限制:免费仅 50 次/天,名单随时轮换 |  |
 | [AIHubMix](https://aihubmix.com/models/free) | $1 开通:每日 100 次/1M token | 优势:平台补贴免费、OpenAI 兼容、免卡注册;限制:未充值仅 10 次试用;全免费模型共享额度,部分模型配额更低 |  |
 | [NVIDIA NIM](https://build.nvidia.com) | 永久免费(不限 token,仅 31B) | 优势:官方托管、免绑卡、无积分/无日限;限制:需短信验证手机号,40 RPM 全站共享,NIM 仅托管 `gemma-4-31b-it`,无 26B-A4B | 经常超时 |
-| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
+| [AMD Token Factory](https://developer.amd.com.cn/login?source=bjOVsdlfc) | 每日免费额度(每天 1 积分,注册 14 天内每天 5 积分) | 优势:AMD 官方托管、OpenAI 兼容、免绑卡;限制:需手机号(默认 +86)和邮箱、按积分计费、并发限流 |  |
 
 #### Whisper
 
@@ -629,7 +629,7 @@
 
 #### AMD Token Factory（Radeon Cloud）
 
-- **官网**：https://developer.amd.com.cn/radeon/tokenfactory
+- **官网**：https://developer.amd.com.cn/login?source=bjOVsdlfc
 - **免费形式**：每天 1 积分免费额度，注册 14 天内每天 5 积分，北京时间 0 点重置
 - **网页说明**："Public Free Model APIs — Ready-to-use free API endpoints"（页面上 12 个模型标注 FREE）
 - **免费模型**：MiMo-V2.6-Flash、DeepSeek-V4.1-Flash、DeepSeek-V4-Flash、GLM-5.3-Flash、Qwen3.8-27B、Gemma-4-31B-IT、MiniCPM-V-4.7-35B-A3B、MiniCPM-V-4.7-1B、MiniCPM5-2B（对话），d3、d3-flash、Clef（分类）
